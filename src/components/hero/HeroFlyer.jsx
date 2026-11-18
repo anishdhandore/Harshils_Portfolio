@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react';
 import { FiImage } from 'react-icons/fi';
+import Propeller from './Propeller';
 
 // intrinsic size of the cut-out loop
 const WIDTH = 840;
@@ -138,6 +139,7 @@ const HeroFlyer = ({ src, still, alt }) => {
                   data-ready={isLoopReady}
                 />
               )}
+              <Propeller isStatic={isReduced} />
             </Aircraft>
           </Attitude>
         </Cruise>

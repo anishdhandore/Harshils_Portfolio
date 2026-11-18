@@ -1,44 +1,56 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Hero from './Hero';
-import { EMAIL, HEADLINE, HERO_CAPTION, HOTSPOTS } from './heroContent';
-
-const fullHeadline = HEADLINE.map((part) => part.text).join(' ');
+import { EMAIL, FLYER, HEADLINE, SPECS } from './heroContent';
 
 describe('Hero', () => {
-  test('renders the full headline as the page h1', () => {
+  test('introduces Harshil by name in the page h1', () => {
     render(<Hero />);
 
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(fullHeadline);
+    expect(screen.getByRole('heading', { level: 1, name: 'I’m Harshil Patel.' })).toBeInTheDocument();
   });
 
-  test('shows local time and availability in the status bar', () => {
+  test('follows the name with the headline statement', () => {
+    render(<Hero />);
+
+    expect(screen.getByText((_, el) => el?.tagName === 'P' && el.textContent.trim() === HEADLINE)).toBeInTheDocument();
+  });
+
+  test('shows local time and availability in the telemetry strip', () => {
     render(<Hero />);
 
     expect(screen.getByText(/local time/i)).toBeInTheDocument();
     expect(screen.getByText(/open to/i)).toBeInTheDocument();
   });
 
-  test('reserves an image slot with a placeholder when no render is set', () => {
+  test('reads out the Nimbus V4 design specs', () => {
     render(<Hero />);
 
-    expect(screen.getByRole('img', { name: /aircraft placeholder/i })).toBeInTheDocument();
+    const specs = screen.getByLabelText(/design specifications/i);
+    SPECS.forEach(({ value }) => expect(specs).toHaveTextContent(value));
   });
 
-  test('renders the aircraft instead of the placeholder when one is provided', () => {
-    render(<Hero imageSrc="/nimbus.webp" imageAlt="Nimbus render" />);
+  test('reserves a slot with a placeholder when no animation is set', () => {
+    render(<Hero />);
 
-    expect(screen.getByRole('img', { name: 'Nimbus render' })).toHaveAttribute('src', '/nimbus.webp');
-    expect(screen.queryByRole('img', { name: /aircraft placeholder/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /hero animation placeholder/i })).toBeInTheDocument();
   });
 
-  test('labels each hotspot on the render and captions it', () => {
-    render(<Hero imageSrc="/nimbus.webp" imageAlt="Nimbus render" caption={HERO_CAPTION} hotspots={HOTSPOTS} />);
+  test('paints the still frame first, described for screen readers', () => {
+    render(<Hero flyerSrc="/loop.webp" flyerStill="/still.webp" flyerAlt={FLYER.alt} />);
 
-    HOTSPOTS.forEach(({ title }) => {
-      expect(screen.getByRole('button', { name: title })).toHaveAttribute('aria-expanded', 'false');
-    });
-    expect(screen.getByText(HERO_CAPTION.label)).toBeInTheDocument();
+    const still = screen.getByRole('img', { name: FLYER.alt });
+    expect(still).toHaveAttribute('src', '/still.webp');
+    expect(still).toHaveAttribute('fetchpriority', 'high');
+  });
+
+  test('keeps the decorative loop out of the accessibility tree until it has loaded', () => {
+    const { container } = render(<Hero flyerSrc="/loop.webp" flyerStill="/still.webp" flyerAlt={FLYER.alt} />);
+
+    const loop = container.querySelector('img.loop');
+    expect(loop).toHaveAttribute('aria-hidden', 'true');
+    expect(loop).toHaveAttribute('data-ready', 'false');
+    expect(loop).not.toHaveAttribute('src');
   });
 
   test('copies the email and confirms it', async () => {
@@ -59,5 +71,4 @@ describe('Hero', () => {
     expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute('href', expect.stringContaining('github.com'));
     expect(screen.getByRole('link', { name: /cv/i })).toHaveAttribute('href', expect.stringMatching(/\.pdf$/));
   });
-
 });

@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import CaseStudyPage from './CaseStudyPage';
 import { CASE_STUDIES, nextCaseStudy } from './caseStudies';
-import { PROJECTS } from '../../components/deck/projects';
+import { PROJECTS } from '../../components/hangar/projects';
 import { FEATURED } from '../../components/featured/featuredContent';
 
 describe('case study content', () => {

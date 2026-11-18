@@ -48,7 +48,7 @@ const Experience = ({ now = new Date() }) => {
   const isCurrent = role.end === null;
 
   return (
-    <Section id="experience" ref={sectionRef} aria-labelledby="experience-heading" $count={ROLES.length} data-hide-trail>
+    <Section id="experience" ref={sectionRef} aria-labelledby="experience-heading" $count={ROLES.length}>
       <Sticky>
         <ExperienceWheel scale={scale} month={month} radius={isMobile ? 380 : 560} />
 

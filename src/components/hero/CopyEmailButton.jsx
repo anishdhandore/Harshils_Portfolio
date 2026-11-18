@@ -5,7 +5,11 @@ import { FiCopy, FiCheck } from 'react-icons/fi';
 
 const CONFIRM_MS = 2000;
 
-const CopyEmailButton = ({ email, className }) => {
+/**
+ * @param {{ email: string, label?: string, className?: string }} props
+ *   label: idle text (defaults to the address itself)
+ */
+const CopyEmailButton = ({ email, label, className }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   useEffect(() => {
@@ -41,7 +45,7 @@ const CopyEmailButton = ({ email, className }) => {
             </>
           ) : (
             <>
-              {email} <FiCopy aria-hidden="true" />
+              {label ?? email} <FiCopy aria-hidden="true" />
             </>
           )}
         </motion.span>
@@ -62,7 +66,7 @@ const Button = styled.button`
   border-radius: var(--radius-control);
   background: var(--color-ink);
   color: var(--color-paper);
-  font: 500 var(--text-sm) / 1 var(--font-body);
+  font: 400 var(--text-sm) / 1 var(--font-body);
   cursor: pointer;
   transition: transform var(--duration-fast) var(--ease-out-expo),
     background-color var(--duration-fast) ease;

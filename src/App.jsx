@@ -2,15 +2,15 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
-import ScrollTrail from './components/scroll-trail/ScrollTrail';
 import FeaturedShowcase from './components/featured/FeaturedShowcase';
-import ProjectDeck from './components/deck/ProjectDeck';
+import Hangar from './components/hangar/Hangar';
 import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
 import CaseStudyPage from './pages/case-study/CaseStudyPage';
 import { matchCaseStudy, useLinkInterception, useRoute } from './lib/router';
-import { HERO_CAPTION, HOTSPOTS } from './components/hero/heroContent';
-import heroRender from './images/hero/nimbus-hero.webp';
+import { FLYER } from './components/hero/heroContent';
+import flyingLoop from './images/hero/harshil-flying.webp';
+import flyingStill from './images/hero/harshil-flying-still.webp';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -62,15 +62,9 @@ const GlobalStyle = createGlobalStyle`
 
 const HomePage = () => (
   <>
-    <ScrollTrail />
-    <Hero
-      imageSrc={heroRender}
-      imageAlt="Nimbus V4 CAD render: the swept wing and lifting-body cargo fuselage, seen from above"
-      caption={HERO_CAPTION}
-      hotspots={HOTSPOTS}
-    />
+    <Hero flyerSrc={flyingLoop} flyerStill={flyingStill} flyerAlt={FLYER.alt} />
     <FeaturedShowcase />
-    <ProjectDeck />
+    <Hangar />
     <Experience />
     <Contact />
   </>

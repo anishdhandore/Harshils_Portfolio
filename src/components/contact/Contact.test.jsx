@@ -1,25 +1,29 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Contact from './Contact';
+
+const EMAIL = 'patelharshil2060@gmail.com';
 
 describe('Contact', () => {
   test('is the #contact section the navbar CTA points to', () => {
     const { container } = render(<Contact />);
 
     expect(container.querySelector('section#contact')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Let’s build something that flies.');
+    expect(screen.getByRole('heading', { level: 2, name: 'Cleared for contact.' })).toBeInTheDocument();
   });
 
-  test('lists every way to get in touch', () => {
+  test('puts every channel on the strip board', () => {
     render(<Contact />);
 
-    expect(screen.getByRole('link', { name: /^email:/i })).toHaveAttribute('href', 'mailto:patelharshil2060@gmail.com');
-    expect(screen.getByRole('link', { name: /^linkedin:/i })).toHaveAttribute('href', expect.stringContaining('linkedin.com'));
-    expect(screen.getByRole('link', { name: /^github:/i })).toHaveAttribute('href', expect.stringContaining('github.com'));
-    expect(screen.queryByRole('link', { name: /résumé|cv/i })).not.toBeInTheDocument();
+    const board = within(screen.getByRole('list', { name: /ways to get in touch/i }));
+    expect(board.getByText(EMAIL)).toBeInTheDocument();
+    expect(board.getByRole('link', { name: /^write$/i })).toHaveAttribute('href', `mailto:${EMAIL}`);
+    expect(board.getByRole('link', { name: /^linkedin:/i })).toHaveAttribute('href', expect.stringContaining('linkedin.com'));
+    expect(board.getByRole('link', { name: /^github:/i })).toHaveAttribute('href', expect.stringContaining('github.com'));
+    expect(board.getByRole('link', { name: /^résumé:/i })).toHaveAttribute('href', expect.stringMatching(/\.pdf$/));
   });
 
-  test('external links open safely in a new tab', () => {
+  test('external strips open safely in a new tab', () => {
     render(<Contact />);
 
     ['linkedin', 'github'].forEach((name) => {
@@ -29,26 +33,22 @@ describe('Contact', () => {
     });
   });
 
-  test('copies the email address', async () => {
+  test('copies the email address from its strip', async () => {
     const user = userEvent.setup();
     const writeText = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue();
     render(<Contact />);
 
     await user.click(screen.getByRole('button', { name: /copy email/i }));
 
-    expect(writeText).toHaveBeenCalledWith('patelharshil2060@gmail.com');
+    expect(writeText).toHaveBeenCalledWith(EMAIL);
   });
 
-  test('footer shows the year and a way back to the top', () => {
+  test('footer shows the year, section links and a way back to the top', () => {
     render(<Contact />);
 
-    expect(screen.getByText(`© ${new Date().getFullYear()} Harshil Patel`)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /back to top/i })).toHaveAttribute('href', '/#home');
-  });
-
-  test('the attitude indicator is decorative', () => {
-    const { container } = render(<Contact />);
-
-    expect(container.querySelector('[data-attitude]')).toHaveAttribute('aria-hidden', 'true');
+    const footer = within(screen.getByRole('contentinfo'));
+    expect(footer.getByText(`© ${new Date().getFullYear()} Harshil Patel. All rights reserved.`)).toBeInTheDocument();
+    expect(footer.getByRole('navigation', { name: /footer/i })).toBeInTheDocument();
+    expect(footer.getByRole('link', { name: /back to top/i })).toHaveAttribute('href', '/#home');
   });
 });

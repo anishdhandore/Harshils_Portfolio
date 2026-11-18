@@ -32,7 +32,7 @@ export const SPECS = [
   { value: '13,000+', label: 'Optimizer evaluations' },
 ];
 
-// The hero animation: Harshil flying his aircraft, cut out of the sky
-export const FLYER = {
-  alt: 'Illustration of Harshil in a headset, flying a white and navy light aircraft and giving a thumbs up',
+// Hero portrait (illustrated, background removed)
+export const PORTRAIT = {
+  alt: 'Illustrated portrait of Harshil Patel smiling, sunglasses pushed up, in a black jacket with an HP logo',
 };

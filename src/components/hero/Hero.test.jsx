@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Hero from './Hero';
-import { EMAIL, FLYER, HEADLINE, SPECS } from './heroContent';
+import { EMAIL, HEADLINE, PORTRAIT, SPECS } from './heroContent';
 
 describe('Hero', () => {
   test('introduces Harshil by name in the page h1', () => {
@@ -30,27 +30,19 @@ describe('Hero', () => {
     SPECS.forEach(({ value }) => expect(specs).toHaveTextContent(value));
   });
 
-  test('reserves a slot with a placeholder when no animation is set', () => {
+  test('reserves a slot with a placeholder when no portrait is set', () => {
     render(<Hero />);
 
-    expect(screen.getByRole('img', { name: /hero animation placeholder/i })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /portrait placeholder/i })).toBeInTheDocument();
   });
 
-  test('paints the still frame first, described for screen readers', () => {
-    render(<Hero flyerSrc="/loop.webp" flyerStill="/still.webp" flyerAlt={FLYER.alt} />);
+  test('shows the portrait, described for screen readers, with a decorative orbit', () => {
+    const { container } = render(<Hero portraitSrc="/portrait.webp" portraitAlt={PORTRAIT.alt} />);
 
-    const still = screen.getByRole('img', { name: FLYER.alt });
-    expect(still).toHaveAttribute('src', '/still.webp');
-    expect(still).toHaveAttribute('fetchpriority', 'high');
-  });
-
-  test('keeps the decorative loop out of the accessibility tree until it has loaded', () => {
-    const { container } = render(<Hero flyerSrc="/loop.webp" flyerStill="/still.webp" flyerAlt={FLYER.alt} />);
-
-    const loop = container.querySelector('img.loop');
-    expect(loop).toHaveAttribute('aria-hidden', 'true');
-    expect(loop).toHaveAttribute('data-ready', 'false');
-    expect(loop).not.toHaveAttribute('src');
+    const img = screen.getByRole('img', { name: PORTRAIT.alt });
+    expect(img).toHaveAttribute('src', '/portrait.webp');
+    expect(img).toHaveAttribute('fetchpriority', 'high');
+    container.querySelectorAll('figure svg').forEach((svg) => expect(svg).toHaveAttribute('aria-hidden', 'true'));
   });
 
   test('copies the email and confirms it', async () => {

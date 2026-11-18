@@ -1,16 +1,16 @@
 // Hero: a telemetry strip; "I'm Harshil Patel." with a statement and actions
-// on the left; Harshil flying his plane on the right; and a spec
+// on the left; his portrait circled by an orbiting aircraft on the right; and a spec
 // strip along the bottom.
 //
 // Choreography (seconds): telemetry 0 → name letters focus in 0.15–0.8 →
 // statement words 0.9–1.5 →
-// lede, actions, socials → specs. The plane flies in alongside from 0.3.
+// lede, actions, socials → specs. The portrait rises in alongside from 0.25.
 import React from 'react';
 import styled from 'styled-components';
 import { motion, useReducedMotion } from 'motion/react';
 import { FiArrowDownRight, FiArrowUpRight } from 'react-icons/fi';
 import TelemetryBar from './TelemetryBar';
-import HeroFlyer from './HeroFlyer';
+import HeroPortrait from './HeroPortrait';
 import CopyEmailButton from './CopyEmailButton';
 import { EMAIL, GREETING, HEADLINE, KICKER, LEDE, RESUME_URL, SOCIALS, SPECS } from './heroContent';
 
@@ -56,9 +56,9 @@ const focusIn = (index) => ({
  * @param {{ imageSrc?: string, imageAlt?: string, label?: object, hotspots?: object[] }} props
  */
 /**
- * @param {{ flyerSrc?: string, flyerStill?: string, flyerAlt?: string }} props
+ * @param {{ portraitSrc?: string, portraitAlt?: string }} props
  */
-const Hero = ({ flyerSrc, flyerStill, flyerAlt = '' }) => {
+const Hero = ({ portraitSrc, portraitAlt = '' }) => {
   const isReduced = useReducedMotion();
 
   return (
@@ -121,7 +121,7 @@ const Hero = ({ flyerSrc, flyerStill, flyerAlt = '' }) => {
           </Copy>
 
           <RenderSlot>
-            <HeroFlyer src={flyerSrc} still={flyerStill} alt={flyerAlt} />
+            <HeroPortrait src={portraitSrc} alt={portraitAlt} />
           </RenderSlot>
         </Stage>
 

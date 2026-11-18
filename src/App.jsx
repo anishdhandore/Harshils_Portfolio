@@ -8,9 +8,8 @@ import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
 import CaseStudyPage from './pages/case-study/CaseStudyPage';
 import { matchCaseStudy, useLinkInterception, useRoute } from './lib/router';
-import { FLYER } from './components/hero/heroContent';
-import flyingLoop from './images/hero/harshil-flying.webp';
-import flyingStill from './images/hero/harshil-flying-still.webp';
+import { PORTRAIT } from './components/hero/heroContent';
+import portrait from './images/hero/harshil-portrait.webp';
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -62,7 +61,7 @@ const GlobalStyle = createGlobalStyle`
 
 const HomePage = () => (
   <>
-    <Hero flyerSrc={flyingLoop} flyerStill={flyingStill} flyerAlt={FLYER.alt} />
+    <Hero portraitSrc={portrait} portraitAlt={PORTRAIT.alt} />
     <FeaturedShowcase />
     <Hangar />
     <Experience />

@@ -1,0 +1,56 @@
+/* Hermeus-inspired tokens: machined-aluminium greys, near-black ink and one
+   signal amber, read from hermeus.com's computed styles. */
+:root {
+  --color-paper: #ececec;
+  --color-ink: #111111;
+  --color-ink-muted: #8f8d8d; /* large text only (3.2:1 on paper) */
+  --color-ink-soft: #454343; /* small text (8.9:1 on paper) */
+  --color-surface: #d9d9d9;
+  --color-surface-strong: #c7c7c7;
+  --color-line: #cfcfcf;
+  --color-live: #f2a500; /* signal amber */
+  --color-amber: #f2a500;
+  --color-amber-ink: #8a5d00; /* amber for small text on paper (5.2:1) */
+
+  --color-night: #0b0c0e; /* dark panels */
+  --color-night-ink: #ececec;
+  --color-night-muted: rgba(236, 236, 236, 0.5);
+  --color-night-line: rgba(236, 236, 236, 0.12);
+
+  /* Floating navbar */
+  --nav-bg: rgba(248, 248, 248, 0.82);
+  --nav-border: rgba(17, 17, 17, 0.08);
+  --nav-ink: #111111;
+  --nav-ink-muted: rgba(17, 17, 17, 0.62);
+  --nav-cta-fill: #111111;
+  --nav-cta-hover: #2b2b2b;
+  --nav-cta-ink: #ececec;
+  --nav-offset: 16px;
+  --nav-height: 60px;
+
+  --font-display: 'TeX Gyre Heros', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'TeX Gyre Heros', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-condensed: 'TeX Gyre Heros Cn', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --text-label: 0.75rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lead: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --text-hero: clamp(2.5rem, 1.3rem + 4.2vw, 5rem);
+
+  --tracking-label: 0.06em;
+
+  --space-gutter: clamp(1rem, 0.4rem + 3vw, 4.5rem);
+  --space-section: clamp(3rem, 2rem + 5vw, 7rem);
+  --content-max: 80rem;
+
+  /* Hermeus is machined, not soft: small radii everywhere */
+  --radius-card: 4px;
+  --radius-panel: 6px;
+  --radius-control: 2px;
+  --radius-pill: 999px;
+
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}

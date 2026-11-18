@@ -186,210 +186,134 @@ Error generating stack: `+e.message+`
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
-`,og=(e,t)=>{let n;try{n=new Intl.DateTimeFormat(`en-US`,{timeZone:t,hour:`numeric`,minute:`2-digit`,timeZoneName:`short`})}catch{throw RangeError(`Unknown time zone "${t}"`)}return n.format(e).replace(/ /g,` `)},sg=`Harshil`,cg=`Harshil Patel`,lg=`patelharshil2060@gmail.com`,ug=`/HarshilPatelResume.pdf`,dg=`America/Los_Angeles`,fg=`Open to aerospace engineering roles`,pg=[{text:`Aerospace Engineer`,strong:!0},{text:`taking aircraft from`,strong:!1},{text:`sizing plots`,strong:!0},{text:`to`,strong:!1},{text:`flight day.`,strong:!0}],mg=[{label:`LinkedIn`,href:`https://www.linkedin.com/in/harshilpatel2060`},{label:`GitHub`,href:`https://github.com/patelharshil2060`}],hg=[`Aircraft design & sizing`,`Flight dynamics & stability`,`Test & instrumentation`],gg={index:`01`,label:`Nimbus V4 · Flying-wing cargo UAV`},_g=[{id:`fuselage`,x:.46,y:.43,title:`Blended lifting-body fuselage`,body:`5 L cargo bay with a clamshell payload door underneath.`},{id:`wing`,x:.3,y:.66,title:`Swept wing`,body:`1.57 m span, 28.3° sweep, Eppler 222 → 230 airfoils.`},{id:`fin`,x:.9,y:.85,title:`Twin delta fins`,body:`Wingtip vertical surfaces, sized in the MATLAB analysis pipeline.`}],vg=15e3,yg=e=>{let[t,n]=(0,j.useState)(()=>og(new Date,e));return(0,j.useEffect)(()=>{let t=setInterval(()=>n(og(new Date,e)),vg);return()=>clearInterval(t)},[e]),t},bg=()=>{let e=yg(dg);return(0,Z.jsxs)(xg,{children:[(0,Z.jsxs)(Sg,{children:[(0,Z.jsx)(Cg,{children:`Local time`}),(0,Z.jsx)(`time`,{children:e})]}),(0,Z.jsxs)(Sg,{children:[(0,Z.jsx)(wg,{"aria-hidden":`true`}),fg]})]})},xg=P.div`
+`,og={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},sg=j.createContext&&j.createContext(og),cg=[`attr`,`size`,`title`];function lg(e,t){if(e==null)return{};var n,r,i=ug(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function ug(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function dg(){return dg=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},dg.apply(null,arguments)}function fg(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function pg(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?fg(Object(n),!0).forEach(function(t){mg(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):fg(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function mg(e,t,n){return(t=hg(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function hg(e){var t=gg(e,`string`);return typeof t==`symbol`?t:t+``}function gg(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function _g(e){return e&&e.map((e,t)=>j.createElement(e.tag,pg({key:t},e.attr),_g(e.child)))}function vg(e){return t=>j.createElement(yg,dg({attr:pg({},e.attr)},t),_g(e.child))}function yg(e){var t=t=>{var n=e.attr,r=e.size,i=e.title,a=lg(e,cg),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),j.createElement(`svg`,dg({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:pg(pg({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&j.createElement(`title`,null,i),e.children)};return sg===void 0?t(og):j.createElement(sg.Consumer,null,e=>t(e))}function bg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`rect`,attr:{x:`3`,y:`3`,width:`18`,height:`18`,rx:`2`,ry:`2`},child:[]},{tag:`circle`,attr:{cx:`8.5`,cy:`8.5`,r:`1.5`},child:[]},{tag:`polyline`,attr:{points:`21 15 16 10 5 21`},child:[]}]})(e)}function xg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`rect`,attr:{x:`9`,y:`9`,width:`13`,height:`13`,rx:`2`,ry:`2`},child:[]},{tag:`path`,attr:{d:`M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1`},child:[]}]})(e)}function Sg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`polyline`,attr:{points:`20 6 9 17 4 12`},child:[]}]})(e)}function Cg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`12`,y1:`19`,x2:`12`,y2:`5`},child:[]},{tag:`polyline`,attr:{points:`5 12 12 5 19 12`},child:[]}]})(e)}function wg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`7`,y1:`17`,x2:`17`,y2:`7`},child:[]},{tag:`polyline`,attr:{points:`7 7 17 7 17 17`},child:[]}]})(e)}function Tg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`5`,y1:`12`,x2:`19`,y2:`12`},child:[]},{tag:`polyline`,attr:{points:`12 5 19 12 12 19`},child:[]}]})(e)}function Eg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`19`,y1:`12`,x2:`5`,y2:`12`},child:[]},{tag:`polyline`,attr:{points:`12 19 5 12 12 5`},child:[]}]})(e)}function Dg(e){return vg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`7`,y1:`7`,x2:`17`,y2:`17`},child:[]},{tag:`polyline`,attr:{points:`17 7 17 17 7 17`},child:[]}]})(e)}var Og=(e,t)=>{let n;try{n=new Intl.DateTimeFormat(`en-US`,{timeZone:t,hour:`numeric`,minute:`2-digit`,timeZoneName:`short`})}catch{throw RangeError(`Unknown time zone "${t}"`)}return n.format(e).replace(/ /g,` `)},kg=15e3,Ag=e=>{let[t,n]=(0,j.useState)(()=>Og(new Date,e));return(0,j.useEffect)(()=>{let t=setInterval(()=>n(Og(new Date,e)),kg);return()=>clearInterval(t)},[e]),t},jg=`Harshil Patel`,Mg=`patelharshil2060@gmail.com`,Ng=`/HarshilPatelResume.pdf`,Pg=`America/Los_Angeles`,Fg=`Open to aerospace engineering roles`,Ig=`Aerospace Engineer · UC San Diego`,Lg={lead:`I’m`,name:jg},Rg=`Designing aircraft from the first sizing plot to the last flight test.`,zg=`I size, analyse and build aircraft: aerodynamics, propulsion, stability and the test work that proves them.`,Bg=[{label:`LinkedIn`,href:`https://www.linkedin.com/in/harshilpatel2060`},{label:`GitHub`,href:`https://github.com/patelharshil2060`}],Vg=[{label:`Base`,value:`San Diego, CA`},{label:`Grad`,value:`Dec 2026`}],Hg=[{value:`1.57 m`,label:`Wingspan`},{value:`800 g`,label:`Design payload`},{value:`28.3°`,label:`Wing sweep`},{value:`13,000+`,label:`Optimizer evaluations`}],Ug={alt:`Illustration of Harshil in a headset, flying a white and navy light aircraft and giving a thumbs up`},Wg=()=>{let e=Ag(Pg);return(0,Z.jsxs)(Gg,{children:[Vg.map(({label:e,value:t})=>(0,Z.jsxs)(Kg,{children:[(0,Z.jsx)(`dt`,{children:e}),(0,Z.jsx)(`dd`,{children:t})]},e)),(0,Z.jsxs)(Kg,{children:[(0,Z.jsx)(`dt`,{children:`Local time`}),(0,Z.jsx)(`dd`,{children:(0,Z.jsx)(`time`,{children:e})})]}),(0,Z.jsxs)(Kg,{$grow:!0,children:[(0,Z.jsx)(`dt`,{children:`Status`}),(0,Z.jsxs)(`dd`,{children:[(0,Z.jsx)(qg,{"aria-hidden":`true`}),Fg]})]})]})},Gg=P.dl`
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
   flex-wrap: wrap;
-  font-size: var(--text-sm);
-  color: var(--color-ink);
-`,Sg=P.p`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-variant-numeric: tabular-nums;
-`,Cg=P.span`
+  border-top: 1px solid var(--color-ink);
+  border-bottom: 1px solid var(--color-line);
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: var(--color-ink-soft);
-`,wg=P.span`
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-live);
+`,Kg=P.div`
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.7rem 1.25rem 0.7rem 0;
+  margin-right: 1.25rem;
+  border-right: 1px solid var(--color-line);
+  ${({$grow:e})=>e?`flex: 1; justify-content: flex-end; border-right: 0; margin-right: 0; padding-right: 0;`:``}
 
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: inherit;
-    animation: live-pulse 2.4s var(--ease-out-expo) infinite;
+  dt {
+    color: var(--color-ink-soft);
   }
 
-  @keyframes live-pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    70%, 100% { transform: scale(2.6); opacity: 0; }
+  dd {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-ink);
+    font-variant-numeric: tabular-nums;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    &::after { animation: none; }
+  @media (max-width: 700px) {
+    border-right: 0;
+    padding-right: 0;
+    ${({$grow:e})=>e?`flex-basis: 100%; justify-content: flex-start; border-top: 1px solid var(--color-line);`:``}
   }
-`,Tg={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Eg=j.createContext&&j.createContext(Tg),Dg=[`attr`,`size`,`title`];function Og(e,t){if(e==null)return{};var n,r,i=kg(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function kg(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function Ag(){return Ag=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Ag.apply(null,arguments)}function jg(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function Mg(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?jg(Object(n),!0).forEach(function(t){Ng(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):jg(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function Ng(e,t,n){return(t=Pg(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function Pg(e){var t=Fg(e,`string`);return typeof t==`symbol`?t:t+``}function Fg(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Ig(e){return e&&e.map((e,t)=>j.createElement(e.tag,Mg({key:t},e.attr),Ig(e.child)))}function Lg(e){return t=>j.createElement(Rg,Ag({attr:Mg({},e.attr)},t),Ig(e.child))}function Rg(e){var t=t=>{var n=e.attr,r=e.size,i=e.title,a=Og(e,Dg),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),j.createElement(`svg`,Ag({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:Mg(Mg({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&j.createElement(`title`,null,i),e.children)};return Eg===void 0?t(Tg):j.createElement(Eg.Consumer,null,e=>t(e))}function zg(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`rect`,attr:{x:`3`,y:`3`,width:`18`,height:`18`,rx:`2`,ry:`2`},child:[]},{tag:`circle`,attr:{cx:`8.5`,cy:`8.5`,r:`1.5`},child:[]},{tag:`polyline`,attr:{points:`21 15 16 10 5 21`},child:[]}]})(e)}function Bg(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`rect`,attr:{x:`9`,y:`9`,width:`13`,height:`13`,rx:`2`,ry:`2`},child:[]},{tag:`path`,attr:{d:`M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1`},child:[]}]})(e)}function Vg(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`polyline`,attr:{points:`20 6 9 17 4 12`},child:[]}]})(e)}function Hg(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`12`,y1:`19`,x2:`12`,y2:`5`},child:[]},{tag:`polyline`,attr:{points:`5 12 12 5 19 12`},child:[]}]})(e)}function Ug(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`7`,y1:`17`,x2:`17`,y2:`7`},child:[]},{tag:`polyline`,attr:{points:`7 7 17 7 17 17`},child:[]}]})(e)}function Wg(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`5`,y1:`12`,x2:`19`,y2:`12`},child:[]},{tag:`polyline`,attr:{points:`12 5 19 12 12 19`},child:[]}]})(e)}function Gg(e){return Lg({tag:`svg`,attr:{viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`},child:[{tag:`line`,attr:{x1:`19`,y1:`12`,x2:`5`,y2:`12`},child:[]},{tag:`polyline`,attr:{points:`12 19 5 12 12 5`},child:[]}]})(e)}var Kg=({x:e,y:t,title:n,body:r})=>{let[i,a]=(0,j.useState)(!1),o=`hotspot-${(0,j.useId)().replace(/[^a-zA-Z0-9]/g,``)}`,s=(0,j.useRef)(null),c=e<1/3?`right`:e>2/3?`left`:`center`,l=t>.6;return(0,j.useEffect)(()=>{if(!i)return;let e=e=>e.key===`Escape`&&a(!1),t=e=>{s.current?.contains(e.target)||a(!1)};return window.addEventListener(`keydown`,e),document.addEventListener(`pointerdown`,t),()=>{window.removeEventListener(`keydown`,e),document.removeEventListener(`pointerdown`,t)}},[i]),(0,Z.jsxs)(Yg,{ref:s,style:{left:`${e*100}%`,top:`${t*100}%`},onPointerEnter:e=>e.pointerType===`mouse`&&a(!0),onPointerLeave:e=>e.pointerType===`mouse`&&a(!1),children:[(0,Z.jsx)(Xg,{type:`button`,"aria-expanded":i,"aria-controls":o,"aria-label":n,onClick:()=>a(e=>!e),onFocus:()=>a(!0),onBlur:()=>a(!1),"data-open":i,children:(0,Z.jsx)(`span`,{"aria-hidden":`true`})}),(0,Z.jsxs)(Zg,{id:o,role:`note`,"data-open":i,$align:c,$opensUp:l,children:[(0,Z.jsx)(`strong`,{children:n}),(0,Z.jsx)(`span`,{children:r})]})]})},qg=24,Jg={right:`left: calc(100% + 10px);`,left:`right: calc(100% + 10px);`,center:`left: 50%;`},Yg=P.div`
-  position: absolute;
-  z-index: 2;
-  width: ${qg}px;
-  height: ${qg}px;
-  margin: -${qg/2}px 0 0 -${qg/2}px;
-`,Xg=P.button`
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: 0;
-  border-radius: 2px;
+`,qg=P.i`
+  width: 7px;
+  height: 7px;
   background: var(--color-amber);
-  cursor: pointer;
-  box-shadow: 0 0 0 0 rgba(242, 165, 0, 0.45);
-  animation: hotspot-ping 2.8s var(--ease-out-expo) infinite;
-  transition: transform var(--duration-fast) var(--ease-out-expo);
+  box-shadow: 0 0 0 3px rgba(242, 165, 0, 0.18);
+  animation: annunciator 1.6s steps(1, end) infinite;
 
-  /* the plus */
-  span,
-  span::after {
-    position: absolute;
-    width: 10px;
-    height: 1.25px;
-    background: #111111;
-    transition: transform var(--duration-normal) var(--ease-out-expo);
-  }
-
-  span::after {
-    content: '';
-    left: 0;
-    transform: rotate(90deg);
-  }
-
-  &[data-open='true'] span {
-    transform: rotate(45deg);
-  }
-
-  &:hover {
-    transform: scale(1.12);
-  }
-
-  &:active {
-    transform: scale(0.94);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-ink);
-    outline-offset: 3px;
-  }
-
-  @keyframes hotspot-ping {
-    0% { box-shadow: 0 0 0 0 rgba(242, 165, 0, 0.5); }
-    70%, 100% { box-shadow: 0 0 0 12px rgba(242, 165, 0, 0); }
+  @keyframes annunciator {
+    50% { opacity: 0.35; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
   }
-`,Zg=P.span`
-  position: absolute;
-  ${({$align:e})=>Jg[e]}
-  ${({$align:e,$opensUp:t})=>e===`center`?t?`bottom: calc(100% + 10px);`:`top: calc(100% + 10px);`:t?`bottom: 0;`:`top: 0;`}
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  width: max-content;
-  max-width: min(15rem, 62vw);
-  padding: 0.7rem 0.85rem;
-  border-radius: 2px;
-  background: rgba(248, 248, 248, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(17, 17, 17, 0.06);
-  font-family: var(--font-body);
-  pointer-events: none;
-  opacity: 0;
-  translate: ${({$align:e})=>e===`center`?`-50% 0`:`0 0`};
-  transform: translateY(4px);
-  transition: opacity var(--duration-fast) ease, transform var(--duration-normal) var(--ease-out-expo);
-
-  strong {
-    font-size: var(--text-label);
-    font-weight: 700;
-    letter-spacing: var(--tracking-label);
-    text-transform: uppercase;
-    color: var(--color-ink);
-  }
-
-  span {
-    font-size: 0.8125rem;
-    line-height: 1.45;
-    color: var(--color-ink-soft);
-  }
-
-  &[data-open='true'] {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`,Qg=960,$g=1200,e_={initial:{x:`14%`,y:`-4%`,scale:1.06,opacity:0},animate:{x:`0%`,y:`0%`,scale:1,opacity:1},transition:{delay:.45,duration:1.6,ease:[.16,1,.3,1]}},t_=({src:e,alt:t,caption:n,hotspots:r=[]})=>{let i=!!Nh();return e?(0,Z.jsxs)(n_,{children:[(0,Z.jsxs)(r_,{children:[(0,Z.jsx)(i_,{"aria-hidden":`true`}),(0,Z.jsx)(a_,{src:e,alt:t,width:Qg,height:$g,loading:`eager`,fetchpriority:`high`,...i?{}:e_}),r.map(e=>(0,Z.jsx)(Kg,{...e},e.id)),(0,Z.jsx)(o_,{"aria-hidden":`true`})]}),n&&(0,Z.jsxs)(s_,{children:[(0,Z.jsx)(`span`,{className:`index`,children:n.index}),n.label]})]}):(0,Z.jsx)(r_,{children:(0,Z.jsxs)(c_,{role:`img`,"aria-label":`Aircraft placeholder`,children:[(0,Z.jsx)(zg,{"aria-hidden":`true`}),(0,Z.jsx)(`span`,{children:`Aircraft render goes here`})]})})},n_=P.figure`
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-`,r_=P.div`
+`,Jg=840,Yg=367,Xg=[.16,1,.3,1],Zg=8,Qg={stiffness:90,damping:16,mass:.7},$g=[{top:.3,length:.22,delay:0},{top:.52,length:.34,delay:.55},{top:.64,length:.2,delay:1.1},{top:.76,length:.28,delay:.3}],e_={hidden:{x:`38%`,y:`-10%`,rotate:9,opacity:0,scale:.9},shown:{x:`0%`,y:`0%`,rotate:0,opacity:1,scale:1,transition:{delay:.3,duration:1.9,ease:Xg,opacity:{delay:.3,duration:.5}}}},t_=(e,t)=>{let[n,r]=(0,j.useState)(!1);return(0,j.useEffect)(()=>{if(!e||!t)return;let n=!1,i=new Image;return i.decoding=`async`,i.onload=()=>!n&&r(!0),i.onerror=()=>!n&&r(!1),i.src=e,()=>{n=!0}},[e,t]),n},n_=e=>{let t=Eh(.5),n=Eh(.5);return{style:{rotateX:Ah(Q(n,[0,1],[Zg,-8]),Qg),rotateY:Ah(Q(t,[0,1],[-11.2,Zg*1.4]),Qg),x:Ah(Q(t,[0,1],[-14,14]),Qg),y:Ah(Q(n,[0,1],[-10,10]),Qg)},onPointerMove:r=>{if(!e||r.pointerType!==`mouse`)return;let i=r.currentTarget.getBoundingClientRect();t.set((r.clientX-i.left)/i.width),n.set((r.clientY-i.top)/i.height)},onPointerLeave:()=>{t.set(.5),n.set(.5)}}},r_=({src:e,still:t,alt:n})=>{let r=!!Nh(),i=t_(e,!r),a=n_(!r);return!e&&!t?(0,Z.jsxs)(u_,{role:`img`,"aria-label":`Hero animation placeholder`,children:[(0,Z.jsx)(bg,{"aria-hidden":`true`}),(0,Z.jsx)(`span`,{children:`Hero animation goes here`})]}):(0,Z.jsx)(i_,{onPointerMove:a.onPointerMove,onPointerLeave:a.onPointerLeave,children:(0,Z.jsx)(a_,{variants:e_,children:(0,Z.jsx)(o_,{$isOn:!r,children:(0,Z.jsxs)(s_,{style:r?void 0:a.style,children:[!r&&(0,Z.jsx)(l_,{"aria-hidden":`true`,children:$g.map(({top:e,length:t,delay:n})=>(0,Z.jsx)(`i`,{style:{top:`${e*100}%`,width:`${t*100}%`,animationDelay:`${n}s`}},e))}),(0,Z.jsxs)(c_,{children:[(0,Z.jsx)(`img`,{className:`still`,src:t??e,alt:n,width:Jg,height:Yg,loading:`eager`,fetchpriority:`high`}),!r&&e&&(0,Z.jsx)(`img`,{className:`loop`,src:i?e:void 0,alt:``,"aria-hidden":`true`,width:Jg,height:Yg,"data-ready":i})]})]})})})})},i_=P.figure`
   position: relative;
-  aspect-ratio: 4 / 5;
-  width: 100%;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  background: radial-gradient(120% 90% at 70% 30%, #e4e4e4 0%, var(--color-surface) 60%, #cecece 100%);
-`,i_=P.div`
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(17, 17, 17, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
-  background-size: 10% 8%;
-  mask-image: radial-gradient(circle at 50% 50%, #000 40%, transparent 85%);
-`,a_=P($.img)`
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.18));
-`,o_=P.span`
-  position: absolute;
-  inset: 12px;
-  pointer-events: none;
-  --c: rgba(17, 17, 17, 0.45);
-  background:
-    linear-gradient(var(--c), var(--c)) top left / 14px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) top left / 1px 14px no-repeat,
-    linear-gradient(var(--c), var(--c)) top right / 14px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) top right / 1px 14px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom left / 14px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom left / 1px 14px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom right / 14px 1px no-repeat,
-    linear-gradient(var(--c), var(--c)) bottom right / 1px 14px no-repeat;
-`,s_=P.figcaption`
-  display: flex;
-  gap: 0.9rem;
-  font-size: var(--text-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem) 0;
+  perspective: 1200px;
+`,a_=P($.div)`
+  position: relative;
+  z-index: 1;
+  width: min(100%, 46rem);
+`,o_=P.div`
+  ${({$isOn:e})=>e?`animation: flyer-bob 5.8s ease-in-out infinite, flyer-roll 8.3s ease-in-out infinite;`:``}
 
-  .index {
-    color: var(--color-amber-ink);
-    font-variant-numeric: tabular-nums;
+  @keyframes flyer-bob {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -14px; }
   }
+
+  @keyframes flyer-roll {
+    0%, 100% { rotate: -1.2deg; }
+    50% { rotate: 1.4deg; }
+  }
+`,s_=P($.div)`
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
 `,c_=P.div`
+  position: relative;
+  aspect-ratio: ${Jg} / ${Yg};
+  /* a soft shadow that follows the silhouette, not a box */
+  filter: drop-shadow(0 28px 22px rgba(17, 17, 17, 0.16));
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .loop {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .loop[data-ready='true'] {
+    opacity: 1;
+  }
+`,l_=P.div`
   position: absolute;
-  inset: 0;
+  left: 94%;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  pointer-events: none;
+
+  i {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgba(17, 17, 17, 0.28), rgba(17, 17, 17, 0));
+    transform-origin: left center;
+    opacity: 0;
+    animation: streak 1.6s cubic-bezier(0.3, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes streak {
+    0% { opacity: 0; transform: translateX(-10%) scaleX(0.2); }
+    25% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(45%) scaleX(1); }
+  }
+`,u_=P.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface);
   color: var(--color-ink-soft);
   font-size: var(--text-sm);
 
@@ -398,7 +322,7 @@ Error generating stack: `+e.message+`
     height: 28px;
     stroke-width: 1.5;
   }
-`,l_=2e3,u_=({email:e,className:t})=>{let[n,r]=(0,j.useState)(!1);return(0,j.useEffect)(()=>{if(!n)return;let e=setTimeout(()=>r(!1),l_);return()=>clearTimeout(e)},[n]),(0,Z.jsxs)(d_,{type:`button`,onClick:async()=>{try{await navigator.clipboard.writeText(e),r(!0)}catch{window.location.href=`mailto:${e}`}},"aria-label":`Copy email ${e}`,className:t,children:[(0,Z.jsx)(kp,{mode:`wait`,initial:!1,children:(0,Z.jsx)($.span,{initial:{opacity:0,y:6},animate:{opacity:1,y:0},exit:{opacity:0,y:-6},transition:{duration:.18},style:{display:`inline-flex`,alignItems:`center`,gap:`0.5rem`},children:n?(0,Z.jsxs)(Z.Fragment,{children:[`Email copied `,(0,Z.jsx)(Vg,{"aria-hidden":`true`})]}):(0,Z.jsxs)(Z.Fragment,{children:[e,` `,(0,Z.jsx)(Bg,{"aria-hidden":`true`})]})},n?`copied`:`idle`)}),(0,Z.jsx)(`span`,{role:`status`,className:`visually-hidden`,children:n?`Email copied to clipboard`:``})]})},d_=P.button`
+`,d_=2e3,f_=({email:e,label:t,className:n})=>{let[r,i]=(0,j.useState)(!1);return(0,j.useEffect)(()=>{if(!r)return;let e=setTimeout(()=>i(!1),d_);return()=>clearTimeout(e)},[r]),(0,Z.jsxs)(p_,{type:`button`,onClick:async()=>{try{await navigator.clipboard.writeText(e),i(!0)}catch{window.location.href=`mailto:${e}`}},"aria-label":`Copy email ${e}`,className:n,children:[(0,Z.jsx)(kp,{mode:`wait`,initial:!1,children:(0,Z.jsx)($.span,{initial:{opacity:0,y:6},animate:{opacity:1,y:0},exit:{opacity:0,y:-6},transition:{duration:.18},style:{display:`inline-flex`,alignItems:`center`,gap:`0.5rem`},children:r?(0,Z.jsxs)(Z.Fragment,{children:[`Email copied `,(0,Z.jsx)(Sg,{"aria-hidden":`true`})]}):(0,Z.jsxs)(Z.Fragment,{children:[t??e,` `,(0,Z.jsx)(xg,{"aria-hidden":`true`})]})},r?`copied`:`idle`)}),(0,Z.jsx)(`span`,{role:`status`,className:`visually-hidden`,children:r?`Email copied to clipboard`:``})]})},p_=P.button`
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
@@ -407,7 +331,7 @@ Error generating stack: `+e.message+`
   border-radius: var(--radius-control);
   background: var(--color-ink);
   color: var(--color-paper);
-  font: 500 var(--text-sm) / 1 var(--font-body);
+  font: 400 var(--text-sm) / 1 var(--font-body);
   cursor: pointer;
   transition: transform var(--duration-fast) var(--ease-out-expo),
     background-color var(--duration-fast) ease;
@@ -418,248 +342,286 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,f_=[.16,1,.3,1],p_=.15,m_=.045,h_=pg.flatMap(e=>e.text.split(` `).map(t=>({word:t,strong:e.strong}))),g_=p_+h_.length*m_,__=e=>({hidden:{opacity:0,y:16},shown:{opacity:1,y:0,transition:{delay:e,duration:.8,ease:f_}}}),v_=e=>({hidden:{y:`105%`,filter:`blur(8px)`},shown:{y:`0%`,filter:`blur(0px)`,transition:{delay:p_+e*m_,duration:.9,ease:f_}}}),y_={hidden:{clipPath:`inset(100% 0% 0% 0%)`},shown:{clipPath:`inset(0% 0% 0% 0%)`,transition:{delay:.25,duration:1.2,ease:f_}}},b_=({imageSrc:e,imageAlt:t=``,caption:n,hotspots:r})=>{let i=!Nh()&&`hidden`;return(0,Z.jsx)(x_,{id:`home`,"aria-labelledby":`hero-heading`,children:(0,Z.jsxs)(S_,{initial:i,animate:`shown`,children:[(0,Z.jsx)($.div,{variants:__(0),children:(0,Z.jsx)(bg,{})}),(0,Z.jsxs)(C_,{children:[(0,Z.jsxs)(w_,{children:[(0,Z.jsxs)(T_,{variants:__(.05),children:[`Hi there, I’m `,(0,Z.jsx)(`strong`,{children:sg})]}),(0,Z.jsx)(E_,{id:`hero-heading`,children:h_.map(({word:e,strong:t},n)=>(0,Z.jsxs)(j.Fragment,{children:[(0,Z.jsx)(D_,{children:(0,Z.jsx)(O_,{variants:v_(n),$strong:t,children:e})}),` `]},`${e}-${n}`))}),(0,Z.jsxs)(k_,{variants:__(g_),children:[(0,Z.jsxs)(A_,{children:[(0,Z.jsx)(j_,{children:`Socials`}),(0,Z.jsx)(M_,{children:mg.map(({label:e,href:t})=>(0,Z.jsx)(`li`,{children:(0,Z.jsx)(P_,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:e})},e))})]}),(0,Z.jsxs)(A_,{children:[(0,Z.jsx)(j_,{children:`Focus`}),(0,Z.jsx)(M_,{children:hg.map(e=>(0,Z.jsx)(`li`,{children:e},e))})]}),(0,Z.jsxs)(A_,{children:[(0,Z.jsx)(j_,{children:`Get in touch`}),(0,Z.jsxs)(N_,{children:[(0,Z.jsx)(u_,{email:lg}),(0,Z.jsx)(P_,{href:ug,target:`_blank`,rel:`noopener noreferrer`,children:`View CV`})]})]})]})]}),(0,Z.jsx)(F_,{variants:y_,children:(0,Z.jsx)(t_,{src:e,alt:t,caption:n,hotspots:r})})]})]})})},x_=P.section`
+`,m_=[.16,1,.3,1],h_=.032,g_=.045,__=[...Lg.name],v_=.4+__.length*h_,y_=v_-.05,b_=v_+.1,x_=Rg.split(` `),S_=b_+x_.length*g_,C_=e=>({hidden:{opacity:0,y:12},shown:{opacity:1,y:0,transition:{delay:e,duration:.8,ease:m_}}}),w_=e=>({hidden:{opacity:0,y:`0.35em`,filter:`blur(12px)`},shown:{opacity:1,y:`0em`,filter:`blur(0px)`,transition:{delay:.4+e*h_,duration:.9,ease:m_}}}),T_=e=>({hidden:{opacity:0,filter:`blur(10px)`},shown:{opacity:1,filter:`blur(0px)`,transition:{delay:b_+e*g_,duration:.9,ease:m_}}}),E_={hidden:{pathLength:0,opacity:0},shown:{pathLength:1,opacity:1,transition:{pathLength:{delay:y_,duration:1.1,ease:[.65,0,.35,1]},opacity:{delay:y_,duration:.2}}}},D_={hidden:{opacity:0,scale:0},shown:{opacity:1,scale:1,transition:{delay:y_+1,duration:.5,ease:m_}}},O_=({flyerSrc:e,flyerStill:t,flyerAlt:n=``})=>{let r=Nh();return(0,Z.jsx)(k_,{id:`home`,"aria-labelledby":`hero-heading`,children:(0,Z.jsxs)(A_,{initial:!r&&`hidden`,animate:`shown`,children:[(0,Z.jsx)($.div,{variants:C_(0),children:(0,Z.jsx)(Wg,{})}),(0,Z.jsxs)(j_,{children:[(0,Z.jsxs)(M_,{children:[(0,Z.jsx)(N_,{variants:C_(.1),children:Ig}),(0,Z.jsxs)(P_,{id:`hero-heading`,"aria-label":`${Lg.lead} ${Lg.name}.`,children:[(0,Z.jsx)($.span,{className:`lead`,variants:w_(-3),"aria-hidden":`true`,children:Lg.lead}),(0,Z.jsxs)(`span`,{className:`full`,"aria-hidden":`true`,children:[__.map((e,t)=>e===` `?(0,Z.jsx)(`span`,{className:`space`,children:` `},t):(0,Z.jsx)($.span,{className:`ch`,variants:w_(t),children:e},t)),(0,Z.jsx)($.span,{className:`ch dot`,variants:w_(__.length),children:`.`}),(0,Z.jsxs)(F_,{viewBox:`0 0 600 60`,preserveAspectRatio:`none`,"aria-hidden":`true`,children:[(0,Z.jsx)(`defs`,{children:(0,Z.jsxs)(`linearGradient`,{id:`hero-swoosh`,x1:`0`,x2:`1`,y1:`0`,y2:`0`,children:[(0,Z.jsx)(`stop`,{offset:`0`,stopColor:`#3fa2f7`,stopOpacity:`0.15`}),(0,Z.jsx)(`stop`,{offset:`0.45`,stopColor:`#3fa2f7`}),(0,Z.jsx)(`stop`,{offset:`1`,stopColor:`#f2a500`})]})}),(0,Z.jsx)($.path,{d:`M4 46 C 150 62, 380 54, 590 10`,fill:`none`,stroke:`url(#hero-swoosh)`,strokeWidth:`5`,strokeLinecap:`round`,vectorEffect:`non-scaling-stroke`,variants:E_})]}),(0,Z.jsx)(I_,{variants:D_})]})]}),(0,Z.jsx)(L_,{children:x_.map((e,t)=>(0,Z.jsxs)(j.Fragment,{children:[(0,Z.jsx)($.span,{variants:T_(t),children:e}),` `]},`${e}-${t}`))}),(0,Z.jsx)(R_,{variants:C_(S_),children:zg}),(0,Z.jsxs)(z_,{variants:C_(S_+.1),children:[(0,Z.jsx)(f_,{email:Mg}),(0,Z.jsxs)(B_,{href:Ng,target:`_blank`,rel:`noopener noreferrer`,children:[`View CV `,(0,Z.jsx)(Dg,{"aria-hidden":`true`})]})]}),(0,Z.jsx)(V_,{variants:C_(S_+.18),"aria-label":`Social profiles`,children:Bg.map(({label:e,href:t})=>(0,Z.jsxs)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:[e,` `,(0,Z.jsx)(wg,{"aria-hidden":`true`})]},e))})]}),(0,Z.jsx)(H_,{children:(0,Z.jsx)(r_,{src:e,still:t,alt:n})})]}),(0,Z.jsxs)(W_,{variants:C_(S_+.25),"aria-label":`Nimbus V4 design specifications`,children:[(0,Z.jsxs)(U_,{children:[(0,Z.jsx)(`span`,{children:`Nimbus V4`}),`Design values`]}),(0,Z.jsx)(G_,{children:Hg.map(({value:e,label:t},n)=>(0,Z.jsxs)(`div`,{children:[(0,Z.jsxs)(`dt`,{children:[(0,Z.jsx)(`span`,{className:`i`,children:String(n+1).padStart(2,`0`)}),t]}),(0,Z.jsx)(`dd`,{children:e})]},t))})]})]})})},k_=P.section`
   position: relative;
   z-index: 1;
   min-height: 100svh;
-  padding: calc(var(--nav-offset) + var(--nav-height) + clamp(1.25rem, 1rem + 1.5vw, 2.5rem))
-    var(--space-gutter) var(--space-section);
+  padding: calc(var(--nav-offset) + var(--nav-height) + clamp(1rem, 0.75rem + 1vw, 1.75rem))
+    var(--space-gutter) clamp(2rem, 1.5rem + 2vw, 3.5rem);
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
-`,S_=P($.div)`
+  overflow-x: clip;
+`,A_=P($.div)`
   max-width: var(--content-max);
   margin: 0 auto;
-`,C_=P.div`
+  min-height: calc(100svh - var(--nav-offset) - var(--nav-height) - 4rem);
+  display: flex;
+  flex-direction: column;
+`,j_=P.div`
+  flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
-  gap: clamp(2rem, 1rem + 4vw, 5rem);
-  align-items: end;
-  margin-top: clamp(3rem, 1.5rem + 7vw, 8rem);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: clamp(1.5rem, 1rem + 3vw, 4rem);
+  padding: clamp(2rem, 1rem + 4vw, 5rem) 0 clamp(1.5rem, 1rem + 2vw, 3rem);
 
   @media (max-width: 900px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,w_=P.div`
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
-
-  @media (max-width: 900px) {
-    display: contents;
-  }
-`,T_=P($.p)`
-  font-size: var(--text-lead);
-  color: var(--color-ink-soft);
-
-  strong {
-    font-weight: 700;
-    color: var(--color-ink);
-  }
-`,E_=P.h1`
-  font-family: var(--font-display);
-  font-size: var(--text-hero);
-  font-weight: 700;
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-  max-width: 17ch;
-  text-wrap: balance;
-`,D_=P.span`
-  display: inline-block;
-  overflow: hidden;
-  /* room for descenders inside the mask */
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
-  vertical-align: top;
-`,O_=P($.span)`
-  display: inline-block;
-  color: ${({$strong:e})=>e?`var(--color-ink)`:`var(--color-ink-muted)`};
-`,k_=P($.div)`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, auto));
-  justify-content: start;
-  gap: 1.5rem clamp(2rem, 1rem + 3vw, 4rem);
-  padding-top: clamp(1rem, 0.5rem + 2vw, 2.5rem);
-  border-top: 1px solid var(--color-line);
-
-  @media (max-width: 900px) {
-    order: 3;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: minmax(0, 1fr);
-  }
-`,A_=P.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  font-size: var(--text-base);
-`,j_=P.h2`
-  font-size: var(--text-label);
-  font-weight: 400;
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
-`,M_=P.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-`,N_=P.div`
+`,M_=P.div`
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.875rem;
-`,P_=P.a`
-  position: relative;
-  color: var(--color-ink);
-  text-decoration: none;
+  gap: clamp(1.1rem, 0.9rem + 0.8vw, 1.6rem);
+`,N_=P($.p)`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
 
-  &::after {
+  &::before {
     content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 1px;
+    width: 2rem;
+    height: 2px;
     background: var(--color-amber);
-    transform: scaleX(0);
-    transform-origin: right;
+  }
+`,P_=P.h1`
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+
+  .lead {
+    display: inline-block;
+    font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.2rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--color-ink-soft);
+  }
+
+  .full {
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    padding-bottom: 0.32em; /* room for the swoosh */
+    font-size: clamp(2.9rem, 1.5rem + 4.1vw, 5.1rem);
+    white-space: nowrap;
+  }
+
+  .ch {
+    display: inline-block;
+  }
+
+  .space {
+    display: inline-block;
+    width: 0.24em;
+  }
+
+  .dot {
+    color: var(--color-amber);
+  }
+
+  @media (max-width: 420px) {
+    .full {
+      white-space: normal;
+    }
+  }
+`,F_=P.svg`
+  position: absolute;
+  left: -2%;
+  right: -4%;
+  bottom: 0;
+  width: 106%;
+  height: 0.42em;
+  overflow: visible;
+  pointer-events: none;
+`,I_=P($.span)`
+  position: absolute;
+  right: -4.5%;
+  bottom: 0.27em;
+  width: 0.16em;
+  height: 0.16em;
+  background: var(--color-amber);
+  clip-path: polygon(50% 0, 100% 100%, 50% 72%, 0 100%);
+  transform-origin: center;
+  rotate: 62deg;
+`,L_=P.p`
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 1.05rem + 1.4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  text-wrap: balance;
+
+  span {
+    display: inline-block;
+  }
+`,R_=P($.p)`
+  max-width: 40ch;
+  font-size: var(--text-lead);
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+`,z_=P($.div)`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+`,B_=P.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-control);
+  color: var(--color-ink);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) ease, color var(--duration-fast) ease,
+    transform var(--duration-fast) var(--ease-out-expo);
+
+  svg {
     transition: transform var(--duration-normal) var(--ease-out-expo);
   }
 
-  &:hover::after,
-  &:focus-visible::after {
-    transform: scaleX(1);
-    transform-origin: left;
+  &:hover {
+    background: var(--color-amber);
+    border-color: var(--color-amber);
+  }
+
+  &:hover svg {
+    transform: translate(2px, 2px);
+  }
+
+  &:active {
+    transform: scale(0.97);
   }
 
   &:focus-visible {
     outline: 2px solid var(--color-ink);
-    outline-offset: 4px;
-    border-radius: 2px;
+    outline-offset: 3px;
   }
-`,F_=P($.div)`
+`,V_=P($.nav)`
+  display: flex;
+  gap: 1.25rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--color-ink-soft);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+  }
+
+  a:hover {
+    color: var(--color-ink);
+    border-color: var(--color-amber);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+`,H_=P.div`
+  /* let the aircraft run past the content edge toward the viewport edge */
+  margin-right: calc(-1 * min(var(--space-gutter), 4rem));
+
   @media (max-width: 900px) {
-    order: 2;
-    width: min(100%, 26rem);
+    margin-right: 0;
   }
-`,I_=e=>Math.min(1,Math.max(0,e)),L_=(e,{height:t,centerX:n,amplitude:r})=>{let i=I_(e);return{x:n+r*Math.sin(2*Math.PI*i),y:i*t}},R_=(e,t)=>{if(e<2)throw RangeError(`A trail needs at least 2 dots, got ${e}`);return Array.from({length:e},(n,r)=>L_(r/(e-1),t))},z_=(e,t)=>t>0?I_(e/t):0,B_=[{id:`home`,label:`Intro`},{id:`work`,label:`Nimbus V4`},{id:`projects`,label:`Projects`},{id:`experience`,label:`Experience`},{id:`contact`,label:`Contact`}],V_=16,H_={height:220,centerX:V_/2,amplitude:3.5},U_=23,W_=1.6,G_=3.25,K_=.002,q_={stiffness:140,damping:26,restDelta:5e-4},J_=R_(U_,H_),Y_=`(min-width: 1120px)`,X_=`(max-width: 1119px)`,Z_=()=>{let[e,t]=(0,j.useState)([]);return(0,j.useEffect)(()=>{let e=()=>{let e=document.documentElement.scrollHeight-window.innerHeight,n=B_.flatMap(({id:t,label:n})=>{let r=document.getElementById(t);return r?[{id:t,label:n,fraction:z_(r.getBoundingClientRect().top+window.scrollY,e)}]:[]});t([...n].sort((e,t)=>e.fraction-t.fraction))};e(),window.addEventListener(`resize`,e),window.addEventListener(`load`,e);let n=typeof ResizeObserver<`u`?new ResizeObserver(e):null;return n?.observe(document.body),()=>{window.removeEventListener(`resize`,e),window.removeEventListener(`load`,e),n?.disconnect()}},[]),e},Q_=.25,$_=Array.from({length:21},(e,t)=>t/20),ev=()=>{let[e,t]=(0,j.useState)(!1);return(0,j.useEffect)(()=>{let e=document.querySelectorAll(`[data-hide-trail]`);if(!e.length||typeof IntersectionObserver>`u`)return;let n=new Set,r=new IntersectionObserver(e=>{e.forEach(e=>e.isIntersecting&&e.intersectionRect.height>=window.innerHeight*Q_?n.add(e.target):n.delete(e.target)),t(n.size>0)},{threshold:$_});return e.forEach(e=>r.observe(e)),()=>r.disconnect()},[]),e},tv=()=>{let e=ev(),t=`trail-${(0,j.useId)().replace(/[^a-zA-Z0-9]/g,``)}`,n=Nh(),{scrollYProgress:r}=Th(),i=Ah(r,q_),a=Q(n?r:i,e=>Math.min(1,Math.max(0,e))),o=Z_(),[s,c]=(0,j.useState)(0),l=e=>o.filter(t=>e+K_>=t.fraction).length;Hm(a,`change`,e=>c(l(e))),(0,j.useEffect)(()=>{c(l(a.get()))},[o]);let u=Q(a,e=>e*H_.height),d=Q(a,e=>L_(e,H_).x),f=Q(a,e=>L_(e,H_).y),p=e=>{document.getElementById(e)?.scrollIntoView({behavior:n?`auto`:`smooth`,block:`start`})};return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsxs)(nv,{$isHidden:e,children:[(0,Z.jsxs)(`svg`,{"aria-hidden":`true`,width:V_,height:H_.height,viewBox:`0 0 ${V_} ${H_.height}`,overflow:`visible`,children:[(0,Z.jsx)(`defs`,{children:(0,Z.jsx)(`clipPath`,{id:t,children:(0,Z.jsx)($.rect,{x:-8,y:0,width:32,height:u})})}),(0,Z.jsx)(`g`,{fill:`var(--t-idle)`,children:J_.map(({x:e,y:t})=>(0,Z.jsx)(`circle`,{"data-trail":`dot`,cx:e,cy:t,r:W_},t))}),(0,Z.jsx)(`g`,{fill:`var(--t-done)`,clipPath:`url(#${t})`,children:J_.map(({x:e,y:t})=>(0,Z.jsx)(`circle`,{cx:e,cy:t,r:W_},t))}),(0,Z.jsx)(rv,{cx:d,cy:f,r:4})]}),o.map(({id:e,label:t,fraction:n},r)=>{let{x:i,y:a}=L_(n,H_);return(0,Z.jsx)(iv,{type:`button`,"aria-label":`Go to ${t}`,style:{left:i,top:a},$isReached:r<s,onClick:()=>p(e),children:(0,Z.jsx)(av,{"aria-hidden":`true`,children:t})},e)})]}),(0,Z.jsx)(ov,{"aria-hidden":`true`,style:{scaleX:a}})]})},nv=P.nav.attrs({"aria-label":`Page sections`})`
-  position: fixed;
-  z-index: 40;
-  top: 50%;
-  /* centre of the empty margin left of the content column */
-  left: calc(
-    (max(var(--space-gutter), (100vw - var(--content-max)) / 2) - ${V_}px) / 2
-  );
-  width: ${V_}px;
-  height: ${H_.height}px;
-  transform: translateY(-50%);
+`,U_=P.p`
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-line);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
 
-  /* Difference blending inverts the trail against whatever is behind it, so it
-     reads dark on light sections and light on dark ones. Colours below are
-     therefore authored inverted: white renders as ink on a white page. */
-  mix-blend-mode: difference;
-  opacity: ${({$isHidden:e})=>+!e};
-  visibility: ${({$isHidden:e})=>e?`hidden`:`visible`};
-  transition: opacity 0.4s ease, visibility 0.4s;
-  --t-done: #ffffff;
-  --t-idle: #393939;
-  --t-idle-strong: #616161;
-  --t-hole: #000000;
-
-  @media ${X_} {
-    display: none;
+  span {
+    color: var(--color-ink);
+    font-weight: 700;
   }
-`,rv=P($.circle)`
-  fill: var(--t-done);
-  stroke: var(--t-hole);
-  stroke-width: 2;
-`,iv=P.button`
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
+`,W_=P($.section)`
+  border-top: 1px solid var(--color-ink);
+`,G_=P.dl`
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
-  /* visible dot */
-  &::before {
-    content: '';
-    position: absolute;
-    inset: calc(50% - ${G_}px);
-    border-radius: 50%;
-    background: var(--t-hole);
-    box-shadow: inset 0 0 0 1.5px
-      ${({$isReached:e})=>e?`var(--t-done)`:`var(--t-idle-strong)`};
-    transition: transform var(--duration-fast) var(--ease-out-expo), box-shadow var(--duration-normal) ease;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.9rem 1rem 0 0;
   }
 
-  &:hover::before,
-  &:focus-visible::before {
-    transform: scale(1.5);
+  div + div {
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-line);
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--t-done);
-    outline-offset: 1px;
+  dt {
+    display: flex;
+    gap: 0.6rem;
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
   }
-`,av=P.span`
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 6px);
-  padding: 4px 8px;
-  border-radius: 6px;
-  background: var(--t-done);
-  color: var(--t-hole);
-  font: 500 12px / 1 var(--font-body);
-  white-space: nowrap;
-  opacity: 0;
-  transform: translate(-4px, -50%);
-  transition: opacity var(--duration-fast) ease, transform var(--duration-normal) var(--ease-out-expo);
-  pointer-events: none;
 
-  ${iv}:hover &,
-  ${iv}:focus-visible & {
-    opacity: 1;
-    transform: translate(0, -50%);
+  .i {
+    color: var(--color-amber-ink);
+    font-variant-numeric: tabular-nums;
   }
-`,ov=P($.div)`
-  position: fixed;
-  z-index: 60;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #ffffff;
-  mix-blend-mode: difference;
-  opacity: ${({$isHidden:e})=>+!e};
-  visibility: ${({$isHidden:e})=>e?`hidden`:`visible`};
-  transition: opacity 0.4s ease, visibility 0.4s;
-  transform-origin: 0 50%;
-  pointer-events: none;
 
-  @media ${Y_} {
-    display: none;
+  dd {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
   }
-`,sv=e=>Math.min(1,Math.max(0,e)),cv=(e,t,[n,r])=>n+e/t*(r-n),lv=(e,t,n)=>{let[r,i]=n,a=sv((e-r)/(i-r));return Math.min(t-1,Math.floor(a*t))},uv=(e,t,n,r)=>{let i=e===0,a=e===t-1,o=cv(e,t,n),s=cv(e+1,t,n),c=i?{input:[0],opacity:[1]}:{input:[o-r,o],opacity:[0,1]},l=a?{input:[1],opacity:[1]}:{input:[s-r,s],opacity:[1,0]};return{input:[...c.input,...l.input],opacity:[...c.opacity,...l.opacity]}},dv=(e,t,[n,r])=>{let i=(r-n)/t;return{start:n+e*i,end:n+(e+1)*i,length:i}},fv=({poses:e,intro:t,outro:n,range:r,transition:i})=>{let a=Object.keys(t),o=[0],s=Object.fromEntries(a.map(e=>[e,[t[e]]]));return e.forEach(({from:t,to:n},c)=>{let{start:l,end:u,length:d}=dv(c,e.length,r);o.push(l+i*d,u-i/2*d),a.forEach(e=>s[e].push(t[e],n[e]))}),o.push(1),a.forEach(e=>s[e].push(n[e])),{input:o,values:s}},pv=(e,t,n)=>{let{start:r,length:i}=dv(e,t,n);return{input:[r+.22*i,r+.42*i,r+.78*i,r+.9*i],lift:[0,1,1,0]}},mv=(e,t,n)=>{let{start:r,end:i,length:a}=dv(e,t,n);return{input:[r,r+.18*a,i-.18*a,i],opacity:[0,1,1,0]}},hv=`/assets/screen-cad-DlyF1eJb.webp`,gv=`/assets/screen-sizing-pViXz-Kg.webp`,_v=`/assets/screen-thrust-DJ9raEv0.webp`,vv=`/assets/screen-build-798Y3fkv.webp`,yv=`/assets/screen-flight-PzquH31_.webp`,bv={name:`Nimbus V4`,slug:`nimbus-v4`,summary:`An autonomous flying-wing cargo aircraft, optimized for a package delivery competition’s profit score, then built and flight-tested.`,role:`Team lead`,timeline:`Mar – Jun 2026`,url:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`,urlLabel:`the code on GitHub`},xv=[{title:`Flying-wing architecture`,body:`Swept wing, blended lifting-body fuselage and twin fins, integrated into one composite airframe.`,word:`Nimbus`,screen:hv,alt:`Nimbus V4 CAD assembly: swept flying wing with a lifting-body cargo fuselage`,focus:{x:.32,y:.38,w:.28,h:.34}},{title:`Sized to the constraints`,body:`A MATLAB–AVL workflow and CMA-ES optimizer ran 13,000+ evaluations to land the design point.`,word:`Sizing`,screen:gv,alt:`Constraint diagram of thrust loading against wing loading, with the design point marked`,focus:{x:.765,y:.57,w:.18,h:.16}},{title:`Propulsion characterized`,body:`Thrust modelled against airspeed for the 10×4.7 propeller, then checked on the bench.`,word:`Thrust`,screen:_v,alt:`Plot of thrust against flight speed for a 10 by 4.7 propeller`,focus:{x:.07,y:.12,w:.26,h:.26}},{title:`Built by the team`,body:`CAD-driven manufacturing, propulsion bench tests and system integration at the field.`,word:`Build`,screen:vv,alt:`The team preparing the Nimbus airframe on a field table`,focus:{x:.28,y:.6,w:.5,h:.3}},{title:`Flight day`,body:`Ground-roll tested and flown at Mission Bay Park, San Diego.`,word:`Flight`,screen:yv,alt:`The Nimbus team standing behind the aircraft at the flight field`,focus:{x:.2,y:.7,w:.62,h:.26}}],Sv=[.07,.95],Cv=.24,wv=`1180 / 820`,Tv=12,Ev=.08,Dv=90,Ov=.06,kv=.55,Av={rotateX:58,rotateY:0,rotateZ:-32,scale:.8},jv={rotateX:40,rotateY:2,rotateZ:-18,scale:.9},Mv=[{from:{rotateX:14,rotateY:10,rotateZ:-8,scale:.98},to:{rotateX:10,rotateY:6,rotateZ:-6,scale:1}},{from:{rotateX:20,rotateY:-16,rotateZ:6,scale:1},to:{rotateX:16,rotateY:-11,rotateZ:4,scale:1}},{from:{rotateX:8,rotateY:18,rotateZ:-4,scale:1},to:{rotateX:6,rotateY:13,rotateZ:-3,scale:1}},{from:{rotateX:24,rotateY:-6,rotateZ:-10,scale:1},to:{rotateX:20,rotateY:-3,rotateZ:-8,scale:1}},{from:{rotateX:12,rotateY:2,rotateZ:-3,scale:1},to:{rotateX:9,rotateY:0,rotateZ:-2,scale:1}}],Nv={rotateX:10,rotateY:-2,rotateZ:-5,scale:1},Pv=xv.length,Fv=e=>`${(e*100).toFixed(3)}%`,Iv=({x:e,y:t,w:n,h:r})=>`${Fv(e+n/2)} ${Fv(t+r/2)}`,Lv=({index:e,progress:t,isReducedMotion:n})=>{let{screen:r,alt:i,focus:a}=xv[e],{x:o,y:s,w:c,h:l}=a,{length:u}=dv(e,Pv,Sv),d=uv(e,Pv,Sv,Cv/2*u),f=Q(t,d.input,d.opacity),p=Q(f,e=>n||e>=.999?`none`:`blur(${((1-e)*Tv).toFixed(2)}px)`),m=pv(e,Pv,Sv),h=Q(t,m.input,m.lift),g=Q(h,e=>n?1:1+Ev*e),_=Q(h,e=>e*kv),v=Q(h,e=>n?0:e*Dv),y=Q(h,e=>n?1:(1+Ev*e)*(1+Ov*e)),b=Q(h,[0,.15,1],[0,1,1]),x=Q(h,e=>`0 ${(e*36).toFixed(1)}px ${(e*60).toFixed(1)}px -12px rgba(0, 0, 0, ${(e*.55).toFixed(3)})`);return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(Qv,{children:(0,Z.jsxs)($v,{style:{opacity:f,filter:p,scale:g,transformOrigin:Iv(a)},children:[(0,Z.jsx)(ey,{src:r,alt:i,width:2360,height:1640,loading:`lazy`,decoding:`async`}),(0,Z.jsx)(ty,{"aria-hidden":`true`,style:{opacity:_}}),(0,Z.jsx)(ny,{"aria-hidden":`true`,style:{left:Fv(o),top:Fv(s),width:Fv(c),height:Fv(l),opacity:h}})]})}),(0,Z.jsx)(ry,{"aria-hidden":`true`,children:(0,Z.jsx)(iy,{style:{left:Fv(o),top:Fv(s),width:Fv(c),height:Fv(l),backgroundImage:`url(${r})`,backgroundSize:`${Fv(1/c)} ${Fv(1/l)}`,backgroundPosition:`${Fv(o/(1-c))} ${Fv(s/(1-l))}`,z:v,scale:y,opacity:b,boxShadow:x}})})]})},Rv=({index:e,progress:t,isReducedMotion:n})=>{let{word:r}=xv[e],{start:i,end:a}=dv(e,Pv,Sv),o=mv(e,Pv,Sv),s=Q(t,o.input,o.opacity),c=Q(t,[i,a],n?[`0%`,`0%`]:[`8%`,`-8%`]);return(0,Z.jsx)(Gv,{"aria-hidden":`true`,style:{opacity:s,x:c},children:r})},zv=fv({poses:Mv,intro:Av,outro:jv,range:Sv,transition:Cv}),Bv=(e,t)=>{let{input:n,values:r}=zv,i=Q(e,n,r.rotateX),a=Q(e,n,r.rotateY),o=Q(e,n,r.rotateZ),s=Q(e,n,r.scale);return t?Nv:{rotateX:i,rotateY:a,rotateZ:o,scale:s}},Vv=({progress:e,isReducedMotion:t})=>{let n=Bv(e,t),r=Q(e,[0,1],[`-60%`,`60%`]);return(0,Z.jsxs)(Hv,{children:[(0,Z.jsx)(Wv,{children:xv.map((n,r)=>(0,Z.jsx)(Rv,{index:r,progress:e,isReducedMotion:t},n.word))}),(0,Z.jsx)(Kv,{children:(0,Z.jsxs)(Xv,{style:n,children:[xv.map((n,r)=>(0,Z.jsx)(Lv,{index:r,progress:e,isReducedMotion:t},n.title)),(0,Z.jsx)(ay,{"aria-hidden":`true`,children:(0,Z.jsx)(oy,{style:{x:r}})}),(0,Z.jsx)(sy,{"aria-hidden":`true`,$side:`left`,children:Yv.left.map(e=>(0,Z.jsx)(`i`,{children:e},e))}),(0,Z.jsx)(sy,{"aria-hidden":`true`,$side:`right`,children:Yv.right.map(e=>(0,Z.jsx)(`i`,{children:e},e))}),(0,Z.jsx)(cy,{"aria-hidden":`true`})]})})]})},Hv=P.div`
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 1.25rem;
+
+    div:nth-child(3) {
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+`,K_=e=>Math.min(1,Math.max(0,e)),q_=(e,t,[n,r])=>n+e/t*(r-n),J_=(e,t,n)=>{let[r,i]=n,a=K_((e-r)/(i-r));return Math.min(t-1,Math.floor(a*t))},Y_=(e,t,n,r)=>{let i=e===0,a=e===t-1,o=q_(e,t,n),s=q_(e+1,t,n),c=i?{input:[0],opacity:[1]}:{input:[o-r,o],opacity:[0,1]},l=a?{input:[1],opacity:[1]}:{input:[s-r,s],opacity:[1,0]};return{input:[...c.input,...l.input],opacity:[...c.opacity,...l.opacity]}},X_=(e,t,[n,r])=>{let i=(r-n)/t;return{start:n+e*i,end:n+(e+1)*i,length:i}},Z_=({poses:e,intro:t,outro:n,range:r,transition:i})=>{let a=Object.keys(t),o=[0],s=Object.fromEntries(a.map(e=>[e,[t[e]]]));return e.forEach(({from:t,to:n},c)=>{let{start:l,end:u,length:d}=X_(c,e.length,r);o.push(l+i*d,u-i/2*d),a.forEach(e=>s[e].push(t[e],n[e]))}),o.push(1),a.forEach(e=>s[e].push(n[e])),{input:o,values:s}},Q_=(e,t,n)=>{let{start:r,length:i}=X_(e,t,n);return{input:[r+.22*i,r+.42*i,r+.78*i,r+.9*i],lift:[0,1,1,0]}},$_=(e,t,n)=>{let{start:r,end:i,length:a}=X_(e,t,n);return{input:[r,r+.18*a,i-.18*a,i],opacity:[0,1,1,0]}},ev=`/assets/screen-cad-DlyF1eJb.webp`,tv=`/assets/screen-sizing-pViXz-Kg.webp`,nv=`/assets/screen-thrust-DJ9raEv0.webp`,rv=`/assets/screen-build-798Y3fkv.webp`,iv=`/assets/screen-flight-PzquH31_.webp`,av={name:`Nimbus V4`,slug:`nimbus-v4`,summary:`An autonomous flying-wing cargo aircraft, optimized for a package delivery competition’s profit score, then built and flight-tested.`,role:`Team lead`,timeline:`Mar – Jun 2026`,url:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`,urlLabel:`the code on GitHub`},ov=[{title:`Flying-wing architecture`,body:`Swept wing, blended lifting-body fuselage and twin fins, integrated into one composite airframe.`,word:`Nimbus`,screen:ev,alt:`Nimbus V4 CAD assembly: swept flying wing with a lifting-body cargo fuselage`,focus:{x:.32,y:.38,w:.28,h:.34}},{title:`Sized to the constraints`,body:`A MATLAB–AVL workflow and CMA-ES optimizer ran 13,000+ evaluations to land the design point.`,word:`Sizing`,screen:tv,alt:`Constraint diagram of thrust loading against wing loading, with the design point marked`,focus:{x:.765,y:.57,w:.18,h:.16}},{title:`Propulsion characterized`,body:`Thrust modelled against airspeed for the 10×4.7 propeller, then checked on the bench.`,word:`Thrust`,screen:nv,alt:`Plot of thrust against flight speed for a 10 by 4.7 propeller`,focus:{x:.07,y:.12,w:.26,h:.26}},{title:`Built by the team`,body:`CAD-driven manufacturing, propulsion bench tests and system integration at the field.`,word:`Build`,screen:rv,alt:`The team preparing the Nimbus airframe on a field table`,focus:{x:.28,y:.6,w:.5,h:.3}},{title:`Flight day`,body:`Ground-roll tested and flown at Mission Bay Park, San Diego.`,word:`Flight`,screen:iv,alt:`The Nimbus team standing behind the aircraft at the flight field`,focus:{x:.2,y:.7,w:.62,h:.26}}],sv=[.07,.95],cv=.24,lv=`1180 / 820`,uv=12,dv=.08,fv=90,pv=.06,mv=.55,hv={rotateX:58,rotateY:0,rotateZ:-32,scale:.8},gv={rotateX:40,rotateY:2,rotateZ:-18,scale:.9},_v=[{from:{rotateX:14,rotateY:10,rotateZ:-8,scale:.98},to:{rotateX:10,rotateY:6,rotateZ:-6,scale:1}},{from:{rotateX:20,rotateY:-16,rotateZ:6,scale:1},to:{rotateX:16,rotateY:-11,rotateZ:4,scale:1}},{from:{rotateX:8,rotateY:18,rotateZ:-4,scale:1},to:{rotateX:6,rotateY:13,rotateZ:-3,scale:1}},{from:{rotateX:24,rotateY:-6,rotateZ:-10,scale:1},to:{rotateX:20,rotateY:-3,rotateZ:-8,scale:1}},{from:{rotateX:12,rotateY:2,rotateZ:-3,scale:1},to:{rotateX:9,rotateY:0,rotateZ:-2,scale:1}}],vv={rotateX:10,rotateY:-2,rotateZ:-5,scale:1},yv=ov.length,bv=e=>`${(e*100).toFixed(3)}%`,xv=({x:e,y:t,w:n,h:r})=>`${bv(e+n/2)} ${bv(t+r/2)}`,Sv=({index:e,progress:t,isReducedMotion:n})=>{let{screen:r,alt:i,focus:a}=ov[e],{x:o,y:s,w:c,h:l}=a,{length:u}=X_(e,yv,sv),d=Y_(e,yv,sv,cv/2*u),f=Q(t,d.input,d.opacity),p=Q(f,e=>n||e>=.999?`none`:`blur(${((1-e)*uv).toFixed(2)}px)`),m=Q_(e,yv,sv),h=Q(t,m.input,m.lift),g=Q(h,e=>n?1:1+dv*e),_=Q(h,e=>e*mv),v=Q(h,e=>n?0:e*fv),y=Q(h,e=>n?1:(1+dv*e)*(1+pv*e)),b=Q(h,[0,.15,1],[0,1,1]),x=Q(h,e=>`0 ${(e*36).toFixed(1)}px ${(e*60).toFixed(1)}px -12px rgba(0, 0, 0, ${(e*.55).toFixed(3)})`);return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(Lv,{children:(0,Z.jsxs)(Rv,{style:{opacity:f,filter:p,scale:g,transformOrigin:xv(a)},children:[(0,Z.jsx)(zv,{src:r,alt:i,width:2360,height:1640,loading:`lazy`,decoding:`async`}),(0,Z.jsx)(Bv,{"aria-hidden":`true`,style:{opacity:_}}),(0,Z.jsx)(Vv,{"aria-hidden":`true`,style:{left:bv(o),top:bv(s),width:bv(c),height:bv(l),opacity:h}})]})}),(0,Z.jsx)(Hv,{"aria-hidden":`true`,children:(0,Z.jsx)(Uv,{style:{left:bv(o),top:bv(s),width:bv(c),height:bv(l),backgroundImage:`url(${r})`,backgroundSize:`${bv(1/c)} ${bv(1/l)}`,backgroundPosition:`${bv(o/(1-c))} ${bv(s/(1-l))}`,z:v,scale:y,opacity:b,boxShadow:x}})})]})},Cv=({index:e,progress:t,isReducedMotion:n})=>{let{word:r}=ov[e],{start:i,end:a}=X_(e,yv,sv),o=$_(e,yv,sv),s=Q(t,o.input,o.opacity),c=Q(t,[i,a],n?[`0%`,`0%`]:[`8%`,`-8%`]);return(0,Z.jsx)(Av,{"aria-hidden":`true`,style:{opacity:s,x:c},children:r})},wv=Z_({poses:_v,intro:hv,outro:gv,range:sv,transition:cv}),Tv=(e,t)=>{let{input:n,values:r}=wv,i=Q(e,n,r.rotateX),a=Q(e,n,r.rotateY),o=Q(e,n,r.rotateZ),s=Q(e,n,r.scale);return t?vv:{rotateX:i,rotateY:a,rotateZ:o,scale:s}},Ev=({progress:e,isReducedMotion:t})=>{let n=Tv(e,t),r=Q(e,[0,1],[`-60%`,`60%`]);return(0,Z.jsxs)(Dv,{children:[(0,Z.jsx)(kv,{children:ov.map((n,r)=>(0,Z.jsx)(Cv,{index:r,progress:e,isReducedMotion:t},n.word))}),(0,Z.jsx)(jv,{children:(0,Z.jsxs)(Fv,{style:n,children:[ov.map((n,r)=>(0,Z.jsx)(Sv,{index:r,progress:e,isReducedMotion:t},n.title)),(0,Z.jsx)(Wv,{"aria-hidden":`true`,children:(0,Z.jsx)(Gv,{style:{x:r}})}),(0,Z.jsx)(Kv,{"aria-hidden":`true`,$side:`left`,children:Pv.left.map(e=>(0,Z.jsx)(`i`,{children:e},e))}),(0,Z.jsx)(Kv,{"aria-hidden":`true`,$side:`right`,children:Pv.right.map(e=>(0,Z.jsx)(`i`,{children:e},e))}),(0,Z.jsx)(qv,{"aria-hidden":`true`})]})})]})},Dv=P.div`
   position: absolute;
   inset: 0;
   overflow: clip;
-`,Uv=`
+`,Ov=`
   position: absolute;
   /* parents position the tablet with --stage-top / --stage-left */
   inset: var(--stage-top, 0) 0 0 var(--stage-left, 0);
   display: grid;
   place-items: center;
-`,Wv=P.div`
-  ${Uv}
+`,kv=P.div`
+  ${Ov}
   pointer-events: none;
-`,Gv=P($.span)`
+`,Av=P($.span)`
   grid-area: 1 / 1;
   font-family: var(--font-display);
   font-size: clamp(5rem, 2rem + 14vw, 17rem);
@@ -669,15 +631,15 @@ Error generating stack: `+e.message+`
   color: var(--color-surface);
   white-space: nowrap;
   user-select: none;
-`,Kv=P.div`
-  ${Uv}
+`,jv=P.div`
+  ${Ov}
   perspective: 1800px;
-`,qv=`clamp(10px, 1.3vw, 18px)`,Jv=`clamp(22px, 3vw, 44px)`,Yv={left:[`GEO`,`AERO`,`PROP`,`STAB`],right:[`MASS`,`STRC`,`MSN`,`TEST`]},Xv=P($.div)`
+`,Mv=`clamp(10px, 1.3vw, 18px)`,Nv=`clamp(22px, 3vw, 44px)`,Pv={left:[`GEO`,`AERO`,`PROP`,`STAB`],right:[`MASS`,`STRC`,`MSN`,`TEST`]},Fv=P($.div)`
   position: relative;
   width: var(--tablet-width, min(46vw, 760px));
-  aspect-ratio: ${wv};
+  aspect-ratio: ${lv};
   box-sizing: content-box;
-  padding: ${qv} ${Jv};
+  padding: ${Mv} ${Nv};
   border-radius: clamp(6px, 0.8vw, 12px);
   /* anodised aluminium housing */
   background:
@@ -690,46 +652,46 @@ Error generating stack: `+e.message+`
     0 22px 34px -22px rgba(0, 0, 0, 0.3);
   transform-style: preserve-3d;
   will-change: transform;
-`,Zv=`
+`,Iv=`
   position: absolute;
-  inset: ${qv} ${Jv};
+  inset: ${Mv} ${Nv};
   border-radius: 2px;
-`,Qv=P.div`
-  ${Zv}
+`,Lv=P.div`
+  ${Iv}
   overflow: hidden;
-`,$v=P($.div)`
+`,Rv=P($.div)`
   position: absolute;
   inset: 0;
   background: #0a0a0a;
-`,ey=P.img`
+`,zv=P.img`
   display: block;
   width: 100%;
   height: 100%;
-`,ty=P($.div)`
+`,Bv=P($.div)`
   position: absolute;
   inset: 0;
   background: #000;
   pointer-events: none;
-`,ny=P($.div)`
+`,Vv=P($.div)`
   position: absolute;
   border-radius: 2px;
   background: #050506;
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-`,ry=P.div`
-  ${Zv}
+`,Hv=P.div`
+  ${Iv}
   transform-style: preserve-3d;
   pointer-events: none;
-`,iy=P($.div)`
+`,Uv=P($.div)`
   position: absolute;
   border-radius: 2px;
   background-repeat: no-repeat;
   outline: 1px solid rgba(255, 255, 255, 0.14);
   outline-offset: -1px;
-`,ay=P.div`
-  ${Zv}
+`,Wv=P.div`
+  ${Iv}
   overflow: hidden;
   pointer-events: none;
-`,oy=P($.div)`
+`,Gv=P($.div)`
   position: absolute;
   inset: -20% -40%;
   background: linear-gradient(
@@ -739,12 +701,12 @@ Error generating stack: `+e.message+`
     rgba(255, 255, 255, 0.02) 55%,
     transparent 65%
   );
-`,sy=P.div`
+`,Kv=P.div`
   position: absolute;
-  top: ${qv};
-  bottom: ${qv};
+  top: ${Mv};
+  bottom: ${Mv};
   ${({$side:e})=>e===`left`?`left: 0;`:`right: 0;`}
-  width: ${Jv};
+  width: ${Nv};
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -763,7 +725,7 @@ Error generating stack: `+e.message+`
     font-style: normal;
     letter-spacing: 0.06em;
   }
-`,cy=P.span`
+`,qv=P.span`
   position: absolute;
   inset: 5px;
   pointer-events: none;
@@ -773,7 +735,7 @@ Error generating stack: `+e.message+`
     var(--s) top right / 8px 8px no-repeat,
     var(--s) bottom left / 8px 8px no-repeat,
     var(--s) bottom right / 8px 8px no-repeat;
-`,ly=({index:e,children:t,tone:n=`paper`,className:r})=>(0,Z.jsxs)(uy,{className:r,$tone:n,children:[e&&(0,Z.jsx)(dy,{"aria-hidden":`true`,$tone:n,children:e}),(0,Z.jsx)(`span`,{children:t})]}),uy=P.p`
+`,Jv=({index:e,children:t,tone:n=`paper`,className:r})=>(0,Z.jsxs)(Yv,{className:r,$tone:n,children:[e&&(0,Z.jsx)(Xv,{"aria-hidden":`true`,$tone:n,children:e}),(0,Z.jsx)(`span`,{children:t})]}),Yv=P.p`
   display: inline-flex;
   align-items: baseline;
   gap: 0.9rem;
@@ -783,10 +745,10 @@ Error generating stack: `+e.message+`
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: ${({$tone:e})=>e===`night`?`var(--color-night-muted)`:`var(--color-ink-soft)`};
-`,dy=P.span`
+`,Xv=P.span`
   font-variant-numeric: tabular-nums;
   color: ${({$tone:e})=>e===`night`?`var(--color-amber)`:`var(--color-amber-ink)`};
-`,fy={stiffness:120,damping:28,restDelta:5e-4},py=`(max-width: 899px)`,my=e=>{let[t,n]=(0,j.useState)(0);return Hm(e,`change`,e=>n(lv(e,xv.length,Sv))),t},hy=()=>{let e=(0,j.useRef)(null),t=!!Nh(),{scrollYProgress:n}=Th({target:e,offset:[`start start`,`end end`]}),r=Ah(n,fy),i=t?n:r,a=my(i),o=[[`Role`,bv.role],[`Timeline`,bv.timeline]].filter(([,e])=>e);return(0,Z.jsx)(gy,{id:`work`,ref:e,"aria-labelledby":`featured-heading`,children:(0,Z.jsxs)(_y,{children:[(0,Z.jsx)(Vv,{progress:i,isReducedMotion:t}),(0,Z.jsxs)(vy,{children:[(0,Z.jsx)(ly,{index:`02`,children:`Featured aircraft`}),(0,Z.jsx)(yy,{id:`featured-heading`,children:bv.name}),(0,Z.jsx)(by,{children:bv.summary}),o.length>0&&(0,Z.jsx)(xy,{children:o.map(([e,t])=>(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`dt`,{children:e}),(0,Z.jsx)(`dd`,{children:t})]},e))}),(0,Z.jsx)(ky,{"aria-hidden":`true`,children:xv[a].title}),(0,Z.jsx)(Sy,{children:xv.map(({title:e,body:n},r)=>(0,Z.jsxs)(Cy,{"aria-current":r===a?`step`:void 0,$isActive:r===a,children:[(0,Z.jsx)(wy,{children:e}),(0,Z.jsx)(Ty,{initial:!1,animate:r===a?{opacity:1,height:`auto`}:{opacity:0,height:0},transition:{duration:t?0:.35,ease:[.16,1,.3,1]},children:n})]},e))}),(0,Z.jsxs)(Ey,{children:[(0,Z.jsxs)(Dy,{href:`/work/${bv.slug}`,children:[`Read the case study `,(0,Z.jsx)(Wg,{"aria-hidden":`true`})]}),(0,Z.jsxs)(Oy,{href:bv.url,target:`_blank`,rel:`noopener noreferrer`,children:[`View `,bv.urlLabel,` `,(0,Z.jsx)(Ug,{"aria-hidden":`true`})]})]})]})]})})},gy=P.section`
+`,Zv={stiffness:120,damping:28,restDelta:5e-4},Qv=`(max-width: 899px)`,$v=e=>{let[t,n]=(0,j.useState)(0);return Hm(e,`change`,e=>n(J_(e,ov.length,sv))),t},ey=()=>{let e=(0,j.useRef)(null),t=!!Nh(),{scrollYProgress:n}=Th({target:e,offset:[`start start`,`end end`]}),r=Ah(n,Zv),i=t?n:r,a=$v(i),o=[[`Role`,av.role],[`Timeline`,av.timeline]].filter(([,e])=>e);return(0,Z.jsx)(ty,{id:`work`,ref:e,"aria-labelledby":`featured-heading`,children:(0,Z.jsxs)(ny,{children:[(0,Z.jsx)(Ev,{progress:i,isReducedMotion:t}),(0,Z.jsxs)(ry,{children:[(0,Z.jsx)(Jv,{index:`02`,children:`Featured aircraft`}),(0,Z.jsx)(iy,{id:`featured-heading`,children:av.name}),(0,Z.jsx)(ay,{children:av.summary}),o.length>0&&(0,Z.jsx)(oy,{children:o.map(([e,t])=>(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`dt`,{children:e}),(0,Z.jsx)(`dd`,{children:t})]},e))}),(0,Z.jsx)(my,{"aria-hidden":`true`,children:ov[a].title}),(0,Z.jsx)(sy,{children:ov.map(({title:e,body:n},r)=>(0,Z.jsxs)(cy,{"aria-current":r===a?`step`:void 0,$isActive:r===a,children:[(0,Z.jsx)(ly,{children:e}),(0,Z.jsx)(uy,{initial:!1,animate:r===a?{opacity:1,height:`auto`}:{opacity:0,height:0},transition:{duration:t?0:.35,ease:[.16,1,.3,1]},children:n})]},e))}),(0,Z.jsxs)(dy,{children:[(0,Z.jsxs)(fy,{href:`/work/${av.slug}`,children:[`Read the case study `,(0,Z.jsx)(Tg,{"aria-hidden":`true`})]}),(0,Z.jsxs)(py,{href:av.url,target:`_blank`,rel:`noopener noreferrer`,children:[`View `,av.urlLabel,` `,(0,Z.jsx)(wg,{"aria-hidden":`true`})]})]})]})]})})},ty=P.section`
   position: relative;
   /* about 70vh of scroll per shot */
   height: 400vh;
@@ -799,10 +761,10 @@ Error generating stack: `+e.message+`
      scroll anchoring "corrects" for that and yanks the page back up */
   overflow-anchor: none;
 
-  @media ${py} {
+  @media ${Qv} {
     height: 340vh;
   }
-`,_y=P.div`
+`,ny=P.div`
   position: sticky;
   top: 0;
   height: 100svh;
@@ -810,12 +772,12 @@ Error generating stack: `+e.message+`
   --tablet-width: min(46vw, 760px);
   --stage-left: 30%;
 
-  @media ${py} {
+  @media ${Qv} {
     --tablet-width: 86vw;
     --stage-left: 0;
     --stage-top: 38%;
   }
-`,vy=P.div`
+`,ry=P.div`
   position: absolute;
   z-index: 1;
   top: calc(var(--nav-offset) + var(--nav-height) + clamp(1.5rem, 4vh, 3rem));
@@ -827,29 +789,29 @@ Error generating stack: `+e.message+`
   flex-direction: column;
   gap: 1.25rem;
 
-  @media ${py} {
+  @media ${Qv} {
     right: var(--space-gutter);
     left: var(--space-gutter);
     bottom: auto;
     width: auto;
     gap: 0.75rem;
   }
-`,yy=P.h2`
+`,iy=P.h2`
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 1.5rem + 2.6vw, 4rem);
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -0.04em;
-`,by=P.p`
+`,ay=P.p`
   max-width: 34ch;
   font-size: var(--text-base);
   line-height: 1.5;
   color: var(--color-ink-soft);
 
-  @media ${py} {
+  @media ${Qv} {
     font-size: var(--text-sm);
   }
-`,xy=P.dl`
+`,oy=P.dl`
   display: flex;
   gap: 2rem;
   font-size: var(--text-sm);
@@ -861,7 +823,7 @@ Error generating stack: `+e.message+`
     color: var(--color-ink-soft);
   }
   dd { margin-top: 0.25rem; }
-`,Sy=P.ol`
+`,sy=P.ol`
   list-style: none;
   margin-top: auto;
   display: flex;
@@ -870,10 +832,10 @@ Error generating stack: `+e.message+`
   padding-left: 1rem;
   border-left: 1px solid var(--color-line);
 
-  @media ${py} {
+  @media ${Qv} {
     display: none;
   }
-`,Cy=P.li`
+`,cy=P.li`
   position: relative;
   color: ${({$isActive:e})=>e?`var(--color-ink)`:`var(--color-ink-muted)`};
   transition: color var(--duration-normal) ease;
@@ -891,21 +853,21 @@ Error generating stack: `+e.message+`
     transform-origin: top;
     transition: transform var(--duration-normal) var(--ease-out-expo);
   }
-`,wy=P.p`
+`,ly=P.p`
   font-size: var(--text-base);
   font-weight: 700;
-`,Ty=P($.p)`
+`,uy=P($.p)`
   overflow: hidden;
   font-size: var(--text-sm);
   line-height: 1.5;
   color: var(--color-ink-soft);
   padding-top: 0.25rem;
-`,Ey=P.div`
+`,dy=P.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1.25rem;
-`,Dy=P.a`
+`,fy=P.a`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -930,7 +892,7 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,Oy=P.a`
+`,py=P.a`
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -950,271 +912,326 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,ky=P.p`
+`,my=P.p`
   display: none;
   font-size: var(--text-sm);
   font-weight: 500;
 
-  @media ${py} {
+  @media ${Qv} {
     display: block;
   }
-`,Ay=`#f2a500`,jy=`#111111`,My=`#ececec`,Ny=()=>{let e=`grid-${(0,j.useId)().replace(/[^a-zA-Z0-9]/g,``)}`;return(0,Z.jsxs)(Ly,{$isBack:!0,"aria-hidden":`true`,"data-card-back":!0,children:[(0,Z.jsxs)(`svg`,{viewBox:`0 0 100 140`,preserveAspectRatio:`none`,width:`100%`,height:`100%`,children:[(0,Z.jsx)(`defs`,{children:(0,Z.jsx)(`pattern`,{id:e,width:`5`,height:`5`,patternUnits:`userSpaceOnUse`,children:(0,Z.jsx)(`path`,{d:`M5 0H0V5`,fill:`none`,stroke:`#ffffff`,strokeWidth:`0.15`,opacity:`0.18`})})}),(0,Z.jsx)(`rect`,{width:`100`,height:`140`,fill:`#1a1b1e`}),(0,Z.jsx)(`rect`,{width:`100`,height:`140`,fill:`url(#${e})`}),(0,Z.jsx)(`rect`,{x:`5`,y:`5`,width:`90`,height:`130`,fill:`none`,stroke:`#ffffff`,strokeWidth:`0.4`,opacity:`0.5`}),(0,Z.jsx)(`path`,{d:`M55 118H95M55 118V135M75 118V135`,stroke:`#ffffff`,strokeWidth:`0.3`,opacity:`0.5`}),(0,Z.jsx)(`rect`,{x:`5`,y:`5`,width:`16`,height:`6`,fill:Ay})]}),(0,Z.jsx)(Ry,{children:(0,Z.jsx)(Ph,{size:64})})]})},Py=({project:e,headingId:t,isActive:n,isDimmed:r})=>{let{index:i,name:a,year:o,hook:s,kind:c,screen:l}=e;return(0,Z.jsxs)(Ly,{as:`article`,"aria-labelledby":t,"data-active":n,$isFront:!0,children:[(0,Z.jsx)(zy,{src:l,alt:``,loading:`lazy`,decoding:`async`,"aria-hidden":`true`}),(0,Z.jsx)(By,{"aria-hidden":`true`}),(0,Z.jsx)(Vy,{"aria-hidden":`true`,children:i}),(0,Z.jsx)(Hy,{children:c}),(0,Z.jsxs)(Uy,{children:[(0,Z.jsx)(Wy,{id:t,children:a}),(0,Z.jsx)(Gy,{children:o}),(0,Z.jsx)(Ky,{children:(0,Z.jsxs)(qy,{children:[(0,Z.jsx)(Jy,{children:s}),(0,Z.jsxs)(Yy,{"aria-hidden":`true`,children:[`Open file `,(0,Z.jsx)(Xy,{children:`→`})]})]})})]}),(0,Z.jsx)(Zy,{"aria-hidden":`true`,$isOn:r})]})},Fy=`[data-active='true'] &`,Iy=`var(--ease-out-expo)`,Ly=P.div`
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  border-radius: var(--card-radius);
-  background: ${({$isFront:e})=>e?`#0c0c0e`:`#1a1b1e`};
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-  color: ${My};
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: ${({$isBack:e})=>e?`rotateY(180deg)`:`none`};
-`,Ry=P.span`
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: ${Ay};
-
-  svg {
-    width: 42%;
-    height: auto;
-  }
-`,zy=P.img`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.02);
-  transition: transform 0.9s ${Iy};
-
-  ${Fy} {
-    transform: scale(1.07);
-  }
-`,By=P.div`
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 12, 0.25), transparent 30%, transparent 55%, rgba(10, 10, 12, 0.55));
-`,Vy=P.span`
-  position: absolute;
-  z-index: 2;
-  left: 5%;
-  top: 4%;
-  padding: 0.35em 0.55em;
-  background: ${Ay};
-  color: ${jy};
-  font: 700 max(calc(var(--card-width) * 0.06), 11px) / 1 var(--font-body);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.04em;
-`,Hy=P.span`
-  position: absolute;
-  z-index: 2;
-  right: 5%;
-  top: 4%;
-  padding: 0.45em 0.7em;
-  background: rgba(17, 17, 17, 0.78);
-  color: ${My};
-  font-size: max(calc(var(--card-width) * 0.04), 8px);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-`,Uy=P.div`
-  position: absolute;
-  z-index: 2;
-  left: 5%;
-  right: 5%;
-  bottom: 4%;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: baseline;
-  column-gap: 0.6em;
-  padding: 5.5% 7%;
-  border-radius: 2px;
-  /* near-solid dark glass: backdrop-filter doesn't render inside the 3D card flip */
-  background: linear-gradient(180deg, rgba(30, 31, 34, 0.95), rgba(14, 15, 17, 0.97));
-  border-top: 2px solid ${Ay};
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-  font-size: max(calc(var(--card-width) * 0.048), 9.5px);
-`,Wy=P.h3`
-  min-width: 0;
-  font-family: var(--font-display);
-  font-size: 1.3em;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-`,Gy=P.p`
-  color: rgba(236, 236, 236, 0.6);
-  font-size: 0.9em;
-  font-variant-numeric: tabular-nums;
-
-  @media (max-width: 639px) {
-    display: none;
-  }
-`,Ky=P.div`
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition: grid-template-rows 0.5s ${Iy}, opacity 0.3s ease;
-
-  ${Fy} {
-    grid-template-rows: 1fr;
-    opacity: 1;
-  }
-`,qy=P.div`
-  min-height: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5em;
-  padding-top: 0.7em;
-  margin-top: 0.7em;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-`,Jy=P.p`
-  line-height: 1.4;
-  color: rgba(236, 236, 236, 0.88);
-`,Yy=P.span`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  margin-top: 0.35em;
-  padding: 0.5em 0.9em;
-  background: ${My};
-  color: ${jy};
-  font-size: 0.85em;
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-`,Xy=P.span`
-  display: inline-block;
-  transform: translateX(-0.3em);
-  transition: transform 0.6s ${Iy} 0.1s;
-
-  ${Fy} {
-    transform: translateX(0.15em);
-  }
-`,Zy=P.div`
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  border-radius: inherit;
-  background: #000000;
-  opacity: ${({$isOn:e})=>e?.5:0};
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-`,Qy=6,$y=.09,eb=16,tb=.45,nb=({count:e,width:t,height:n,ratio:r,maxWidth:i=1/0})=>{let a=[2,3].map(a=>{let o=Math.ceil(e/a),s=(t-(a-1)*eb)/a,c=(n-(o-1)*eb)/o/r;return{columns:a,cardWidth:Math.floor(Math.min(s,c,i))}}).reduce((e,t)=>t.cardWidth>e.cardWidth?t:e);return{...a,cardHeight:Math.floor(a.cardWidth*r)}},rb=({count:e,stageWidth:t,cardWidth:n,cardHeight:r,columns:i})=>{let a=n*1.08,o=a*(e-1)+n;if(!i&&o<=t){let t=(e-1)/2;return Array.from({length:e},(e,n)=>{let i=t===0?0:(n-t)/t;return{x:(n-t)*a,y:i*i*r*$y,rotate:i*Qy}})}let s=i??2,c=Math.ceil(e/s),l=c*r+(c-1)*eb,u=n+eb;return Array.from({length:e},(t,n)=>{let i=Math.floor(n/s),a=i===c-1?e-i*s:s;return{x:(n%s-(a-1)/2)*u,y:i*(r+eb)-l/2+r/2,rotate:0}})},ib=(e,t)=>({x:e*7%5-2,y:(e-(t-1))*2.5,rotate:e*13%7-3}),ab=(e,t,[n,r])=>{let i=r-n,a=i*tb,o=n+e*(t>1?(i-a)/(t-1):0);return{start:o,end:o+a}},ob=70,sb=6,cb={stiffness:220,damping:20},lb={type:`spring`,stiffness:320,damping:26},ub=1.08,db=26,fb=e=>Math.min(1,Math.max(0,e)),pb=e=>e<.5?4*e*e*e:1-(-2*e+2)**3/2,mb=(e,t,n)=>e+(t-e)*n,hb=e=>{let t=Eh(.5),n=Eh(.5),r=Ah(Q(n,[0,1],[sb,-6]),cb),i=Ah(Q(t,[0,1],[-6,sb]),cb);return(0,j.useEffect)(()=>{e||(t.set(.5),n.set(.5))},[e,t,n]),{rotateX:r,rotateY:i,onPointerMove:r=>{if(!e||r.pointerType!==`mouse`)return;let i=r.currentTarget.getBoundingClientRect();t.set((r.clientX-i.left)/i.width),n.set((r.clientY-i.top)/i.height)}}},gb=({project:e,index:t,count:n,progress:r,spot:i,dealRange:a,isDealt:o,pick:s,side:c,onPick:l})=>{let u=`card-${(0,j.useId)().replace(/[^a-zA-Z0-9]/g,``)}`,{start:d,end:f}=ab(t,n,a),p=ib(t,n),m=s===`picked`,h=Eh(+!!m);(0,j.useEffect)(()=>h.set(+!!m),[m,h]);let g=Q(r,e=>pb(fb((e-d)/(f-d)))),_=Q(g,e=>mb(p.x,i.x,e)),v=Q(g,e=>mb(p.y,i.y,e)-Math.sin(Math.PI*e)*ob),y=Q(g,e=>mb(p.rotate,i.rotate,e)-Math.sin(Math.PI*e)*6),b=Q(g,e=>1+Math.sin(Math.PI*e)*.08),x=Q(g,[0,.25,.8,1],[180,180,0,0]),S=Q([g,h],([e,r])=>e<=0?n-t:e<1?100+t:r?60:10+t),C=Q([Q(g,e=>.55+Math.sin(Math.PI*e)*.25),Q([g,h],([e,t])=>t?60:18+Math.sin(Math.PI*e)*30)],([e,t])=>`0 ${(t/2).toFixed(1)}px ${t.toFixed(1)}px -8px rgba(0, 0, 0, ${e.toFixed(3)})`),w=hb(m),T=o?{onPointerEnter:e=>e.pointerType===`mouse`&&l(t),onPointerLeave:e=>e.pointerType===`mouse`&&l(null),onFocus:()=>l(t),onBlur:()=>l(null)}:{};return(0,Z.jsx)(_b,{style:{x:_,y:v,rotate:y,scale:b,zIndex:S},children:(0,Z.jsxs)(vb,{animate:{rotate:m?-i.rotate:0,y:m?-34:0,x:s===`other`?c*db:0,scale:m?ub:1},transition:lb,...T,children:[(0,Z.jsx)(bb,{style:{rotateX:w.rotateX,rotateY:w.rotateY},onPointerMove:w.onPointerMove,children:(0,Z.jsxs)(xb,{style:{rotateY:x,boxShadow:C},children:[(0,Z.jsx)(Py,{project:e,headingId:u,isActive:m,isDimmed:s===`other`}),(0,Z.jsx)(Ny,{})]})}),(0,Z.jsx)(yb,{href:`/work/${e.slug}`,"aria-label":`${e.name}: view case study`,tabIndex:o?0:-1,$isEnabled:o})]})})},_b=P($.div)`
-  position: absolute;
-  left: calc(50% - var(--card-width) / 2);
-  top: calc(50% - var(--card-height) / 2);
-  width: var(--card-width);
-  height: var(--card-height);
-  perspective: 1200px;
-`,vb=P($.div)`
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-`,yb=P.a`
-  position: absolute;
-  inset: 0;
-  border-radius: var(--card-radius);
-  /* in front of the card even at full tilt */
-  transform: translateZ(40px);
-  pointer-events: ${({$isEnabled:e})=>e?`auto`:`none`};
-  cursor: pointer;
-
-  &:focus-visible {
-    outline: 3px solid ${Ay};
-    outline-offset: 3px;
-  }
-`,bb=P($.div)`
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-`,xb=P($.div)`
+`,hy=`/assets/photo-team-Cn4VVPbo.webp`,gy=`/assets/render-hero-sp_Ix8R8.webp`,_y=[{index:`01`,slug:`nimbus-v4`,name:`Nimbus V4`,year:`2026`,kind:`Built & flown`,hook:`A flying-wing cargo UAV, optimized for profit, then built and flown at Mission Bay.`,tech:[`MATLAB`,`AVL`,`CMA-ES`,`CAD`],preview:hy,previewAlt:`The Nimbus team behind the aircraft at the Mission Bay flight field`,figures:[{value:`1.57 m`,label:`Span`},{value:`800 g`,label:`Payload`},{value:`14.3`,label:`Cruise L/D`}]},{index:`02`,slug:`jager-qrf`,name:`Jäger-QRF`,year:`2026`,kind:`Conceptual design`,hook:`A hybrid VTOL that hovers over a fire and drops two suppression payloads.`,tech:[`MATLAB`,`AVL`,`Mission sizing`,`Flight dynamics`],preview:gy,previewAlt:`Jäger-QRF render releasing two red suppression payloads`,figures:[{value:`~51 mph`,label:`Cruise`},{value:`1.5 mi`,label:`Range`},{value:`55 lb`,label:`Gross weight`}]}],vy=[.16,1,.3,1],yy=[`A`,`B`,`C`,`D`,`E`,`F`],by=[`1`,`2`,`3`,`4`],xy=()=>{let[e,t]=(0,j.useState)(0),n=!!Nh(),r=_y[e];return(0,Z.jsx)(Cy,{id:`projects`,"aria-labelledby":`projects-heading`,children:(0,Z.jsxs)(wy,{children:[(0,Z.jsxs)(Ty,{children:[(0,Z.jsx)(Jv,{index:`03`,children:`The hangar`}),(0,Z.jsx)(Ey,{id:`projects-heading`,children:`Project files`}),(0,Z.jsx)(Dy,{children:`Two airframes, from mission requirements to sizing, stability and hardware.`})]}),(0,Z.jsxs)(Oy,{children:[(0,Z.jsxs)(ky,{children:[(0,Z.jsxs)(jy,{"aria-hidden":`true`,children:[(0,Z.jsx)(`span`,{children:`No.`}),(0,Z.jsx)(`span`,{children:`Aircraft`}),(0,Z.jsx)(`span`,{children:`Status`})]}),_y.map((n,r)=>(0,Z.jsxs)(My,{"data-active":r===e,children:[(0,Z.jsxs)(Ny,{href:`/work/${n.slug}`,"aria-label":`${n.name}: view case study`,onPointerEnter:e=>e.pointerType===`mouse`&&t(r),onFocus:()=>t(r),children:[(0,Z.jsx)(`span`,{className:`no`,children:n.index}),(0,Z.jsx)(`span`,{className:`name`,children:n.name}),(0,Z.jsx)(`span`,{className:`kind`,children:n.kind})]}),(0,Z.jsx)(Py,{children:(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`p`,{children:n.hook}),(0,Z.jsx)(`ul`,{children:n.tech.map(e=>(0,Z.jsx)(`li`,{children:e},e))}),(0,Z.jsxs)(`span`,{className:`open`,children:[`Open case study `,(0,Z.jsx)(Tg,{"aria-hidden":`true`})]})]})}),(0,Z.jsx)(Fy,{src:n.preview,alt:``,width:1600,height:1e3,loading:`lazy`,"aria-hidden":`true`})]},n.slug))]}),(0,Z.jsxs)(Iy,{"aria-live":`polite`,children:[(0,Z.jsx)(Ly,{"aria-hidden":`true`,$axis:`x`,children:yy.map(e=>(0,Z.jsx)(`span`,{children:e},e))}),(0,Z.jsx)(Ly,{"aria-hidden":`true`,$axis:`y`,children:by.map(e=>(0,Z.jsx)(`span`,{children:e},e))}),(0,Z.jsxs)(Ry,{children:[(0,Z.jsx)(kp,{mode:`popLayout`,initial:!1,children:(0,Z.jsx)($.img,{src:r.preview,alt:r.previewAlt,width:1600,height:1e3,initial:n?{opacity:0}:{opacity:0,scale:1.04,filter:`blur(8px)`},animate:{opacity:1,scale:1,filter:`blur(0px)`},exit:{opacity:0},transition:{duration:n?.2:.7,ease:vy}},r.slug)}),(0,Z.jsx)(zy,{"aria-hidden":`true`})]}),(0,Z.jsx)(By,{children:r.figures.map(({value:e,label:t})=>(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`dt`,{children:t}),(0,Z.jsx)(`dd`,{children:e})]},t))}),(0,Z.jsxs)(Vy,{"aria-hidden":`true`,children:[(0,Z.jsx)(`span`,{className:`k`,children:`Dwg`}),(0,Z.jsxs)(`span`,{className:`v`,children:[`HP-`,r.index]}),(0,Z.jsx)(`span`,{className:`k`,children:`Title`}),(0,Z.jsx)(`span`,{className:`v`,children:r.name}),(0,Z.jsx)(`span`,{className:`k`,children:`Sheet`}),(0,Z.jsxs)(`span`,{className:`v`,children:[e+1,` of `,_y.length]})]})]})]})]})})},Sy=`(max-width: 899px)`,Cy=P.section`
   position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--card-radius);
-  transform-style: preserve-3d;
-`,Sb=[{index:`01`,slug:`nimbus-v4`,name:`Nimbus V4`,year:`2026`,kind:`Built & flown`,hook:`A flying-wing cargo UAV, optimized for profit, then built and flown at Mission Bay.`,tech:[`MATLAB`,`AVL`,`CMA-ES`,`CAD`],screen:`/assets/nimbus-Cf1gDVnF.webp`,links:[{label:`GitHub`,href:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`}]},{index:`02`,slug:`jager-qrf`,name:`Jäger-QRF`,year:`2026`,kind:`Conceptual design`,hook:`A hybrid VTOL that hovers over a fire and drops two suppression payloads.`,tech:[`MATLAB`,`AVL`,`Mission sizing`,`Flight dynamics`],screen:`/assets/jager-cI7gMRvI.webp`,links:[{label:`GitHub`,href:`https://github.com/patelharshil2060/Jager-Firefighter-Drone`}]}],Cb=[.14,.72],wb={stiffness:120,damping:26,restDelta:5e-4},Tb=7/5,Eb=640,Db={width:1200,height:600},Ob=({width:e,height:t})=>{if(e<Eb)return nb({count:Sb.length,width:e,height:t,ratio:Tb,maxWidth:260});let n=Math.round(Math.max(140,Math.min(290,e*.22,t*.78/Tb)));return{cardWidth:n,cardHeight:Math.round(n*Tb),columns:void 0}},kb=e=>{let[t,n]=(0,j.useState)(Db);return(0,j.useEffect)(()=>{let t=e.current;if(!t||typeof ResizeObserver>`u`)return;let r=new ResizeObserver(([e])=>{let{width:t,height:r}=e.contentRect;t>0&&r>0&&n({width:t,height:r})});return r.observe(t),()=>r.disconnect()},[e]),t},Ab=()=>{let e=(0,j.useRef)(null),t=(0,j.useRef)(null),n=!!Nh(),r=kb(t),{cardWidth:i,cardHeight:a,columns:o}=Ob(r),s=rb({count:Sb.length,stageWidth:r.width,cardWidth:i,cardHeight:a,columns:o}),{scrollYProgress:c}=Th({target:e,offset:[`start start`,`end end`]}),l=Ah(c,wb),u=Eh(1),d=n?u:l,[f,p]=(0,j.useState)(n);Hm(d,`change`,e=>p(e>=Cb[1]));let[m,h]=(0,j.useState)(null);(0,j.useEffect)(()=>{f||h(null)},[f]);let g=Q(d,[0,Cb[0]*.6,Cb[0]],[1,1,0]);return(0,Z.jsx)(Fb,{id:`projects`,ref:e,"aria-labelledby":`projects-heading`,"data-scroll-to":`end`,children:(0,Z.jsxs)(Ib,{children:[(0,Z.jsxs)(Lb,{children:[(0,Z.jsx)(ly,{index:`03`,tone:`night`,children:`Project files`}),(0,Z.jsx)(Rb,{id:`projects-heading`,children:`Two airframes, end to end`}),(0,Z.jsx)(zb,{children:`From mission requirements to sizing, stability and hardware.`})]}),(0,Z.jsxs)(Bb,{ref:t,style:{"--card-width":`${i}px`,"--card-height":`${a}px`,"--card-radius":`3px`},children:[Sb.map((e,t)=>(0,Z.jsx)(gb,{project:e,index:t,count:Sb.length,progress:d,spot:s[t],dealRange:Cb,isDealt:f,pick:m===null?`none`:m===t?`picked`:`other`,side:m===null?0:Math.sign(t-m),onPick:h},e.name)),!n&&(0,Z.jsx)(Vb,{style:{opacity:g},children:`Scroll to open the files`})]})]})})},jb=`(max-width: 899px)`,Mb=`clamp(8px, 1vw, 16px)`,Nb=`#ececec`,Pb=`url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22f%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%221.1%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20values%3D%220%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.5%200%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23f)%22%2F%3E%3C%2Fsvg%3E")`,Fb=P.section`
-  position: relative;
-  height: 260vh;
-  margin: 0 ${Mb};
-  border-radius: var(--radius-panel);
-  background: var(--color-night);
-  color: ${Nb};
+  padding: var(--space-section) var(--space-gutter);
+  background: #f6f6f6;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-ink);
   font-family: var(--font-body);
-  overflow: clip;
-  overflow-anchor: none;
-
-`,Ib=P.div`
-  position: sticky;
-  top: 0;
-  height: 100svh;
+`,wy=P.div`
+  max-width: var(--content-max);
+  margin: 0 auto;
+`,Ty=P.header`
   display: flex;
   flex-direction: column;
-  padding: calc(var(--nav-offset) + var(--nav-height) + clamp(1rem, 3vh, 2.5rem))
-    calc(max(var(--space-gutter), (100vw - var(--content-max)) / 2) - ${Mb})
-    clamp(1.5rem, 5vh, 3rem);
-
-  /* hangar floodlight, a drafting grid and floor grain */
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  &::before {
-    background:
-      radial-gradient(ellipse 55% 50% at 50% 58%, rgba(255, 255, 255, 0.1), transparent 70%),
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 100% 64px,
-      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 64px 100%;
-  }
-
-  &::after {
-    background-image: ${Pb};
-    opacity: 0.06;
-    mix-blend-mode: overlay;
-  }
-
-  & > * {
-    position: relative;
-    z-index: 1;
-  }
-`,Lb=P.header`
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-`,Rb=P.h2`
+  gap: 0.8rem;
+  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+`,Ey=P.h2`
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 1.5rem + 2.6vw, 4rem);
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -0.04em;
-`,zb=P.p`
-  color: rgba(236, 236, 236, 0.62);
+`,Dy=P.p`
+  max-width: 44ch;
+  color: var(--color-ink-soft);
+  font-size: var(--text-lead);
+  line-height: 1.5;
+`,Oy=P.div`
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 1rem + 2.5vw, 3.5rem);
+  align-items: start;
 
-  @media ${jb} {
-    font-size: var(--text-sm);
+  @media ${Sy} {
+    grid-template-columns: minmax(0, 1fr);
   }
-`,Bb=P.div`
-  position: relative;
-  flex: 1;
-  min-height: 0;
-  margin-top: clamp(1rem, 3vh, 2rem);
-`,Vb=P($.p)`
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+`,ky=P.ol`
+  list-style: none;
+  border-top: 1px solid var(--color-ink);
+`,Ay=`
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1rem;
+`,jy=P.li`
+  ${Ay}
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-line);
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  color: rgba(236, 236, 236, 0.55);
+  color: var(--color-ink-soft);
+
+  span:last-child {
+    text-align: right;
+  }
+`,My=P.li`
+  position: relative;
+  border-bottom: 1px solid var(--color-line);
+
+  /* amber rule marks the selected part */
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-amber);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform var(--duration-normal) var(--ease-out-expo);
+  }
+
+  &[data-active='true']::before {
+    transform: scaleY(1);
+  }
+
+  @media ${Sy} {
+    &::before {
+      left: 0;
+    }
+  }
+`,Ny=P.a`
+  ${Ay}
+  padding: clamp(1rem, 0.8rem + 0.8vw, 1.5rem) 0;
+  color: var(--color-ink);
+  text-decoration: none;
+
+  .no {
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    color: var(--color-amber-ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .name {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    transition: transform 0.5s var(--ease-out-expo), color var(--duration-fast) ease;
+  }
+
+  .kind {
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+    white-space: nowrap;
+  }
+
+  ${My}:not([data-active='true']) & .name {
+    color: var(--color-ink-muted);
+  }
+
+  &:hover .name {
+    transform: translateX(0.4rem);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  @media ${Sy} {
+    padding-left: 0.9rem;
+
+    ${My}:not([data-active='true']) & .name {
+      color: var(--color-ink);
+    }
+  }
+`,Py=P.div`
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.5s var(--ease-out-expo), opacity 0.3s ease;
+
+  ${My}[data-active='true'] & {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  & > div {
+    min-height: 0;
+    overflow: hidden;
+    padding-left: 4rem;
+  }
+
+  p {
+    max-width: 40ch;
+    color: var(--color-ink-soft);
+    line-height: 1.55;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+  }
+
+  li {
+    padding: 0.25rem 0.55rem;
+    border: 1px solid var(--color-surface-strong);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+
+  .open {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 1rem 0 1.5rem;
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink);
+  }
+
+  @media ${Sy} {
+    grid-template-rows: 1fr;
+    opacity: 1;
+
+    & > div {
+      padding-left: 0.9rem;
+    }
+  }
+`,Fy=P.img`
+  display: none;
+
+  @media ${Sy} {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--color-line);
+  }
+`,Iy=P.div`
+  position: relative;
+  padding: 1.6rem;
+  border: 1px solid var(--color-ink);
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 1px) 0 0 / 100% 32px,
+    linear-gradient(90deg, rgba(17, 17, 17, 0.04) 1px, transparent 1px) 0 0 / 32px 100%,
+    #fbfbfb;
+
+  @media ${Sy} {
+    display: none;
+  }
+`,Ly=P.div`
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-soft);
   pointer-events: none;
-`,Hb=2.4,Ub=4,Wb={month:6,quarter:10,year:16},Gb=9,Kb=[`Jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`],qb=e=>e*Math.PI/180,Jb=(e,t)=>({x:e*Math.cos(qb(t)),y:e*Math.sin(qb(t))}),Yb=(e,t,n)=>{let r=Jb(e,t),i=Jb(e,n),a=+(Math.abs(n-t)>180),o=+(n>t);return`M ${r.x.toFixed(2)} ${r.y.toFixed(2)} A ${e} ${e} 0 ${a} ${o} ${i.x.toFixed(2)} ${i.y.toFixed(2)}`},Xb=({scale:e,month:t,radius:n})=>{let{ticks:r,totalMonths:i}=e,a=Q(t,e=>e*Hb),o=Q(t,e=>i?Math.min(1,Math.max(0,e/i)):0),s=-i*Hb,c=n-Ub,l=c-Wb.year-Gb;return(0,Z.jsxs)(Zb,{style:{"--r":`${n}px`},children:[(0,Z.jsxs)($.svg,{viewBox:`${-n} ${-n} ${n*2} ${n*2}`,width:n*2,height:n*2,"aria-hidden":`true`,style:{rotate:a},children:[(0,Z.jsx)(`circle`,{r:n,fill:`none`,stroke:`var(--wheel-line)`,strokeWidth:`1`}),(0,Z.jsx)($.path,{d:Yb(n,0,s),fill:`none`,stroke:`var(--color-amber)`,strokeWidth:`2`,strokeLinecap:`round`,style:{pathLength:o}}),r.map(({m:e,year:t,month:n})=>{let r=-e*Hb,a=t?`year`:n%3==0?`quarter`:`month`,o=Jb(c,r),s=Jb(c-Wb[a],r),u=Jb(l,r);return(0,Z.jsxs)(`g`,{children:[(0,Z.jsx)(`line`,{x1:o.x,y1:o.y,x2:s.x,y2:s.y,className:`tick ${a}`}),(0,Z.jsx)(`text`,{x:u.x,y:u.y,transform:`rotate(${r} ${u.x} ${u.y})`,textAnchor:`end`,dominantBaseline:`middle`,className:e===i?`now`:t?`year`:`month`,children:e===i?`NOW`:t??Kb[n]})]},e)})]}),(0,Z.jsx)(Qb,{"aria-hidden":`true`})]})},Zb=P.div`
+
+  ${({$axis:e})=>e===`x`?`left: 1.6rem; right: 1.6rem; top: 0.4rem;`:`top: 1.6rem; bottom: 1.6rem; left: 0.55rem; flex-direction: column; align-items: center;`}
+`,Ry=P.div`
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`,zy=P.span`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  --c: rgba(242, 165, 0, 0.9);
+  background:
+    linear-gradient(var(--c), var(--c)) center / 100% 1px no-repeat,
+    linear-gradient(var(--c), var(--c)) center / 1px 100% no-repeat;
+  mix-blend-mode: multiply;
+`,By=P.dl`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.2rem;
+  margin-right: 13rem; /* clear of the title block */
+  border-top: 1px solid var(--color-ink);
+
+  div {
+    padding: 0.7rem 1rem 0 0;
+  }
+
+  div + div {
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-line);
+  }
+
+  dt {
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+
+  dd {
+    margin-top: 0.35rem;
+    font-size: clamp(1.25rem, 1rem + 0.8vw, 1.75rem);
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+`,Vy=P.div`
+  position: absolute;
+  right: 1.6rem;
+  bottom: 1.6rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 12rem;
+  border: 1px solid var(--color-ink);
+  background: #fbfbfb;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  span {
+    padding: 0.35rem 0.55rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  span:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .k {
+    color: var(--color-ink-soft);
+    border-right: 1px solid var(--color-line);
+  }
+
+  .v {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+`,Hy=2.4,Uy=4,Wy={month:6,quarter:10,year:16},Gy=9,Ky=[`Jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`],qy=e=>e*Math.PI/180,Jy=(e,t)=>({x:e*Math.cos(qy(t)),y:e*Math.sin(qy(t))}),Yy=(e,t,n)=>{let r=Jy(e,t),i=Jy(e,n),a=+(Math.abs(n-t)>180),o=+(n>t);return`M ${r.x.toFixed(2)} ${r.y.toFixed(2)} A ${e} ${e} 0 ${a} ${o} ${i.x.toFixed(2)} ${i.y.toFixed(2)}`},Xy=({scale:e,month:t,radius:n})=>{let{ticks:r,totalMonths:i}=e,a=Q(t,e=>e*Hy),o=Q(t,e=>i?Math.min(1,Math.max(0,e/i)):0),s=-i*Hy,c=n-Uy,l=c-Wy.year-Gy;return(0,Z.jsxs)(Zy,{style:{"--r":`${n}px`},children:[(0,Z.jsxs)($.svg,{viewBox:`${-n} ${-n} ${n*2} ${n*2}`,width:n*2,height:n*2,"aria-hidden":`true`,style:{rotate:a},children:[(0,Z.jsx)(`circle`,{r:n,fill:`none`,stroke:`var(--wheel-line)`,strokeWidth:`1`}),(0,Z.jsx)($.path,{d:Yy(n,0,s),fill:`none`,stroke:`var(--color-amber)`,strokeWidth:`2`,strokeLinecap:`round`,style:{pathLength:o}}),r.map(({m:e,year:t,month:n})=>{let r=-e*Hy,a=t?`year`:n%3==0?`quarter`:`month`,o=Jy(c,r),s=Jy(c-Wy[a],r),u=Jy(l,r);return(0,Z.jsxs)(`g`,{children:[(0,Z.jsx)(`line`,{x1:o.x,y1:o.y,x2:s.x,y2:s.y,className:`tick ${a}`}),(0,Z.jsx)(`text`,{x:u.x,y:u.y,transform:`rotate(${r} ${u.x} ${u.y})`,textAnchor:`end`,dominantBaseline:`middle`,className:e===i?`now`:t?`year`:`month`,children:e===i?`NOW`:t??Ky[n]})]},e)})]}),(0,Z.jsx)(Qy,{"aria-hidden":`true`})]})},Zy=P.div`
   position: absolute;
   /* the wheel's centre sits off-screen left; its rim passes through --rim-x */
   left: calc(var(--rim-x) - var(--r) * 2);
@@ -1277,7 +1294,7 @@ Error generating stack: `+e.message+`
     fill: var(--color-amber-ink);
     font-weight: 700;
   }
-`,Qb=P.span`
+`,Qy=P.span`
   position: absolute;
   left: 100%;
   top: 50%;
@@ -1296,7 +1313,7 @@ Error generating stack: `+e.message+`
     border-right: 6px solid var(--color-ink);
     transform: translate(-50%, -50%);
   }
-`,$b=/^(\d{4})-(\d{2})$/,ex=e=>{let t=$b.exec(e);if(!t)throw RangeError(`Expected a YYYY-MM date, got "${e}"`);return{year:Number(t[1]),month:Number(t[2])-1}},tx=e=>`${e.getFullYear()}-${String(e.getMonth()+1).padStart(2,`0`)}`,nx=(e,t)=>{let n=ex(t),r=ex(e);return(r.year-n.year)*12+(r.month-n.month)},rx=(e,t)=>{let n=e[0].start,r=nx(tx(t),n),{year:i,month:a}=ex(n);return{origin:n,totalMonths:r,ticks:Array.from({length:r+1},(e,t)=>{let n=(a+t)%12,r=i+Math.floor((a+t)/12);return{m:t,month:n,year:n===0?r:null}}),nodes:e.map(e=>nx(e.start,n))}},ix=(e,[t,n])=>{let r=(n-t)/e.length,i=[0],a=[e[0]];return e.forEach((e,n)=>{let o=t+n*r,s=n===0?o:o+r*.5800000000000001;i.push(s,o+r),a.push(e,e)}),i.push(1),a.push(e[e.length-1]),i[1]===0?{input:i.slice(1),output:a.slice(1)}:{input:i,output:a}},ax=(e,t,[n,r])=>{let i=Math.min(1,Math.max(0,(e-n)/(r-n)));return Math.min(t-1,Math.floor(i*t))},ox=(e,t,n)=>{let r=nx(t??tx(n),e)+1,i=Math.floor(r/12),a=r%12,o=(e,t)=>e?`${e} ${t}${e===1?``:`s`}`:``;return[o(i,`yr`),o(a,`mo`)].filter(Boolean).join(` `)||`1 mo`},sx=[{start:`2021-08`,end:`2021-11`,role:`Process Engineering Intern`,company:`Dove Pharma LLP`,location:`India`,summary:`Supported engineering teams with process documentation and data analysis for ongoing operations.`,highlights:[`Supported engineering teams with process documentation, data collection and analysis.`,`Assisted with engineering calculations and spreadsheet-based tracking for validation and compliance activities.`,`Prepared technical documentation and summaries for internal engineering review.`],impact:`Kept validation and compliance work traceable with clear calculations, tracking and review-ready documentation.`,metric:null,tags:[`Process documentation`,`Data analysis`,`Validation`,`Technical writing`]},{start:`2022-08`,end:`2024-07`,role:`A.S.-T in Mathematics`,company:`Palomar College`,location:`San Marcos, CA`,summary:`Associate Degree in Science for Transfer in Mathematics, the foundation for transferring into aerospace engineering.`,highlights:[`Dean’s List in Fall 2022, Spring 2023, Fall 2023, Spring 2024 and Summer 2024.`,`Transferred to UC San Diego’s B.S. in Aerospace Engineering.`],impact:`Built the mathematical base for aerodynamics, controls and computational methods coursework.`,metric:{value:`3.94`,label:`GPA out of 4.0`},tags:[`Mathematics`,`Dean’s List`]},{start:`2024-09`,end:`2026-12`,role:`B.S. Aerospace Engineering`,company:`UC San Diego`,location:`La Jolla, CA`,summary:`Aircraft design, computational analysis and hardware integration, graduating December 2026.`,highlights:[`Coursework: aerodynamics, advanced fluid mechanics, propulsion, linear controls, computational methods, flight simulation techniques, aerospace structures and senior aerospace design.`,`Senior design: Jäger-QRF hybrid VTOL (MAE 155A) and Nimbus V4 flying-wing cargo aircraft (MAE 155B).`],impact:`Carried two aircraft from requirements through sizing and stability, and one all the way to flight test.`,metric:{value:`4×`,label:`UCSD Provost Honors`},tags:[`Aerodynamics`,`Propulsion`,`Controls`,`Aircraft design`]},{start:`2026-01`,end:`2026-09`,role:`Instructional Assistant`,company:`Physics Department, UC San Diego`,location:`La Jolla, CA`,summary:`Supported physics instruction in the classroom and the lab.`,highlights:[`Collaborated with professors and teaching staff to keep instruction aligned with course objectives.`,`Helped students connect theoretical physics principles to practical applications in class and lab.`,`Graded assignments and examinations.`],impact:`Helped students turn physics theory into working intuition, and kept course delivery consistent across the teaching team.`,metric:null,tags:[`Teaching`,`Physics`,`Lab instruction`]},{start:`2026-06`,end:`2026-08`,role:`Test Engineering Intern`,company:`Sensor Systems LLC`,location:`St. Petersburg, FL`,summary:`Qualification testing of precision potentiometers for mission-critical aerospace and defense applications.`,highlights:[`Ran clutch-release-time tests on clutched potentiometer assemblies using controlled-speed actuation and high-speed timing instrumentation.`,`Executed multi-axis vibration qualification on shaker systems with accelerometers and data acquisition, in 3-hour cycles across X, Y and Z.`,`Performed full-travel linearity and output-smoothness testing with precision actuators, multimeters, oscilloscopes and automated logging.`],impact:`Verified mechanical response, overtravel protection, durability and electrical stability against customer specifications.`,metric:{value:`3-axis`,label:`vibration qualification, 3-hour test cycles`},tags:[`Vibration testing`,`Data acquisition`,`Instrumentation`,`Qualification`]},{start:`2026-09`,end:null,role:`Project Engineer`,company:`Big Sky Electric`,location:`San Marcos, CA`,summary:`Planning and coordinating onsite engineering for water and wastewater infrastructure projects.`,highlights:[`Assist the project manager in planning and coordinating onsite engineering activities while tracking budgets, documentation and schedule updates.`,`Coordinate project submittals and track RFIs and PCOs to resolve technical issues.`,`Work with foremen, superintendents, suppliers and subcontractors to keep field operations efficient.`],impact:`Keeps technical issues moving to resolution and field work on schedule and on budget.`,metric:null,tags:[`Project coordination`,`RFIs & PCOs`,`Submittals`,`Budget tracking`]}],cx=[.06,.94],lx={stiffness:55,damping:20,mass:.9,restDelta:5e-4},ux=`(max-width: 899px)`,dx=[.16,1,.3,1],fx=[`Jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`],px=e=>{let[t,n]=e.split(`-`);return`${fx[Number(n)-1]} ${t}`},mx=({now:e=new Date})=>{let t=(0,j.useRef)(null),n=!!Nh(),r=Rh(ux),i=rx(sx,e),{scrollYProgress:a}=Th({target:t,offset:[`start start`,`end end`]}),o=Ah(a,lx),s=n?a:o,{input:c,output:l}=ix(i.nodes,cx),u=Q(s,c,l),[d,f]=(0,j.useState)(0);Hm(s,`change`,e=>f(ax(e,sx.length,cx)));let p=sx[d],m=p.end===null;return(0,Z.jsx)(hx,{id:`experience`,ref:t,"aria-labelledby":`experience-heading`,$count:sx.length,"data-hide-trail":!0,children:(0,Z.jsxs)(gx,{children:[(0,Z.jsx)(Xb,{scale:i,month:u,radius:r?380:560}),(0,Z.jsxs)(_x,{children:[(0,Z.jsxs)(yx,{children:[(0,Z.jsx)(ly,{index:`04`,children:`Flight log`}),(0,Z.jsx)(`h2`,{id:`experience-heading`,children:`Experience`})]}),(0,Z.jsx)(vx,{children:(0,Z.jsx)(kp,{mode:`wait`,initial:!1,children:(0,Z.jsxs)($.article,{initial:!n&&{opacity:0,y:24},animate:{opacity:1,y:0},exit:n?{opacity:0}:{opacity:0,y:-18},transition:{duration:.45,ease:dx},"aria-live":`polite`,children:[(0,Z.jsxs)(bx,{children:[m&&(0,Z.jsx)(xx,{"aria-hidden":`true`}),px(p.start),` — `,m?`Present`:px(p.end),(0,Z.jsxs)(`span`,{children:[` · `,ox(p.start,p.end,e)]})]}),(0,Z.jsx)(Sx,{children:p.role}),(0,Z.jsxs)(Cx,{children:[p.company,(0,Z.jsxs)(`span`,{children:[` · `,p.location]})]}),(0,Z.jsx)(wx,{children:p.summary}),p.highlights.length>0&&(0,Z.jsx)(Ex,{children:p.highlights.map(e=>(0,Z.jsx)(`li`,{children:e},e))}),(0,Z.jsxs)(Dx,{children:[p.metric&&(0,Z.jsxs)(kx,{children:[(0,Z.jsx)(`b`,{children:p.metric.value}),(0,Z.jsx)(`span`,{children:p.metric.label})]}),(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(Ox,{children:`Impact`}),(0,Z.jsx)(`p`,{children:p.impact})]})]}),(0,Z.jsx)(Ax,{children:p.tags.map(e=>(0,Z.jsx)(`li`,{children:e},e))})]},p.company)})})]}),(0,Z.jsx)(jx,{as:`ol`,children:sx.map(e=>(0,Z.jsxs)(`li`,{children:[e.role,`, `,e.company,`, `,px(e.start),` to `,e.end?px(e.end):`present`]},e.company))})]})})},hx=P.section`
+`,$y=/^(\d{4})-(\d{2})$/,eb=e=>{let t=$y.exec(e);if(!t)throw RangeError(`Expected a YYYY-MM date, got "${e}"`);return{year:Number(t[1]),month:Number(t[2])-1}},tb=e=>`${e.getFullYear()}-${String(e.getMonth()+1).padStart(2,`0`)}`,nb=(e,t)=>{let n=eb(t),r=eb(e);return(r.year-n.year)*12+(r.month-n.month)},rb=(e,t)=>{let n=e[0].start,r=nb(tb(t),n),{year:i,month:a}=eb(n);return{origin:n,totalMonths:r,ticks:Array.from({length:r+1},(e,t)=>{let n=(a+t)%12,r=i+Math.floor((a+t)/12);return{m:t,month:n,year:n===0?r:null}}),nodes:e.map(e=>nb(e.start,n))}},ib=(e,[t,n])=>{let r=(n-t)/e.length,i=[0],a=[e[0]];return e.forEach((e,n)=>{let o=t+n*r,s=n===0?o:o+r*.5800000000000001;i.push(s,o+r),a.push(e,e)}),i.push(1),a.push(e[e.length-1]),i[1]===0?{input:i.slice(1),output:a.slice(1)}:{input:i,output:a}},ab=(e,t,[n,r])=>{let i=Math.min(1,Math.max(0,(e-n)/(r-n)));return Math.min(t-1,Math.floor(i*t))},ob=(e,t,n)=>{let r=nb(t??tb(n),e)+1,i=Math.floor(r/12),a=r%12,o=(e,t)=>e?`${e} ${t}${e===1?``:`s`}`:``;return[o(i,`yr`),o(a,`mo`)].filter(Boolean).join(` `)||`1 mo`},sb=[{start:`2021-08`,end:`2021-11`,role:`Process Engineering Intern`,company:`Dove Pharma LLP`,location:`India`,summary:`Supported engineering teams with process documentation and data analysis for ongoing operations.`,highlights:[`Supported engineering teams with process documentation, data collection and analysis.`,`Assisted with engineering calculations and spreadsheet-based tracking for validation and compliance activities.`,`Prepared technical documentation and summaries for internal engineering review.`],impact:`Kept validation and compliance work traceable with clear calculations, tracking and review-ready documentation.`,metric:null,tags:[`Process documentation`,`Data analysis`,`Validation`,`Technical writing`]},{start:`2022-08`,end:`2024-07`,role:`A.S.-T in Mathematics`,company:`Palomar College`,location:`San Marcos, CA`,summary:`Associate Degree in Science for Transfer in Mathematics, the foundation for transferring into aerospace engineering.`,highlights:[`Dean’s List in Fall 2022, Spring 2023, Fall 2023, Spring 2024 and Summer 2024.`,`Transferred to UC San Diego’s B.S. in Aerospace Engineering.`],impact:`Built the mathematical base for aerodynamics, controls and computational methods coursework.`,metric:{value:`3.94`,label:`GPA out of 4.0`},tags:[`Mathematics`,`Dean’s List`]},{start:`2024-09`,end:`2026-12`,role:`B.S. Aerospace Engineering`,company:`UC San Diego`,location:`La Jolla, CA`,summary:`Aircraft design, computational analysis and hardware integration, graduating December 2026.`,highlights:[`Coursework: aerodynamics, advanced fluid mechanics, propulsion, linear controls, computational methods, flight simulation techniques, aerospace structures and senior aerospace design.`,`Senior design: Jäger-QRF hybrid VTOL (MAE 155A) and Nimbus V4 flying-wing cargo aircraft (MAE 155B).`],impact:`Carried two aircraft from requirements through sizing and stability, and one all the way to flight test.`,metric:{value:`4×`,label:`UCSD Provost Honors`},tags:[`Aerodynamics`,`Propulsion`,`Controls`,`Aircraft design`]},{start:`2026-01`,end:`2026-09`,role:`Instructional Assistant`,company:`Physics Department, UC San Diego`,location:`La Jolla, CA`,summary:`Supported physics instruction in the classroom and the lab.`,highlights:[`Collaborated with professors and teaching staff to keep instruction aligned with course objectives.`,`Helped students connect theoretical physics principles to practical applications in class and lab.`,`Graded assignments and examinations.`],impact:`Helped students turn physics theory into working intuition, and kept course delivery consistent across the teaching team.`,metric:null,tags:[`Teaching`,`Physics`,`Lab instruction`]},{start:`2026-06`,end:`2026-08`,role:`Test Engineering Intern`,company:`Sensor Systems LLC`,location:`St. Petersburg, FL`,summary:`Qualification testing of precision potentiometers for mission-critical aerospace and defense applications.`,highlights:[`Ran clutch-release-time tests on clutched potentiometer assemblies using controlled-speed actuation and high-speed timing instrumentation.`,`Executed multi-axis vibration qualification on shaker systems with accelerometers and data acquisition, in 3-hour cycles across X, Y and Z.`,`Performed full-travel linearity and output-smoothness testing with precision actuators, multimeters, oscilloscopes and automated logging.`],impact:`Verified mechanical response, overtravel protection, durability and electrical stability against customer specifications.`,metric:{value:`3-axis`,label:`vibration qualification, 3-hour test cycles`},tags:[`Vibration testing`,`Data acquisition`,`Instrumentation`,`Qualification`]},{start:`2026-09`,end:null,role:`Project Engineer`,company:`Big Sky Electric`,location:`San Marcos, CA`,summary:`Planning and coordinating onsite engineering for water and wastewater infrastructure projects.`,highlights:[`Assist the project manager in planning and coordinating onsite engineering activities while tracking budgets, documentation and schedule updates.`,`Coordinate project submittals and track RFIs and PCOs to resolve technical issues.`,`Work with foremen, superintendents, suppliers and subcontractors to keep field operations efficient.`],impact:`Keeps technical issues moving to resolution and field work on schedule and on budget.`,metric:null,tags:[`Project coordination`,`RFIs & PCOs`,`Submittals`,`Budget tracking`]}],cb=[.06,.94],lb={stiffness:55,damping:20,mass:.9,restDelta:5e-4},ub=`(max-width: 899px)`,db=[.16,1,.3,1],fb=[`Jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`],pb=e=>{let[t,n]=e.split(`-`);return`${fb[Number(n)-1]} ${t}`},mb=({now:e=new Date})=>{let t=(0,j.useRef)(null),n=!!Nh(),r=Rh(ub),i=rb(sb,e),{scrollYProgress:a}=Th({target:t,offset:[`start start`,`end end`]}),o=Ah(a,lb),s=n?a:o,{input:c,output:l}=ib(i.nodes,cb),u=Q(s,c,l),[d,f]=(0,j.useState)(0);Hm(s,`change`,e=>f(ab(e,sb.length,cb)));let p=sb[d],m=p.end===null;return(0,Z.jsx)(hb,{id:`experience`,ref:t,"aria-labelledby":`experience-heading`,$count:sb.length,children:(0,Z.jsxs)(gb,{children:[(0,Z.jsx)(Xy,{scale:i,month:u,radius:r?380:560}),(0,Z.jsxs)(_b,{children:[(0,Z.jsxs)(yb,{children:[(0,Z.jsx)(Jv,{index:`04`,children:`Flight log`}),(0,Z.jsx)(`h2`,{id:`experience-heading`,children:`Experience`})]}),(0,Z.jsx)(vb,{children:(0,Z.jsx)(kp,{mode:`wait`,initial:!1,children:(0,Z.jsxs)($.article,{initial:!n&&{opacity:0,y:24},animate:{opacity:1,y:0},exit:n?{opacity:0}:{opacity:0,y:-18},transition:{duration:.45,ease:db},"aria-live":`polite`,children:[(0,Z.jsxs)(bb,{children:[m&&(0,Z.jsx)(xb,{"aria-hidden":`true`}),pb(p.start),` — `,m?`Present`:pb(p.end),(0,Z.jsxs)(`span`,{children:[` · `,ob(p.start,p.end,e)]})]}),(0,Z.jsx)(Sb,{children:p.role}),(0,Z.jsxs)(Cb,{children:[p.company,(0,Z.jsxs)(`span`,{children:[` · `,p.location]})]}),(0,Z.jsx)(wb,{children:p.summary}),p.highlights.length>0&&(0,Z.jsx)(Eb,{children:p.highlights.map(e=>(0,Z.jsx)(`li`,{children:e},e))}),(0,Z.jsxs)(Db,{children:[p.metric&&(0,Z.jsxs)(kb,{children:[(0,Z.jsx)(`b`,{children:p.metric.value}),(0,Z.jsx)(`span`,{children:p.metric.label})]}),(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(Ob,{children:`Impact`}),(0,Z.jsx)(`p`,{children:p.impact})]})]}),(0,Z.jsx)(Ab,{children:p.tags.map(e=>(0,Z.jsx)(`li`,{children:e},e))})]},p.company)})})]}),(0,Z.jsx)(jb,{as:`ol`,children:sb.map(e=>(0,Z.jsxs)(`li`,{children:[e.role,`, `,e.company,`, `,pb(e.start),` to `,e.end?pb(e.end):`present`]},e.company))})]})})},hb=P.section`
   position: relative;
   height: ${({$count:e})=>e*80+40}vh;
   background: var(--color-paper);
@@ -1304,17 +1321,17 @@ Error generating stack: `+e.message+`
   font-family: var(--font-body);
   overflow: clip;
   overflow-anchor: none;
-`,gx=P.div`
+`,gb=P.div`
   position: sticky;
   top: 0;
   height: 100svh;
   overflow: hidden;
   --rim-x: clamp(150px, 24vw, 360px);
 
-  @media ${ux} {
+  @media ${ub} {
     --rim-x: 64px;
   }
-`,_x=P.div`
+`,_b=P.div`
   position: absolute;
   z-index: 1;
   left: ${`calc(var(--rim-x) + clamp(5.5rem, 3.5rem + 5vw, 9rem))`};
@@ -1326,13 +1343,13 @@ Error generating stack: `+e.message+`
   gap: clamp(1.5rem, 5vh, 3.5rem);
   max-width: 40rem;
 
-  @media ${ux} {
+  @media ${ub} {
     left: calc(var(--rim-x) + 2.75rem);
   }
-`,vx=P.div`
+`,vb=P.div`
   flex: 1;
   min-height: 0;
-`,yx=P.header`
+`,yb=P.header`
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -1344,7 +1361,7 @@ Error generating stack: `+e.message+`
     font-weight: 700;
     letter-spacing: -0.035em;
   }
-`,bx=P.p`
+`,bb=P.p`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -1358,7 +1375,7 @@ Error generating stack: `+e.message+`
     color: var(--color-ink-soft);
     font-weight: 400;
   }
-`,xx=P.i`
+`,xb=P.i`
   position: relative;
   width: 8px;
   height: 8px;
@@ -1382,7 +1399,7 @@ Error generating stack: `+e.message+`
   @media (prefers-reduced-motion: reduce) {
     &::after { animation: none; }
   }
-`,Sx=P.h3`
+`,Sb=P.h3`
   margin-top: 0.9rem;
   font-family: var(--font-display);
   font-size: clamp(2rem, 1.4rem + 2vw, 3.25rem);
@@ -1395,10 +1412,10 @@ Error generating stack: `+e.message+`
     font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.6rem);
   }
 
-  @media ${ux} {
+  @media ${ub} {
     font-size: 1.6rem;
   }
-`,Cx=P.p`
+`,Cb=P.p`
   margin-top: 0.6rem;
   font-size: 1.125rem;
   font-weight: 700;
@@ -1409,19 +1426,19 @@ Error generating stack: `+e.message+`
     font-weight: 400;
   }
 
-  @media ${ux} {
+  @media ${ub} {
     font-size: 1rem;
   }
-`,wx=P.p`
+`,wb=P.p`
   margin-top: 1rem;
   max-width: 52ch;
   line-height: 1.55;
   color: var(--color-ink);
 
-  @media ${ux} {
+  @media ${ub} {
     font-size: var(--text-sm);
   }
-`,Tx=`(max-height: 780px)`,Ex=P.ul`
+`,Tb=`(max-height: 780px)`,Eb=P.ul`
   list-style: none;
   margin-top: 1.1rem;
   display: grid;
@@ -1437,7 +1454,7 @@ Error generating stack: `+e.message+`
   }
 
   /* hairline dash instead of a bullet */
-  @media ${Tx} {
+  @media ${Tb} {
     margin-top: 0.8rem;
     gap: 0.35rem;
     line-height: 1.45;
@@ -1454,10 +1471,10 @@ Error generating stack: `+e.message+`
   }
 
   /* too long for a narrow column: phones get the summary and impact instead */
-  @media ${ux} {
+  @media ${ub} {
     display: none;
   }
-`,Dx=P.div`
+`,Db=P.div`
   display: flex;
   align-items: stretch;
   gap: 1.25rem;
@@ -1466,7 +1483,7 @@ Error generating stack: `+e.message+`
   border-top: 1px solid var(--color-line);
   max-width: 60ch;
 
-  @media ${Tx} {
+  @media ${Tb} {
     margin-top: 1rem;
     padding-top: 0.8rem;
   }
@@ -1477,17 +1494,17 @@ Error generating stack: `+e.message+`
     line-height: 1.55;
   }
 
-  @media ${ux} {
+  @media ${ub} {
     flex-direction: column;
     gap: 0.75rem;
   }
-`,Ox=P.span`
+`,Ob=P.span`
   font-size: var(--text-label);
   font-weight: 700;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-ink-soft);
-`,kx=P.div`
+`,kb=P.div`
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -1509,11 +1526,11 @@ Error generating stack: `+e.message+`
     color: var(--color-ink-soft);
   }
 
-  @media ${ux} {
+  @media ${ub} {
     padding-right: 0;
     border-right: 0;
   }
-`,Ax=P.ul`
+`,Ab=P.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -1534,290 +1551,361 @@ Error generating stack: `+e.message+`
   @media (max-height: 680px) {
     display: none;
   }
-`,jx=P.div`
+`,jb=P.div`
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
-`,Mx=35,Nx=18,Px=2.2,Fx={stiffness:60,damping:14,mass:1},Ix=100,Lx=(e,t,n)=>Math.min(n,Math.max(t,e)),Rx=(e,t)=>{let n=Eh(0),r=Eh(0);return(0,j.useEffect)(()=>{if(!t)return;let i=t=>{let i=e.current?.getBoundingClientRect();if(!i)return;let a=(t.clientX-(i.left+i.width/2))/(window.innerWidth/2),o=(t.clientY-(i.top+i.height/2))/(window.innerHeight/2);n.set(Lx(a,-1,1)*Mx),r.set(Lx(-o,-1,1)*Nx)},a=()=>{n.set(0),r.set(0)};return window.addEventListener(`pointermove`,i,{passive:!0}),document.documentElement.addEventListener(`pointerleave`,a),()=>{window.removeEventListener(`pointermove`,i),document.documentElement.removeEventListener(`pointerleave`,a)}},[e,t,n,r]),{roll:n,pitch:r}},zx=[-20,-15,-10,-5,5,10,15,20],Bx=[-60,-45,-30,-20,-10,0,10,20,30,45,60],Vx=({size:e=200,className:t})=>{let n=(0,j.useRef)(null),r=!!Nh(),i=`ai-${(0,j.useId)().replace(/[^a-zA-Z0-9]/g,``)}`,a=Rx(n,!r),o=Ah(a.roll,Fx),s=Ah(a.pitch,Fx),c=(0,j.useRef)(null),l=(0,j.useRef)(null),u=()=>{let e=o.get(),t=s.get();c.current?.setAttribute(`transform`,`rotate(${(-e).toFixed(2)}) translate(0 ${(t*Px).toFixed(2)})`),l.current?.setAttribute(`transform`,`rotate(${(-e).toFixed(2)})`)};return Hm(o,`change`,u),Hm(s,`change`,u),(0,Z.jsx)(Hx,{ref:n,className:t,style:{width:e,height:e},"data-attitude":!0,"aria-hidden":`true`,children:(0,Z.jsxs)(`svg`,{viewBox:`-108 -108 216 216`,width:`100%`,height:`100%`,children:[(0,Z.jsx)(`defs`,{children:(0,Z.jsx)(`clipPath`,{id:i,children:(0,Z.jsx)(`circle`,{r:86})})}),(0,Z.jsx)(`circle`,{r:106,fill:`#1a1b1e`,stroke:`rgba(255,255,255,0.12)`,strokeWidth:`1`}),(0,Z.jsx)(`g`,{clipPath:`url(#${i})`,children:(0,Z.jsxs)(`g`,{ref:c,children:[(0,Z.jsx)(`rect`,{x:-200,y:-300,width:400,height:300,fill:`#2c4a63`}),(0,Z.jsx)(`rect`,{x:-200,y:0,width:400,height:300,fill:`#4a3826`}),(0,Z.jsx)(`line`,{x1:-200,x2:200,y1:0,y2:0,stroke:`#ececec`,strokeWidth:`1.5`}),zx.map(e=>{let t=-e*Px,n=e%10==0?22:11;return(0,Z.jsxs)(`g`,{children:[(0,Z.jsx)(`line`,{x1:-n,x2:n,y1:t,y2:t,stroke:`#ececec`,strokeWidth:`1`,opacity:`0.85`}),e%10==0&&(0,Z.jsx)(`text`,{x:n+5,y:t,fill:`#ececec`,fontSize:`7`,dominantBaseline:`middle`,opacity:`0.8`,children:Math.abs(e)})]},e)})]})}),Bx.map(e=>{let t=e%30==0;return(0,Z.jsx)(`line`,{x1:0,x2:0,y1:-98,y2:-(Ix-(t?12:7)),stroke:`#ececec`,strokeWidth:t?1.6:1,transform:`rotate(${e})`},e)}),(0,Z.jsx)(`path`,{ref:l,d:`M0 -86 l-5 9 h10 z`,fill:`#f2a500`}),(0,Z.jsxs)(`g`,{stroke:`#f2a500`,strokeWidth:`4`,strokeLinecap:`square`,fill:`none`,children:[(0,Z.jsx)(`path`,{d:`M-52 0 H-20 L-12 8`}),(0,Z.jsx)(`path`,{d:`M52 0 H20 L12 8`})]}),(0,Z.jsx)(`rect`,{x:-2.5,y:-2.5,width:5,height:5,fill:`#f2a500`})]})})},Hx=P.div`
-  flex-shrink: 0;
-  border-radius: 50%;
-  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-
-  svg {
-    display: block;
-    font-family: var(--font-body);
-  }
-`,Ux=[.16,1,.3,1],Wx=.05,Gx=[{text:`Let’s build`,strong:!0},{text:`something`,strong:!1},{text:`that`,strong:!1},{text:`flies.`,strong:!0}].flatMap(e=>e.text.split(` `).map(t=>({word:t,strong:e.strong}))),Kx=e=>mg.find(t=>t.label===e).href,qx=[{label:`Email`,handle:lg,href:`mailto:${lg}`},{label:`LinkedIn`,handle:`in/harshilpatel2060`,href:Kx(`LinkedIn`),external:!0},{label:`GitHub`,handle:`patelharshil2060`,href:Kx(`GitHub`),external:!0}],Jx={once:!0,margin:`-15% 0px`},Yx=()=>{let e=!!Nh(),t=yg(dg),n=new Date().getFullYear(),r=!e&&`hidden`;return(0,Z.jsxs)(rS,{id:`contact`,"aria-labelledby":`contact-heading`,children:[(0,Z.jsx)(iS,{"aria-hidden":`true`}),(0,Z.jsxs)(aS,{initial:r,whileInView:`shown`,viewport:Jx,children:[(0,Z.jsxs)(oS,{children:[(0,Z.jsx)($.div,{variants:Xx(0),children:(0,Z.jsx)(ly,{index:`05`,tone:`night`,children:`Contact`})}),(0,Z.jsxs)(sS,{variants:Xx(.04),children:[(0,Z.jsx)(cS,{"aria-hidden":`true`}),fg]}),(0,Z.jsx)(lS,{id:`contact-heading`,children:Gx.map(({word:e,strong:t},n)=>(0,Z.jsxs)(j.Fragment,{children:[(0,Z.jsx)(uS,{children:(0,Z.jsx)(dS,{variants:Zx(.1+n*Wx),$strong:t,children:e})}),` `]},`${e}-${n}`))}),(0,Z.jsx)(fS,{variants:Xx(.1+Gx.length*Wx),children:(0,Z.jsx)(pS,{email:lg})})]}),(0,Z.jsxs)(mS,{variants:Xx(.2),"aria-hidden":`true`,children:[(0,Z.jsx)(Vx,{size:200}),(0,Z.jsx)(hS,{children:`Wings level, inbox open.`})]})]}),(0,Z.jsx)(gS,{initial:r,whileInView:`shown`,viewport:Jx,children:qx.map(({label:e,handle:t,href:n,external:r},i)=>(0,Z.jsx)($.li,{variants:Xx(i*.08),children:(0,Z.jsxs)(_S,{href:n,...r?{target:`_blank`,rel:`noopener noreferrer`}:{},"aria-label":`${e}: ${t}`,children:[(0,Z.jsx)(`span`,{className:`label`,children:e}),(0,Z.jsx)(`span`,{className:`handle`,children:t}),(0,Z.jsx)(`span`,{className:`arrow`,"aria-hidden":`true`,children:(0,Z.jsx)(Ug,{})})]})},e))}),(0,Z.jsxs)(vS,{children:[(0,Z.jsxs)(`span`,{children:[`© `,n,` `,cg]}),(0,Z.jsxs)(`span`,{className:`time`,children:[`San Diego · `,(0,Z.jsx)(`time`,{children:t})]}),(0,Z.jsxs)(yS,{href:`/#home`,children:[`Back to top `,(0,Z.jsx)(Hg,{"aria-hidden":`true`})]})]}),(0,Z.jsx)(bS,{"aria-hidden":`true`,children:cg})]})},Xx=e=>({hidden:{opacity:0,y:20},shown:{opacity:1,y:0,transition:{delay:e,duration:.8,ease:Ux}}}),Zx=e=>({hidden:{y:`110%`},shown:{y:`0%`,transition:{delay:e,duration:.9,ease:Ux}}}),Qx=`clamp(8px, 1vw, 16px)`,$x=`var(--color-night-ink)`,eS=`rgba(236, 236, 236, 0.5)`,tS=`var(--color-night-line)`,nS=`(max-width: 899px)`,rS=P.section`
-  position: relative;
-  overflow: hidden;
-  margin: 0 ${Qx} ${Qx};
-  padding: clamp(4rem, 3rem + 6vw, 9rem) calc(max(var(--space-gutter), (100vw - var(--content-max)) / 2) - ${Qx})
-    0;
-  border-radius: var(--radius-panel);
-  background: var(--color-night);
-  color: ${$x};
-  font-family: var(--font-body);
-`,iS=P.div`
-  position: absolute;
-  inset: -30% 20% auto -10%;
-  height: 80%;
-  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.07), transparent);
-  pointer-events: none;
-  animation: contact-drift 14s ease-in-out infinite alternate;
-
-  @keyframes contact-drift {
-    from { transform: translate(0, 0); }
-    to { transform: translate(12%, 8%); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-  }
-`,aS=P($.div)`
+`,Mb=({channel:e,callsign:t,handle:n,href:r,action:i,external:a,isPrimary:o,children:s})=>{let c=(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(Pb,{"aria-hidden":`true`,$isPrimary:o}),(0,Z.jsxs)(Fb,{className:`ch`,"aria-hidden":`true`,children:[(0,Z.jsx)(`small`,{children:`Ch`}),e]}),(0,Z.jsxs)(Fb,{className:`route`,children:[(0,Z.jsx)(`span`,{className:`callsign`,children:t}),(0,Z.jsx)(`span`,{className:`handle`,children:n})]}),(0,Z.jsx)(Fb,{className:`action`,children:s??(0,Z.jsxs)(`span`,{className:`cue`,children:[i,` `,(0,Z.jsx)(wg,{"aria-hidden":`true`})]})})]});return r?(0,Z.jsx)(Nb,{as:`a`,href:r,...a?{target:`_blank`,rel:`noopener noreferrer`}:{},"aria-label":`${t}: ${n}`,$isLink:!0,children:c}):(0,Z.jsx)(Nb,{children:c})},Nb=P.div`
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: clamp(2rem, 1rem + 4vw, 5rem);
-
-  @media ${nS} {
-    grid-template-columns: minmax(0, 1fr);
-  }
-`,oS=P.div`
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.25rem, 1rem + 1vw, 2rem);
-`,sS=P($.p)`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: var(--text-sm);
-  color: ${eS};
-`,cS=P.i`
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-live);
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: inherit;
-    animation: contact-pulse 2.4s var(--ease-out-expo) infinite;
-  }
-
-  @keyframes contact-pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    70%, 100% { transform: scale(2.6); opacity: 0; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &::after { animation: none; }
-  }
-`,lS=P.h2`
-  font-family: var(--font-display);
-  font-size: clamp(2.75rem, 1.3rem + 5vw, 6.25rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  max-width: 14ch;
-`,uS=P.span`
-  display: inline-block;
-  overflow: hidden;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
-  vertical-align: top;
-`,dS=P($.span)`
-  display: inline-block;
-  color: ${({$strong:e})=>e?$x:eS};
-`,fS=P($.div)`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-`,pS=P(u_)`
-  background: ${$x};
-  color: #111111;
-
-  &:hover {
-    background: var(--color-amber);
-  }
-
-  &:focus-visible {
-    outline-color: ${$x};
-  }
-`,mS=P($.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding-bottom: 0.5rem;
-
-  @media ${nS} {
-    display: none;
-  }
-`,hS=P.p`
-  font-size: var(--text-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: ${eS};
-`,gS=P($.ul)`
-  position: relative;
-  list-style: none;
-  margin-top: clamp(3.5rem, 2rem + 5vw, 7rem);
-  border-top: 1px solid ${tS};
-`,_S=P.a`
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(7rem, 1fr) minmax(0, 2fr) auto;
-  align-items: center;
-  gap: 1rem;
-  padding: clamp(1.1rem, 0.9rem + 0.8vw, 1.6rem) 0;
-  border-bottom: 1px solid ${tS};
-  color: ${$x};
+  grid-template-columns: 0.5rem 3.25rem minmax(0, 1fr) auto;
+  align-items: stretch;
+  min-height: 4rem;
+  background: #fbf9f3;
+  color: var(--color-ink);
   text-decoration: none;
-  isolation: isolate;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 6px 14px -10px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo);
 
-  /* a soft fill sweeps in from the left on hover */
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0 calc(-1 * clamp(0.75rem, 2vw, 1.5rem));
-    z-index: -1;
-    border-radius: 2px;
-    background: rgba(236, 236, 236, 0.05);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.6s var(--ease-out-expo);
+  /* strips slide along the board when picked up */
+  &:hover,
+  &:focus-within {
+    transform: translateX(10px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), 0 14px 24px -14px rgba(0, 0, 0, 0.45);
   }
 
-  .label {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.5rem);
+  ${({$isLink:e})=>e&&`
+    &:hover .cue svg { transform: rotate(45deg); }
+    &:hover .cue { background: var(--color-amber); border-color: var(--color-amber); }
+    &:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
+  `}
+
+  @media (prefers-reduced-motion: reduce) {
+    &:hover,
+    &:focus-within {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 0.5rem minmax(0, 1fr) auto;
+  }
+`,Pb=P.span`
+  background: ${({$isPrimary:e})=>e?`var(--color-amber)`:`#8f8d8d`};
+`,Fb=P.span`
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+
+  & + & {
+    border-left: 1px dashed rgba(17, 17, 17, 0.18);
+  }
+
+  &.ch {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
     font-weight: 700;
-    letter-spacing: -0.03em;
-    transition: transform 0.6s var(--ease-out-expo);
+    font-variant-numeric: tabular-nums;
+
+    small {
+      font-size: 0.5625rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+    }
+  }
+
+  &.route {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .callsign {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1rem + 0.8vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
   }
 
   .handle {
-    color: ${eS};
-    font-size: var(--text-sm);
-    transition: color var(--duration-normal) ease;
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
   }
 
-  .arrow {
-    display: grid;
-    place-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 2px;
-    border: 1px solid ${tS};
-    transition: transform 0.6s var(--ease-out-expo), background-color var(--duration-normal) ease,
-      color var(--duration-normal) ease, border-color var(--duration-normal) ease;
+  &.action {
+    gap: 0.5rem;
   }
 
-  &:hover::before,
-  &:focus-visible::before {
-    transform: scaleX(1);
+  .cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-ink);
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    transition: background-color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+
+    svg {
+      transition: transform var(--duration-normal) var(--ease-out-expo);
+    }
   }
 
-  &:hover .label,
-  &:focus-visible .label {
-    transform: translateX(0.5rem);
+  /* the email strip's copy button, made compact, plus its "write" link */
+  button {
+    min-height: 2.25rem;
+    padding: 0 0.75rem;
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
   }
 
-  &:hover .handle,
-  &:focus-visible .handle {
-    color: ${$x};
+  .write {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--color-ink);
+    color: var(--color-ink);
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color var(--duration-fast) ease, border-color var(--duration-fast) ease;
   }
 
-  &:hover .arrow,
-  &:focus-visible .arrow {
+  .write:hover {
     background: var(--color-amber);
     border-color: var(--color-amber);
-    color: #111111;
-    transform: rotate(45deg);
   }
 
-  &:focus-visible {
-    outline: none;
+  .write:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
   }
 
-  @media ${nS} {
-    grid-template-columns: minmax(0, 1fr) auto;
-
-    .handle {
-      grid-row: 2;
-      grid-column: 1;
-    }
-
-    .arrow {
-      grid-row: 1 / span 2;
-      grid-column: 2;
+  @media (max-width: 560px) {
+    &.ch {
+      display: none;
     }
   }
-`,vS=P.footer`
-  position: relative;
+`,Ib=[...Bg,{label:`Résumé`,href:Ng}],Lb=()=>{let e=Ag(Pg),t=new Date().getFullYear();return(0,Z.jsxs)(Rb,{children:[(0,Z.jsxs)(zb,{children:[(0,Z.jsxs)(Bb,{children:[(0,Z.jsxs)(Vb,{children:[(0,Z.jsx)(Ph,{size:34}),(0,Z.jsx)(`span`,{children:jg}),(0,Z.jsxs)(`address`,{children:[`San Diego, California`,(0,Z.jsx)(`br`,{}),`USA · `,(0,Z.jsx)(`time`,{children:e})]})]}),(0,Z.jsxs)(Hb,{children:[(0,Z.jsxs)(`nav`,{"aria-label":`Footer`,children:[(0,Z.jsx)(`h2`,{children:`Sections`}),(0,Z.jsx)(`ul`,{children:Bh.map(({label:e,href:t})=>(0,Z.jsx)(`li`,{children:(0,Z.jsx)(`a`,{href:t,children:e})},t))})]}),(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`h2`,{children:`Elsewhere`}),(0,Z.jsx)(`ul`,{children:Ib.map(({label:e,href:t})=>(0,Z.jsx)(`li`,{children:(0,Z.jsx)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:e})},e))})]})]})]}),(0,Z.jsxs)(Ub,{children:[(0,Z.jsxs)(`span`,{children:[`© `,t,` `,jg,`. All rights reserved.`]}),(0,Z.jsxs)(`a`,{href:`/#home`,children:[`Back to top `,(0,Z.jsx)(Cg,{"aria-hidden":`true`})]})]})]}),(0,Z.jsx)(Wb,{"aria-hidden":`true`,children:jg})]})},Rb=P.footer`
+  overflow: hidden;
+  padding: clamp(3rem, 2rem + 3vw, 5rem) var(--space-gutter) 0;
+  background: #f8f8f8;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-ink-soft);
+  font-family: var(--font-body);
+`,zb=P.div`
+  max-width: var(--content-max);
+  margin: 0 auto;
+`,Bb=P.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem) 0;
-  font-size: var(--text-label);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: ${eS};
-
-  .time {
-    font-variant-numeric: tabular-nums;
-  }
-`,yS=P.a`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: ${$x};
-  text-decoration: none;
+  gap: 2.5rem;
+`,Vb=P.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 
   svg {
+    color: var(--color-amber);
+  }
+
+  span {
+    color: var(--color-ink);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  address {
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #aeaeae;
+    font-variant-numeric: tabular-nums;
+  }
+`,Hb=P.div`
+  display: flex;
+  gap: clamp(2rem, 1rem + 4vw, 6rem);
+
+  h2 {
+    margin-bottom: 0.9rem;
+    font-size: var(--text-label);
+    font-weight: 400;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-ink);
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  a {
+    color: #8f8d8d;
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color var(--duration-fast) ease;
+  }
+
+  a:hover {
+    color: var(--color-ink);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+`,Ub=P.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 0.6875rem;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: #8f8d8d;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  a svg {
     transition: transform var(--duration-normal) var(--ease-out-expo);
   }
 
-  &:hover svg {
+  a:hover svg {
     transform: translateY(-3px);
   }
 
-  &:focus-visible {
-    outline: 2px solid ${$x};
+  a:focus-visible {
+    outline: 2px solid var(--color-ink);
     outline-offset: 3px;
-    border-radius: 4px;
   }
-`,bS=P.p`
-  margin: 0 calc(-1 * (max(var(--space-gutter), (100vw - var(--content-max)) / 2) - ${Qx}));
-  margin-bottom: -0.2em;
-  padding: 0 clamp(8px, 1vw, 16px);
+`,Wb=P.p`
+  margin: clamp(1.5rem, 1rem + 2vw, 3rem) calc(-1 * var(--space-gutter)) 0;
   font-family: var(--font-condensed);
-  font-size: clamp(3.5rem, 13.2vw, 15rem);
+  font-size: 12.4vw;
   font-weight: 700;
-  line-height: 0.85;
-  letter-spacing: -0.02em;
+  line-height: 0.78;
+  letter-spacing: -0.01em;
+  text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  text-align: center;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(236, 236, 236, 0.22);
+  color: #e3e3e3;
   user-select: none;
-  overflow: hidden;
-`,xS=({src:e,alt:t,caption:n,figure:r,tone:i=`paper`,width:a=1600,height:o=1e3,eager:s=!1,className:c})=>(0,Z.jsxs)(SS,{className:c,$tone:i,children:[(0,Z.jsx)(CS,{$tone:i,children:(0,Z.jsx)(`img`,{src:e,alt:t,width:a,height:o,loading:s?`eager`:`lazy`,decoding:`async`})}),n&&(0,Z.jsxs)(`figcaption`,{children:[r!==void 0&&(0,Z.jsxs)(`span`,{className:`fig`,children:[`Fig. `,String(r).padStart(2,`0`)]}),n]})]}),SS=P.figure`
+  transform: translateY(8%);
+`,Gb=[.16,1,.3,1],Kb=e=>Bg.find(t=>t.label===e).href,qb=[{id:`li`,callsign:`LinkedIn`,handle:`in/harshilpatel2060`,href:Kb(`LinkedIn`),action:`Open`,external:!0},{id:`gh`,callsign:`GitHub`,handle:`patelharshil2060`,href:Kb(`GitHub`),action:`Open`,external:!0},{id:`cv`,callsign:`Résumé`,handle:`HarshilPatelResume.pdf`,href:Ng,action:`View`,external:!0}],Jb=e=>({hidden:{opacity:0,y:18},shown:{opacity:1,y:0,transition:{delay:e,duration:.8,ease:Gb}}}),Yb=e=>({hidden:{opacity:0,x:60},shown:{opacity:1,x:0,transition:{delay:e,duration:.9,ease:Gb}}}),Xb={once:!0,margin:`-15% 0px`},Zb=()=>{let e=!Nh()&&`hidden`;return(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(Qb,{id:`contact`,"aria-labelledby":`contact-heading`,children:(0,Z.jsxs)($b,{initial:e,whileInView:`shown`,viewport:Xb,children:[(0,Z.jsxs)(ex,{children:[(0,Z.jsx)($.div,{variants:Jb(0),children:(0,Z.jsx)(Jv,{index:`05`,children:`Contact`})}),(0,Z.jsxs)(tx,{id:`contact-heading`,variants:Jb(.08),children:[`Cleared for `,(0,Z.jsx)(`em`,{children:`contact.`})]}),(0,Z.jsx)(nx,{variants:Jb(.16),children:`Working on aircraft design, flight test or analysis? I’d like to hear about it.`}),(0,Z.jsxs)(rx,{variants:Jb(.22),children:[(0,Z.jsx)(ix,{"aria-hidden":`true`}),Fg]})]}),(0,Z.jsxs)(ax,{"aria-label":`Ways to get in touch`,children:[(0,Z.jsxs)(ox,{variants:Jb(.1),"aria-hidden":`true`,children:[(0,Z.jsx)(`span`,{children:`Strip board`}),(0,Z.jsxs)(`span`,{children:[`San Diego · `,qb.length+1,` channels open`]})]}),(0,Z.jsx)($.li,{variants:Yb(.15),children:(0,Z.jsxs)(Mb,{channel:`01`,callsign:`Email`,handle:Mg,isPrimary:!0,children:[(0,Z.jsx)(f_,{email:Mg,label:`Copy`}),(0,Z.jsx)(`a`,{className:`write`,href:`mailto:${Mg}`,children:`Write`})]})}),qb.map(({id:e,callsign:t,handle:n,href:r,action:i,external:a},o)=>(0,Z.jsx)($.li,{variants:Yb(.25+o*.1),children:(0,Z.jsx)(Mb,{channel:String(o+2).padStart(2,`0`),callsign:t,handle:n,href:r,action:i,external:a})},e))]})]})}),(0,Z.jsx)(Lb,{})]})},Qb=P.section`
+  /* strips wait offscreen-right before sliding in; don't let them widen the page */
+  overflow-x: clip;
+  padding: var(--space-section) var(--space-gutter);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+`,$b=P($.div)`
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(2rem, 1rem + 4vw, 5rem);
+  align-items: start;
+
+  @media (max-width: 899px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+`,ex=P.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+`,tx=P($.h2)`
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 1.6rem + 4vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+
+  em {
+    font-style: normal;
+    color: var(--color-ink-muted);
+  }
+`,nx=P($.p)`
+  max-width: 36ch;
+  font-size: var(--text-lead);
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+`,rx=P($.p)`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-line);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+`,ix=P.i`
+  width: 7px;
+  height: 7px;
+  background: var(--color-amber);
+  box-shadow: 0 0 0 3px rgba(242, 165, 0, 0.18);
+`,ax=P.ol`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  background:
+    repeating-linear-gradient(180deg, transparent 0 calc(4.5rem - 1px), rgba(17, 17, 17, 0.05) calc(4.5rem - 1px) 4.5rem),
+    #e2e2e2;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.06);
+`,ox=P($.li)`
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0.25rem 0.4rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+
+  span:first-child {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+`,sx=({src:e,alt:t,caption:n,figure:r,tone:i=`paper`,width:a=1600,height:o=1e3,eager:s=!1,className:c})=>(0,Z.jsxs)(cx,{className:c,$tone:i,children:[(0,Z.jsx)(lx,{$tone:i,children:(0,Z.jsx)(`img`,{src:e,alt:t,width:a,height:o,loading:s?`eager`:`lazy`,decoding:`async`})}),n&&(0,Z.jsxs)(`figcaption`,{children:[r!==void 0&&(0,Z.jsxs)(`span`,{className:`fig`,children:[`Fig. `,String(r).padStart(2,`0`)]}),n]})]}),cx=P.figure`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1838,7 +1926,7 @@ Error generating stack: `+e.message+`
     color: ${({$tone:e})=>e===`night`?`var(--color-amber)`:`var(--color-amber-ink)`};
     font-variant-numeric: tabular-nums;
   }
-`,CS=P.div`
+`,lx=P.div`
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-card);
@@ -1868,34 +1956,34 @@ Error generating stack: `+e.message+`
       linear-gradient(var(--c), var(--c)) bottom right / 10px 1px no-repeat,
       linear-gradient(var(--c), var(--c)) bottom right / 1px 10px no-repeat;
   }
-`,wS=[.16,1,.3,1],TS=({children:e,delay:t=0,as:n=`div`,...r})=>{let i=Nh(),a=$[n];return(0,Z.jsx)(a,{initial:!i&&{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:`-12% 0px`},transition:{duration:.8,ease:wS,delay:t},...r,children:e})},ES=({id:e,index:t,children:n,tone:r})=>(0,Z.jsxs)(LS,{children:[(0,Z.jsx)(RS,{"aria-hidden":`true`,$onDark:r===`night`,children:t}),(0,Z.jsx)(zS,{id:e,$onDark:r===`night`,children:n})]}),DS=({text:e})=>(0,Z.jsx)(IS,{"aria-labelledby":`cs-problem`,children:(0,Z.jsxs)(TS,{children:[(0,Z.jsx)(ES,{id:`cs-problem`,index:`01`,children:`The engineering challenge`}),(0,Z.jsx)(BS,{children:e})]})}),OS=({items:e})=>(0,Z.jsxs)(IS,{"aria-labelledby":`cs-built`,children:[(0,Z.jsx)(TS,{children:(0,Z.jsx)(ES,{id:`cs-built`,index:`02`,children:`What I did`})}),(0,Z.jsx)(VS,{children:e.map(({title:e,body:t},n)=>(0,Z.jsxs)(TS,{as:`li`,delay:n*.06,children:[(0,Z.jsx)(`h3`,{children:e}),(0,Z.jsx)(`p`,{children:t})]},e))})]}),kS=({steps:e})=>(0,Z.jsxs)(IS,{"aria-labelledby":`cs-flow`,$wide:!0,children:[(0,Z.jsx)(TS,{children:(0,Z.jsx)(ES,{id:`cs-flow`,index:`03`,children:`Design workflow`})}),(0,Z.jsx)(HS,{children:e.map(({label:e,detail:t},n)=>(0,Z.jsxs)(TS,{as:`li`,delay:n*.08,children:[(0,Z.jsx)(`span`,{className:`step`,children:String(n+1).padStart(2,`0`)}),(0,Z.jsx)(`strong`,{children:e}),(0,Z.jsx)(`span`,{className:`detail`,children:t})]},e))})]}),AS=({items:e})=>(0,Z.jsxs)(IS,{"aria-labelledby":`cs-results`,$wide:!0,children:[(0,Z.jsx)(TS,{children:(0,Z.jsx)(ES,{id:`cs-results`,index:`04`,children:`Key figures`})}),(0,Z.jsx)(US,{children:e.map(({value:e,label:t},n)=>(0,Z.jsxs)(TS,{as:`li`,delay:n*.06,children:[(0,Z.jsx)(`b`,{children:e}),(0,Z.jsx)(`span`,{children:t})]},t))}),(0,Z.jsx)(WS,{children:`Design values, not measured flight performance.`})]}),jS=({items:e})=>(0,Z.jsxs)(GS,{"aria-labelledby":`cs-evidence`,children:[(0,Z.jsx)(TS,{children:(0,Z.jsx)(ES,{id:`cs-evidence`,index:`05`,tone:`night`,children:`Technical evidence`})}),(0,Z.jsx)(KS,{children:e.map((e,t)=>(0,Z.jsx)(TS,{delay:t%2*.1,children:(0,Z.jsx)(xS,{...e,figure:t+1,tone:`night`,width:1400,height:950})},e.caption))})]}),MS=({items:e})=>e.length>0&&(0,Z.jsxs)(IS,{"aria-labelledby":`cs-photos`,$wide:!0,children:[(0,Z.jsx)(TS,{children:(0,Z.jsx)(ES,{id:`cs-photos`,index:`06`,children:`In the field`})}),(0,Z.jsx)(qS,{children:e.map((e,t)=>(0,Z.jsx)(TS,{delay:t%2*.08,children:(0,Z.jsx)(xS,{...e})},e.caption))})]}),NS=({text:e})=>(0,Z.jsx)(IS,{"aria-labelledby":`cs-status`,children:(0,Z.jsx)(TS,{children:(0,Z.jsxs)(JS,{children:[(0,Z.jsx)(ES,{id:`cs-status`,index:`Note`,children:`Design status`}),(0,Z.jsx)(BS,{children:e})]})})}),PS=({study:e})=>(0,Z.jsxs)(YS,{href:`/work/${e.slug}`,"aria-label":`Next project: ${e.name}`,children:[(0,Z.jsx)(`span`,{className:`label`,children:`Next project`}),(0,Z.jsxs)(`span`,{className:`name`,children:[e.name,` `,(0,Z.jsx)(`span`,{"aria-hidden":`true`,children:`→`})]}),(0,Z.jsx)(`span`,{className:`shot`,"aria-hidden":`true`,children:(0,Z.jsx)(`img`,{src:e.hero.main.src,alt:``,width:1600,height:1e3,loading:`lazy`})})]}),FS=`46rem`,IS=P.section`
-  max-width: ${({$wide:e})=>e?`var(--content-max)`:FS};
+`,ux=[.16,1,.3,1],dx=({children:e,delay:t=0,as:n=`div`,...r})=>{let i=Nh(),a=$[n];return(0,Z.jsx)(a,{initial:!i&&{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:`-12% 0px`},transition:{duration:.8,ease:ux,delay:t},...r,children:e})},fx=({id:e,index:t,children:n,tone:r})=>(0,Z.jsxs)(Cx,{children:[(0,Z.jsx)(wx,{"aria-hidden":`true`,$onDark:r===`night`,children:t}),(0,Z.jsx)(Tx,{id:e,$onDark:r===`night`,children:n})]}),px=({text:e})=>(0,Z.jsx)(Sx,{"aria-labelledby":`cs-problem`,children:(0,Z.jsxs)(dx,{children:[(0,Z.jsx)(fx,{id:`cs-problem`,index:`01`,children:`The engineering challenge`}),(0,Z.jsx)(Ex,{children:e})]})}),mx=({items:e})=>(0,Z.jsxs)(Sx,{"aria-labelledby":`cs-built`,children:[(0,Z.jsx)(dx,{children:(0,Z.jsx)(fx,{id:`cs-built`,index:`02`,children:`What I did`})}),(0,Z.jsx)(Dx,{children:e.map(({title:e,body:t},n)=>(0,Z.jsxs)(dx,{as:`li`,delay:n*.06,children:[(0,Z.jsx)(`h3`,{children:e}),(0,Z.jsx)(`p`,{children:t})]},e))})]}),hx=({steps:e})=>(0,Z.jsxs)(Sx,{"aria-labelledby":`cs-flow`,$wide:!0,children:[(0,Z.jsx)(dx,{children:(0,Z.jsx)(fx,{id:`cs-flow`,index:`03`,children:`Design workflow`})}),(0,Z.jsx)(Ox,{children:e.map(({label:e,detail:t},n)=>(0,Z.jsxs)(dx,{as:`li`,delay:n*.08,children:[(0,Z.jsx)(`span`,{className:`step`,children:String(n+1).padStart(2,`0`)}),(0,Z.jsx)(`strong`,{children:e}),(0,Z.jsx)(`span`,{className:`detail`,children:t})]},e))})]}),gx=({items:e})=>(0,Z.jsxs)(Sx,{"aria-labelledby":`cs-results`,$wide:!0,children:[(0,Z.jsx)(dx,{children:(0,Z.jsx)(fx,{id:`cs-results`,index:`04`,children:`Key figures`})}),(0,Z.jsx)(kx,{children:e.map(({value:e,label:t},n)=>(0,Z.jsxs)(dx,{as:`li`,delay:n*.06,children:[(0,Z.jsx)(`b`,{children:e}),(0,Z.jsx)(`span`,{children:t})]},t))}),(0,Z.jsx)(Ax,{children:`Design values, not measured flight performance.`})]}),_x=({items:e})=>(0,Z.jsxs)(jx,{"aria-labelledby":`cs-evidence`,children:[(0,Z.jsx)(dx,{children:(0,Z.jsx)(fx,{id:`cs-evidence`,index:`05`,tone:`night`,children:`Technical evidence`})}),(0,Z.jsx)(Mx,{children:e.map((e,t)=>(0,Z.jsx)(dx,{delay:t%2*.1,children:(0,Z.jsx)(sx,{...e,figure:t+1,tone:`night`,width:1400,height:950})},e.caption))})]}),vx=({items:e})=>e.length>0&&(0,Z.jsxs)(Sx,{"aria-labelledby":`cs-photos`,$wide:!0,children:[(0,Z.jsx)(dx,{children:(0,Z.jsx)(fx,{id:`cs-photos`,index:`06`,children:`In the field`})}),(0,Z.jsx)(Nx,{children:e.map((e,t)=>(0,Z.jsx)(dx,{delay:t%2*.08,children:(0,Z.jsx)(sx,{...e})},e.caption))})]}),yx=({text:e})=>(0,Z.jsx)(Sx,{"aria-labelledby":`cs-status`,children:(0,Z.jsx)(dx,{children:(0,Z.jsxs)(Px,{children:[(0,Z.jsx)(fx,{id:`cs-status`,index:`Note`,children:`Design status`}),(0,Z.jsx)(Ex,{children:e})]})})}),bx=({study:e})=>(0,Z.jsxs)(Fx,{href:`/work/${e.slug}`,"aria-label":`Next project: ${e.name}`,children:[(0,Z.jsx)(`span`,{className:`label`,children:`Next project`}),(0,Z.jsxs)(`span`,{className:`name`,children:[e.name,` `,(0,Z.jsx)(`span`,{"aria-hidden":`true`,children:`→`})]}),(0,Z.jsx)(`span`,{className:`shot`,"aria-hidden":`true`,children:(0,Z.jsx)(`img`,{src:e.hero.main.src,alt:``,width:1600,height:1e3,loading:`lazy`})})]}),xx=`46rem`,Sx=P.section`
+  max-width: ${({$wide:e})=>e?`var(--content-max)`:xx};
   margin: 0 auto;
   padding: clamp(3rem, 2rem + 4vw, 6rem) var(--space-gutter) 0;
   box-sizing: content-box;
-`,LS=P.div`
+`,Cx=P.div`
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   margin-bottom: 1.4rem;
-`,RS=P.span`
+`,wx=P.span`
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
   color: ${({$onDark:e})=>e?`var(--color-amber)`:`var(--color-amber-ink)`};
-`,zS=P.h2`
+`,Tx=P.h2`
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: ${({$onDark:e})=>e?`var(--color-night-ink)`:`var(--color-ink)`};
-`,BS=P.p`
+`,Ex=P.p`
   font-size: var(--text-lead);
   line-height: 1.55;
   color: var(--color-ink-soft);
   max-width: 62ch;
-`,VS=P.ol`
+`,Dx=P.ol`
   list-style: none;
   display: grid;
   gap: 1.75rem;
@@ -1934,7 +2022,7 @@ Error generating stack: `+e.message+`
     color: var(--color-ink-soft);
     line-height: 1.6;
   }
-`,HS=P.ol`
+`,Ox=P.ol`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1993,7 +2081,7 @@ Error generating stack: `+e.message+`
       transform: translateX(-50%) rotate(135deg);
     }
   }
-`,US=P.ul`
+`,kx=P.ul`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -2022,11 +2110,11 @@ Error generating stack: `+e.message+`
     letter-spacing: var(--tracking-label);
     text-transform: uppercase;
   }
-`,WS=P.p`
+`,Ax=P.p`
   margin-top: 1rem;
   font-size: var(--text-label);
   color: var(--color-ink-soft);
-`,GS=P.section`
+`,jx=P.section`
   margin: clamp(3rem, 2rem + 4vw, 6rem) clamp(8px, 1vw, 16px) 0;
   padding: clamp(3rem, 2rem + 4vw, 6rem) var(--space-gutter);
   border-radius: var(--radius-panel);
@@ -2040,7 +2128,7 @@ Error generating stack: `+e.message+`
     margin-left: auto;
     margin-right: auto;
   }
-`,KS=P.div`
+`,Mx=P.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.5rem, 1rem + 2vw, 3rem) clamp(1rem, 0.5rem + 2vw, 2.5rem);
@@ -2048,7 +2136,7 @@ Error generating stack: `+e.message+`
   @media (max-width: 799px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,qS=P.div`
+`,Nx=P.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 0.5rem + 2vw, 2rem);
@@ -2060,11 +2148,11 @@ Error generating stack: `+e.message+`
   @media (max-width: 699px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,JS=P.div`
+`,Px=P.div`
   padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
   border-left: 3px solid var(--color-amber);
   background: #f6f6f6;
-`,YS=P.a`
+`,Fx=P.a`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
@@ -2138,16 +2226,16 @@ Error generating stack: `+e.message+`
       grid-row: auto;
     }
   }
-`,XS=[{slug:`nimbus-v4`,name:`Nimbus V4`,outcome:`A profit-optimized flying-wing cargo aircraft, designed, built and flight-tested by a six-person team.`,meta:[{label:`Role`,value:`Team lead`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Mar – Jun 2026`},{label:`Course`,value:`MAE 155B Aircraft Design, UC San Diego`}],links:[{label:`Code & design files`,href:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`}],hero:{main:{src:`/assets/cad-3-BdPdftdc.webp`,alt:`Nimbus V4 CAD assembly seen from above`,caption:`Integrated CAD assembly`},side:[{src:`/assets/cad-2-BwWM2d_e.webp`,alt:`Nimbus V4 CAD render from below and behind`,caption:`Composite structure, rear view`},{src:`/assets/payload-bay-BLSWoyhn.webp`,alt:`Cross-section of the Nimbus cargo bay and payload door`,caption:`Payload bay cross-section`}]},problem:`Develop a cargo aircraft for a package delivery competition scored on profit. Balance payload capacity and cruise efficiency against takeoff distance, stall speed, static and dynamic stability, and structural mass.`,built:[{title:`Led the team from design to flight`,body:`Led five other engineers through design, manufacturing, integration and testing of the aircraft.`},{title:`Analysed every discipline`,body:`Contributed to the aerodynamic, propulsion, static and dynamic stability, structural and flight-performance analyses that fed the design.`},{title:`Optimized against the profit score`,body:`Worked within the team’s coupled MATLAB–AVL workflow, where a CMA-ES optimizer ran about 13,000 evaluations across 13 design variables to settle the design point.`},{title:`Turned CAD into hardware`,body:`Validated the design through CAD-driven manufacturing, propulsion bench testing, ground-roll testing and system-level integration.`}],flow:[{label:`Mission`,detail:`Competition profit function`},{label:`Optimize`,detail:`CMA-ES over 13 design variables`},{label:`Analyse`,detail:`Aero, CTOL sizing, AVL stability`},{label:`Build & fly`,detail:`Bench, ground roll, flight test`}],results:[{value:`1.57 m`,label:`Wingspan`},{value:`800 g`,label:`Design payload`},{value:`13,000+`,label:`Optimizer evaluations`},{value:`14.3`,label:`Cruise L/D`},{value:`4.9%`,label:`Static margin (AVL)`},{value:`3.89`,label:`Spar bending factor of safety`}],evidence:[{src:`/assets/plot-ctol-constraint-diagram-DkHCG00k.webp`,alt:`Constraint diagram of thrust loading against wing loading`,caption:`CTOL sizing: wing loading vs thrust loading, design point W/S = 87.4 N/m², T/W = 0.28`},{src:`/assets/plot-thrust-vs-speed-10x47-LxQSQ4Yv.webp`,alt:`Thrust against flight speed for the 10 by 4.7 propeller`,caption:`Propulsion: thrust vs airspeed, APC 10×4.7 propeller`},{src:`/assets/plot-v-n-diagram-maneuver-envelope-BpRbfg78.webp`,alt:`V-n diagram showing the maneuver envelope`,caption:`V-n diagram: maneuver envelope, +3.8 g / −1.5 g limit loads`},{src:`/assets/plot-sm-vs-battery-position-Cg_x7PSW.webp`,alt:`Static margin against battery position`,caption:`Stability: static margin vs battery position (AVL neutral point)`},{src:`/assets/plot-mission-profile-3d-CpCZFcMi.webp`,alt:`3D mission profile with takeoff, laps, payload drop and landing`,caption:`Mission profile: takeoff, laps, payload drop and landing`},{src:`/assets/plot-drag-polar-cl-vs-cd-c6IOa3Y0.webp`,alt:`Aircraft drag polar, lift coefficient against drag coefficient`,caption:`Aerodynamics: aircraft drag polar`}],photos:[{src:`/assets/photo-team-Cn4VVPbo.webp`,alt:`The Nimbus team behind the aircraft at the flight field`,caption:`Flight day, Mission Bay Park`},{src:`/assets/photo-launch-CC-4k6OI.webp`,alt:`A team member setting Nimbus down on the field to launch`,caption:`Launch at the flight field`},{src:`/assets/photo-prep-FG80ZepZ.webp`,alt:`The team working on the airframe at the field table`,caption:`Field integration`},{src:`/assets/photo-bench-BgIOnXn6.webp`,alt:`Team members checking the aircraft at the field table`,caption:`Pre-flight checks`}],status:`The team manufactured the aircraft and flight-tested it at Mission Bay Park, San Diego, after propulsion bench testing, ground-roll testing and system-level integration. Figures on this page are design values rather than measured flight performance, and the plots may come from different design iterations.`},{slug:`jager-qrf`,name:`Jäger-QRF`,outcome:`A hybrid VTOL firefighter that launches from the station, hovers over a fire and drops two suppression payloads within three minutes of takeoff.`,meta:[{label:`Role`,value:`Sizing, aero, propulsion & stability`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Jan – Mar 2026`},{label:`Course`,value:`MAE 155A Aircraft Design, UC San Diego`}],links:[{label:`Analysis files`,href:`https://github.com/patelharshil2060/Jager-Firefighter-Drone`}],hero:{main:{src:`/assets/render-hero-sp_Ix8R8.webp`,alt:`Jäger-QRF render releasing two red suppression payloads`,caption:`Payload deployment concept`},side:[{src:`/assets/render-front-DVoGAcQR.webp`,alt:`Jäger-QRF front view with four rotors and a thermal camera turret`,caption:`Front view`},{src:`/assets/render-side-BJ65wBmG.webp`,alt:`Jäger-QRF side profile with fixed wing and V-tail`,caption:`Side profile`}]},problem:`Fires can escalate before ground crews arrive. Design a rapid-response UAV with vertical takeoff, precise hover and efficient fixed-wing cruise, and reconcile hover power demand with range, payload, weight and a time-critical mission.`,built:[{title:`Sized the aircraft to the mission`,body:`Built hover and forward-flight constraints into a power-loading vs wing-loading sizing diagram, landing at W/S = 396.5 N/m² and P/W = 20.7 W/N with a 2% margin.`},{title:`Modelled the aerodynamics`,body:`Analysed the NACA 4412 wing’s lift curve and the aircraft drag polar to set cruise performance.`},{title:`Designed propulsion and weight & balance`,body:`Contributed to the propulsion design and the component-level weight and balance that set the CG range with and without payload.`},{title:`Checked loads and stability`,body:`Generated the V-n envelope and ran static and dynamic stability evaluations with MATLAB and AVL.`}],flow:[{label:`Mission`,detail:`Climb, cruise, hover, drop, return`},{label:`Size`,detail:`Hover and cruise constraints`},{label:`Aero & propulsion`,detail:`NACA 4412, rotor and wing power`},{label:`Loads & stability`,detail:`V-n envelope, AVL`}],results:[{value:`~51 mph`,label:`Target cruise speed`},{value:`1.5 mi`,label:`Design one-way range`},{value:`2`,label:`Suppression payloads`},{value:`< 3 min`,label:`Takeoff to first drop`},{value:`55 lb`,label:`Gross weight`},{value:`6.31 ft`,label:`Wingspan`}],evidence:[{src:`/assets/plot-missionprofiles-D48q3ECX.webp`,alt:`Altitude against time for the delivery and recon mission profiles`,caption:`Mission profiles: air delivery and recon`},{src:`/assets/plot-sizing-constraint-C4LlTlFV.webp`,alt:`Power loading against wing loading with cruise, maneuver, hover and climb constraints`,caption:`Sizing: hover and forward-flight constraints`},{src:`/assets/plot-vndiagram-final-D_ykVhSS.webp`,alt:`V-n diagram with maneuver and gust envelopes`,caption:`V-n envelope: maneuver and gust loads`},{src:`/assets/plot-staticmargin-ME_anj5F.webp`,alt:`Static margin against CG location with and without payload`,caption:`Weight & balance: static margin with and without payload`},{src:`/assets/plot-cl-vs-cd-polar-D5CktIqO.webp`,alt:`Lift coefficient against drag coefficient for the aircraft`,caption:`Aerodynamics: drag polar and best L/D`}],photos:[],status:`A conceptual design supported by sizing, aerodynamic, propulsion and stability analyses. Mission parameters are targets: flight and fire-suppression performance were not demonstrated in this study.`}],ZS=e=>XS.find(t=>t.slug===e)??null,QS=e=>XS[(XS.findIndex(t=>t.slug===e)+1)%XS.length],$S=[.16,1,.3,1],eC=(e,t)=>({initial:!t&&{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:1,ease:$S,delay:e}}),tC=({slug:e})=>{let t=ZS(e),n=!!Nh();if((0,j.useEffect)(()=>(document.title=t?`${t.name} · ${cg}`:cg,()=>{document.title=cg}),[t]),!t)return(0,Z.jsx)(nC,{children:(0,Z.jsxs)(rC,{children:[(0,Z.jsxs)(iC,{href:`/#projects`,children:[(0,Z.jsx)(Gg,{"aria-hidden":`true`}),` All projects`]}),(0,Z.jsx)(oC,{children:`Project not found`}),(0,Z.jsx)(sC,{children:`That page doesn’t exist. Pick a project from the files instead.`})]})});let{name:r,outcome:i,meta:a,links:o,hero:s}=t;return(0,Z.jsxs)(nC,{children:[(0,Z.jsxs)(rC,{children:[(0,Z.jsxs)(iC,{href:`/#projects`,children:[(0,Z.jsx)(Gg,{"aria-hidden":`true`}),` All projects`]}),(0,Z.jsxs)(aC,{children:[(0,Z.jsx)($.div,{...eC(0,n),children:(0,Z.jsx)(oC,{children:r})}),(0,Z.jsxs)($.div,{...eC(.08,n),children:[(0,Z.jsx)(sC,{children:i}),(0,Z.jsx)(cC,{children:a.map(({label:e,value:t})=>(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`dt`,{children:e}),(0,Z.jsx)(`dd`,{children:t})]},e))}),(0,Z.jsx)(lC,{children:o.map(({label:e,href:t})=>(0,Z.jsxs)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:[e,` `,(0,Z.jsx)(Ug,{"aria-hidden":`true`})]},t))})]})]})]}),(0,Z.jsxs)(uC,{"aria-label":`${r} renders`,children:[(0,Z.jsx)($.div,{className:`main`,...eC(.15,n),children:(0,Z.jsx)(xS,{...s.main,tone:`night`,eager:!0})}),s.side.map((e,t)=>(0,Z.jsx)($.div,{className:`side`,...eC(.28+t*.12,n),children:(0,Z.jsx)(xS,{...e,tone:`night`})},e.caption))]}),(0,Z.jsx)(DS,{text:t.problem}),(0,Z.jsx)(OS,{items:t.built}),(0,Z.jsx)(kS,{steps:t.flow}),(0,Z.jsx)(AS,{items:t.results}),(0,Z.jsx)(jS,{items:t.evidence}),(0,Z.jsx)(MS,{items:t.photos}),(0,Z.jsx)(NS,{text:t.status}),(0,Z.jsx)(PS,{study:QS(e)}),(0,Z.jsx)(dC,{})]})},nC=P.main`
+`,Ix=[{slug:`nimbus-v4`,name:`Nimbus V4`,outcome:`A profit-optimized flying-wing cargo aircraft, designed, built and flight-tested by a six-person team.`,meta:[{label:`Role`,value:`Team lead`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Mar – Jun 2026`},{label:`Course`,value:`MAE 155B Aircraft Design, UC San Diego`}],links:[{label:`Code & design files`,href:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`}],hero:{main:{src:`/assets/cad-3-BdPdftdc.webp`,alt:`Nimbus V4 CAD assembly seen from above`,caption:`Integrated CAD assembly`},side:[{src:`/assets/cad-2-BwWM2d_e.webp`,alt:`Nimbus V4 CAD render from below and behind`,caption:`Composite structure, rear view`},{src:`/assets/payload-bay-BLSWoyhn.webp`,alt:`Cross-section of the Nimbus cargo bay and payload door`,caption:`Payload bay cross-section`}]},problem:`Develop a cargo aircraft for a package delivery competition scored on profit. Balance payload capacity and cruise efficiency against takeoff distance, stall speed, static and dynamic stability, and structural mass.`,built:[{title:`Led the team from design to flight`,body:`Led five other engineers through design, manufacturing, integration and testing of the aircraft.`},{title:`Analysed every discipline`,body:`Contributed to the aerodynamic, propulsion, static and dynamic stability, structural and flight-performance analyses that fed the design.`},{title:`Optimized against the profit score`,body:`Worked within the team’s coupled MATLAB–AVL workflow, where a CMA-ES optimizer ran about 13,000 evaluations across 13 design variables to settle the design point.`},{title:`Turned CAD into hardware`,body:`Validated the design through CAD-driven manufacturing, propulsion bench testing, ground-roll testing and system-level integration.`}],flow:[{label:`Mission`,detail:`Competition profit function`},{label:`Optimize`,detail:`CMA-ES over 13 design variables`},{label:`Analyse`,detail:`Aero, CTOL sizing, AVL stability`},{label:`Build & fly`,detail:`Bench, ground roll, flight test`}],results:[{value:`1.57 m`,label:`Wingspan`},{value:`800 g`,label:`Design payload`},{value:`13,000+`,label:`Optimizer evaluations`},{value:`14.3`,label:`Cruise L/D`},{value:`4.9%`,label:`Static margin (AVL)`},{value:`3.89`,label:`Spar bending factor of safety`}],evidence:[{src:`/assets/plot-ctol-constraint-diagram-DkHCG00k.webp`,alt:`Constraint diagram of thrust loading against wing loading`,caption:`CTOL sizing: wing loading vs thrust loading, design point W/S = 87.4 N/m², T/W = 0.28`},{src:`/assets/plot-thrust-vs-speed-10x47-LxQSQ4Yv.webp`,alt:`Thrust against flight speed for the 10 by 4.7 propeller`,caption:`Propulsion: thrust vs airspeed, APC 10×4.7 propeller`},{src:`/assets/plot-v-n-diagram-maneuver-envelope-BpRbfg78.webp`,alt:`V-n diagram showing the maneuver envelope`,caption:`V-n diagram: maneuver envelope, +3.8 g / −1.5 g limit loads`},{src:`/assets/plot-sm-vs-battery-position-Cg_x7PSW.webp`,alt:`Static margin against battery position`,caption:`Stability: static margin vs battery position (AVL neutral point)`},{src:`/assets/plot-mission-profile-3d-CpCZFcMi.webp`,alt:`3D mission profile with takeoff, laps, payload drop and landing`,caption:`Mission profile: takeoff, laps, payload drop and landing`},{src:`/assets/plot-drag-polar-cl-vs-cd-c6IOa3Y0.webp`,alt:`Aircraft drag polar, lift coefficient against drag coefficient`,caption:`Aerodynamics: aircraft drag polar`}],photos:[{src:hy,alt:`The Nimbus team behind the aircraft at the flight field`,caption:`Flight day, Mission Bay Park`},{src:`/assets/photo-launch-CC-4k6OI.webp`,alt:`A team member setting Nimbus down on the field to launch`,caption:`Launch at the flight field`},{src:`/assets/photo-prep-FG80ZepZ.webp`,alt:`The team working on the airframe at the field table`,caption:`Field integration`},{src:`/assets/photo-bench-BgIOnXn6.webp`,alt:`Team members checking the aircraft at the field table`,caption:`Pre-flight checks`}],status:`The team manufactured the aircraft and flight-tested it at Mission Bay Park, San Diego, after propulsion bench testing, ground-roll testing and system-level integration. Figures on this page are design values rather than measured flight performance, and the plots may come from different design iterations.`},{slug:`jager-qrf`,name:`Jäger-QRF`,outcome:`A hybrid VTOL firefighter that launches from the station, hovers over a fire and drops two suppression payloads within three minutes of takeoff.`,meta:[{label:`Role`,value:`Sizing, aero, propulsion & stability`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Jan – Mar 2026`},{label:`Course`,value:`MAE 155A Aircraft Design, UC San Diego`}],links:[{label:`Analysis files`,href:`https://github.com/patelharshil2060/Jager-Firefighter-Drone`}],hero:{main:{src:gy,alt:`Jäger-QRF render releasing two red suppression payloads`,caption:`Payload deployment concept`},side:[{src:`/assets/render-front-DVoGAcQR.webp`,alt:`Jäger-QRF front view with four rotors and a thermal camera turret`,caption:`Front view`},{src:`/assets/render-side-BJ65wBmG.webp`,alt:`Jäger-QRF side profile with fixed wing and V-tail`,caption:`Side profile`}]},problem:`Fires can escalate before ground crews arrive. Design a rapid-response UAV with vertical takeoff, precise hover and efficient fixed-wing cruise, and reconcile hover power demand with range, payload, weight and a time-critical mission.`,built:[{title:`Sized the aircraft to the mission`,body:`Built hover and forward-flight constraints into a power-loading vs wing-loading sizing diagram, landing at W/S = 396.5 N/m² and P/W = 20.7 W/N with a 2% margin.`},{title:`Modelled the aerodynamics`,body:`Analysed the NACA 4412 wing’s lift curve and the aircraft drag polar to set cruise performance.`},{title:`Designed propulsion and weight & balance`,body:`Contributed to the propulsion design and the component-level weight and balance that set the CG range with and without payload.`},{title:`Checked loads and stability`,body:`Generated the V-n envelope and ran static and dynamic stability evaluations with MATLAB and AVL.`}],flow:[{label:`Mission`,detail:`Climb, cruise, hover, drop, return`},{label:`Size`,detail:`Hover and cruise constraints`},{label:`Aero & propulsion`,detail:`NACA 4412, rotor and wing power`},{label:`Loads & stability`,detail:`V-n envelope, AVL`}],results:[{value:`~51 mph`,label:`Target cruise speed`},{value:`1.5 mi`,label:`Design one-way range`},{value:`2`,label:`Suppression payloads`},{value:`< 3 min`,label:`Takeoff to first drop`},{value:`55 lb`,label:`Gross weight`},{value:`6.31 ft`,label:`Wingspan`}],evidence:[{src:`/assets/plot-missionprofiles-D48q3ECX.webp`,alt:`Altitude against time for the delivery and recon mission profiles`,caption:`Mission profiles: air delivery and recon`},{src:`/assets/plot-sizing-constraint-C4LlTlFV.webp`,alt:`Power loading against wing loading with cruise, maneuver, hover and climb constraints`,caption:`Sizing: hover and forward-flight constraints`},{src:`/assets/plot-vndiagram-final-D_ykVhSS.webp`,alt:`V-n diagram with maneuver and gust envelopes`,caption:`V-n envelope: maneuver and gust loads`},{src:`/assets/plot-staticmargin-ME_anj5F.webp`,alt:`Static margin against CG location with and without payload`,caption:`Weight & balance: static margin with and without payload`},{src:`/assets/plot-cl-vs-cd-polar-D5CktIqO.webp`,alt:`Lift coefficient against drag coefficient for the aircraft`,caption:`Aerodynamics: drag polar and best L/D`}],photos:[],status:`A conceptual design supported by sizing, aerodynamic, propulsion and stability analyses. Mission parameters are targets: flight and fire-suppression performance were not demonstrated in this study.`}],Lx=e=>Ix.find(t=>t.slug===e)??null,Rx=e=>Ix[(Ix.findIndex(t=>t.slug===e)+1)%Ix.length],zx=[.16,1,.3,1],Bx=(e,t)=>({initial:!t&&{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:1,ease:zx,delay:e}}),Vx=({slug:e})=>{let t=Lx(e),n=!!Nh();if((0,j.useEffect)(()=>(document.title=t?`${t.name} · ${jg}`:jg,()=>{document.title=jg}),[t]),!t)return(0,Z.jsx)(Hx,{children:(0,Z.jsxs)(Ux,{children:[(0,Z.jsxs)(Wx,{href:`/#projects`,children:[(0,Z.jsx)(Eg,{"aria-hidden":`true`}),` All projects`]}),(0,Z.jsx)(Kx,{children:`Project not found`}),(0,Z.jsx)(qx,{children:`That page doesn’t exist. Pick a project from the files instead.`})]})});let{name:r,outcome:i,meta:a,links:o,hero:s}=t;return(0,Z.jsxs)(Hx,{children:[(0,Z.jsxs)(Ux,{children:[(0,Z.jsxs)(Wx,{href:`/#projects`,children:[(0,Z.jsx)(Eg,{"aria-hidden":`true`}),` All projects`]}),(0,Z.jsxs)(Gx,{children:[(0,Z.jsx)($.div,{...Bx(0,n),children:(0,Z.jsx)(Kx,{children:r})}),(0,Z.jsxs)($.div,{...Bx(.08,n),children:[(0,Z.jsx)(qx,{children:i}),(0,Z.jsx)(Jx,{children:a.map(({label:e,value:t})=>(0,Z.jsxs)(`div`,{children:[(0,Z.jsx)(`dt`,{children:e}),(0,Z.jsx)(`dd`,{children:t})]},e))}),(0,Z.jsx)(Yx,{children:o.map(({label:e,href:t})=>(0,Z.jsxs)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:[e,` `,(0,Z.jsx)(wg,{"aria-hidden":`true`})]},t))})]})]})]}),(0,Z.jsxs)(Xx,{"aria-label":`${r} renders`,children:[(0,Z.jsx)($.div,{className:`main`,...Bx(.15,n),children:(0,Z.jsx)(sx,{...s.main,tone:`night`,eager:!0})}),s.side.map((e,t)=>(0,Z.jsx)($.div,{className:`side`,...Bx(.28+t*.12,n),children:(0,Z.jsx)(sx,{...e,tone:`night`})},e.caption))]}),(0,Z.jsx)(px,{text:t.problem}),(0,Z.jsx)(mx,{items:t.built}),(0,Z.jsx)(hx,{steps:t.flow}),(0,Z.jsx)(gx,{items:t.results}),(0,Z.jsx)(_x,{items:t.evidence}),(0,Z.jsx)(vx,{items:t.photos}),(0,Z.jsx)(yx,{text:t.status}),(0,Z.jsx)(bx,{study:Rx(e)}),(0,Z.jsx)(Zx,{})]})},Hx=P.main`
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
-`,rC=P.header`
+`,Ux=P.header`
   max-width: var(--content-max);
   margin: 0 auto;
   padding: calc(var(--nav-offset) + var(--nav-height) + clamp(1.5rem, 1rem + 2vw, 3rem)) var(--space-gutter) 0;
   box-sizing: content-box;
-`,iC=P.a`
+`,Wx=P.a`
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -2167,7 +2255,7 @@ Error generating stack: `+e.message+`
     outline-offset: 3px;
     border-radius: 2px;
   }
-`,aC=P.div`
+`,Gx=P.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   gap: clamp(1.5rem, 1rem + 3vw, 4rem);
@@ -2176,19 +2264,19 @@ Error generating stack: `+e.message+`
   @media (max-width: 899px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,oC=P.h1`
+`,Kx=P.h1`
   font-family: var(--font-display);
   font-size: clamp(3rem, 1.5rem + 5vw, 6.5rem);
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -0.045em;
-`,sC=P.p`
+`,qx=P.p`
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 1.05rem + 1vw, 1.85rem);
   line-height: 1.25;
   letter-spacing: -0.02em;
   max-width: 30ch;
-`,cC=P.dl`
+`,Jx=P.dl`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem 2rem;
@@ -2211,7 +2299,7 @@ Error generating stack: `+e.message+`
   @media (max-width: 479px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,lC=P.div`
+`,Yx=P.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
@@ -2244,7 +2332,7 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,uC=P.section`
+`,Xx=P.section`
   margin: clamp(2.5rem, 2rem + 3vw, 4.5rem) clamp(8px, 1vw, 16px) 0;
   padding: clamp(2rem, 1.5rem + 3vw, 4.5rem) var(--space-gutter);
   border-radius: var(--radius-panel);
@@ -2270,9 +2358,9 @@ Error generating stack: `+e.message+`
       grid-row: auto;
     }
   }
-`,dC=P.div`
+`,Zx=P.div`
   height: clamp(3rem, 2rem + 4vw, 6rem);
-`,fC=`app:navigate`,pC=/^\/work\/([a-z0-9-]+)\/?$/,mC=30,hC=e=>e.match(pC)?.[1]??null,gC=e=>{if(!e)return!1;let t=document.getElementById(e.slice(1));if(!t)return!1;if(t.dataset.scrollTo===`end`){let e=t.getBoundingClientRect().top+window.scrollY;return window.scrollTo({top:e+t.offsetHeight-window.innerHeight*1.05,behavior:`instant`}),!0}return t.scrollIntoView({behavior:`smooth`,block:`start`}),!0},_C=e=>{let t=new URL(e,window.location.href),n=t.pathname===window.location.pathname;if(n&&t.hash&&gC(t.hash)){window.history.replaceState(null,``,t.pathname+t.hash);return}if(n||(window.history.pushState(null,``,t.pathname+t.hash),window.dispatchEvent(new Event(fC))),!t.hash){requestAnimationFrame(()=>window.scrollTo({top:0,behavior:`instant`}));return}let r=mC,i=()=>{gC(t.hash)||--r>0&&requestAnimationFrame(i)};window.scrollTo({top:0,behavior:`instant`}),requestAnimationFrame(i)},vC=()=>{let[e,t]=(0,j.useState)(()=>window.location.pathname);return(0,j.useEffect)(()=>{let e=()=>t(window.location.pathname);return window.addEventListener(`popstate`,e),window.addEventListener(fC,e),()=>{window.removeEventListener(`popstate`,e),window.removeEventListener(fC,e)}},[]),{pathname:e}},yC=()=>{(0,j.useEffect)(()=>{let e=e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;let t=e.target instanceof Element?e.target.closest(`a[href]`):null;if(!t||t.target===`_blank`||t.hasAttribute(`download`))return;let n=t.getAttribute(`href`);n.startsWith(`/`)&&!n.startsWith(`//`)&&(e.preventDefault(),_C(n))};return document.addEventListener(`click`,e),()=>document.removeEventListener(`click`,e)},[])},bC=`/assets/nimbus-hero-BFthUvTy.webp`,xC=Un`
+`,Qx=`app:navigate`,$x=/^\/work\/([a-z0-9-]+)\/?$/,eS=30,tS=e=>e.match($x)?.[1]??null,nS=e=>{if(!e)return!1;let t=document.getElementById(e.slice(1));if(!t)return!1;if(t.dataset.scrollTo===`end`){let e=t.getBoundingClientRect().top+window.scrollY;return window.scrollTo({top:e+t.offsetHeight-window.innerHeight*1.05,behavior:`instant`}),!0}return t.scrollIntoView({behavior:`smooth`,block:`start`}),!0},rS=e=>{let t=new URL(e,window.location.href),n=t.pathname===window.location.pathname;if(n&&t.hash&&nS(t.hash)){window.history.replaceState(null,``,t.pathname+t.hash);return}if(n||(window.history.pushState(null,``,t.pathname+t.hash),window.dispatchEvent(new Event(Qx))),!t.hash){requestAnimationFrame(()=>window.scrollTo({top:0,behavior:`instant`}));return}let r=eS,i=()=>{nS(t.hash)||--r>0&&requestAnimationFrame(i)};window.scrollTo({top:0,behavior:`instant`}),requestAnimationFrame(i)},iS=()=>{let[e,t]=(0,j.useState)(()=>window.location.pathname);return(0,j.useEffect)(()=>{let e=()=>t(window.location.pathname);return window.addEventListener(`popstate`,e),window.addEventListener(Qx,e),()=>{window.removeEventListener(`popstate`,e),window.removeEventListener(Qx,e)}},[]),{pathname:e}},aS=()=>{(0,j.useEffect)(()=>{let e=e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;let t=e.target instanceof Element?e.target.closest(`a[href]`):null;if(!t||t.target===`_blank`||t.hasAttribute(`download`))return;let n=t.getAttribute(`href`);n.startsWith(`/`)&&!n.startsWith(`//`)&&(e.preventDefault(),rS(n))};return document.addEventListener(`click`,e),()=>document.removeEventListener(`click`,e)},[])},oS=`/assets/harshil-flying-BQYIVdsb.webp`,sS=`/assets/harshil-flying-still-BTQNG2t7.webp`,cS=Un`
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -2318,4 +2406,4 @@ Error generating stack: `+e.message+`
     border-radius: 6px;
   }
   ::-webkit-scrollbar-thumb:hover { background: var(--color-amber); }
-`,SC=()=>(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(tv,{}),(0,Z.jsx)(b_,{imageSrc:bC,imageAlt:`Nimbus V4 CAD render: the swept wing and lifting-body cargo fuselage, seen from above`,caption:gg,hotspots:_g}),(0,Z.jsx)(hy,{}),(0,Z.jsx)(Ab,{}),(0,Z.jsx)(mx,{}),(0,Z.jsx)(Yx,{})]});(0,Ge.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(j.StrictMode,{children:(0,Z.jsx)(()=>{let{pathname:e}=vC(),t=hC(e);return yC(),(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(xC,{}),(0,Z.jsx)(Gh,{}),t?(0,Z.jsx)(tC,{slug:t},t):(0,Z.jsx)(SC,{})]})},{})}));
+`,lS=()=>(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(O_,{flyerSrc:oS,flyerStill:sS,flyerAlt:Ug.alt}),(0,Z.jsx)(ey,{}),(0,Z.jsx)(xy,{}),(0,Z.jsx)(mb,{}),(0,Z.jsx)(Zb,{})]});(0,Ge.createRoot)(document.getElementById(`root`)).render((0,Z.jsx)(j.StrictMode,{children:(0,Z.jsx)(()=>{let{pathname:e}=iS(),t=tS(e);return aS(),(0,Z.jsxs)(Z.Fragment,{children:[(0,Z.jsx)(cS,{}),(0,Z.jsx)(Gh,{}),t?(0,Z.jsx)(Vx,{slug:t},t):(0,Z.jsx)(lS,{})]})},{})}));

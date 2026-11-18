@@ -3,7 +3,7 @@
 // strip along the bottom.
 //
 // Choreography (seconds): telemetry 0 → name letters focus in 0.15–0.8 →
-// orbit swoosh draws under the name 0.75–1.85 → statement words 0.9–1.5 →
+// statement words 0.9–1.5 →
 // lede, actions, socials → specs. The plane flies in alongside from 0.3.
 import React from 'react';
 import styled from 'styled-components';
@@ -21,7 +21,6 @@ const WORD_STAGGER = 0.045;
 
 const nameLetters = [...GREETING.name];
 const nameEnd = NAME_START + 0.25 + nameLetters.length * LETTER_STAGGER;
-const SWOOSH_START = nameEnd - 0.05;
 const STATEMENT_START = nameEnd + 0.1;
 const words = HEADLINE.split(' ');
 const headlineEnd = STATEMENT_START + words.length * WORD_STAGGER;
@@ -52,21 +51,6 @@ const focusIn = (index) => ({
   },
 });
 
-// The orbit swoosh from his logo draws itself under the name, then its
-// tip (a small amber craft) arrives at the end of the arc
-const swooshDraw = {
-  hidden: { pathLength: 0, opacity: 0 },
-  shown: {
-    pathLength: 1,
-    opacity: 1,
-    transition: { pathLength: { delay: SWOOSH_START, duration: 1.1, ease: [0.65, 0, 0.35, 1] }, opacity: { delay: SWOOSH_START, duration: 0.2 } },
-  },
-};
-
-const swooshTip = {
-  hidden: { opacity: 0, scale: 0 },
-  shown: { opacity: 1, scale: 1, transition: { delay: SWOOSH_START + 1, duration: 0.5, ease: EASE } },
-};
 
 /**
  * @param {{ imageSrc?: string, imageAlt?: string, label?: object, hotspots?: object[] }} props
@@ -104,28 +88,9 @@ const Hero = ({ flyerSrc, flyerStill, flyerAlt = '' }) => {
                     </motion.span>
                   )
                 )}
-                <motion.span className="ch dot" variants={letterIn(nameLetters.length)}>
+                <motion.span className="ch" variants={letterIn(nameLetters.length)}>
                   .
                 </motion.span>
-                <Swoosh viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="hero-swoosh" x1="0" x2="1" y1="0" y2="0">
-                      <stop offset="0" stopColor="#3fa2f7" stopOpacity="0.15" />
-                      <stop offset="0.45" stopColor="#3fa2f7" />
-                      <stop offset="1" stopColor="#f2a500" />
-                    </linearGradient>
-                  </defs>
-                  <motion.path
-                    d="M4 46 C 150 62, 380 54, 590 10"
-                    fill="none"
-                    stroke="url(#hero-swoosh)"
-                    strokeWidth="5"
-                    strokeLinecap="round"
-                    vectorEffect="non-scaling-stroke"
-                    variants={swooshDraw}
-                  />
-                </Swoosh>
-                <Tip variants={swooshTip} />
               </span>
             </Name>
 
@@ -262,7 +227,6 @@ const Name = styled.h1`
     position: relative;
     display: inline-block;
     align-self: flex-start;
-    padding-bottom: 0.32em; /* room for the swoosh */
     font-size: clamp(2.9rem, 1.5rem + 4.1vw, 5.1rem);
     white-space: nowrap;
   }
@@ -276,10 +240,6 @@ const Name = styled.h1`
     width: 0.24em;
   }
 
-  .dot {
-    color: var(--color-amber);
-  }
-
   @media (max-width: 420px) {
     .full {
       white-space: normal;
@@ -287,31 +247,8 @@ const Name = styled.h1`
   }
 `;
 
-const Swoosh = styled.svg`
-  position: absolute;
-  left: -2%;
-  right: -4%;
-  bottom: 0;
-  width: 106%;
-  height: 0.42em;
-  overflow: visible;
-  pointer-events: none;
-`;
-
-/* the craft at the end of the orbit: an amber chevron, like the wing mark */
-const Tip = styled(motion.span)`
-  position: absolute;
-  right: -4.5%;
-  bottom: 0.27em;
-  width: 0.16em;
-  height: 0.16em;
-  background: var(--color-amber);
-  clip-path: polygon(50% 0, 100% 100%, 50% 72%, 0 100%);
-  transform-origin: center;
-  rotate: 62deg;
-`;
-
 const Statement = styled.p`
+  margin-top: 0.4rem;
   max-width: 22ch;
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 1.05rem + 1.4vw, 2.25rem);

@@ -12,9 +12,9 @@ describe('Experience', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'Experience' })).toBeInTheDocument();
   });
 
-  test('starts on the first waypoint with its full readout', () => {
+  test('plays back newest first: starts on the most recent role with its full readout', () => {
     render(<Experience now={NOW} />);
-    const [first] = ROLES;
+    const first = ROLES[ROLES.length - 1];
 
     const article = within(screen.getByRole('article'));
     expect(article.getByRole('heading', { level: 3, name: first.role })).toBeInTheDocument();
@@ -31,15 +31,18 @@ describe('Experience', () => {
       expect(screen.getByRole('button', { name: `Go to ${code}: ${role}` })).toBeInTheDocument();
     });
     expect(container.querySelectorAll('svg .wpt')).toHaveLength(ROLES.length);
-    expect(screen.getByRole('button', { name: new RegExp(`^Go to ${ROLES[0].code}`) })).toHaveAttribute('aria-current', 'step');
+    const newest = ROLES[ROLES.length - 1];
+    expect(screen.getByRole('button', { name: new RegExp(`^Go to ${newest.code}`) })).toHaveAttribute('aria-current', 'step');
   });
 
-  test('keeps the chart decorative and lists every role for assistive tech', () => {
+  test('keeps the chart decorative and lists every role, newest first, for assistive tech', () => {
     const { container } = render(<Experience now={NOW} />);
 
     expect(container.querySelector('svg')).toHaveAttribute('aria-hidden', 'true');
-    ROLES.forEach(({ role, company }) => {
-      expect(screen.getByText(new RegExp(`${role}, ${company}`))).toBeInTheDocument();
+    const items = [...container.querySelectorAll('ol > li')].map((li) => li.textContent);
+    expect(items).toHaveLength(ROLES.length);
+    [...ROLES].reverse().forEach(({ role, company }, i) => {
+      expect(items[i]).toMatch(new RegExp(`^${role}, ${company}`));
     });
   });
 

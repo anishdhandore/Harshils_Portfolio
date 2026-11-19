@@ -53,13 +53,15 @@ describe('routeShare', () => {
 });
 
 describe('progressForLeg', () => {
-  test('targets a point inside each leg, in order', () => {
+  test('rewinds: the newest leg comes first in the scroll, the oldest last', () => {
     const range = [0.04, 0.96];
     const targets = [0, 1, 2].map((i) => progressForLeg(i, 3, range));
 
-    targets.forEach((t, i) => {
-      expect(t).toBeGreaterThan(range[0] + (i / 3) * (range[1] - range[0]));
-      expect(t).toBeLessThan(range[0] + ((i + 1) / 3) * (range[1] - range[0]));
+    expect(targets[2]).toBeLessThan(targets[1]);
+    expect(targets[1]).toBeLessThan(targets[0]);
+    targets.forEach((t) => {
+      expect(t).toBeGreaterThan(range[0]);
+      expect(t).toBeLessThan(range[1]);
     });
   });
 });

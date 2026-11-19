@@ -50,5 +50,12 @@ export const legAt = (x, points) => {
 /** Scroll progress (0–1) within `[start, end]` → share of the route flown (0–1). */
 export const routeShare = (p, [start, end]) => clamp01((p - start) / (end - start));
 
-/** Scroll progress that puts the aircraft just past waypoint `i`, for jumping to a role. */
-export const progressForLeg = (i, count, [start, end]) => start + ((i + CLIMB_SHARE + 0.08) / count) * (end - start);
+/**
+ * Scroll progress that puts the aircraft just past waypoint `i`, for jumping
+ * to a role. The log plays back newest first, so the route is rewound: scroll
+ * share 0 is the end of the route (now) and 1 is the start.
+ */
+export const progressForLeg = (i, count, [start, end]) => {
+  const position = (i + CLIMB_SHARE + 0.08) / count; // share of the route, from the start
+  return start + (1 - position) * (end - start);
+};

@@ -1,7 +1,8 @@
 // Experience as a flight log on a black field: a flight profile (altitude over
-// route) where each role is a waypoint and the route climbs at each one. As you
-// scroll, the amber route draws on and the aircraft flies it; the readout below
-// shows the leg the aircraft is on.
+// route) where each role is a waypoint and the route climbs at each one. It
+// plays back like a flight data recorder, newest first: the aircraft starts at
+// today's position and scrolling rewinds it back along the route. The readout
+// below shows the leg it's on.
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react';
@@ -28,7 +29,8 @@ const Experience = ({ now = new Date() }) => {
   const smooth = useSpring(scrollYProgress, SCROLL_SPRING);
   const share = useTransform(isReduced ? scrollYProgress : smooth, (p) => routeShare(p, RANGE));
 
-  const [active, setActive] = useState(0);
+  // playback starts at the most recent role
+  const [active, setActive] = useState(ROLES.length - 1);
   const onLeg = (i) => setActive((prev) => (prev === i ? prev : i));
 
   // jump the page to the scroll position where the aircraft reaches waypoint i
@@ -55,14 +57,12 @@ const Experience = ({ now = new Date() }) => {
               <h2 id="experience-heading">Experience</h2>
             </div>
             <Legend aria-hidden="true">
-              <span>
-                <i className="flown" /> Flown
+              <span className="rew">
+                <b>◀◀</b> FDR playback
               </span>
+              <span className="hide-sm">Newest first</span>
               <span>
-                <i className="planned" /> Route
-              </span>
-              <span>
-                Wpt {String(active + 1).padStart(2, '0')} / {String(ROLES.length).padStart(2, '0')}
+                {String(ROLES.length - active).padStart(2, '0')} / {String(ROLES.length).padStart(2, '0')}
               </span>
             </Legend>
           </Header>
@@ -71,7 +71,7 @@ const Experience = ({ now = new Date() }) => {
             roles={ROLES}
             share={share}
             active={active}
-            isStatic={isReduced}
+            now={now}
             onLeg={onLeg}
             onSelect={goToLeg}
           />
@@ -139,7 +139,7 @@ const Experience = ({ now = new Date() }) => {
 
         {/* the full log, for screen readers and anyone skimming */}
         <VisuallyHidden as="ol">
-          {ROLES.map((r) => (
+          {[...ROLES].reverse().map((r) => (
             <li key={r.code}>
               {r.role}, {r.company}, {formatMonth(r.start)} to {r.end ? formatMonth(r.end) : 'present'}
             </li>
@@ -221,18 +221,28 @@ const Legend = styled.div`
     gap: 0.5rem;
   }
 
-  i {
-    width: 22px;
-    height: 0;
-    border-top: 2px solid var(--color-amber);
+  .rew {
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgba(242, 165, 0, 0.5);
+    color: var(--color-amber);
   }
 
-  i.planned {
-    border-top: 2px dashed rgba(236, 236, 236, 0.35);
+  .rew b {
+    font-weight: 400;
+    letter-spacing: -0.1em;
+    animation: rew-blink 1.2s steps(1, end) infinite;
+  }
+
+  @keyframes rew-blink {
+    50% { opacity: 0.25; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rew b { animation: none; }
   }
 
   @media (max-width: 640px) {
-    span:not(:last-child) {
+    .hide-sm {
       display: none;
     }
   }

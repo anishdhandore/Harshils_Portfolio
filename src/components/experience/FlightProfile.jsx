@@ -1,7 +1,8 @@
-// The route chart: altitude bands, a dashed planned route, the flown route
-// drawn in amber as you scroll, waypoint markers with their idents, and the
-// aircraft riding the tip of the flown route. Positions are written straight
-// to SVG attributes on scroll (no re-render per frame).
+// The route chart, played back like a flight data recorder: the whole route is
+// already recorded (dim amber) and the aircraft starts at today's position.
+// Scrolling rewinds it back along the route toward the first role; the part
+// played back so far glows bright, and a playhead with a date tag tracks it.
+// Positions are written straight to SVG attributes (no re-render per frame).
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useMotionValueEvent } from 'motion/react';
@@ -14,51 +15,64 @@ const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', '
 /** "2024-09" → "SEP ’24" */
 const legDate = (ym) => `${MONTHS[Number(ym.slice(5, 7)) - 1]} ’${ym.slice(2, 4)}`;
 
+/** "2024-09" → months since year 0, and back to "SEP ’24" */
+const toMonths = (ym) => Number(ym.slice(0, 4)) * 12 + Number(ym.slice(5, 7)) - 1;
+const monthLabel = (m) => `${MONTHS[((Math.round(m) % 12) + 12) % 12]} ’${String(Math.floor(Math.round(m) / 12)).slice(2)}`;
+
 /**
  * @param {{
  *   roles: {code: string, start: string}[],
- *   share: import('motion/react').MotionValue<number>,  route flown, 0–1
+ *   share: import('motion/react').MotionValue<number>,  rewind played back, 0–1 (0 = now)
  *   active: number,
- *   isStatic: boolean,
+ *   now: Date,  end of the last leg
  *   onLeg: (i: number) => void,
  *   onSelect: (i: number) => void,
  * }} props
  */
-const FlightProfile = ({ roles, share, active, isStatic, onLeg, onSelect }) => {
+const FlightProfile = ({ roles, share, active, now, onLeg, onSelect }) => {
   const points = waypoints(roles.length);
   const d = profilePath(points);
-  const flownRef = useRef(null);
+  const playedRef = useRef(null);
   const craftRef = useRef(null);
+  const headRef = useRef(null);
+  const headTextRef = useRef(null);
+  const nowMonths = now.getFullYear() * 12 + now.getMonth();
 
-  // place the aircraft and the flown line for a share of the route
-  const fly = (t) => {
-    const path = flownRef.current;
+  /** Date under x: interpolated across the leg from its start to the next start (or now). */
+  const dateAt = (x) => {
+    const i = legAt(x, points);
+    const { legStart, legEnd } = points[i];
+    const from = toMonths(roles[i].start);
+    const to = i + 1 < roles.length ? toMonths(roles[i + 1].start) : nowMonths;
+    const f = Math.min(1, Math.max(0, (x - legStart) / (legEnd - legStart)));
+    return monthLabel(from + f * (to - from));
+  };
+
+  // place the aircraft, playhead and played-back segment for a share of the rewind
+  const play = (t) => {
+    const path = playedRef.current;
     const craft = craftRef.current;
     if (!path || !craft || typeof path.getTotalLength !== 'function') return;
     const total = path.getTotalLength();
-    const at = Math.max(0.01, Math.min(total - 0.01, t * total));
-    if (!isStatic) path.style.strokeDashoffset = String(total - at);
+    const at = Math.max(0.01, Math.min(total - 0.01, (1 - t) * total));
+    // bright from the aircraft forward to "now": a dash of the full length, starting at `at`
+    path.style.strokeDasharray = `${total} ${total}`;
+    path.style.strokeDashoffset = String(-at);
     const p = path.getPointAtLength(at);
     const q = path.getPointAtLength(Math.min(total, at + 1));
     const angle = (Math.atan2(q.y - p.y, q.x - p.x) * 180) / Math.PI;
-    if (!isStatic) craft.setAttribute('transform', `translate(${p.x} ${p.y}) rotate(${angle})`);
+    craft.setAttribute('transform', `translate(${p.x} ${p.y}) rotate(${angle})`);
+    headRef.current?.setAttribute('transform', `translate(${p.x} 0)`);
+    if (headTextRef.current) headTextRef.current.textContent = dateAt(p.x);
     onLeg(legAt(p.x, points));
   };
 
-  useMotionValueEvent(share, 'change', fly);
+  useMotionValueEvent(share, 'change', play);
 
   useEffect(() => {
-    const path = flownRef.current;
-    if (path && typeof path.getTotalLength === 'function') {
-      const total = path.getTotalLength();
-      path.style.strokeDasharray = isStatic ? 'none' : String(total);
-    }
-    fly(share.get());
+    play(share.get());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isStatic]);
-
-  // with reduced motion the route is drawn in full and the aircraft parks on the active waypoint
-  const parked = points[active];
+  }, []);
 
   return (
     <Chart>
@@ -87,12 +101,21 @@ const FlightProfile = ({ roles, share, active, isStatic, onLeg, onSelect }) => {
           </g>
         ))}
 
-        <path className="planned" d={d} />
-        <path ref={flownRef} className="flown" d={d} />
+        <path className="recorded" d={d} />
+        <path ref={playedRef} className="played" d={d} />
+
+        {/* playhead: a scrub line through the aircraft with its date */}
+        <g ref={headRef} className="head">
+          <line x1={0} x2={0} y1={BOX.top - 14} y2={BOX.ground} />
+          <rect x={-30} y={BOX.ground + 9} width={60} height={20} rx={2} />
+          <text ref={headTextRef} x={0} y={BOX.ground + 23} textAnchor="middle">
+            NOW
+          </text>
+        </g>
 
         {/* waypoints: a diamond and the ident above it */}
         {points.map(({ x, y }, i) => (
-          <g key={roles[i].code} className="wpt" data-state={i < active ? 'past' : i === active ? 'active' : 'ahead'}>
+          <g key={roles[i].code} className="wpt" data-state={i > active ? 'played' : i === active ? 'active' : 'ahead'}>
             <rect x={x - 6} y={y - 6} width={12} height={12} transform={`rotate(45 ${x} ${y})`} />
             <text x={x} y={y - 18} textAnchor="middle">
               {roles[i].code}
@@ -101,7 +124,7 @@ const FlightProfile = ({ roles, share, active, isStatic, onLeg, onSelect }) => {
         ))}
 
         {/* the aircraft: a swept-wing glyph pointing along +x */}
-        <g ref={craftRef} transform={isStatic ? `translate(${parked.x} ${parked.y})` : undefined} className="craft">
+        <g ref={craftRef} className="craft">
           <path d="M 14 0 L -9 -10 L -4 0 L -9 10 Z" />
         </g>
       </svg>
@@ -154,19 +177,36 @@ const Chart = styled.div`
     stroke-dasharray: 2 4;
   }
 
-  .planned {
+  .recorded {
     fill: none;
-    stroke: rgba(236, 236, 236, 0.22);
-    stroke-width: 1.5;
-    stroke-dasharray: 4 6;
+    stroke: rgba(242, 165, 0, 0.28);
+    stroke-width: 2;
+    stroke-dasharray: 5 5;
   }
 
-  .flown {
+  .played {
     fill: none;
     stroke: var(--color-amber);
     stroke-width: 2.5;
     stroke-linecap: round;
     filter: drop-shadow(0 0 6px rgba(242, 165, 0, 0.45));
+  }
+
+  .head line {
+    stroke: rgba(236, 236, 236, 0.45);
+    stroke-width: 1;
+    stroke-dasharray: 2 3;
+  }
+
+  .head rect {
+    fill: var(--color-amber);
+  }
+
+  .head text {
+    fill: #111111;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
   }
 
   .wpt rect {
@@ -184,7 +224,7 @@ const Chart = styled.div`
     transition: fill var(--duration-normal) ease;
   }
 
-  .wpt[data-state='past'] rect {
+  .wpt[data-state='played'] rect {
     fill: var(--color-amber);
     stroke: var(--color-amber);
   }
@@ -196,7 +236,7 @@ const Chart = styled.div`
   }
 
   .wpt[data-state='active'] text,
-  .wpt[data-state='past'] text {
+  .wpt[data-state='played'] text {
     fill: #ececec;
   }
 
@@ -209,6 +249,8 @@ const Chart = styled.div`
   @media (max-width: 640px) {
     .level text,
     .leg text,
+    .head rect,
+    .head text,
     .wpt text {
       display: none;
     }

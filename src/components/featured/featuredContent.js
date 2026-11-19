@@ -11,7 +11,7 @@ export const FEATURED = {
   slug: 'nimbus-v4',
   summary:
     'An autonomous flying-wing cargo aircraft, optimized for a package delivery competition’s profit score, then built and flight-tested.',
-  role: 'Team lead',
+  role: 'Engineer',
   timeline: 'Mar – Jun 2026',
   url: 'https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV',
   urlLabel: 'the code on GitHub',

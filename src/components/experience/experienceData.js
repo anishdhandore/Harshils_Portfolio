@@ -2,7 +2,8 @@
 // Dates are YYYY-MM; `end: null` means current. Content comes from the resume
 // (public/HarshilPatelResume.pdf).
 //
-// - `code`: a four-letter waypoint ident shown on the flight profile
+// - `code`: a four-letter flight number shown on the departure board
+// - `board`: short uppercase labels for the board's split-flap columns
 // - `summary`: one line on the role
 // - `highlights`: what he did
 // - `impact`: what the work delivered; `metric` is optional
@@ -13,6 +14,7 @@ export const ROLES = [
     role: 'Process Engineering Intern',
     company: 'Dove Pharma LLP',
     code: 'DOVE',
+    board: { destination: 'PROCESS ENG. INTERN', via: 'DOVE PHARMA' },
     location: 'India',
     summary: 'Supported engineering teams with process documentation and data analysis for ongoing operations.',
     highlights: [
@@ -30,6 +32,7 @@ export const ROLES = [
     role: 'A.S.-T in Mathematics',
     company: 'Palomar College',
     code: 'PLMR',
+    board: { destination: 'A.S.-T MATHEMATICS', via: 'PALOMAR COLLEGE' },
     location: 'San Marcos, CA',
     summary: 'Associate Degree in Science for Transfer in Mathematics, the foundation for transferring into aerospace engineering.',
     highlights: [
@@ -46,6 +49,7 @@ export const ROLES = [
     role: 'B.S. Aerospace Engineering',
     company: 'UC San Diego',
     code: 'UCSD',
+    board: { destination: 'B.S. AEROSPACE ENG.', via: 'UC SAN DIEGO' },
     location: 'La Jolla, CA',
     summary: 'Aircraft design, computational analysis and hardware integration, graduating December 2026.',
     highlights: [
@@ -62,6 +66,7 @@ export const ROLES = [
     role: 'Instructional Assistant',
     company: 'Physics Department, UC San Diego',
     code: 'UPHY',
+    board: { destination: 'INSTRUCTIONAL ASST.', via: 'UCSD PHYSICS' },
     location: 'La Jolla, CA',
     summary: 'Supported physics instruction in the classroom and the lab.',
     highlights: [
@@ -79,6 +84,7 @@ export const ROLES = [
     role: 'Test Engineering Intern',
     company: 'Sensor Systems LLC',
     code: 'SNSR',
+    board: { destination: 'TEST ENG. INTERN', via: 'SENSOR SYSTEMS' },
     location: 'St. Petersburg, FL',
     summary: 'Qualification testing of precision potentiometers for mission-critical aerospace and defense applications.',
     highlights: [
@@ -96,6 +102,7 @@ export const ROLES = [
     role: 'Project Engineer',
     company: 'Big Sky Electric',
     code: 'BSKY',
+    board: { destination: 'PROJECT ENGINEER', via: 'BIG SKY ELECTRIC' },
     location: 'San Marcos, CA',
     summary: 'Planning and coordinating onsite engineering for water and wastewater infrastructure projects.',
     highlights: [

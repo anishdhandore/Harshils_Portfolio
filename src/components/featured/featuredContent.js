@@ -64,3 +64,11 @@ export const CHAPTERS = [
     focus: { x: 0.2, y: 0.7, w: 0.62, h: 0.26 },
   },
 ];
+
+// Nimbus V4 design values from the project README.
+export const SPECS = [
+  { value: '1.57 m', label: 'Wingspan' },
+  { value: '800 g', label: 'Design payload' },
+  { value: '28.3°', label: 'Wing sweep' },
+  { value: '13,000+', label: 'Optimizer evaluations' },
+];

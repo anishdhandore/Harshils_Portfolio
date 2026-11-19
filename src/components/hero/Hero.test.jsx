@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Hero from './Hero';
-import { EMAIL, HEADLINE, PORTRAIT, SPECS } from './heroContent';
+import { EMAIL, HEADLINE, PORTRAIT } from './heroContent';
 
 describe('Hero', () => {
   test('introduces Harshil by name in the page h1', () => {
@@ -21,13 +21,6 @@ describe('Hero', () => {
 
     expect(screen.getByText(/local time/i)).toBeInTheDocument();
     expect(screen.getByText(/open to/i)).toBeInTheDocument();
-  });
-
-  test('reads out the Nimbus V4 design specs', () => {
-    render(<Hero />);
-
-    const specs = screen.getByLabelText(/design specifications/i);
-    SPECS.forEach(({ value }) => expect(specs).toHaveTextContent(value));
   });
 
   test('reserves a slot with a placeholder when no portrait is set', () => {

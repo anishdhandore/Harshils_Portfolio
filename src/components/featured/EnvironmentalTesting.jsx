@@ -1,49 +1,67 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionLabel from '../ui/SectionLabel';
-import shakerPhoto from '../../images/environmental-vibration.jpg';
-import accelerometerPhoto from '../../images/environmental-instrumentation.jpg';
+import shakerPhoto from '../../images/potentiometer-shaker.webp';
+import workflowImage from '../../images/potentiometer-workflow.webp';
 
 const EnvironmentalTesting = () => (
   <Section aria-labelledby="environmental-testing-heading">
     <div>
       <SectionLabel>Featured testing</SectionLabel>
       <Title id="environmental-testing-heading">Environmental qualification testing</Title>
-      <Role>Test Engineering Intern · Sensor Systems LLC · June–August 2026</Role>
+      <Role>Environmental Test Engineering Intern · Sensor Systems LLC · June–August 2026</Role>
       <Summary>
-        I tested aerospace components on a shaker and checked how their electrical outputs
-        responded during bench verification.
+        I tested precision potentiometers used in aerospace and defense applications to
+        evaluate their mechanical durability and electrical stability.
       </Summary>
       <Methods>
         <div>
-          <dt>Vibration qualification</dt>
+          <dt>Multi-axis vibration</dt>
           <dd>
-            Mounted components on shaker fixtures and ran three-hour test cycles across
-            the X, Y and Z axes. I used accelerometers and a data acquisition system to
-            record the mechanical response.
+            Ran three-hour cycles across the X, Y and Z axes. I used a shaker,
+            accelerometers and data acquisition equipment to monitor the assembly’s
+            mechanical response and electrical output under vibration.
           </dd>
         </div>
         <div>
-          <dt>Electrical verification</dt>
+          <dt>Clutch-release timing</dt>
           <dd>
-            Used oscilloscopes and digital multimeters to check output and linearity,
-            and logged the measurements.
+            Used controlled-speed actuation and high-speed timing instruments to measure
+            how quickly clutched assemblies released and evaluate overtravel protection.
+          </dd>
+        </div>
+        <div>
+          <dt>Full-travel linearity</dt>
+          <dd>
+            Used precision actuators, digital multimeters, oscilloscopes and automated
+            logging to check output across the full stroke. I looked for signal
+            discontinuities and compared the response with customer specifications.
           </dd>
         </div>
       </Methods>
+      <Applications>
+        <h3>Aircraft applications</h3>
+        <p>
+          A potentiometer converts motion into a voltage that varies with position.
+          In aircraft, these sensors can report flap or trim position to an avionics
+          display, or track throttle lever position in an autothrottle system.
+        </p>
+        <p>
+          Examples · <a href="https://www.dynoncertified.com/downloads/documentation/general/SkyView_HDX_System_Installation_Manual_Rev_T.pdf">Flap and trim sensing</a>
+          {' · '}<a href="https://patents.google.com/patent/US11027854B2">Throttle lever sensing</a>
+        </p>
+      </Applications>
     </div>
 
     <Gallery>
       <Figure>
-        <img src={shakerPhoto} alt="NASA MMS magnetometer boom mounted on a shaker table" loading="lazy" />
-        <figcaption>
-          Shaker fixture reference · <a href="https://mms.gsfc.nasa.gov/spacecraft_assembly/mechanical/mechanical_03.html">NASA Goddard</a>
-        </figcaption>
+        <img src={shakerPhoto} alt="Machined aluminum fixture with circuit boards and an accelerometer on a blue shaker" width="1400" height="788" loading="lazy" />
+        <figcaption>Shaker fixture and instrumentation</figcaption>
       </Figure>
       <Figure>
-        <img src={accelerometerPhoto} alt="Engineers attaching an accelerometer to a Europa Clipper instrument" loading="lazy" />
+        <img src={workflowImage} alt="Shaker fixture connected to a data acquisition module and a display with two signal traces" width="1350" height="900" loading="lazy" />
         <figcaption>
-          Accelerometer installation reference · <a href="https://science.nasa.gov/missions/europa-clipper/europa-clipper-resources/plasma-instrument-vibration-testing/">Johns Hopkins APL / Craig Weiman</a>
+          Vibration test workflow · Illustrative potentiometer and accelerometer traces
         </figcaption>
       </Figure>
     </Gallery>
@@ -51,7 +69,7 @@ const EnvironmentalTesting = () => (
 );
 
 const Section = styled.section`
-  width: min(100% - 2 * var(--space-gutter), var(--content-max));
+  width: min(calc(100% - 2 * var(--space-gutter)), var(--content-max));
   margin-inline: auto;
   padding-block: var(--space-section);
   display: grid;
@@ -100,22 +118,34 @@ const Methods = styled.dl`
   }
 `;
 
+const Applications = styled.div`
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+
+  h3 { font-size: var(--text-base); }
+  p {
+    margin-top: 0.4rem;
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+  }
+  p:last-child { font-size: var(--text-sm); }
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+  }
+`;
+
 const Gallery = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-
-  @media (max-width: 480px) {
-    grid-template-columns: minmax(0, 1fr);
-  }
+  gap: 1rem;
 `;
 
 const Figure = styled.figure`
   img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
+    height: auto;
     border-radius: var(--radius-card);
     background: var(--color-surface);
   }
@@ -127,14 +157,6 @@ const Figure = styled.figure`
     line-height: 1.4;
   }
 
-  a {
-    color: inherit;
-    text-underline-offset: 0.2em;
-  }
-
-  @media (max-width: 480px) {
-    img { aspect-ratio: 4 / 3; }
-  }
 `;
 
 export default EnvironmentalTesting;

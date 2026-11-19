@@ -24,14 +24,6 @@ export const TELEMETRY = [
   { label: 'Grad', value: 'Dec 2026' },
 ];
 
-// Spec strip under the render (Nimbus V4 design values, from the project README)
-export const SPECS = [
-  { value: '1.57 m', label: 'Wingspan' },
-  { value: '800 g', label: 'Design payload' },
-  { value: '28.3°', label: 'Wing sweep' },
-  { value: '13,000+', label: 'Optimizer evaluations' },
-];
-
 // Hero portrait (illustrated, background removed)
 export const PORTRAIT = {
   alt: 'Illustrated portrait of Harshil Patel smiling, sunglasses pushed up, in a black jacket with an HP logo',

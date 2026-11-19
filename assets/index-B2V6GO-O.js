@@ -815,7 +815,11 @@ Error generating stack: `+e.message+`
   @media ${Xv} {
     display: block;
   }
-`,py=`/assets/potentiometer-shaker-Bm73HY_b.webp`,my=`/assets/potentiometer-workflow-ChM6L7Tv.webp`,hy=()=>(0,Q.jsxs)(gy,{"aria-labelledby":`environmental-testing-heading`,children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(Kv,{children:`Featured testing`}),(0,Q.jsx)(_y,{id:`environmental-testing-heading`,children:`Environmental qualification testing`}),(0,Q.jsx)(vy,{children:`Environmental Test Engineering Intern · Sensor Systems LLC · June–August 2026`}),(0,Q.jsx)(yy,{children:`I tested precision potentiometers used in aerospace and defense applications to evaluate their mechanical durability and electrical stability.`}),(0,Q.jsxs)(by,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Multi-axis vibration`}),(0,Q.jsx)(`dd`,{children:`Ran three-hour cycles across the X, Y and Z axes. I used a shaker, accelerometers and data acquisition equipment to monitor the assembly’s mechanical response and electrical output under vibration.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Clutch-release timing`}),(0,Q.jsx)(`dd`,{children:`Used controlled-speed actuation and high-speed timing instruments to measure how quickly clutched assemblies released and evaluate overtravel protection.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Full-travel linearity`}),(0,Q.jsx)(`dd`,{children:`Used precision actuators, digital multimeters, oscilloscopes and automated logging to check output across the full stroke. I looked for signal discontinuities and compared the response with customer specifications.`})]})]}),(0,Q.jsxs)(xy,{children:[(0,Q.jsx)(`h3`,{children:`Aircraft applications`}),(0,Q.jsx)(`p`,{children:`A potentiometer converts motion into a voltage that varies with position. In aircraft, these sensors can report flap or trim position to an avionics display, or track throttle lever position in an autothrottle system.`}),(0,Q.jsxs)(`p`,{children:[`Examples · `,(0,Q.jsx)(`a`,{href:`https://www.dynoncertified.com/downloads/documentation/general/SkyView_HDX_System_Installation_Manual_Rev_T.pdf`,children:`Flap and trim sensing`}),` · `,(0,Q.jsx)(`a`,{href:`https://patents.google.com/patent/US11027854B2`,children:`Throttle lever sensing`})]})]})]}),(0,Q.jsxs)(Sy,{children:[(0,Q.jsxs)(Cy,{children:[(0,Q.jsx)(`img`,{src:py,alt:`Machined aluminum fixture with circuit boards and an accelerometer on a blue shaker`,width:`1400`,height:`788`,loading:`lazy`}),(0,Q.jsx)(`figcaption`,{children:`Shaker fixture and instrumentation`})]}),(0,Q.jsxs)(Cy,{children:[(0,Q.jsx)(`img`,{src:my,alt:`Shaker fixture connected to a data acquisition module and a display with two signal traces`,width:`1350`,height:`900`,loading:`lazy`}),(0,Q.jsx)(`figcaption`,{children:`Vibration test workflow · Illustrative potentiometer and accelerometer traces`})]})]})]}),gy=P.section`
+`,py=`/assets/potentiometer-shaker-Bm73HY_b.webp`,my=()=>(0,Q.jsx)(hy,{id:`environmental-testing`,"aria-labelledby":`environmental-testing-heading`,children:(0,Q.jsxs)(gy,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(Kv,{tone:`night`,children:`Featured testing`}),(0,Q.jsx)(_y,{id:`environmental-testing-heading`,children:`Environmental qualification testing`}),(0,Q.jsx)(vy,{children:`Environmental Test Engineering Intern · Sensor Systems LLC · June–August 2026`}),(0,Q.jsx)(yy,{children:`I tested precision potentiometers used in aerospace and defense applications to evaluate their mechanical durability and electrical stability.`}),(0,Q.jsxs)(by,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Multi-axis vibration`}),(0,Q.jsx)(`dd`,{children:`Ran three-hour cycles across the X, Y and Z axes. I used a shaker, accelerometers and data acquisition equipment to monitor the assembly’s mechanical response and electrical output under vibration.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Clutch-release timing`}),(0,Q.jsx)(`dd`,{children:`Used controlled-speed actuation and high-speed timing instruments to measure how quickly clutched assemblies released and evaluate overtravel protection.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Full-travel linearity`}),(0,Q.jsx)(`dd`,{children:`Used precision actuators, digital multimeters, oscilloscopes and automated logging to check output across the full stroke. I looked for signal discontinuities and compared the response with customer specifications.`})]})]}),(0,Q.jsxs)(xy,{children:[(0,Q.jsx)(`h3`,{children:`Aircraft applications`}),(0,Q.jsx)(`p`,{children:`A potentiometer converts motion into a voltage that varies with position. Aircraft systems can use that signal to monitor the position of moving components.`})]})]}),(0,Q.jsx)(Sy,{src:py,alt:`Machined aluminum fixture with circuit boards and an accelerometer on a blue shaker`,width:`1400`,height:`788`,loading:`lazy`})]})}),hy=P.section`
+  background: #000;
+  color: var(--color-night-ink);
+`,gy=P.div`
+  --testing-muted: #c4c4c4;
   width: min(calc(100% - 2 * var(--space-gutter)), var(--content-max));
   margin-inline: auto;
   padding-block: var(--space-section);
@@ -823,7 +827,6 @@ Error generating stack: `+e.message+`
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   align-items: start;
   gap: clamp(2rem, 6vw, 6rem);
-  border-bottom: 1px solid var(--color-line);
 
   @media (max-width: 899px) {
     grid-template-columns: minmax(0, 1fr);
@@ -836,12 +839,12 @@ Error generating stack: `+e.message+`
   letter-spacing: -0.04em;
 `,vy=P.p`
   margin-top: 1rem;
-  color: var(--color-ink-soft);
+  color: var(--testing-muted);
   font-size: var(--text-sm);
 `,yy=P.p`
   margin-top: 1.25rem;
   line-height: 1.5;
-  color: var(--color-ink-soft);
+  color: var(--testing-muted);
 `,by=P.dl`
   display: grid;
   gap: 1.25rem;
@@ -853,44 +856,29 @@ Error generating stack: `+e.message+`
   dd {
     margin-top: 0.25rem;
     line-height: 1.5;
-    color: var(--color-ink-soft);
+    color: var(--testing-muted);
   }
 `,xy=P.div`
   margin-top: 1.75rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--color-line);
+  border-top: 1px solid var(--color-night-line);
 
   h3 { font-size: var(--text-base); }
   p {
     margin-top: 0.4rem;
     line-height: 1.5;
-    color: var(--color-ink-soft);
+    color: var(--testing-muted);
   }
-  p:last-child { font-size: var(--text-sm); }
-  a {
-    color: inherit;
-    text-underline-offset: 0.2em;
-  }
-`,Sy=P.div`
-  display: grid;
-  gap: 1rem;
-`,Cy=P.figure`
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-card);
-    background: var(--color-surface);
-  }
+`,Sy=P.img`
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
 
-  figcaption {
-    margin-top: 0.5rem;
-    color: var(--color-ink-soft);
-    font-size: var(--text-sm);
-    line-height: 1.4;
+  @media (min-width: 900px) {
+    align-self: center;
   }
-
-`,wy=()=>(0,Q.jsxs)(Ey,{"aria-label":`Nimbus V4 design specifications`,children:[(0,Q.jsxs)(Ty,{children:[(0,Q.jsx)(`span`,{children:`Nimbus V4`}),`Design values`]}),(0,Q.jsx)(Dy,{children:iv.map(({value:e,label:t},n)=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsxs)(`dt`,{children:[(0,Q.jsx)(`span`,{className:`i`,children:String(n+1).padStart(2,`0`)}),t]}),(0,Q.jsx)(`dd`,{children:e})]},t))})]}),Ty=P.p`
+`,Cy=()=>(0,Q.jsxs)(Ty,{"aria-label":`Nimbus V4 design specifications`,children:[(0,Q.jsxs)(wy,{children:[(0,Q.jsx)(`span`,{children:`Nimbus V4`}),`Design values`]}),(0,Q.jsx)(Ey,{children:iv.map(({value:e,label:t},n)=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsxs)(`dt`,{children:[(0,Q.jsx)(`span`,{className:`i`,children:String(n+1).padStart(2,`0`)}),t]}),(0,Q.jsx)(`dd`,{children:e})]},t))})]}),wy=P.p`
   display: flex;
   gap: 0.75rem;
   padding: 0.6rem 0;
@@ -904,12 +892,12 @@ Error generating stack: `+e.message+`
     color: var(--color-ink);
     font-weight: 700;
   }
-`,Ey=P.section`
+`,Ty=P.section`
   width: min(calc(100% - 2 * var(--space-gutter)), var(--content-max));
   margin-inline: auto;
   margin-bottom: clamp(2rem, 5vw, 4rem);
   border-top: 1px solid var(--color-ink);
-`,Dy=P.dl`
+`,Ey=P.dl`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
@@ -956,7 +944,7 @@ Error generating stack: `+e.message+`
       border-left: 0;
     }
   }
-`,Oy=`/assets/photo-team-Cn4VVPbo.webp`,ky=`/assets/render-hero-sp_Ix8R8.webp`,Ay=[{index:`01`,slug:`nimbus-v4`,name:`Nimbus V4`,year:`2026`,kind:`Built & flown`,hook:`A flying-wing cargo UAV, optimized for profit, then built and flown at Mission Bay.`,tech:[`MATLAB`,`AVL`,`CMA-ES`,`CAD`],preview:Oy,previewAlt:`The Nimbus team behind the aircraft at the Mission Bay flight field`,figures:[{value:`1.57 m`,label:`Span`},{value:`800 g`,label:`Payload`},{value:`14.3`,label:`Cruise L/D`}]},{index:`02`,slug:`jager-qrf`,name:`Jäger-QRF`,year:`2026`,kind:`Conceptual design`,hook:`A hybrid VTOL that hovers over a fire and drops two suppression payloads.`,tech:[`MATLAB`,`AVL`,`Mission sizing`,`Flight dynamics`],preview:ky,previewAlt:`Jäger-QRF render releasing two red suppression payloads`,figures:[{value:`~51 mph`,label:`Cruise`},{value:`1.5 mi`,label:`Range`},{value:`55 lb`,label:`Gross weight`}]}],jy=[.16,1,.3,1],My=[`A`,`B`,`C`,`D`,`E`,`F`],Ny=[`1`,`2`,`3`,`4`],Py=()=>{let[e,t]=(0,j.useState)(0),n=!!Nh(),r=Ay[e];return(0,Q.jsx)(Iy,{id:`projects`,"aria-labelledby":`projects-heading`,children:(0,Q.jsxs)(Ly,{children:[(0,Q.jsxs)(Ry,{children:[(0,Q.jsx)(Kv,{index:`03`,children:`The hangar`}),(0,Q.jsx)(zy,{id:`projects-heading`,children:`Project files`}),(0,Q.jsx)(By,{children:`Two airframes, from mission requirements to sizing, stability and hardware.`})]}),(0,Q.jsxs)(Vy,{children:[(0,Q.jsxs)(Hy,{children:[(0,Q.jsxs)(Wy,{"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{children:`No.`}),(0,Q.jsx)(`span`,{children:`Aircraft`}),(0,Q.jsx)(`span`,{children:`Status`})]}),Ay.map((n,r)=>(0,Q.jsxs)(Gy,{"data-active":r===e,children:[(0,Q.jsxs)(Ky,{href:`/work/${n.slug}`,"aria-label":`${n.name}: view case study`,onPointerEnter:e=>e.pointerType===`mouse`&&t(r),onFocus:()=>t(r),children:[(0,Q.jsx)(`span`,{className:`no`,children:n.index}),(0,Q.jsx)(`span`,{className:`name`,children:n.name}),(0,Q.jsx)(`span`,{className:`kind`,children:n.kind})]}),(0,Q.jsx)(qy,{children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`p`,{children:n.hook}),(0,Q.jsx)(`ul`,{children:n.tech.map(e=>(0,Q.jsx)(`li`,{children:e},e))}),(0,Q.jsxs)(`span`,{className:`open`,children:[`Open case study `,(0,Q.jsx)(Og,{"aria-hidden":`true`})]})]})}),(0,Q.jsx)(Jy,{src:n.preview,alt:``,width:1600,height:1e3,loading:`lazy`,"aria-hidden":`true`})]},n.slug))]}),(0,Q.jsxs)(Yy,{"aria-live":`polite`,children:[(0,Q.jsx)(Xy,{"aria-hidden":`true`,$axis:`x`,children:My.map(e=>(0,Q.jsx)(`span`,{children:e},e))}),(0,Q.jsx)(Xy,{"aria-hidden":`true`,$axis:`y`,children:Ny.map(e=>(0,Q.jsx)(`span`,{children:e},e))}),(0,Q.jsxs)(Zy,{children:[(0,Q.jsx)(Op,{mode:`popLayout`,initial:!1,children:(0,Q.jsx)($.img,{src:r.preview,alt:r.previewAlt,width:1600,height:1e3,initial:n?{opacity:0}:{opacity:0,scale:1.04,filter:`blur(8px)`},animate:{opacity:1,scale:1,filter:`blur(0px)`},exit:{opacity:0},transition:{duration:n?.2:.7,ease:jy}},r.slug)}),(0,Q.jsx)(Qy,{"aria-hidden":`true`})]}),(0,Q.jsx)($y,{children:r.figures.map(({value:e,label:t})=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:t}),(0,Q.jsx)(`dd`,{children:e})]},t))}),(0,Q.jsxs)(eb,{"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{className:`k`,children:`Dwg`}),(0,Q.jsxs)(`span`,{className:`v`,children:[`HP-`,r.index]}),(0,Q.jsx)(`span`,{className:`k`,children:`Title`}),(0,Q.jsx)(`span`,{className:`v`,children:r.name}),(0,Q.jsx)(`span`,{className:`k`,children:`Sheet`}),(0,Q.jsxs)(`span`,{className:`v`,children:[e+1,` of `,Ay.length]})]})]})]})]})})},Fy=`(max-width: 899px)`,Iy=P.section`
+`,Dy=`/assets/photo-team-Cn4VVPbo.webp`,Oy=`/assets/render-hero-sp_Ix8R8.webp`,ky=[{index:`01`,slug:`nimbus-v4`,name:`Nimbus V4`,year:`2026`,kind:`Built & flown`,hook:`A flying-wing cargo UAV, optimized for profit, then built and flown at Mission Bay.`,tech:[`MATLAB`,`AVL`,`CMA-ES`,`CAD`],preview:Dy,previewAlt:`The Nimbus team behind the aircraft at the Mission Bay flight field`,figures:[{value:`1.57 m`,label:`Span`},{value:`800 g`,label:`Payload`},{value:`14.3`,label:`Cruise L/D`}]},{index:`02`,slug:`jager-qrf`,name:`Jäger-QRF`,year:`2026`,kind:`Conceptual design`,hook:`A hybrid VTOL that hovers over a fire and drops two suppression payloads.`,tech:[`MATLAB`,`AVL`,`Mission sizing`,`Flight dynamics`],preview:Oy,previewAlt:`Jäger-QRF render releasing two red suppression payloads`,figures:[{value:`~51 mph`,label:`Cruise`},{value:`1.5 mi`,label:`Range`},{value:`55 lb`,label:`Gross weight`}]}],Ay=[.16,1,.3,1],jy=[`A`,`B`,`C`,`D`,`E`,`F`],My=[`1`,`2`,`3`,`4`],Ny=()=>{let[e,t]=(0,j.useState)(0),n=!!Nh(),r=ky[e];return(0,Q.jsx)(Fy,{id:`projects`,"aria-labelledby":`projects-heading`,children:(0,Q.jsxs)(Iy,{children:[(0,Q.jsxs)(Ly,{children:[(0,Q.jsx)(Kv,{index:`03`,children:`The hangar`}),(0,Q.jsx)(Ry,{id:`projects-heading`,children:`Project files`}),(0,Q.jsx)(zy,{children:`Two airframes, from mission requirements to sizing, stability and hardware.`})]}),(0,Q.jsxs)(By,{children:[(0,Q.jsxs)(Vy,{children:[(0,Q.jsxs)(Uy,{"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{children:`No.`}),(0,Q.jsx)(`span`,{children:`Aircraft`}),(0,Q.jsx)(`span`,{children:`Status`})]}),ky.map((n,r)=>(0,Q.jsxs)(Wy,{"data-active":r===e,children:[(0,Q.jsxs)(Gy,{href:`/work/${n.slug}`,"aria-label":`${n.name}: view case study`,onPointerEnter:e=>e.pointerType===`mouse`&&t(r),onFocus:()=>t(r),children:[(0,Q.jsx)(`span`,{className:`no`,children:n.index}),(0,Q.jsx)(`span`,{className:`name`,children:n.name}),(0,Q.jsx)(`span`,{className:`kind`,children:n.kind})]}),(0,Q.jsx)(Ky,{children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`p`,{children:n.hook}),(0,Q.jsx)(`ul`,{children:n.tech.map(e=>(0,Q.jsx)(`li`,{children:e},e))}),(0,Q.jsxs)(`span`,{className:`open`,children:[`Open case study `,(0,Q.jsx)(Og,{"aria-hidden":`true`})]})]})}),(0,Q.jsx)(qy,{src:n.preview,alt:``,width:1600,height:1e3,loading:`lazy`,"aria-hidden":`true`})]},n.slug))]}),(0,Q.jsxs)(Jy,{"aria-live":`polite`,children:[(0,Q.jsx)(Yy,{"aria-hidden":`true`,$axis:`x`,children:jy.map(e=>(0,Q.jsx)(`span`,{children:e},e))}),(0,Q.jsx)(Yy,{"aria-hidden":`true`,$axis:`y`,children:My.map(e=>(0,Q.jsx)(`span`,{children:e},e))}),(0,Q.jsxs)(Xy,{children:[(0,Q.jsx)(Op,{mode:`popLayout`,initial:!1,children:(0,Q.jsx)($.img,{src:r.preview,alt:r.previewAlt,width:1600,height:1e3,initial:n?{opacity:0}:{opacity:0,scale:1.04,filter:`blur(8px)`},animate:{opacity:1,scale:1,filter:`blur(0px)`},exit:{opacity:0},transition:{duration:n?.2:.7,ease:Ay}},r.slug)}),(0,Q.jsx)(Zy,{"aria-hidden":`true`})]}),(0,Q.jsx)(Qy,{children:r.figures.map(({value:e,label:t})=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:t}),(0,Q.jsx)(`dd`,{children:e})]},t))}),(0,Q.jsxs)($y,{"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{className:`k`,children:`Dwg`}),(0,Q.jsxs)(`span`,{className:`v`,children:[`HP-`,r.index]}),(0,Q.jsx)(`span`,{className:`k`,children:`Title`}),(0,Q.jsx)(`span`,{className:`v`,children:r.name}),(0,Q.jsx)(`span`,{className:`k`,children:`Sheet`}),(0,Q.jsxs)(`span`,{className:`v`,children:[e+1,` of `,ky.length]})]})]})]})]})})},Py=`(max-width: 899px)`,Fy=P.section`
   position: relative;
   padding: var(--space-section) var(--space-gutter);
   background: #f6f6f6;
@@ -964,44 +952,44 @@ Error generating stack: `+e.message+`
   border-bottom: 1px solid var(--color-line);
   color: var(--color-ink);
   font-family: var(--font-body);
-`,Ly=P.div`
+`,Iy=P.div`
   max-width: var(--content-max);
   margin: 0 auto;
-`,Ry=P.header`
+`,Ly=P.header`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem);
-`,zy=P.h2`
+`,Ry=P.h2`
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 1.5rem + 2.6vw, 4rem);
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -0.04em;
-`,By=P.p`
+`,zy=P.p`
   max-width: 44ch;
   color: var(--color-ink-soft);
   font-size: var(--text-lead);
   line-height: 1.5;
-`,Vy=P.div`
+`,By=P.div`
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: clamp(1.5rem, 1rem + 2.5vw, 3.5rem);
   align-items: start;
 
-  @media ${Fy} {
+  @media ${Py} {
     grid-template-columns: minmax(0, 1fr);
   }
-`,Hy=P.ol`
+`,Vy=P.ol`
   list-style: none;
   border-top: 1px solid var(--color-ink);
-`,Uy=`
+`,Hy=`
   display: grid;
   grid-template-columns: 3rem minmax(0, 1fr) auto;
   align-items: baseline;
   gap: 1rem;
-`,Wy=P.li`
-  ${Uy}
+`,Uy=P.li`
+  ${Hy}
   padding: 0.6rem 0;
   border-bottom: 1px solid var(--color-line);
   font-size: var(--text-label);
@@ -1012,7 +1000,7 @@ Error generating stack: `+e.message+`
   span:last-child {
     text-align: right;
   }
-`,Gy=P.li`
+`,Wy=P.li`
   position: relative;
   border-bottom: 1px solid var(--color-line);
 
@@ -1034,13 +1022,13 @@ Error generating stack: `+e.message+`
     transform: scaleY(1);
   }
 
-  @media ${Fy} {
+  @media ${Py} {
     &::before {
       left: 0;
     }
   }
-`,Ky=P.a`
-  ${Uy}
+`,Gy=P.a`
+  ${Hy}
   padding: clamp(1rem, 0.8rem + 0.8vw, 1.5rem) 0;
   color: var(--color-ink);
   text-decoration: none;
@@ -1069,7 +1057,7 @@ Error generating stack: `+e.message+`
     white-space: nowrap;
   }
 
-  ${Gy}:not([data-active='true']) & .name {
+  ${Wy}:not([data-active='true']) & .name {
     color: var(--color-ink-muted);
   }
 
@@ -1082,20 +1070,20 @@ Error generating stack: `+e.message+`
     outline-offset: 2px;
   }
 
-  @media ${Fy} {
+  @media ${Py} {
     padding-left: 0.9rem;
 
-    ${Gy}:not([data-active='true']) & .name {
+    ${Wy}:not([data-active='true']) & .name {
       color: var(--color-ink);
     }
   }
-`,qy=P.div`
+`,Ky=P.div`
   display: grid;
   grid-template-rows: 0fr;
   opacity: 0;
   transition: grid-template-rows 0.5s var(--ease-out-expo), opacity 0.3s ease;
 
-  ${Gy}[data-active='true'] & {
+  ${Wy}[data-active='true'] & {
     grid-template-rows: 1fr;
     opacity: 1;
   }
@@ -1140,7 +1128,7 @@ Error generating stack: `+e.message+`
     color: var(--color-ink);
   }
 
-  @media ${Fy} {
+  @media ${Py} {
     grid-template-rows: 1fr;
     opacity: 1;
 
@@ -1148,17 +1136,17 @@ Error generating stack: `+e.message+`
       padding-left: 0.9rem;
     }
   }
-`,Jy=P.img`
+`,qy=P.img`
   display: none;
 
-  @media ${Fy} {
+  @media ${Py} {
     display: block;
     width: 100%;
     height: auto;
     margin-bottom: 1.25rem;
     border: 1px solid var(--color-line);
   }
-`,Yy=P.div`
+`,Jy=P.div`
   position: relative;
   padding: 1.6rem;
   border: 1px solid var(--color-ink);
@@ -1167,10 +1155,10 @@ Error generating stack: `+e.message+`
     linear-gradient(90deg, rgba(17, 17, 17, 0.04) 1px, transparent 1px) 0 0 / 32px 100%,
     #fbfbfb;
 
-  @media ${Fy} {
+  @media ${Py} {
     display: none;
   }
-`,Xy=P.div`
+`,Yy=P.div`
   position: absolute;
   display: flex;
   justify-content: space-around;
@@ -1180,7 +1168,7 @@ Error generating stack: `+e.message+`
   pointer-events: none;
 
   ${({$axis:e})=>e===`x`?`left: 1.6rem; right: 1.6rem; top: 0.4rem;`:`top: 1.6rem; bottom: 1.6rem; left: 0.55rem; flex-direction: column; align-items: center;`}
-`,Zy=P.div`
+`,Xy=P.div`
   position: relative;
   aspect-ratio: 16 / 10;
   overflow: hidden;
@@ -1194,7 +1182,7 @@ Error generating stack: `+e.message+`
     height: 100%;
     object-fit: cover;
   }
-`,Qy=P.span`
+`,Zy=P.span`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1207,7 +1195,7 @@ Error generating stack: `+e.message+`
     linear-gradient(var(--c), var(--c)) center / 100% 1px no-repeat,
     linear-gradient(var(--c), var(--c)) center / 1px 100% no-repeat;
   mix-blend-mode: multiply;
-`,$y=P.dl`
+`,Qy=P.dl`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 1.2rem;
@@ -1236,7 +1224,7 @@ Error generating stack: `+e.message+`
     letter-spacing: -0.03em;
     font-variant-numeric: tabular-nums;
   }
-`,eb=P.div`
+`,$y=P.div`
   position: absolute;
   right: 1.6rem;
   bottom: 1.6rem;
@@ -1267,11 +1255,11 @@ Error generating stack: `+e.message+`
     font-weight: 700;
     font-variant-numeric: tabular-nums;
   }
-`,tb=/^(\d{4})-(\d{2})$/,nb=e=>{let t=tb.exec(e);if(!t)throw RangeError(`Expected a YYYY-MM date, got "${e}"`);return{year:Number(t[1]),month:Number(t[2])-1}},rb=e=>`${e.getFullYear()}-${String(e.getMonth()+1).padStart(2,`0`)}`,ib=(e,t)=>{let n=nb(t),r=nb(e);return(r.year-n.year)*12+(r.month-n.month)},ab=(e,t,n)=>{let r=ib(t??rb(n),e)+1,i=Math.floor(r/12),a=r%12,o=(e,t)=>e?`${e} ${t}${e===1?``:`s`}`:``;return[o(i,`yr`),o(a,`mo`)].filter(Boolean).join(` `)||`1 mo`},ob=[`JAN`,`FEB`,`MAR`,`APR`,`MAY`,`JUN`,`JUL`,`AUG`,`SEP`,`OCT`,`NOV`,`DEC`],sb=`ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-/`,cb=e=>`${e.getFullYear()}-${String(e.getMonth()+1).padStart(2,`0`)}`,lb=({end:e},t)=>e===null?`ON DUTY`:ib(e,cb(t))>=0?`IN FLIGHT`:`LANDED`,ub=e=>`${ob[Number(e.slice(5,7))-1]} ${e.slice(2,4)}`,db=(e,t)=>e.toUpperCase().slice(0,t).padEnd(t,` `),fb=(e,t=0)=>Array.from({length:e},(e,n)=>6+Math.round(n*.55)+(n*7+t*13)%5),pb=(e,t,n,r=Math.random)=>[...e].map((e,i)=>t>=n[i]||e===` `?e:sb[Math.floor(r()*39)]).join(``),mb=55,hb=({text:e,isRunning:t,isStatic:n=!1,delay:r=0,seed:i=0,tone:a=`ink`,className:o})=>{let s=(0,j.useMemo)(()=>fb(e.length,i),[e.length,i]),c=Math.max(0,...s),[l,u]=(0,j.useState)(()=>n?e:` `.repeat(e.length));return(0,j.useEffect)(()=>{if(n){u(e);return}if(!t)return;let i=0,a,o=setTimeout(()=>{a=setInterval(()=>{u(pb(e,i,s)),i>=c&&clearInterval(a),i+=1},mb)},r);return()=>{clearTimeout(o),clearInterval(a)}},[e,t,n,r,s,c]),(0,Q.jsx)(_b,{className:o,"aria-hidden":`true`,$tone:a,children:[...l].map((e,t)=>(0,Q.jsx)(vb,{children:(0,Q.jsx)(yb,{$isStatic:n,children:e===` `?`\xA0`:e},e)},t))})},gb={ink:`#ececec`,amber:`var(--color-amber)`,muted:`rgba(236, 236, 236, 0.5)`},_b=P.span`
+`,eb=/^(\d{4})-(\d{2})$/,tb=e=>{let t=eb.exec(e);if(!t)throw RangeError(`Expected a YYYY-MM date, got "${e}"`);return{year:Number(t[1]),month:Number(t[2])-1}},nb=e=>`${e.getFullYear()}-${String(e.getMonth()+1).padStart(2,`0`)}`,rb=(e,t)=>{let n=tb(t),r=tb(e);return(r.year-n.year)*12+(r.month-n.month)},ib=(e,t,n)=>{let r=rb(t??nb(n),e)+1,i=Math.floor(r/12),a=r%12,o=(e,t)=>e?`${e} ${t}${e===1?``:`s`}`:``;return[o(i,`yr`),o(a,`mo`)].filter(Boolean).join(` `)||`1 mo`},ab=[`JAN`,`FEB`,`MAR`,`APR`,`MAY`,`JUN`,`JUL`,`AUG`,`SEP`,`OCT`,`NOV`,`DEC`],ob=`ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-/`,sb=e=>`${e.getFullYear()}-${String(e.getMonth()+1).padStart(2,`0`)}`,cb=({end:e},t)=>e===null?`ON DUTY`:rb(e,sb(t))>=0?`IN FLIGHT`:`LANDED`,lb=e=>`${ab[Number(e.slice(5,7))-1]} ${e.slice(2,4)}`,ub=(e,t)=>e.toUpperCase().slice(0,t).padEnd(t,` `),db=(e,t=0)=>Array.from({length:e},(e,n)=>6+Math.round(n*.55)+(n*7+t*13)%5),fb=(e,t,n,r=Math.random)=>[...e].map((e,i)=>t>=n[i]||e===` `?e:ob[Math.floor(r()*39)]).join(``),pb=55,mb=({text:e,isRunning:t,isStatic:n=!1,delay:r=0,seed:i=0,tone:a=`ink`,className:o})=>{let s=(0,j.useMemo)(()=>db(e.length,i),[e.length,i]),c=Math.max(0,...s),[l,u]=(0,j.useState)(()=>n?e:` `.repeat(e.length));return(0,j.useEffect)(()=>{if(n){u(e);return}if(!t)return;let i=0,a,o=setTimeout(()=>{a=setInterval(()=>{u(fb(e,i,s)),i>=c&&clearInterval(a),i+=1},pb)},r);return()=>{clearTimeout(o),clearInterval(a)}},[e,t,n,r,s,c]),(0,Q.jsx)(gb,{className:o,"aria-hidden":`true`,$tone:a,children:[...l].map((e,t)=>(0,Q.jsx)(_b,{children:(0,Q.jsx)(vb,{$isStatic:n,children:e===` `?`\xA0`:e},e)},t))})},hb={ink:`#ececec`,amber:`var(--color-amber)`,muted:`rgba(236, 236, 236, 0.5)`},gb=P.span`
   display: inline-flex;
   gap: var(--tile-gap, 2px);
-  color: ${({$tone:e})=>gb[e]};
-`,vb=P.span`
+  color: ${({$tone:e})=>hb[e]};
+`,_b=P.span`
   position: relative;
   display: inline-grid;
   place-items: center;
@@ -1293,7 +1281,7 @@ Error generating stack: `+e.message+`
     height: 1px;
     background: rgba(0, 0, 0, 0.75);
   }
-`,yb=P.span`
+`,vb=P.span`
   font-family: var(--font-condensed);
   font-weight: 700;
   font-size: var(--tile-font, 0.95em);
@@ -1306,20 +1294,20 @@ Error generating stack: `+e.message+`
     from { transform: rotateX(-80deg); opacity: 0.4; }
     to { transform: rotateX(0deg); opacity: 1; }
   }
-`,bb=[{start:`2021-08`,end:`2021-11`,role:`Process Engineering Intern`,company:`Dove Pharma LLP`,code:`DOVE`,board:{destination:`PROCESS ENG. INTERN`,via:`DOVE PHARMA`},location:`India`,summary:`Supported engineering teams with process documentation and data analysis for ongoing operations.`,highlights:[`Supported engineering teams with process documentation, data collection and analysis.`,`Assisted with engineering calculations and spreadsheet-based tracking for validation and compliance activities.`,`Prepared technical documentation and summaries for internal engineering review.`],impact:`Kept validation and compliance work traceable with clear calculations, tracking and review-ready documentation.`,metric:null,tags:[`Process documentation`,`Data analysis`,`Validation`,`Technical writing`]},{start:`2022-08`,end:`2024-07`,role:`A.S.-T in Mathematics`,company:`Palomar College`,code:`PLMR`,board:{destination:`A.S.-T MATHEMATICS`,via:`PALOMAR COLLEGE`},location:`San Marcos, CA`,summary:`Associate Degree in Science for Transfer in Mathematics, the foundation for transferring into aerospace engineering.`,highlights:[`Dean’s List in Fall 2022, Spring 2023, Fall 2023, Spring 2024 and Summer 2024.`,`Transferred to UC San Diego’s B.S. in Aerospace Engineering.`],impact:`Built the mathematical base for aerodynamics, controls and computational methods coursework.`,metric:{value:`3.94`,label:`GPA out of 4.0`},tags:[`Mathematics`,`Dean’s List`]},{start:`2024-09`,end:`2026-12`,role:`B.S. Aerospace Engineering`,company:`UC San Diego`,code:`UCSD`,board:{destination:`B.S. AEROSPACE ENG.`,via:`UC SAN DIEGO`},location:`La Jolla, CA`,summary:`Aircraft design, computational analysis and hardware integration, graduating December 2026.`,highlights:[`Coursework: aerodynamics, advanced fluid mechanics, propulsion, linear controls, computational methods, flight simulation techniques, aerospace structures and senior aerospace design.`,`Senior design: Jäger-QRF hybrid VTOL (MAE 155A) and Nimbus V4 flying-wing cargo aircraft (MAE 155B).`],impact:`Carried two aircraft from requirements through sizing and stability, and one all the way to flight test.`,metric:{value:`4×`,label:`UCSD Provost Honors`},tags:[`Aerodynamics`,`Propulsion`,`Controls`,`Aircraft design`]},{start:`2026-01`,end:`2026-09`,role:`Instructional Assistant`,company:`Physics Department, UC San Diego`,code:`UPHY`,board:{destination:`INSTRUCTIONAL ASST.`,via:`UCSD PHYSICS`},location:`La Jolla, CA`,summary:`Supported physics instruction in the classroom and the lab.`,highlights:[`Collaborated with professors and teaching staff to keep instruction aligned with course objectives.`,`Helped students connect theoretical physics principles to practical applications in class and lab.`,`Graded assignments and examinations.`],impact:`Helped students turn physics theory into working intuition, and kept course delivery consistent across the teaching team.`,metric:null,tags:[`Teaching`,`Physics`,`Lab instruction`]},{start:`2026-06`,end:`2026-08`,role:`Test Engineering Intern`,company:`Sensor Systems LLC`,code:`SNSR`,board:{destination:`TEST ENG. INTERN`,via:`SENSOR SYSTEMS`},location:`St. Petersburg, FL`,summary:`Qualification testing of precision potentiometers for mission-critical aerospace and defense applications.`,highlights:[`Ran clutch-release-time tests on clutched potentiometer assemblies using controlled-speed actuation and high-speed timing instrumentation.`,`Executed multi-axis vibration qualification on shaker systems with accelerometers and data acquisition, in 3-hour cycles across X, Y and Z.`,`Performed full-travel linearity and output-smoothness testing with precision actuators, multimeters, oscilloscopes and automated logging.`],impact:`Verified mechanical response, overtravel protection, durability and electrical stability against customer specifications.`,metric:{value:`3-axis`,label:`vibration qualification, 3-hour test cycles`},tags:[`Vibration testing`,`Data acquisition`,`Instrumentation`,`Qualification`]},{start:`2026-09`,end:null,role:`Project Engineer`,company:`Big Sky Electric`,code:`BSKY`,board:{destination:`PROJECT ENGINEER`,via:`BIG SKY ELECTRIC`},location:`San Marcos, CA`,summary:`Planning and coordinating onsite engineering for water and wastewater infrastructure projects.`,highlights:[`Assist the project manager in planning and coordinating onsite engineering activities while tracking budgets, documentation and schedule updates.`,`Coordinate project submittals and track RFIs and PCOs to resolve technical issues.`,`Work with foremen, superintendents, suppliers and subcontractors to keep field operations efficient.`],impact:`Keeps technical issues moving to resolution and field work on schedule and on budget.`,metric:null,tags:[`Project coordination`,`RFIs & PCOs`,`Submittals`,`Budget tracking`]}],xb=[.16,1,.3,1],Sb=220,Cb=[`Jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`],wb=e=>`${Cb[Number(e.slice(5,7))-1]} ${e.slice(0,4)}`,Tb=[...bb].reverse(),Eb={wide:[[`flight`,`Flight`,4],[`dest`,`Destination`,19],[`via`,`Via`,16],[`date`,`Date`,6],[`status`,`Status`,9]],medium:[[`flight`,`Flight`,4],[`dest`,`Destination`,19],[`date`,`Date`,6],[`status`,`Status`,9]],narrow:[[`flight`,`Flight`,4],[`dest`,`Destination`,19]]},Db=(e,t,n)=>{switch(e){case`flight`:return t.code;case`dest`:return t.board.destination;case`via`:return t.board.via;case`date`:return ub(t.start);default:return n}},Ob=(e,t)=>e===`status`?t===`LANDED`?`muted`:`amber`:e===`flight`?`amber`:`ink`,kb=({now:e=new Date})=>{let t=(0,j.useRef)(null),n=!!Nh(),r=Ih(t,{once:!0,amount:.3}),i=Vh(`(min-width: 1200px)`),a=Vh(`(min-width: 700px)`),o=Eb[i?`wide`:a?`medium`:`narrow`],s=Ng(Lg),[c,l]=(0,j.useState)(Tb[0].code),u=Tb.find(e=>e.code===c),d=lb(u,e);return(0,Q.jsx)(Pb,{id:`experience`,"aria-labelledby":`experience-heading`,children:(0,Q.jsxs)(Fb,{children:[(0,Q.jsxs)(Ib,{children:[(0,Q.jsx)(Kv,{index:`04`,tone:`night`,children:`Flight log`}),(0,Q.jsx)(`h2`,{id:`experience-heading`,children:`Experience`})]}),(0,Q.jsxs)(Lb,{ref:t,$columns:o,children:[(0,Q.jsxs)(Rb,{children:[(0,Q.jsxs)(`span`,{className:`title`,children:[(0,Q.jsx)(zb,{"aria-hidden":`true`,viewBox:`0 0 24 24`,children:(0,Q.jsx)(`path`,{d:`M2 14.5 21 9l1 2-8.5 4.5L15 21l-2 .5-3.5-5L5 18l-1-1.5 3-2.5L2 14.5Z`})}),`Departures`]}),(0,Q.jsxs)(`span`,{className:`clock`,children:[(0,Q.jsx)(`span`,{className:`city`,children:`San Diego`}),(0,Q.jsx)(`time`,{children:s})]})]}),(0,Q.jsx)(Vb,{"aria-hidden":`true`,children:o.map(([e,t])=>(0,Q.jsx)(`span`,{className:`col col-${e}`,children:t},e))}),(0,Q.jsx)(Hb,{"aria-label":`Experience, newest first`,children:Tb.map((t,i)=>{let a=lb(t,e),s=t.code===c,u=`${wb(t.start)} to ${t.end?wb(t.end):`present`}`;return(0,Q.jsx)(`li`,{children:(0,Q.jsxs)(Ub,{type:`button`,"aria-pressed":s,"aria-controls":`flight-detail`,"aria-label":`${t.role}, ${t.company}, ${u}, ${a.toLowerCase()}`,onClick:()=>l(t.code),"data-selected":s,children:[(0,Q.jsx)(Wb,{"aria-hidden":`true`,children:`▶`}),o.map(([e,,o],s)=>(0,Q.jsx)(`span`,{className:`col col-${e}`,children:(0,Q.jsx)(hb,{text:db(Db(e,t,a),o),isRunning:r,isStatic:n,delay:i*Sb+s*60,seed:i*7+s,tone:Ob(e,a)})},e)),(0,Q.jsxs)(Gb,{"aria-hidden":`true`,"data-status":a,children:[(0,Q.jsx)(`i`,{}),` `,a]}),a===`ON DUTY`&&(0,Q.jsx)(Kb,{"aria-hidden":`true`})]})},t.code)})})]}),(0,Q.jsx)(qb,{id:`flight-detail`,"aria-live":`polite`,children:(0,Q.jsx)(Op,{mode:`wait`,initial:!1,children:(0,Q.jsxs)($.article,{initial:!n&&{opacity:0,y:14,filter:`blur(6px)`},animate:{opacity:1,y:0,filter:`blur(0px)`},exit:n?{opacity:0}:{opacity:0,y:-10,filter:`blur(6px)`},transition:{duration:.4,ease:xb},children:[(0,Q.jsxs)(Jb,{children:[(0,Q.jsxs)(Yb,{children:[(0,Q.jsx)(`span`,{className:`code`,children:u.code}),(0,Q.jsxs)(`span`,{className:d===`LANDED`?`muted`:`live`,children:[d!==`LANDED`&&(0,Q.jsx)(`i`,{"aria-hidden":`true`}),d]}),(0,Q.jsxs)(`span`,{children:[wb(u.start),` — `,u.end?wb(u.end):`Present`]}),(0,Q.jsx)(`span`,{className:`muted`,children:ab(u.start,u.end,e)})]}),(0,Q.jsx)(Xb,{children:u.role}),(0,Q.jsxs)(Zb,{children:[u.company,(0,Q.jsxs)(`span`,{children:[` · `,u.location]})]}),(0,Q.jsx)(Qb,{children:u.summary}),u.highlights.length>0&&(0,Q.jsx)($b,{children:u.highlights.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]}),(0,Q.jsxs)(ex,{children:[u.metric&&(0,Q.jsxs)(tx,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Readout`}),(0,Q.jsx)(`b`,{children:u.metric.value}),(0,Q.jsx)(`span`,{className:`sub`,children:u.metric.label})]}),(0,Q.jsxs)(tx,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Impact`}),(0,Q.jsx)(`p`,{children:u.impact})]}),(0,Q.jsx)(nx,{children:u.tags.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},u.code)})})]})})},Ab=`#ececec`,jb=`rgba(236, 236, 236, 0.55)`,Mb=`rgba(236, 236, 236, 0.12)`,Nb=`(max-width: 699px)`,Pb=P.section`
+`,yb=[{start:`2021-08`,end:`2021-11`,role:`Process Engineering Intern`,company:`Dove Pharma LLP`,code:`DOVE`,board:{destination:`PROCESS ENG. INTERN`,via:`DOVE PHARMA`},location:`India`,summary:`Supported engineering teams with process documentation and data analysis for ongoing operations.`,highlights:[`Supported engineering teams with process documentation, data collection and analysis.`,`Assisted with engineering calculations and spreadsheet-based tracking for validation and compliance activities.`,`Prepared technical documentation and summaries for internal engineering review.`],impact:`Kept validation and compliance work traceable with clear calculations, tracking and review-ready documentation.`,metric:null,tags:[`Process documentation`,`Data analysis`,`Validation`,`Technical writing`]},{start:`2022-08`,end:`2024-07`,role:`A.S.-T in Mathematics`,company:`Palomar College`,code:`PLMR`,board:{destination:`A.S.-T MATHEMATICS`,via:`PALOMAR COLLEGE`},location:`San Marcos, CA`,summary:`Associate Degree in Science for Transfer in Mathematics, the foundation for transferring into aerospace engineering.`,highlights:[`Dean’s List in Fall 2022, Spring 2023, Fall 2023, Spring 2024 and Summer 2024.`,`Transferred to UC San Diego’s B.S. in Aerospace Engineering.`],impact:`Built the mathematical base for aerodynamics, controls and computational methods coursework.`,metric:{value:`3.94`,label:`GPA out of 4.0`},tags:[`Mathematics`,`Dean’s List`]},{start:`2024-09`,end:`2026-12`,role:`B.S. Aerospace Engineering`,company:`UC San Diego`,code:`UCSD`,board:{destination:`B.S. AEROSPACE ENG.`,via:`UC SAN DIEGO`},location:`La Jolla, CA`,summary:`Aircraft design, computational analysis and hardware integration, graduating December 2026.`,highlights:[`Coursework: aerodynamics, advanced fluid mechanics, propulsion, linear controls, computational methods, flight simulation techniques, aerospace structures and senior aerospace design.`,`Senior design: Jäger-QRF hybrid VTOL (MAE 155A) and Nimbus V4 flying-wing cargo aircraft (MAE 155B).`],impact:`Carried two aircraft from requirements through sizing and stability, and one all the way to flight test.`,metric:{value:`4×`,label:`UCSD Provost Honors`},tags:[`Aerodynamics`,`Propulsion`,`Controls`,`Aircraft design`]},{start:`2026-01`,end:`2026-09`,role:`Instructional Assistant`,company:`Physics Department, UC San Diego`,code:`UPHY`,board:{destination:`INSTRUCTIONAL ASST.`,via:`UCSD PHYSICS`},location:`La Jolla, CA`,summary:`Supported physics instruction in the classroom and the lab.`,highlights:[`Collaborated with professors and teaching staff to keep instruction aligned with course objectives.`,`Helped students connect theoretical physics principles to practical applications in class and lab.`,`Graded assignments and examinations.`],impact:`Helped students turn physics theory into working intuition, and kept course delivery consistent across the teaching team.`,metric:null,tags:[`Teaching`,`Physics`,`Lab instruction`]},{start:`2026-06`,end:`2026-08`,role:`Test Engineering Intern`,company:`Sensor Systems LLC`,code:`SNSR`,board:{destination:`TEST ENG. INTERN`,via:`SENSOR SYSTEMS`},location:`St. Petersburg, FL`,summary:`Qualification testing of precision potentiometers for mission-critical aerospace and defense applications.`,highlights:[`Ran clutch-release-time tests on clutched potentiometer assemblies using controlled-speed actuation and high-speed timing instrumentation.`,`Executed multi-axis vibration qualification on shaker systems with accelerometers and data acquisition, in 3-hour cycles across X, Y and Z.`,`Performed full-travel linearity and output-smoothness testing with precision actuators, multimeters, oscilloscopes and automated logging.`],impact:`Verified mechanical response, overtravel protection, durability and electrical stability against customer specifications.`,metric:{value:`3-axis`,label:`vibration qualification, 3-hour test cycles`},tags:[`Vibration testing`,`Data acquisition`,`Instrumentation`,`Qualification`]},{start:`2026-09`,end:null,role:`Project Engineer`,company:`Big Sky Electric`,code:`BSKY`,board:{destination:`PROJECT ENGINEER`,via:`BIG SKY ELECTRIC`},location:`San Marcos, CA`,summary:`Planning and coordinating onsite engineering for water and wastewater infrastructure projects.`,highlights:[`Assist the project manager in planning and coordinating onsite engineering activities while tracking budgets, documentation and schedule updates.`,`Coordinate project submittals and track RFIs and PCOs to resolve technical issues.`,`Work with foremen, superintendents, suppliers and subcontractors to keep field operations efficient.`],impact:`Keeps technical issues moving to resolution and field work on schedule and on budget.`,metric:null,tags:[`Project coordination`,`RFIs & PCOs`,`Submittals`,`Budget tracking`]}],bb=[.16,1,.3,1],xb=220,Sb=[`Jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`],Cb=e=>`${Sb[Number(e.slice(5,7))-1]} ${e.slice(0,4)}`,wb=[...yb].reverse(),Tb={wide:[[`flight`,`Flight`,4],[`dest`,`Destination`,19],[`via`,`Via`,16],[`date`,`Date`,6],[`status`,`Status`,9]],medium:[[`flight`,`Flight`,4],[`dest`,`Destination`,19],[`date`,`Date`,6],[`status`,`Status`,9]],narrow:[[`flight`,`Flight`,4],[`dest`,`Destination`,19]]},Eb=(e,t,n)=>{switch(e){case`flight`:return t.code;case`dest`:return t.board.destination;case`via`:return t.board.via;case`date`:return lb(t.start);default:return n}},Db=(e,t)=>e===`status`?t===`LANDED`?`muted`:`amber`:e===`flight`?`amber`:`ink`,Ob=({now:e=new Date})=>{let t=(0,j.useRef)(null),n=!!Nh(),r=Ih(t,{once:!0,amount:.3}),i=Vh(`(min-width: 1200px)`),a=Vh(`(min-width: 700px)`),o=Tb[i?`wide`:a?`medium`:`narrow`],s=Ng(Lg),[c,l]=(0,j.useState)(wb[0].code),u=wb.find(e=>e.code===c),d=cb(u,e);return(0,Q.jsx)(Nb,{id:`experience`,"aria-labelledby":`experience-heading`,children:(0,Q.jsxs)(Pb,{children:[(0,Q.jsxs)(Fb,{children:[(0,Q.jsx)(Kv,{index:`04`,tone:`night`,children:`Flight log`}),(0,Q.jsx)(`h2`,{id:`experience-heading`,children:`Experience`})]}),(0,Q.jsxs)(Ib,{ref:t,$columns:o,children:[(0,Q.jsxs)(Lb,{children:[(0,Q.jsxs)(`span`,{className:`title`,children:[(0,Q.jsx)(Rb,{"aria-hidden":`true`,viewBox:`0 0 24 24`,children:(0,Q.jsx)(`path`,{d:`M2 14.5 21 9l1 2-8.5 4.5L15 21l-2 .5-3.5-5L5 18l-1-1.5 3-2.5L2 14.5Z`})}),`Departures`]}),(0,Q.jsxs)(`span`,{className:`clock`,children:[(0,Q.jsx)(`span`,{className:`city`,children:`San Diego`}),(0,Q.jsx)(`time`,{children:s})]})]}),(0,Q.jsx)(Bb,{"aria-hidden":`true`,children:o.map(([e,t])=>(0,Q.jsx)(`span`,{className:`col col-${e}`,children:t},e))}),(0,Q.jsx)(Vb,{"aria-label":`Experience, newest first`,children:wb.map((t,i)=>{let a=cb(t,e),s=t.code===c,u=`${Cb(t.start)} to ${t.end?Cb(t.end):`present`}`;return(0,Q.jsx)(`li`,{children:(0,Q.jsxs)(Hb,{type:`button`,"aria-pressed":s,"aria-controls":`flight-detail`,"aria-label":`${t.role}, ${t.company}, ${u}, ${a.toLowerCase()}`,onClick:()=>l(t.code),"data-selected":s,children:[(0,Q.jsx)(Ub,{"aria-hidden":`true`,children:`▶`}),o.map(([e,,o],s)=>(0,Q.jsx)(`span`,{className:`col col-${e}`,children:(0,Q.jsx)(mb,{text:ub(Eb(e,t,a),o),isRunning:r,isStatic:n,delay:i*xb+s*60,seed:i*7+s,tone:Db(e,a)})},e)),(0,Q.jsxs)(Wb,{"aria-hidden":`true`,"data-status":a,children:[(0,Q.jsx)(`i`,{}),` `,a]}),a===`ON DUTY`&&(0,Q.jsx)(Gb,{"aria-hidden":`true`})]})},t.code)})})]}),(0,Q.jsx)(Kb,{id:`flight-detail`,"aria-live":`polite`,children:(0,Q.jsx)(Op,{mode:`wait`,initial:!1,children:(0,Q.jsxs)($.article,{initial:!n&&{opacity:0,y:14,filter:`blur(6px)`},animate:{opacity:1,y:0,filter:`blur(0px)`},exit:n?{opacity:0}:{opacity:0,y:-10,filter:`blur(6px)`},transition:{duration:.4,ease:bb},children:[(0,Q.jsxs)(qb,{children:[(0,Q.jsxs)(Jb,{children:[(0,Q.jsx)(`span`,{className:`code`,children:u.code}),(0,Q.jsxs)(`span`,{className:d===`LANDED`?`muted`:`live`,children:[d!==`LANDED`&&(0,Q.jsx)(`i`,{"aria-hidden":`true`}),d]}),(0,Q.jsxs)(`span`,{children:[Cb(u.start),` — `,u.end?Cb(u.end):`Present`]}),(0,Q.jsx)(`span`,{className:`muted`,children:ib(u.start,u.end,e)})]}),(0,Q.jsx)(Yb,{children:u.role}),(0,Q.jsxs)(Xb,{children:[u.company,(0,Q.jsxs)(`span`,{children:[` · `,u.location]})]}),(0,Q.jsx)(Zb,{children:u.summary}),u.highlights.length>0&&(0,Q.jsx)(Qb,{children:u.highlights.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]}),(0,Q.jsxs)($b,{children:[u.metric&&(0,Q.jsxs)(ex,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Readout`}),(0,Q.jsx)(`b`,{children:u.metric.value}),(0,Q.jsx)(`span`,{className:`sub`,children:u.metric.label})]}),(0,Q.jsxs)(ex,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Impact`}),(0,Q.jsx)(`p`,{children:u.impact})]}),(0,Q.jsx)(tx,{children:u.tags.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},u.code)})})]})})},kb=`#ececec`,Ab=`rgba(236, 236, 236, 0.55)`,jb=`rgba(236, 236, 236, 0.12)`,Mb=`(max-width: 699px)`,Nb=P.section`
   position: relative;
   padding: var(--space-section) var(--space-gutter);
-  color: ${Ab};
+  color: ${kb};
   font-family: var(--font-body);
   background:
     radial-gradient(ellipse 70% 45% at 50% 0%, rgba(242, 165, 0, 0.06), transparent 70%),
     linear-gradient(rgba(236, 236, 236, 0.025) 1px, transparent 1px) 0 0 / 100% 48px,
     linear-gradient(90deg, rgba(236, 236, 236, 0.025) 1px, transparent 1px) 0 0 / 48px 100%,
     #08090b;
-`,Fb=P.div`
+`,Pb=P.div`
   max-width: var(--content-max);
   margin: 0 auto;
-`,Ib=P.header`
+`,Fb=P.header`
   margin-bottom: clamp(1.5rem, 1rem + 2vw, 2.5rem);
 
   h2 {
@@ -1330,7 +1318,7 @@ Error generating stack: `+e.message+`
     letter-spacing: -0.04em;
     line-height: 0.95;
   }
-`,Lb=P.div`
+`,Ib=P.div`
   --tile-w: 17px;
   --tile-h: 27px;
   --tile-gap: 2px;
@@ -1338,7 +1326,7 @@ Error generating stack: `+e.message+`
   --col-gap: 18px;
 
   padding: clamp(0.9rem, 0.6rem + 1vw, 1.5rem);
-  border: 1px solid ${Mb};
+  border: 1px solid ${jb};
   border-radius: var(--radius-panel);
   background: linear-gradient(180deg, #0f1013, #0b0c0e);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 40px 80px -40px rgba(0, 0, 0, 0.9);
@@ -1356,7 +1344,7 @@ Error generating stack: `+e.message+`
     --tile-h: 28px;
   }
 
-  @media ${Nb} {
+  @media ${Mb} {
     /* rows stack (flight number above destination), so 19 tiles fill the width */
     --tile-w: calc((100vw - 2 * var(--space-gutter) - 2 * 0.9rem - 2.4rem) / 19 - 2px);
     --tile-h: calc(var(--tile-w) * 1.45);
@@ -1364,14 +1352,14 @@ Error generating stack: `+e.message+`
     --col-gap: 6px;
     padding: 0.9rem;
   }
-`,Rb=P.div`
+`,Lb=P.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding-bottom: 0.8rem;
   margin-bottom: 0.6rem;
-  border-bottom: 1px solid ${Mb};
+  border-bottom: 1px solid ${jb};
   font-size: var(--text-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1385,48 +1373,48 @@ Error generating stack: `+e.message+`
   }
 
   .clock {
-    color: ${jb};
+    color: ${Ab};
     font-variant-numeric: tabular-nums;
   }
 
   .clock time {
     margin-left: 0.5rem;
-    color: ${Ab};
+    color: ${kb};
     white-space: nowrap;
   }
 
-  @media ${Nb} {
+  @media ${Mb} {
     .city {
       display: none;
     }
   }
-`,zb=P.svg`
+`,Rb=P.svg`
   width: 16px;
   height: 16px;
   fill: currentColor;
-`,Bb=`
+`,zb=`
   display: flex;
   align-items: center;
   gap: var(--col-gap);
   padding-left: 1.6rem;
-`,Vb=P.div`
-  ${Bb}
+`,Bb=P.div`
+  ${zb}
   padding-bottom: 0.5rem;
   font-size: 0.625rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: ${jb};
+  color: ${Ab};
 
-  @media ${Nb} {
+  @media ${Mb} {
     display: none;
   }
-`,Hb=P.ol`
+`,Vb=P.ol`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 4px;
-`,Ub=P.button`
-  ${Bb}
+`,Hb=P.button`
+  ${zb}
   position: relative;
   width: 100%;
   padding-top: 5px;
@@ -1454,13 +1442,13 @@ Error generating stack: `+e.message+`
     outline-offset: 2px;
   }
 
-  @media ${Nb} {
+  @media ${Mb} {
     flex-wrap: wrap;
     row-gap: 6px;
     padding-top: 8px;
     padding-bottom: 8px;
   }
-`,Wb=P.span`
+`,Ub=P.span`
   position: absolute;
   left: 0.45rem;
   font-size: 0.6rem;
@@ -1469,18 +1457,18 @@ Error generating stack: `+e.message+`
   transform: translateX(-4px);
   transition: opacity var(--duration-fast) ease, transform var(--duration-normal) var(--ease-out-expo);
 
-  ${Ub}[data-selected='true'] & {
+  ${Hb}[data-selected='true'] & {
     opacity: 1;
     transform: translateX(0);
   }
-`,Gb=P.span`
+`,Wb=P.span`
   display: none;
   align-items: center;
   gap: 0.4rem;
   width: 100%;
   font-size: 0.625rem;
   letter-spacing: 0.1em;
-  color: ${jb};
+  color: ${Ab};
 
   i {
     width: 6px;
@@ -1493,10 +1481,10 @@ Error generating stack: `+e.message+`
     color: var(--color-amber);
   }
 
-  @media ${Nb} {
+  @media ${Mb} {
     display: inline-flex;
   }
-`,Kb=P.i`
+`,Gb=P.i`
   position: absolute;
   right: 0.6rem;
   top: 50%;
@@ -1515,10 +1503,10 @@ Error generating stack: `+e.message+`
     animation: none;
   }
 
-  @media ${Nb} {
+  @media ${Mb} {
     top: 1.1rem;
   }
-`,qb=P.div`
+`,Kb=P.div`
   margin-top: clamp(1.5rem, 1rem + 2vw, 2.5rem);
 
   article {
@@ -1533,9 +1521,9 @@ Error generating stack: `+e.message+`
       gap: 1rem;
     }
   }
-`,Jb=P.div`
+`,qb=P.div`
   min-width: 0;
-`,Yb=P.p`
+`,Jb=P.p`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1566,30 +1554,30 @@ Error generating stack: `+e.message+`
   }
 
   .muted {
-    color: ${jb};
+    color: ${Ab};
   }
-`,Xb=P.h3`
+`,Yb=P.h3`
   margin-top: 0.8rem;
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 1.2rem + 2vw, 3rem);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.035em;
-`,Zb=P.p`
+`,Xb=P.p`
   margin-top: 0.5rem;
   font-size: 1.05rem;
   font-weight: 700;
 
   span {
-    color: ${jb};
+    color: ${Ab};
     font-weight: 400;
   }
-`,Qb=P.p`
+`,Zb=P.p`
   margin-top: 0.8rem;
   max-width: 58ch;
   line-height: 1.55;
   color: rgba(236, 236, 236, 0.85);
-`,$b=P.ul`
+`,Qb=P.ul`
   list-style: none;
   margin-top: 0.9rem;
   display: grid;
@@ -1597,7 +1585,7 @@ Error generating stack: `+e.message+`
   max-width: 64ch;
   font-size: var(--text-sm);
   line-height: 1.5;
-  color: ${jb};
+  color: ${Ab};
 
   li {
     position: relative;
@@ -1613,14 +1601,14 @@ Error generating stack: `+e.message+`
     height: 1px;
     background: var(--color-amber);
   }
-`,ex=P.div`
+`,$b=P.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   min-width: 0;
-`,tx=P.div`
+`,ex=P.div`
   padding: 0.9rem 1rem;
-  border: 1px solid ${Mb};
+  border: 1px solid ${jb};
   background: rgba(236, 236, 236, 0.025);
 
   .label {
@@ -1628,7 +1616,7 @@ Error generating stack: `+e.message+`
     font-size: 0.6875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: ${jb};
+    color: ${Ab};
   }
 
   b {
@@ -1647,7 +1635,7 @@ Error generating stack: `+e.message+`
     display: block;
     margin-top: 0.35rem;
     font-size: var(--text-label);
-    color: ${jb};
+    color: ${Ab};
   }
 
   p {
@@ -1655,7 +1643,7 @@ Error generating stack: `+e.message+`
     font-size: var(--text-sm);
     line-height: 1.5;
   }
-`,nx=P.ul`
+`,tx=P.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -1663,13 +1651,13 @@ Error generating stack: `+e.message+`
 
   li {
     padding: 0.3rem 0.55rem;
-    border: 1px solid ${Mb};
+    border: 1px solid ${jb};
     font-size: 0.6875rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: ${jb};
+    color: ${Ab};
   }
-`,rx=({channel:e,callsign:t,handle:n,href:r,action:i,external:a,isPrimary:o,children:s})=>{let c=(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(ax,{"aria-hidden":`true`,$isPrimary:o}),(0,Q.jsxs)(ox,{className:`ch`,"aria-hidden":`true`,children:[(0,Q.jsx)(`small`,{children:`Ch`}),e]}),(0,Q.jsxs)(ox,{className:`route`,children:[(0,Q.jsx)(`span`,{className:`callsign`,children:t}),(0,Q.jsx)(`span`,{className:`handle`,children:n})]}),(0,Q.jsx)(ox,{className:`action`,children:s??(0,Q.jsxs)(`span`,{className:`cue`,children:[i,` `,(0,Q.jsx)(Dg,{"aria-hidden":`true`})]})})]});return r?(0,Q.jsx)(ix,{as:`a`,href:r,...a?{target:`_blank`,rel:`noopener noreferrer`}:{},"aria-label":`${t}: ${n}`,$isLink:!0,children:c}):(0,Q.jsx)(ix,{children:c})},ix=P.div`
+`,nx=({channel:e,callsign:t,handle:n,href:r,action:i,external:a,isPrimary:o,children:s})=>{let c=(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(ix,{"aria-hidden":`true`,$isPrimary:o}),(0,Q.jsxs)(ax,{className:`ch`,"aria-hidden":`true`,children:[(0,Q.jsx)(`small`,{children:`Ch`}),e]}),(0,Q.jsxs)(ax,{className:`route`,children:[(0,Q.jsx)(`span`,{className:`callsign`,children:t}),(0,Q.jsx)(`span`,{className:`handle`,children:n})]}),(0,Q.jsx)(ax,{className:`action`,children:s??(0,Q.jsxs)(`span`,{className:`cue`,children:[i,` `,(0,Q.jsx)(Dg,{"aria-hidden":`true`})]})})]});return r?(0,Q.jsx)(rx,{as:`a`,href:r,...a?{target:`_blank`,rel:`noopener noreferrer`}:{},"aria-label":`${t}: ${n}`,$isLink:!0,children:c}):(0,Q.jsx)(rx,{children:c})},rx=P.div`
   position: relative;
   display: grid;
   grid-template-columns: 0.5rem 3.25rem minmax(0, 1fr) auto;
@@ -1704,9 +1692,9 @@ Error generating stack: `+e.message+`
   @media (max-width: 560px) {
     grid-template-columns: 0.5rem minmax(0, 1fr) auto;
   }
-`,ax=P.span`
+`,ix=P.span`
   background: ${({$isPrimary:e})=>e?`var(--color-amber)`:`#8f8d8d`};
-`,ox=P.span`
+`,ax=P.span`
   display: flex;
   align-items: center;
   padding: 0.6rem 0.9rem;
@@ -1814,22 +1802,22 @@ Error generating stack: `+e.message+`
       display: none;
     }
   }
-`,sx=[...Ug,{label:`Résumé`,href:Ig}],cx=()=>{let e=Ng(Lg),t=new Date().getFullYear();return(0,Q.jsxs)(lx,{children:[(0,Q.jsxs)(ux,{children:[(0,Q.jsxs)(dx,{children:[(0,Q.jsxs)(fx,{children:[(0,Q.jsx)(Lh,{size:34}),(0,Q.jsx)(`span`,{children:Pg}),(0,Q.jsxs)(`address`,{children:[`San Diego, California`,(0,Q.jsx)(`br`,{}),`USA · `,(0,Q.jsx)(`time`,{children:e})]})]}),(0,Q.jsxs)(px,{children:[(0,Q.jsxs)(`nav`,{"aria-label":`Footer`,children:[(0,Q.jsx)(`h2`,{children:`Sections`}),(0,Q.jsx)(`ul`,{children:Uh.map(({label:e,href:t})=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(`a`,{href:t,children:e})},t))})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`h2`,{children:`Elsewhere`}),(0,Q.jsx)(`ul`,{children:sx.map(({label:e,href:t})=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:e})},e))})]})]})]}),(0,Q.jsxs)(mx,{children:[(0,Q.jsxs)(`span`,{children:[`© `,t,` `,Pg,`. All rights reserved.`]}),(0,Q.jsxs)(`a`,{href:`/#home`,children:[`Back to top `,(0,Q.jsx)(Eg,{"aria-hidden":`true`})]})]})]}),(0,Q.jsx)(hx,{"aria-hidden":`true`,children:Pg})]})},lx=P.footer`
+`,ox=[...Ug,{label:`Résumé`,href:Ig}],sx=()=>{let e=Ng(Lg),t=new Date().getFullYear();return(0,Q.jsxs)(cx,{children:[(0,Q.jsxs)(lx,{children:[(0,Q.jsxs)(ux,{children:[(0,Q.jsxs)(dx,{children:[(0,Q.jsx)(Lh,{size:34}),(0,Q.jsx)(`span`,{children:Pg}),(0,Q.jsxs)(`address`,{children:[`San Diego, California`,(0,Q.jsx)(`br`,{}),`USA · `,(0,Q.jsx)(`time`,{children:e})]})]}),(0,Q.jsxs)(fx,{children:[(0,Q.jsxs)(`nav`,{"aria-label":`Footer`,children:[(0,Q.jsx)(`h2`,{children:`Sections`}),(0,Q.jsx)(`ul`,{children:Uh.map(({label:e,href:t})=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(`a`,{href:t,children:e})},t))})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`h2`,{children:`Elsewhere`}),(0,Q.jsx)(`ul`,{children:ox.map(({label:e,href:t})=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:e})},e))})]})]})]}),(0,Q.jsxs)(px,{children:[(0,Q.jsxs)(`span`,{children:[`© `,t,` `,Pg,`. All rights reserved.`]}),(0,Q.jsxs)(`a`,{href:`/#home`,children:[`Back to top `,(0,Q.jsx)(Eg,{"aria-hidden":`true`})]})]})]}),(0,Q.jsx)(mx,{"aria-hidden":`true`,children:Pg})]})},cx=P.footer`
   overflow: hidden;
   padding: clamp(3rem, 2rem + 3vw, 5rem) var(--space-gutter) 0;
   background: #f8f8f8;
   border-top: 1px solid var(--color-line);
   color: var(--color-ink-soft);
   font-family: var(--font-body);
-`,ux=P.div`
+`,lx=P.div`
   max-width: var(--content-max);
   margin: 0 auto;
-`,dx=P.div`
+`,ux=P.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2.5rem;
-`,fx=P.div`
+`,dx=P.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -1854,7 +1842,7 @@ Error generating stack: `+e.message+`
     color: #aeaeae;
     font-variant-numeric: tabular-nums;
   }
-`,px=P.div`
+`,fx=P.div`
   display: flex;
   gap: clamp(2rem, 1rem + 4vw, 6rem);
 
@@ -1891,7 +1879,7 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,mx=P.div`
+`,px=P.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1924,7 +1912,7 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,hx=P.p`
+`,mx=P.p`
   margin: clamp(1.5rem, 1rem + 2vw, 3rem) calc(-1 * var(--space-gutter)) 0;
   font-family: var(--font-condensed);
   font-size: 12.4vw;
@@ -1937,14 +1925,14 @@ Error generating stack: `+e.message+`
   color: #e3e3e3;
   user-select: none;
   transform: translateY(8%);
-`,gx=[.16,1,.3,1],_x=e=>Ug.find(t=>t.label===e).href,vx=[{id:`li`,callsign:`LinkedIn`,handle:`in/harshilpatel2060`,href:_x(`LinkedIn`),action:`Open`,external:!0},{id:`gh`,callsign:`GitHub`,handle:`patelharshil2060`,href:_x(`GitHub`),action:`Open`,external:!0},{id:`cv`,callsign:`Résumé`,handle:`HarshilPatelResume.pdf`,href:Ig,action:`View`,external:!0}],yx=e=>({hidden:{opacity:0,y:18},shown:{opacity:1,y:0,transition:{delay:e,duration:.8,ease:gx}}}),bx=e=>({hidden:{opacity:0,x:60},shown:{opacity:1,x:0,transition:{delay:e,duration:.9,ease:gx}}}),xx={once:!0,margin:`-15% 0px`},Sx=()=>{let e=!Nh()&&`hidden`;return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(Cx,{id:`contact`,"aria-labelledby":`contact-heading`,children:(0,Q.jsxs)(wx,{initial:e,whileInView:`shown`,viewport:xx,children:[(0,Q.jsxs)(Tx,{children:[(0,Q.jsx)($.div,{variants:yx(0),children:(0,Q.jsx)(Kv,{index:`05`,children:`Contact`})}),(0,Q.jsxs)(Ex,{id:`contact-heading`,variants:yx(.08),children:[`Cleared for `,(0,Q.jsx)(`em`,{children:`contact.`})]}),(0,Q.jsx)(Dx,{variants:yx(.16),children:`Working on aircraft design, flight test or analysis? I’d like to hear about it.`}),(0,Q.jsxs)(Ox,{variants:yx(.22),children:[(0,Q.jsx)(kx,{"aria-hidden":`true`}),Rg]})]}),(0,Q.jsxs)(Ax,{"aria-label":`Ways to get in touch`,children:[(0,Q.jsxs)(jx,{variants:yx(.1),"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{children:`Strip board`}),(0,Q.jsxs)(`span`,{children:[`San Diego · `,vx.length+1,` channels open`]})]}),(0,Q.jsx)($.li,{variants:bx(.15),children:(0,Q.jsxs)(rx,{channel:`01`,callsign:`Email`,handle:Fg,isPrimary:!0,children:[(0,Q.jsx)(v_,{email:Fg,label:`Copy`}),(0,Q.jsx)(`a`,{className:`write`,href:`mailto:${Fg}`,children:`Write`})]})}),vx.map(({id:e,callsign:t,handle:n,href:r,action:i,external:a},o)=>(0,Q.jsx)($.li,{variants:bx(.25+o*.1),children:(0,Q.jsx)(rx,{channel:String(o+2).padStart(2,`0`),callsign:t,handle:n,href:r,action:i,external:a})},e))]})]})}),(0,Q.jsx)(cx,{})]})},Cx=P.section`
+`,hx=[.16,1,.3,1],gx=e=>Ug.find(t=>t.label===e).href,_x=[{id:`li`,callsign:`LinkedIn`,handle:`in/harshilpatel2060`,href:gx(`LinkedIn`),action:`Open`,external:!0},{id:`gh`,callsign:`GitHub`,handle:`patelharshil2060`,href:gx(`GitHub`),action:`Open`,external:!0},{id:`cv`,callsign:`Résumé`,handle:`HarshilPatelResume.pdf`,href:Ig,action:`View`,external:!0}],vx=e=>({hidden:{opacity:0,y:18},shown:{opacity:1,y:0,transition:{delay:e,duration:.8,ease:hx}}}),yx=e=>({hidden:{opacity:0,x:60},shown:{opacity:1,x:0,transition:{delay:e,duration:.9,ease:hx}}}),bx={once:!0,margin:`-15% 0px`},xx=()=>{let e=!Nh()&&`hidden`;return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(Sx,{id:`contact`,"aria-labelledby":`contact-heading`,children:(0,Q.jsxs)(Cx,{initial:e,whileInView:`shown`,viewport:bx,children:[(0,Q.jsxs)(wx,{children:[(0,Q.jsx)($.div,{variants:vx(0),children:(0,Q.jsx)(Kv,{index:`05`,children:`Contact`})}),(0,Q.jsxs)(Tx,{id:`contact-heading`,variants:vx(.08),children:[`Cleared for `,(0,Q.jsx)(`em`,{children:`contact.`})]}),(0,Q.jsx)(Ex,{variants:vx(.16),children:`Working on aircraft design, flight test or analysis? I’d like to hear about it.`}),(0,Q.jsxs)(Dx,{variants:vx(.22),children:[(0,Q.jsx)(Ox,{"aria-hidden":`true`}),Rg]})]}),(0,Q.jsxs)(kx,{"aria-label":`Ways to get in touch`,children:[(0,Q.jsxs)(Ax,{variants:vx(.1),"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{children:`Strip board`}),(0,Q.jsxs)(`span`,{children:[`San Diego · `,_x.length+1,` channels open`]})]}),(0,Q.jsx)($.li,{variants:yx(.15),children:(0,Q.jsxs)(nx,{channel:`01`,callsign:`Email`,handle:Fg,isPrimary:!0,children:[(0,Q.jsx)(v_,{email:Fg,label:`Copy`}),(0,Q.jsx)(`a`,{className:`write`,href:`mailto:${Fg}`,children:`Write`})]})}),_x.map(({id:e,callsign:t,handle:n,href:r,action:i,external:a},o)=>(0,Q.jsx)($.li,{variants:yx(.25+o*.1),children:(0,Q.jsx)(nx,{channel:String(o+2).padStart(2,`0`),callsign:t,handle:n,href:r,action:i,external:a})},e))]})]})}),(0,Q.jsx)(sx,{})]})},Sx=P.section`
   /* strips wait offscreen-right before sliding in; don't let them widen the page */
   overflow-x: clip;
   padding: var(--space-section) var(--space-gutter);
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
-`,wx=P($.div)`
+`,Cx=P($.div)`
   max-width: var(--content-max);
   margin: 0 auto;
   display: grid;
@@ -1955,12 +1943,12 @@ Error generating stack: `+e.message+`
   @media (max-width: 899px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,Tx=P.div`
+`,wx=P.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.1rem;
-`,Ex=P($.h2)`
+`,Tx=P($.h2)`
   font-family: var(--font-display);
   font-size: clamp(2.75rem, 1.6rem + 4vw, 5.5rem);
   font-weight: 700;
@@ -1971,12 +1959,12 @@ Error generating stack: `+e.message+`
     font-style: normal;
     color: var(--color-ink-muted);
   }
-`,Dx=P($.p)`
+`,Ex=P($.p)`
   max-width: 36ch;
   font-size: var(--text-lead);
   line-height: 1.5;
   color: var(--color-ink-soft);
-`,Ox=P($.p)`
+`,Dx=P($.p)`
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -1986,12 +1974,12 @@ Error generating stack: `+e.message+`
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-ink-soft);
-`,kx=P.i`
+`,Ox=P.i`
   width: 7px;
   height: 7px;
   background: var(--color-amber);
   box-shadow: 0 0 0 3px rgba(242, 165, 0, 0.18);
-`,Ax=P.ol`
+`,kx=P.ol`
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -2002,7 +1990,7 @@ Error generating stack: `+e.message+`
     repeating-linear-gradient(180deg, transparent 0 calc(4.5rem - 1px), rgba(17, 17, 17, 0.05) calc(4.5rem - 1px) 4.5rem),
     #e2e2e2;
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.06);
-`,jx=P($.li)`
+`,Ax=P($.li)`
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -2016,7 +2004,7 @@ Error generating stack: `+e.message+`
     color: var(--color-ink);
     font-weight: 700;
   }
-`,Mx=({src:e,alt:t,caption:n,figure:r,tone:i=`paper`,width:a=1600,height:o=1e3,eager:s=!1,className:c})=>(0,Q.jsxs)(Nx,{className:c,$tone:i,children:[(0,Q.jsx)(Px,{$tone:i,children:(0,Q.jsx)(`img`,{src:e,alt:t,width:a,height:o,loading:s?`eager`:`lazy`,decoding:`async`})}),n&&(0,Q.jsxs)(`figcaption`,{children:[r!==void 0&&(0,Q.jsxs)(`span`,{className:`fig`,children:[`Fig. `,String(r).padStart(2,`0`)]}),n]})]}),Nx=P.figure`
+`,jx=({src:e,alt:t,caption:n,figure:r,tone:i=`paper`,width:a=1600,height:o=1e3,eager:s=!1,className:c})=>(0,Q.jsxs)(Mx,{className:c,$tone:i,children:[(0,Q.jsx)(Nx,{$tone:i,children:(0,Q.jsx)(`img`,{src:e,alt:t,width:a,height:o,loading:s?`eager`:`lazy`,decoding:`async`})}),n&&(0,Q.jsxs)(`figcaption`,{children:[r!==void 0&&(0,Q.jsxs)(`span`,{className:`fig`,children:[`Fig. `,String(r).padStart(2,`0`)]}),n]})]}),Mx=P.figure`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -2037,7 +2025,7 @@ Error generating stack: `+e.message+`
     color: ${({$tone:e})=>e===`night`?`var(--color-amber)`:`var(--color-amber-ink)`};
     font-variant-numeric: tabular-nums;
   }
-`,Px=P.div`
+`,Nx=P.div`
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-card);
@@ -2067,34 +2055,34 @@ Error generating stack: `+e.message+`
       linear-gradient(var(--c), var(--c)) bottom right / 10px 1px no-repeat,
       linear-gradient(var(--c), var(--c)) bottom right / 1px 10px no-repeat;
   }
-`,Fx=[.16,1,.3,1],Ix=({children:e,delay:t=0,as:n=`div`,...r})=>{let i=Nh(),a=$[n];return(0,Q.jsx)(a,{initial:!i&&{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:`-12% 0px`},transition:{duration:.8,ease:Fx,delay:t},...r,children:e})},Lx=({id:e,index:t,children:n,tone:r})=>(0,Q.jsxs)(Jx,{children:[(0,Q.jsx)(Yx,{"aria-hidden":`true`,$onDark:r===`night`,children:t}),(0,Q.jsx)(Xx,{id:e,$onDark:r===`night`,children:n})]}),Rx=({text:e})=>(0,Q.jsx)(qx,{"aria-labelledby":`cs-problem`,children:(0,Q.jsxs)(Ix,{children:[(0,Q.jsx)(Lx,{id:`cs-problem`,index:`01`,children:`The engineering challenge`}),(0,Q.jsx)(Zx,{children:e})]})}),zx=({items:e})=>(0,Q.jsxs)(qx,{"aria-labelledby":`cs-built`,children:[(0,Q.jsx)(Ix,{children:(0,Q.jsx)(Lx,{id:`cs-built`,index:`02`,children:`What I did`})}),(0,Q.jsx)(Qx,{children:e.map(({title:e,body:t},n)=>(0,Q.jsxs)(Ix,{as:`li`,delay:n*.06,children:[(0,Q.jsx)(`h3`,{children:e}),(0,Q.jsx)(`p`,{children:t})]},e))})]}),Bx=({steps:e})=>(0,Q.jsxs)(qx,{"aria-labelledby":`cs-flow`,$wide:!0,children:[(0,Q.jsx)(Ix,{children:(0,Q.jsx)(Lx,{id:`cs-flow`,index:`03`,children:`Design workflow`})}),(0,Q.jsx)($x,{children:e.map(({label:e,detail:t},n)=>(0,Q.jsxs)(Ix,{as:`li`,delay:n*.08,children:[(0,Q.jsx)(`span`,{className:`step`,children:String(n+1).padStart(2,`0`)}),(0,Q.jsx)(`strong`,{children:e}),(0,Q.jsx)(`span`,{className:`detail`,children:t})]},e))})]}),Vx=({items:e})=>(0,Q.jsxs)(qx,{"aria-labelledby":`cs-results`,$wide:!0,children:[(0,Q.jsx)(Ix,{children:(0,Q.jsx)(Lx,{id:`cs-results`,index:`04`,children:`Key figures`})}),(0,Q.jsx)(eS,{children:e.map(({value:e,label:t},n)=>(0,Q.jsxs)(Ix,{as:`li`,delay:n*.06,children:[(0,Q.jsx)(`b`,{children:e}),(0,Q.jsx)(`span`,{children:t})]},t))}),(0,Q.jsx)(tS,{children:`Design values, not measured flight performance.`})]}),Hx=({items:e})=>(0,Q.jsxs)(nS,{"aria-labelledby":`cs-evidence`,children:[(0,Q.jsx)(Ix,{children:(0,Q.jsx)(Lx,{id:`cs-evidence`,index:`05`,tone:`night`,children:`Technical evidence`})}),(0,Q.jsx)(rS,{children:e.map((e,t)=>(0,Q.jsx)(Ix,{delay:t%2*.1,children:(0,Q.jsx)(Mx,{...e,figure:t+1,tone:`night`,width:1400,height:950})},e.caption))})]}),Ux=({items:e})=>e.length>0&&(0,Q.jsxs)(qx,{"aria-labelledby":`cs-photos`,$wide:!0,children:[(0,Q.jsx)(Ix,{children:(0,Q.jsx)(Lx,{id:`cs-photos`,index:`06`,children:`In the field`})}),(0,Q.jsx)(iS,{children:e.map((e,t)=>(0,Q.jsx)(Ix,{delay:t%2*.08,children:(0,Q.jsx)(Mx,{...e})},e.caption))})]}),Wx=({text:e})=>(0,Q.jsx)(qx,{"aria-labelledby":`cs-status`,children:(0,Q.jsx)(Ix,{children:(0,Q.jsxs)(aS,{children:[(0,Q.jsx)(Lx,{id:`cs-status`,index:`Note`,children:`Design status`}),(0,Q.jsx)(Zx,{children:e})]})})}),Gx=({study:e})=>(0,Q.jsxs)(oS,{href:`/work/${e.slug}`,"aria-label":`Next project: ${e.name}`,children:[(0,Q.jsx)(`span`,{className:`label`,children:`Next project`}),(0,Q.jsxs)(`span`,{className:`name`,children:[e.name,` `,(0,Q.jsx)(`span`,{"aria-hidden":`true`,children:`→`})]}),(0,Q.jsx)(`span`,{className:`shot`,"aria-hidden":`true`,children:(0,Q.jsx)(`img`,{src:e.hero.main.src,alt:``,width:1600,height:1e3,loading:`lazy`})})]}),Kx=`46rem`,qx=P.section`
-  max-width: ${({$wide:e})=>e?`var(--content-max)`:Kx};
+`,Px=[.16,1,.3,1],Fx=({children:e,delay:t=0,as:n=`div`,...r})=>{let i=Nh(),a=$[n];return(0,Q.jsx)(a,{initial:!i&&{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:`-12% 0px`},transition:{duration:.8,ease:Px,delay:t},...r,children:e})},Ix=({id:e,index:t,children:n,tone:r})=>(0,Q.jsxs)(qx,{children:[(0,Q.jsx)(Jx,{"aria-hidden":`true`,$onDark:r===`night`,children:t}),(0,Q.jsx)(Yx,{id:e,$onDark:r===`night`,children:n})]}),Lx=({text:e})=>(0,Q.jsx)(Kx,{"aria-labelledby":`cs-problem`,children:(0,Q.jsxs)(Fx,{children:[(0,Q.jsx)(Ix,{id:`cs-problem`,index:`01`,children:`The engineering challenge`}),(0,Q.jsx)(Xx,{children:e})]})}),Rx=({items:e})=>(0,Q.jsxs)(Kx,{"aria-labelledby":`cs-built`,children:[(0,Q.jsx)(Fx,{children:(0,Q.jsx)(Ix,{id:`cs-built`,index:`02`,children:`What I did`})}),(0,Q.jsx)(Zx,{children:e.map(({title:e,body:t},n)=>(0,Q.jsxs)(Fx,{as:`li`,delay:n*.06,children:[(0,Q.jsx)(`h3`,{children:e}),(0,Q.jsx)(`p`,{children:t})]},e))})]}),zx=({steps:e})=>(0,Q.jsxs)(Kx,{"aria-labelledby":`cs-flow`,$wide:!0,children:[(0,Q.jsx)(Fx,{children:(0,Q.jsx)(Ix,{id:`cs-flow`,index:`03`,children:`Design workflow`})}),(0,Q.jsx)(Qx,{children:e.map(({label:e,detail:t},n)=>(0,Q.jsxs)(Fx,{as:`li`,delay:n*.08,children:[(0,Q.jsx)(`span`,{className:`step`,children:String(n+1).padStart(2,`0`)}),(0,Q.jsx)(`strong`,{children:e}),(0,Q.jsx)(`span`,{className:`detail`,children:t})]},e))})]}),Bx=({items:e})=>(0,Q.jsxs)(Kx,{"aria-labelledby":`cs-results`,$wide:!0,children:[(0,Q.jsx)(Fx,{children:(0,Q.jsx)(Ix,{id:`cs-results`,index:`04`,children:`Key figures`})}),(0,Q.jsx)($x,{children:e.map(({value:e,label:t},n)=>(0,Q.jsxs)(Fx,{as:`li`,delay:n*.06,children:[(0,Q.jsx)(`b`,{children:e}),(0,Q.jsx)(`span`,{children:t})]},t))}),(0,Q.jsx)(eS,{children:`Design values, not measured flight performance.`})]}),Vx=({items:e})=>(0,Q.jsxs)(tS,{"aria-labelledby":`cs-evidence`,children:[(0,Q.jsx)(Fx,{children:(0,Q.jsx)(Ix,{id:`cs-evidence`,index:`05`,tone:`night`,children:`Technical evidence`})}),(0,Q.jsx)(nS,{children:e.map((e,t)=>(0,Q.jsx)(Fx,{delay:t%2*.1,children:(0,Q.jsx)(jx,{...e,figure:t+1,tone:`night`,width:1400,height:950})},e.caption))})]}),Hx=({items:e})=>e.length>0&&(0,Q.jsxs)(Kx,{"aria-labelledby":`cs-photos`,$wide:!0,children:[(0,Q.jsx)(Fx,{children:(0,Q.jsx)(Ix,{id:`cs-photos`,index:`06`,children:`In the field`})}),(0,Q.jsx)(rS,{children:e.map((e,t)=>(0,Q.jsx)(Fx,{delay:t%2*.08,children:(0,Q.jsx)(jx,{...e})},e.caption))})]}),Ux=({text:e})=>(0,Q.jsx)(Kx,{"aria-labelledby":`cs-status`,children:(0,Q.jsx)(Fx,{children:(0,Q.jsxs)(iS,{children:[(0,Q.jsx)(Ix,{id:`cs-status`,index:`Note`,children:`Design status`}),(0,Q.jsx)(Xx,{children:e})]})})}),Wx=({study:e})=>(0,Q.jsxs)(aS,{href:`/work/${e.slug}`,"aria-label":`Next project: ${e.name}`,children:[(0,Q.jsx)(`span`,{className:`label`,children:`Next project`}),(0,Q.jsxs)(`span`,{className:`name`,children:[e.name,` `,(0,Q.jsx)(`span`,{"aria-hidden":`true`,children:`→`})]}),(0,Q.jsx)(`span`,{className:`shot`,"aria-hidden":`true`,children:(0,Q.jsx)(`img`,{src:e.hero.main.src,alt:``,width:1600,height:1e3,loading:`lazy`})})]}),Gx=`46rem`,Kx=P.section`
+  max-width: ${({$wide:e})=>e?`var(--content-max)`:Gx};
   margin: 0 auto;
   padding: clamp(3rem, 2rem + 4vw, 6rem) var(--space-gutter) 0;
   box-sizing: content-box;
-`,Jx=P.div`
+`,qx=P.div`
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   margin-bottom: 1.4rem;
-`,Yx=P.span`
+`,Jx=P.span`
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
   color: ${({$onDark:e})=>e?`var(--color-amber)`:`var(--color-amber-ink)`};
-`,Xx=P.h2`
+`,Yx=P.h2`
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: ${({$onDark:e})=>e?`var(--color-night-ink)`:`var(--color-ink)`};
-`,Zx=P.p`
+`,Xx=P.p`
   font-size: var(--text-lead);
   line-height: 1.55;
   color: var(--color-ink-soft);
   max-width: 62ch;
-`,Qx=P.ol`
+`,Zx=P.ol`
   list-style: none;
   display: grid;
   gap: 1.75rem;
@@ -2133,7 +2121,7 @@ Error generating stack: `+e.message+`
     color: var(--color-ink-soft);
     line-height: 1.6;
   }
-`,$x=P.ol`
+`,Qx=P.ol`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2192,7 +2180,7 @@ Error generating stack: `+e.message+`
       transform: translateX(-50%) rotate(135deg);
     }
   }
-`,eS=P.ul`
+`,$x=P.ul`
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -2221,11 +2209,11 @@ Error generating stack: `+e.message+`
     letter-spacing: var(--tracking-label);
     text-transform: uppercase;
   }
-`,tS=P.p`
+`,eS=P.p`
   margin-top: 1rem;
   font-size: var(--text-label);
   color: var(--color-ink-soft);
-`,nS=P.section`
+`,tS=P.section`
   margin: clamp(3rem, 2rem + 4vw, 6rem) clamp(8px, 1vw, 16px) 0;
   padding: clamp(3rem, 2rem + 4vw, 6rem) var(--space-gutter);
   border-radius: var(--radius-panel);
@@ -2239,7 +2227,7 @@ Error generating stack: `+e.message+`
     margin-left: auto;
     margin-right: auto;
   }
-`,rS=P.div`
+`,nS=P.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.5rem, 1rem + 2vw, 3rem) clamp(1rem, 0.5rem + 2vw, 2.5rem);
@@ -2247,7 +2235,7 @@ Error generating stack: `+e.message+`
   @media (max-width: 799px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,iS=P.div`
+`,rS=P.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1rem, 0.5rem + 2vw, 2rem);
@@ -2259,11 +2247,11 @@ Error generating stack: `+e.message+`
   @media (max-width: 699px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,aS=P.div`
+`,iS=P.div`
   padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
   border-left: 3px solid var(--color-amber);
   background: #f6f6f6;
-`,oS=P.a`
+`,aS=P.a`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
@@ -2337,16 +2325,16 @@ Error generating stack: `+e.message+`
       grid-row: auto;
     }
   }
-`,sS=[{slug:`nimbus-v4`,name:`Nimbus V4`,outcome:`A profit-optimized flying-wing cargo aircraft, designed, built and flight-tested by a six-person team.`,meta:[{label:`Role`,value:`Engineer`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Mar – Jun 2026`},{label:`Course`,value:`MAE 155B Aircraft Design, UC San Diego`}],links:[{label:`Code & design files`,href:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`}],hero:{main:{src:`/assets/cad-3-BdPdftdc.webp`,alt:`Nimbus V4 CAD assembly seen from above`,caption:`Integrated CAD assembly`},side:[{src:`/assets/cad-2-BwWM2d_e.webp`,alt:`Nimbus V4 CAD render from below and behind`,caption:`Composite structure, rear view`},{src:`/assets/payload-bay-BLSWoyhn.webp`,alt:`Cross-section of the Nimbus cargo bay and payload door`,caption:`Payload bay cross-section`}]},problem:`Develop a cargo aircraft for a package delivery competition scored on profit. Balance payload capacity and cruise efficiency against takeoff distance, stall speed, static and dynamic stability, and structural mass.`,built:[{title:`Helped the engineering team from design to flight`,body:`Worked with five other engineers through design, manufacturing, integration and testing of the aircraft.`},{title:`Analysed every discipline`,body:`Contributed to the aerodynamic, propulsion, static and dynamic stability, structural and flight-performance analyses that fed the design.`},{title:`Optimized against the profit score`,body:`Worked within the team’s coupled MATLAB–AVL workflow, where a CMA-ES optimizer ran about 13,000 evaluations across 13 design variables to settle the design point.`},{title:`Turned CAD into hardware`,body:`Validated the design through CAD-driven manufacturing, propulsion bench testing, ground-roll testing and system-level integration.`}],flow:[{label:`Mission`,detail:`Competition profit function`},{label:`Optimize`,detail:`CMA-ES over 13 design variables`},{label:`Analyse`,detail:`Aero, CTOL sizing, AVL stability`},{label:`Build & fly`,detail:`Bench, ground roll, flight test`}],results:[{value:`1.57 m`,label:`Wingspan`},{value:`800 g`,label:`Design payload`},{value:`13,000+`,label:`Optimizer evaluations`},{value:`14.3`,label:`Cruise L/D`},{value:`4.9%`,label:`Static margin (AVL)`},{value:`3.89`,label:`Spar bending factor of safety`}],evidence:[{src:`/assets/plot-ctol-constraint-diagram-DkHCG00k.webp`,alt:`Constraint diagram of thrust loading against wing loading`,caption:`CTOL sizing: wing loading vs thrust loading, design point W/S = 87.4 N/m², T/W = 0.28`},{src:`/assets/plot-thrust-vs-speed-10x47-LxQSQ4Yv.webp`,alt:`Thrust against flight speed for the 10 by 4.7 propeller`,caption:`Propulsion: thrust vs airspeed, APC 10×4.7 propeller`},{src:`/assets/plot-v-n-diagram-maneuver-envelope-BpRbfg78.webp`,alt:`V-n diagram showing the maneuver envelope`,caption:`V-n diagram: maneuver envelope, +3.8 g / −1.5 g limit loads`},{src:`/assets/plot-sm-vs-battery-position-Cg_x7PSW.webp`,alt:`Static margin against battery position`,caption:`Stability: static margin vs battery position (AVL neutral point)`},{src:`/assets/plot-mission-profile-3d-CpCZFcMi.webp`,alt:`3D mission profile with takeoff, laps, payload drop and landing`,caption:`Mission profile: takeoff, laps, payload drop and landing`},{src:`/assets/plot-drag-polar-cl-vs-cd-c6IOa3Y0.webp`,alt:`Aircraft drag polar, lift coefficient against drag coefficient`,caption:`Aerodynamics: aircraft drag polar`}],photos:[{src:Oy,alt:`The Nimbus team behind the aircraft at the flight field`,caption:`Flight day, Mission Bay Park`},{src:`/assets/photo-launch-CC-4k6OI.webp`,alt:`A team member setting Nimbus down on the field to launch`,caption:`Launch at the flight field`},{src:`/assets/photo-prep-FG80ZepZ.webp`,alt:`The team working on the airframe at the field table`,caption:`Field integration`},{src:`/assets/photo-bench-BgIOnXn6.webp`,alt:`Team members checking the aircraft at the field table`,caption:`Pre-flight checks`}],status:`The team manufactured the aircraft and flight-tested it at Mission Bay Park, San Diego, after propulsion bench testing, ground-roll testing and system-level integration. Figures on this page are design values rather than measured flight performance, and the plots may come from different design iterations.`},{slug:`jager-qrf`,name:`Jäger-QRF`,outcome:`A hybrid VTOL firefighter that launches from the station, hovers over a fire and drops two suppression payloads within three minutes of takeoff.`,meta:[{label:`Role`,value:`Sizing, aero, propulsion & stability`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Jan – Mar 2026`},{label:`Course`,value:`MAE 155A Aircraft Design, UC San Diego`}],links:[{label:`Analysis files`,href:`https://github.com/patelharshil2060/Jager-Firefighter-Drone`}],hero:{main:{src:ky,alt:`Jäger-QRF render releasing two red suppression payloads`,caption:`Payload deployment concept`},side:[{src:`/assets/render-front-DVoGAcQR.webp`,alt:`Jäger-QRF front view with four rotors and a thermal camera turret`,caption:`Front view`},{src:`/assets/render-side-BJ65wBmG.webp`,alt:`Jäger-QRF side profile with fixed wing and V-tail`,caption:`Side profile`}]},problem:`Fires can escalate before ground crews arrive. Design a rapid-response UAV with vertical takeoff, precise hover and efficient fixed-wing cruise, and reconcile hover power demand with range, payload, weight and a time-critical mission.`,built:[{title:`Sized the aircraft to the mission`,body:`Built hover and forward-flight constraints into a power-loading vs wing-loading sizing diagram, landing at W/S = 396.5 N/m² and P/W = 20.7 W/N with a 2% margin.`},{title:`Modelled the aerodynamics`,body:`Analysed the NACA 4412 wing’s lift curve and the aircraft drag polar to set cruise performance.`},{title:`Designed propulsion and weight & balance`,body:`Contributed to the propulsion design and the component-level weight and balance that set the CG range with and without payload.`},{title:`Checked loads and stability`,body:`Generated the V-n envelope and ran static and dynamic stability evaluations with MATLAB and AVL.`}],flow:[{label:`Mission`,detail:`Climb, cruise, hover, drop, return`},{label:`Size`,detail:`Hover and cruise constraints`},{label:`Aero & propulsion`,detail:`NACA 4412, rotor and wing power`},{label:`Loads & stability`,detail:`V-n envelope, AVL`}],results:[{value:`~51 mph`,label:`Target cruise speed`},{value:`1.5 mi`,label:`Design one-way range`},{value:`2`,label:`Suppression payloads`},{value:`< 3 min`,label:`Takeoff to first drop`},{value:`55 lb`,label:`Gross weight`},{value:`6.31 ft`,label:`Wingspan`}],evidence:[{src:`/assets/plot-missionprofiles-D48q3ECX.webp`,alt:`Altitude against time for the delivery and recon mission profiles`,caption:`Mission profiles: air delivery and recon`},{src:`/assets/plot-sizing-constraint-C4LlTlFV.webp`,alt:`Power loading against wing loading with cruise, maneuver, hover and climb constraints`,caption:`Sizing: hover and forward-flight constraints`},{src:`/assets/plot-vndiagram-final-D_ykVhSS.webp`,alt:`V-n diagram with maneuver and gust envelopes`,caption:`V-n envelope: maneuver and gust loads`},{src:`/assets/plot-staticmargin-ME_anj5F.webp`,alt:`Static margin against CG location with and without payload`,caption:`Weight & balance: static margin with and without payload`},{src:`/assets/plot-cl-vs-cd-polar-D5CktIqO.webp`,alt:`Lift coefficient against drag coefficient for the aircraft`,caption:`Aerodynamics: drag polar and best L/D`}],photos:[],status:`A conceptual design supported by sizing, aerodynamic, propulsion and stability analyses. Mission parameters are targets: flight and fire-suppression performance were not demonstrated in this study.`}],cS=e=>sS.find(t=>t.slug===e)??null,lS=e=>sS[(sS.findIndex(t=>t.slug===e)+1)%sS.length],uS=[.16,1,.3,1],dS=(e,t)=>({initial:!t&&{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:1,ease:uS,delay:e}}),fS=({slug:e})=>{let t=cS(e),n=!!Nh();if((0,j.useEffect)(()=>(document.title=t?`${t.name} · ${Pg}`:Pg,()=>{document.title=Pg}),[t]),!t)return(0,Q.jsx)(pS,{children:(0,Q.jsxs)(mS,{children:[(0,Q.jsxs)(hS,{href:`/#projects`,children:[(0,Q.jsx)(kg,{"aria-hidden":`true`}),` All projects`]}),(0,Q.jsx)(_S,{children:`Project not found`}),(0,Q.jsx)(vS,{children:`That page doesn’t exist. Pick a project from the files instead.`})]})});let{name:r,outcome:i,meta:a,links:o,hero:s}=t;return(0,Q.jsxs)(pS,{children:[(0,Q.jsxs)(mS,{children:[(0,Q.jsxs)(hS,{href:`/#projects`,children:[(0,Q.jsx)(kg,{"aria-hidden":`true`}),` All projects`]}),(0,Q.jsxs)(gS,{children:[(0,Q.jsx)($.div,{...dS(0,n),children:(0,Q.jsx)(_S,{children:r})}),(0,Q.jsxs)($.div,{...dS(.08,n),children:[(0,Q.jsx)(vS,{children:i}),(0,Q.jsx)(yS,{children:a.map(({label:e,value:t})=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:e}),(0,Q.jsx)(`dd`,{children:t})]},e))}),(0,Q.jsx)(bS,{children:o.map(({label:e,href:t})=>(0,Q.jsxs)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:[e,` `,(0,Q.jsx)(Dg,{"aria-hidden":`true`})]},t))})]})]})]}),(0,Q.jsxs)(xS,{"aria-label":`${r} renders`,children:[(0,Q.jsx)($.div,{className:`main`,...dS(.15,n),children:(0,Q.jsx)(Mx,{...s.main,tone:`night`,eager:!0})}),s.side.map((e,t)=>(0,Q.jsx)($.div,{className:`side`,...dS(.28+t*.12,n),children:(0,Q.jsx)(Mx,{...e,tone:`night`})},e.caption))]}),(0,Q.jsx)(Rx,{text:t.problem}),(0,Q.jsx)(zx,{items:t.built}),(0,Q.jsx)(Bx,{steps:t.flow}),(0,Q.jsx)(Vx,{items:t.results}),(0,Q.jsx)(Hx,{items:t.evidence}),(0,Q.jsx)(Ux,{items:t.photos}),(0,Q.jsx)(Wx,{text:t.status}),(0,Q.jsx)(Gx,{study:lS(e)}),(0,Q.jsx)(SS,{})]})},pS=P.main`
+`,oS=[{slug:`nimbus-v4`,name:`Nimbus V4`,outcome:`A profit-optimized flying-wing cargo aircraft, designed, built and flight-tested by a six-person team.`,meta:[{label:`Role`,value:`Engineer`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Mar – Jun 2026`},{label:`Course`,value:`MAE 155B Aircraft Design, UC San Diego`}],links:[{label:`Code & design files`,href:`https://github.com/patelharshil2060/Nimbus-Package-Delivery-UAV`}],hero:{main:{src:`/assets/cad-3-BdPdftdc.webp`,alt:`Nimbus V4 CAD assembly seen from above`,caption:`Integrated CAD assembly`},side:[{src:`/assets/cad-2-BwWM2d_e.webp`,alt:`Nimbus V4 CAD render from below and behind`,caption:`Composite structure, rear view`},{src:`/assets/payload-bay-BLSWoyhn.webp`,alt:`Cross-section of the Nimbus cargo bay and payload door`,caption:`Payload bay cross-section`}]},problem:`Develop a cargo aircraft for a package delivery competition scored on profit. Balance payload capacity and cruise efficiency against takeoff distance, stall speed, static and dynamic stability, and structural mass.`,built:[{title:`Helped the engineering team from design to flight`,body:`Worked with five other engineers through design, manufacturing, integration and testing of the aircraft.`},{title:`Analysed every discipline`,body:`Contributed to the aerodynamic, propulsion, static and dynamic stability, structural and flight-performance analyses that fed the design.`},{title:`Optimized against the profit score`,body:`Worked within the team’s coupled MATLAB–AVL workflow, where a CMA-ES optimizer ran about 13,000 evaluations across 13 design variables to settle the design point.`},{title:`Turned CAD into hardware`,body:`Validated the design through CAD-driven manufacturing, propulsion bench testing, ground-roll testing and system-level integration.`}],flow:[{label:`Mission`,detail:`Competition profit function`},{label:`Optimize`,detail:`CMA-ES over 13 design variables`},{label:`Analyse`,detail:`Aero, CTOL sizing, AVL stability`},{label:`Build & fly`,detail:`Bench, ground roll, flight test`}],results:[{value:`1.57 m`,label:`Wingspan`},{value:`800 g`,label:`Design payload`},{value:`13,000+`,label:`Optimizer evaluations`},{value:`14.3`,label:`Cruise L/D`},{value:`4.9%`,label:`Static margin (AVL)`},{value:`3.89`,label:`Spar bending factor of safety`}],evidence:[{src:`/assets/plot-ctol-constraint-diagram-DkHCG00k.webp`,alt:`Constraint diagram of thrust loading against wing loading`,caption:`CTOL sizing: wing loading vs thrust loading, design point W/S = 87.4 N/m², T/W = 0.28`},{src:`/assets/plot-thrust-vs-speed-10x47-LxQSQ4Yv.webp`,alt:`Thrust against flight speed for the 10 by 4.7 propeller`,caption:`Propulsion: thrust vs airspeed, APC 10×4.7 propeller`},{src:`/assets/plot-v-n-diagram-maneuver-envelope-BpRbfg78.webp`,alt:`V-n diagram showing the maneuver envelope`,caption:`V-n diagram: maneuver envelope, +3.8 g / −1.5 g limit loads`},{src:`/assets/plot-sm-vs-battery-position-Cg_x7PSW.webp`,alt:`Static margin against battery position`,caption:`Stability: static margin vs battery position (AVL neutral point)`},{src:`/assets/plot-mission-profile-3d-CpCZFcMi.webp`,alt:`3D mission profile with takeoff, laps, payload drop and landing`,caption:`Mission profile: takeoff, laps, payload drop and landing`},{src:`/assets/plot-drag-polar-cl-vs-cd-c6IOa3Y0.webp`,alt:`Aircraft drag polar, lift coefficient against drag coefficient`,caption:`Aerodynamics: aircraft drag polar`}],photos:[{src:Dy,alt:`The Nimbus team behind the aircraft at the flight field`,caption:`Flight day, Mission Bay Park`},{src:`/assets/photo-launch-CC-4k6OI.webp`,alt:`A team member setting Nimbus down on the field to launch`,caption:`Launch at the flight field`},{src:`/assets/photo-prep-FG80ZepZ.webp`,alt:`The team working on the airframe at the field table`,caption:`Field integration`},{src:`/assets/photo-bench-BgIOnXn6.webp`,alt:`Team members checking the aircraft at the field table`,caption:`Pre-flight checks`}],status:`The team manufactured the aircraft and flight-tested it at Mission Bay Park, San Diego, after propulsion bench testing, ground-roll testing and system-level integration. Figures on this page are design values rather than measured flight performance, and the plots may come from different design iterations.`},{slug:`jager-qrf`,name:`Jäger-QRF`,outcome:`A hybrid VTOL firefighter that launches from the station, hovers over a fire and drops two suppression payloads within three minutes of takeoff.`,meta:[{label:`Role`,value:`Sizing, aero, propulsion & stability`},{label:`Team`,value:`6 engineers`},{label:`Timeline`,value:`Jan – Mar 2026`},{label:`Course`,value:`MAE 155A Aircraft Design, UC San Diego`}],links:[{label:`Analysis files`,href:`https://github.com/patelharshil2060/Jager-Firefighter-Drone`}],hero:{main:{src:Oy,alt:`Jäger-QRF render releasing two red suppression payloads`,caption:`Payload deployment concept`},side:[{src:`/assets/render-front-DVoGAcQR.webp`,alt:`Jäger-QRF front view with four rotors and a thermal camera turret`,caption:`Front view`},{src:`/assets/render-side-BJ65wBmG.webp`,alt:`Jäger-QRF side profile with fixed wing and V-tail`,caption:`Side profile`}]},problem:`Fires can escalate before ground crews arrive. Design a rapid-response UAV with vertical takeoff, precise hover and efficient fixed-wing cruise, and reconcile hover power demand with range, payload, weight and a time-critical mission.`,built:[{title:`Sized the aircraft to the mission`,body:`Built hover and forward-flight constraints into a power-loading vs wing-loading sizing diagram, landing at W/S = 396.5 N/m² and P/W = 20.7 W/N with a 2% margin.`},{title:`Modelled the aerodynamics`,body:`Analysed the NACA 4412 wing’s lift curve and the aircraft drag polar to set cruise performance.`},{title:`Designed propulsion and weight & balance`,body:`Contributed to the propulsion design and the component-level weight and balance that set the CG range with and without payload.`},{title:`Checked loads and stability`,body:`Generated the V-n envelope and ran static and dynamic stability evaluations with MATLAB and AVL.`}],flow:[{label:`Mission`,detail:`Climb, cruise, hover, drop, return`},{label:`Size`,detail:`Hover and cruise constraints`},{label:`Aero & propulsion`,detail:`NACA 4412, rotor and wing power`},{label:`Loads & stability`,detail:`V-n envelope, AVL`}],results:[{value:`~51 mph`,label:`Target cruise speed`},{value:`1.5 mi`,label:`Design one-way range`},{value:`2`,label:`Suppression payloads`},{value:`< 3 min`,label:`Takeoff to first drop`},{value:`55 lb`,label:`Gross weight`},{value:`6.31 ft`,label:`Wingspan`}],evidence:[{src:`/assets/plot-missionprofiles-D48q3ECX.webp`,alt:`Altitude against time for the delivery and recon mission profiles`,caption:`Mission profiles: air delivery and recon`},{src:`/assets/plot-sizing-constraint-C4LlTlFV.webp`,alt:`Power loading against wing loading with cruise, maneuver, hover and climb constraints`,caption:`Sizing: hover and forward-flight constraints`},{src:`/assets/plot-vndiagram-final-D_ykVhSS.webp`,alt:`V-n diagram with maneuver and gust envelopes`,caption:`V-n envelope: maneuver and gust loads`},{src:`/assets/plot-staticmargin-ME_anj5F.webp`,alt:`Static margin against CG location with and without payload`,caption:`Weight & balance: static margin with and without payload`},{src:`/assets/plot-cl-vs-cd-polar-D5CktIqO.webp`,alt:`Lift coefficient against drag coefficient for the aircraft`,caption:`Aerodynamics: drag polar and best L/D`}],photos:[],status:`A conceptual design supported by sizing, aerodynamic, propulsion and stability analyses. Mission parameters are targets: flight and fire-suppression performance were not demonstrated in this study.`}],sS=e=>oS.find(t=>t.slug===e)??null,cS=e=>oS[(oS.findIndex(t=>t.slug===e)+1)%oS.length],lS=[.16,1,.3,1],uS=(e,t)=>({initial:!t&&{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:1,ease:lS,delay:e}}),dS=({slug:e})=>{let t=sS(e),n=!!Nh();if((0,j.useEffect)(()=>(document.title=t?`${t.name} · ${Pg}`:Pg,()=>{document.title=Pg}),[t]),!t)return(0,Q.jsx)(fS,{children:(0,Q.jsxs)(pS,{children:[(0,Q.jsxs)(mS,{href:`/#projects`,children:[(0,Q.jsx)(kg,{"aria-hidden":`true`}),` All projects`]}),(0,Q.jsx)(gS,{children:`Project not found`}),(0,Q.jsx)(_S,{children:`That page doesn’t exist. Pick a project from the files instead.`})]})});let{name:r,outcome:i,meta:a,links:o,hero:s}=t;return(0,Q.jsxs)(fS,{children:[(0,Q.jsxs)(pS,{children:[(0,Q.jsxs)(mS,{href:`/#projects`,children:[(0,Q.jsx)(kg,{"aria-hidden":`true`}),` All projects`]}),(0,Q.jsxs)(hS,{children:[(0,Q.jsx)($.div,{...uS(0,n),children:(0,Q.jsx)(gS,{children:r})}),(0,Q.jsxs)($.div,{...uS(.08,n),children:[(0,Q.jsx)(_S,{children:i}),(0,Q.jsx)(vS,{children:a.map(({label:e,value:t})=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:e}),(0,Q.jsx)(`dd`,{children:t})]},e))}),(0,Q.jsx)(yS,{children:o.map(({label:e,href:t})=>(0,Q.jsxs)(`a`,{href:t,target:`_blank`,rel:`noopener noreferrer`,children:[e,` `,(0,Q.jsx)(Dg,{"aria-hidden":`true`})]},t))})]})]})]}),(0,Q.jsxs)(bS,{"aria-label":`${r} renders`,children:[(0,Q.jsx)($.div,{className:`main`,...uS(.15,n),children:(0,Q.jsx)(jx,{...s.main,tone:`night`,eager:!0})}),s.side.map((e,t)=>(0,Q.jsx)($.div,{className:`side`,...uS(.28+t*.12,n),children:(0,Q.jsx)(jx,{...e,tone:`night`})},e.caption))]}),(0,Q.jsx)(Lx,{text:t.problem}),(0,Q.jsx)(Rx,{items:t.built}),(0,Q.jsx)(zx,{steps:t.flow}),(0,Q.jsx)(Bx,{items:t.results}),(0,Q.jsx)(Vx,{items:t.evidence}),(0,Q.jsx)(Hx,{items:t.photos}),(0,Q.jsx)(Ux,{text:t.status}),(0,Q.jsx)(Wx,{study:cS(e)}),(0,Q.jsx)(xS,{})]})},fS=P.main`
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
-`,mS=P.header`
+`,pS=P.header`
   max-width: var(--content-max);
   margin: 0 auto;
   padding: calc(var(--nav-offset) + var(--nav-height) + clamp(1.5rem, 1rem + 2vw, 3rem)) var(--space-gutter) 0;
   box-sizing: content-box;
-`,hS=P.a`
+`,mS=P.a`
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -2366,7 +2354,7 @@ Error generating stack: `+e.message+`
     outline-offset: 3px;
     border-radius: 2px;
   }
-`,gS=P.div`
+`,hS=P.div`
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   gap: clamp(1.5rem, 1rem + 3vw, 4rem);
@@ -2375,19 +2363,19 @@ Error generating stack: `+e.message+`
   @media (max-width: 899px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,_S=P.h1`
+`,gS=P.h1`
   font-family: var(--font-display);
   font-size: clamp(3rem, 1.5rem + 5vw, 6.5rem);
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -0.045em;
-`,vS=P.p`
+`,_S=P.p`
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 1.05rem + 1vw, 1.85rem);
   line-height: 1.25;
   letter-spacing: -0.02em;
   max-width: 30ch;
-`,yS=P.dl`
+`,vS=P.dl`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem 2rem;
@@ -2410,7 +2398,7 @@ Error generating stack: `+e.message+`
   @media (max-width: 479px) {
     grid-template-columns: minmax(0, 1fr);
   }
-`,bS=P.div`
+`,yS=P.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
@@ -2443,7 +2431,7 @@ Error generating stack: `+e.message+`
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
-`,xS=P.section`
+`,bS=P.section`
   margin: clamp(2.5rem, 2rem + 3vw, 4.5rem) clamp(8px, 1vw, 16px) 0;
   padding: clamp(2rem, 1.5rem + 3vw, 4.5rem) var(--space-gutter);
   border-radius: var(--radius-panel);
@@ -2469,9 +2457,9 @@ Error generating stack: `+e.message+`
       grid-row: auto;
     }
   }
-`,SS=P.div`
+`,xS=P.div`
   height: clamp(3rem, 2rem + 4vw, 6rem);
-`,CS=`app:navigate`,wS=/^\/work\/([a-z0-9-]+)\/?$/,TS=30,ES=e=>e.match(wS)?.[1]??null,DS=e=>{if(!e)return!1;let t=document.getElementById(e.slice(1));if(!t)return!1;if(t.dataset.scrollTo===`end`){let e=t.getBoundingClientRect().top+window.scrollY;return window.scrollTo({top:e+t.offsetHeight-window.innerHeight*1.05,behavior:`instant`}),!0}return t.scrollIntoView({behavior:`smooth`,block:`start`}),!0},OS=e=>{let t=new URL(e,window.location.href),n=t.pathname===window.location.pathname;if(n&&t.hash&&DS(t.hash)){window.history.replaceState(null,``,t.pathname+t.hash);return}if(n||(window.history.pushState(null,``,t.pathname+t.hash),window.dispatchEvent(new Event(CS))),!t.hash){requestAnimationFrame(()=>window.scrollTo({top:0,behavior:`instant`}));return}let r=TS,i=()=>{DS(t.hash)||--r>0&&requestAnimationFrame(i)};window.scrollTo({top:0,behavior:`instant`}),requestAnimationFrame(i)},kS=()=>{let[e,t]=(0,j.useState)(()=>window.location.pathname);return(0,j.useEffect)(()=>{let e=()=>t(window.location.pathname);return window.addEventListener(`popstate`,e),window.addEventListener(CS,e),()=>{window.removeEventListener(`popstate`,e),window.removeEventListener(CS,e)}},[]),{pathname:e}},AS=()=>{(0,j.useEffect)(()=>{let e=e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;let t=e.target instanceof Element?e.target.closest(`a[href]`):null;if(!t||t.target===`_blank`||t.hasAttribute(`download`))return;let n=t.getAttribute(`href`);n.startsWith(`/`)&&!n.startsWith(`//`)&&(e.preventDefault(),OS(n))};return document.addEventListener(`click`,e),()=>document.removeEventListener(`click`,e)},[])},jS=`/assets/harshil-portrait-C6FbgUnQ.webp`,MS=Un`
+`,SS=`app:navigate`,CS=/^\/work\/([a-z0-9-]+)\/?$/,wS=30,TS=e=>e.match(CS)?.[1]??null,ES=e=>{if(!e)return!1;let t=document.getElementById(e.slice(1));if(!t)return!1;if(t.dataset.scrollTo===`end`){let e=t.getBoundingClientRect().top+window.scrollY;return window.scrollTo({top:e+t.offsetHeight-window.innerHeight*1.05,behavior:`instant`}),!0}return t.scrollIntoView({behavior:`smooth`,block:`start`}),!0},DS=e=>{let t=new URL(e,window.location.href),n=t.pathname===window.location.pathname;if(n&&t.hash&&ES(t.hash)){window.history.replaceState(null,``,t.pathname+t.hash);return}if(n||(window.history.pushState(null,``,t.pathname+t.hash),window.dispatchEvent(new Event(SS))),!t.hash){requestAnimationFrame(()=>window.scrollTo({top:0,behavior:`instant`}));return}let r=wS,i=()=>{ES(t.hash)||--r>0&&requestAnimationFrame(i)};window.scrollTo({top:0,behavior:`instant`}),requestAnimationFrame(i)},OS=()=>{let[e,t]=(0,j.useState)(()=>window.location.pathname);return(0,j.useEffect)(()=>{let e=()=>t(window.location.pathname);return window.addEventListener(`popstate`,e),window.addEventListener(SS,e),()=>{window.removeEventListener(`popstate`,e),window.removeEventListener(SS,e)}},[]),{pathname:e}},kS=()=>{(0,j.useEffect)(()=>{let e=e=>{if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;let t=e.target instanceof Element?e.target.closest(`a[href]`):null;if(!t||t.target===`_blank`||t.hasAttribute(`download`))return;let n=t.getAttribute(`href`);n.startsWith(`/`)&&!n.startsWith(`//`)&&(e.preventDefault(),DS(n))};return document.addEventListener(`click`,e),()=>document.removeEventListener(`click`,e)},[])},AS=`/assets/harshil-portrait-C6FbgUnQ.webp`,jS=Un`
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -2517,4 +2505,4 @@ Error generating stack: `+e.message+`
     border-radius: 6px;
   }
   ::-webkit-scrollbar-thumb:hover { background: var(--color-amber); }
-`,NS=()=>(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(A_,{portraitSrc:jS,portraitAlt:Gg.alt}),(0,Q.jsx)(hy,{}),(0,Q.jsx)(Qv,{}),(0,Q.jsx)(wy,{}),(0,Q.jsx)(Py,{}),(0,Q.jsx)(kb,{}),(0,Q.jsx)(Sx,{})]});(0,Ge.createRoot)(document.getElementById(`root`)).render((0,Q.jsx)(j.StrictMode,{children:(0,Q.jsx)(()=>{let{pathname:e}=kS(),t=ES(e);return AS(),(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(MS,{}),(0,Q.jsx)(Jh,{}),t?(0,Q.jsx)(fS,{slug:t},t):(0,Q.jsx)(NS,{})]})},{})}));
+`,MS=()=>(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(A_,{portraitSrc:AS,portraitAlt:Gg.alt}),(0,Q.jsx)(my,{}),(0,Q.jsx)(Qv,{}),(0,Q.jsx)(Cy,{}),(0,Q.jsx)(Ny,{}),(0,Q.jsx)(Ob,{}),(0,Q.jsx)(xx,{})]});(0,Ge.createRoot)(document.getElementById(`root`)).render((0,Q.jsx)(j.StrictMode,{children:(0,Q.jsx)(()=>{let{pathname:e}=OS(),t=TS(e);return kS(),(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(jS,{}),(0,Q.jsx)(Jh,{}),t?(0,Q.jsx)(dS,{slug:t},t):(0,Q.jsx)(MS,{})]})},{})}));

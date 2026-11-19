@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
 import FeaturedShowcase from './components/featured/FeaturedShowcase';
+import EnvironmentalTesting from './components/featured/EnvironmentalTesting';
 import Hangar from './components/hangar/Hangar';
 import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
@@ -62,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
 const HomePage = () => (
   <>
     <Hero portraitSrc={portrait} portraitAlt={PORTRAIT.alt} />
+    <EnvironmentalTesting />
     <FeaturedShowcase />
     <Hangar />
     <Experience />

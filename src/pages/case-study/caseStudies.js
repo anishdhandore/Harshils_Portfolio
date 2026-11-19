@@ -49,7 +49,7 @@ export const CASE_STUDIES = [
     name: 'Nimbus V4',
     outcome: 'A profit-optimized flying-wing cargo aircraft, designed, built and flight-tested by a six-person team.',
     meta: [
-      { label: 'Role', value: 'Team lead' },
+      { label: 'Role', value: 'Engineer' },
       { label: 'Team', value: '6 engineers' },
       { label: 'Timeline', value: 'Mar – Jun 2026' },
       { label: 'Course', value: 'MAE 155B Aircraft Design, UC San Diego' },
@@ -66,8 +66,8 @@ export const CASE_STUDIES = [
       'Develop a cargo aircraft for a package delivery competition scored on profit. Balance payload capacity and cruise efficiency against takeoff distance, stall speed, static and dynamic stability, and structural mass.',
     built: [
       {
-        title: 'Led the team from design to flight',
-        body: 'Led five other engineers through design, manufacturing, integration and testing of the aircraft.',
+        title: 'Helped the engineering team from design to flight',
+        body: 'Worked with five other engineers through design, manufacturing, integration and testing of the aircraft.',
       },
       {
         title: 'Analysed every discipline',

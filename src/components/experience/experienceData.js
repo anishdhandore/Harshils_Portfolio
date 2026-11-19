@@ -2,6 +2,7 @@
 // Dates are YYYY-MM; `end: null` means current. Content comes from the resume
 // (public/HarshilPatelResume.pdf).
 //
+// - `code`: a four-letter waypoint ident shown on the flight profile
 // - `summary`: one line on the role
 // - `highlights`: what he did
 // - `impact`: what the work delivered; `metric` is optional
@@ -11,6 +12,7 @@ export const ROLES = [
     end: '2021-11',
     role: 'Process Engineering Intern',
     company: 'Dove Pharma LLP',
+    code: 'DOVE',
     location: 'India',
     summary: 'Supported engineering teams with process documentation and data analysis for ongoing operations.',
     highlights: [
@@ -27,6 +29,7 @@ export const ROLES = [
     end: '2024-07',
     role: 'A.S.-T in Mathematics',
     company: 'Palomar College',
+    code: 'PLMR',
     location: 'San Marcos, CA',
     summary: 'Associate Degree in Science for Transfer in Mathematics, the foundation for transferring into aerospace engineering.',
     highlights: [
@@ -42,6 +45,7 @@ export const ROLES = [
     end: '2026-12',
     role: 'B.S. Aerospace Engineering',
     company: 'UC San Diego',
+    code: 'UCSD',
     location: 'La Jolla, CA',
     summary: 'Aircraft design, computational analysis and hardware integration, graduating December 2026.',
     highlights: [
@@ -57,6 +61,7 @@ export const ROLES = [
     end: '2026-09',
     role: 'Instructional Assistant',
     company: 'Physics Department, UC San Diego',
+    code: 'UPHY',
     location: 'La Jolla, CA',
     summary: 'Supported physics instruction in the classroom and the lab.',
     highlights: [
@@ -73,6 +78,7 @@ export const ROLES = [
     end: '2026-08',
     role: 'Test Engineering Intern',
     company: 'Sensor Systems LLC',
+    code: 'SNSR',
     location: 'St. Petersburg, FL',
     summary: 'Qualification testing of precision potentiometers for mission-critical aerospace and defense applications.',
     highlights: [
@@ -89,6 +95,7 @@ export const ROLES = [
     end: null,
     role: 'Project Engineer',
     company: 'Big Sky Electric',
+    code: 'BSKY',
     location: 'San Marcos, CA',
     summary: 'Planning and coordinating onsite engineering for water and wastewater infrastructure projects.',
     highlights: [

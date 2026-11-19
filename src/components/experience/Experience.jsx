@@ -1,29 +1,21 @@
-// Experience as a scroll-turned wheel: the ruler on the left rotates through
-// time and the role under the pointer is described on the right.
+// Experience as a flight log on a black field: a flight profile (altitude over
+// route) where each role is a waypoint and the route climbs at each one. As you
+// scroll, the amber route draws on and the aircraft flies it; the readout below
+// shows the leg the aircraft is on.
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from 'motion/react';
-import ExperienceWheel from './ExperienceWheel';
-import { activeIndexAt, buildScale, formatSpan, rotationKeyframes } from './scale';
-import { ROLES } from './experienceData';
-import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react';
+import FlightProfile from './FlightProfile';
 import SectionLabel from '../ui/SectionLabel';
+import { progressForLeg, routeShare } from './routeGeometry';
+import { formatSpan } from './scale';
+import { ROLES } from './experienceData';
 
-const RANGE = [0.06, 0.94];
-// soft spring: the wheel eases into each stop instead of snapping
-const SCROLL_SPRING = { stiffness: 55, damping: 20, mass: 0.9, restDelta: 0.0005 };
-const MOBILE_QUERY = '(max-width: 899px)';
+const RANGE = [0.04, 0.96];
+const SCROLL_SPRING = { stiffness: 70, damping: 22, mass: 0.8, restDelta: 0.0005 };
 const EASE = [0.16, 1, 0.3, 1];
-
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 const formatMonth = (ym) => {
   const [y, m] = ym.split('-');
   return `${MONTHS[Number(m) - 1]} ${y}`;
@@ -32,17 +24,21 @@ const formatMonth = (ym) => {
 const Experience = ({ now = new Date() }) => {
   const sectionRef = useRef(null);
   const isReduced = Boolean(useReducedMotion());
-  const isMobile = useMediaQuery(MOBILE_QUERY);
-  const scale = buildScale(ROLES, now);
-
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end end'] });
   const smooth = useSpring(scrollYProgress, SCROLL_SPRING);
-  const progress = isReduced ? scrollYProgress : smooth;
-  const { input, output } = rotationKeyframes(scale.nodes, RANGE);
-  const month = useTransform(progress, input, output);
+  const share = useTransform(isReduced ? scrollYProgress : smooth, (p) => routeShare(p, RANGE));
 
   const [active, setActive] = useState(0);
-  useMotionValueEvent(progress, 'change', (p) => setActive(activeIndexAt(p, ROLES.length, RANGE)));
+  const onLeg = (i) => setActive((prev) => (prev === i ? prev : i));
+
+  // jump the page to the scroll position where the aircraft reaches waypoint i
+  const goToLeg = (i) => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    const travel = el.offsetHeight - window.innerHeight;
+    window.scrollTo({ top: top + progressForLeg(i, ROLES.length, RANGE) * travel, behavior: isReduced ? 'auto' : 'smooth' });
+  };
 
   const role = ROLES[active];
   const isCurrent = role.end === null;
@@ -50,69 +46,101 @@ const Experience = ({ now = new Date() }) => {
   return (
     <Section id="experience" ref={sectionRef} aria-labelledby="experience-heading" $count={ROLES.length}>
       <Sticky>
-        <ExperienceWheel scale={scale} month={month} radius={isMobile ? 380 : 560} />
-
-        <Column>
+        <Inner>
           <Header>
-            <SectionLabel index="04">Flight log</SectionLabel>
-            <h2 id="experience-heading">Experience</h2>
+            <div>
+              <SectionLabel index="04" tone="night">
+                Flight log
+              </SectionLabel>
+              <h2 id="experience-heading">Experience</h2>
+            </div>
+            <Legend aria-hidden="true">
+              <span>
+                <i className="flown" /> Flown
+              </span>
+              <span>
+                <i className="planned" /> Route
+              </span>
+              <span>
+                Wpt {String(active + 1).padStart(2, '0')} / {String(ROLES.length).padStart(2, '0')}
+              </span>
+            </Legend>
           </Header>
 
-          <Content>
+          <FlightProfile
+            roles={ROLES}
+            share={share}
+            active={active}
+            isStatic={isReduced}
+            onLeg={onLeg}
+            onSelect={goToLeg}
+          />
 
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.article
-              key={role.company}
-              initial={isReduced ? false : { opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={isReduced ? { opacity: 0 } : { opacity: 0, y: -18 }}
-              transition={{ duration: 0.45, ease: EASE }}
-              aria-live="polite"
-            >
-              <Kicker>
-                {isCurrent && <Live aria-hidden="true" />}
-                {formatMonth(role.start)} — {isCurrent ? 'Present' : formatMonth(role.end)}
-                <span> · {formatSpan(role.start, role.end, now)}</span>
-              </Kicker>
-              <Role>{role.role}</Role>
-              <Company>
-                {role.company}
-                <span> · {role.location}</span>
-              </Company>
-              <Summary>{role.summary}</Summary>
-              {role.highlights.length > 0 && (
-                <Highlights>
-                  {role.highlights.map((h) => (
-                    <li key={h}>{h}</li>
-                  ))}
-                </Highlights>
-              )}
-              <Impact>
-                {role.metric && (
-                  <Metric>
-                    <b>{role.metric.value}</b>
-                    <span>{role.metric.label}</span>
-                  </Metric>
-                )}
-                <div>
-                  <ImpactLabel>Impact</ImpactLabel>
-                  <p>{role.impact}</p>
-                </div>
-              </Impact>
-              <Tags>
-                {role.tags.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </Tags>
-            </motion.article>
-          </AnimatePresence>
-          </Content>
-        </Column>
+          <Readout>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.article
+                key={role.code}
+                initial={isReduced ? false : { opacity: 0, y: 18, filter: 'blur(6px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                exit={isReduced ? { opacity: 0 } : { opacity: 0, y: -12, filter: 'blur(6px)' }}
+                transition={{ duration: 0.45, ease: EASE }}
+                aria-live="polite"
+              >
+                <Main>
+                  <Kicker>
+                    <span className="code">{role.code}</span>
+                    {isCurrent && (
+                      <span className="live">
+                        <i aria-hidden="true" /> Current
+                      </span>
+                    )}
+                    <span>
+                      {formatMonth(role.start)} — {isCurrent ? 'Present' : formatMonth(role.end)}
+                    </span>
+                    <span className="muted">{formatSpan(role.start, role.end, now)}</span>
+                  </Kicker>
+                  <Role>{role.role}</Role>
+                  <Company>
+                    {role.company}
+                    <span> · {role.location}</span>
+                  </Company>
+                  <Summary>{role.summary}</Summary>
+                  {role.highlights.length > 0 && (
+                    <Highlights>
+                      {role.highlights.map((h) => (
+                        <li key={h}>{h}</li>
+                      ))}
+                    </Highlights>
+                  )}
+                </Main>
 
-        {/* the full list, for screen readers and anyone skimming */}
+                <Side>
+                  {role.metric && (
+                    <Cell>
+                      <span className="label">Readout</span>
+                      <b>{role.metric.value}</b>
+                      <span className="sub">{role.metric.label}</span>
+                    </Cell>
+                  )}
+                  <Cell>
+                    <span className="label">Impact</span>
+                    <p>{role.impact}</p>
+                  </Cell>
+                  <Tags>
+                    {role.tags.map((t) => (
+                      <li key={t}>{t}</li>
+                    ))}
+                  </Tags>
+                </Side>
+              </motion.article>
+            </AnimatePresence>
+          </Readout>
+        </Inner>
+
+        {/* the full log, for screen readers and anyone skimming */}
         <VisuallyHidden as="ol">
           {ROLES.map((r) => (
-            <li key={r.company}>
+            <li key={r.code}>
               {r.role}, {r.company}, {formatMonth(r.start)} to {r.end ? formatMonth(r.end) : 'present'}
             </li>
           ))}
@@ -122,11 +150,17 @@ const Experience = ({ now = new Date() }) => {
   );
 };
 
+const INK = '#ececec';
+const MUTED = 'rgba(236, 236, 236, 0.55)';
+const LINE = 'rgba(236, 236, 236, 0.12)';
+const SHORT = '(max-height: 820px)';
+const MOBILE = '(max-width: 899px)';
+
 const Section = styled.section`
   position: relative;
-  height: ${({ $count }) => $count * 80 + 40}vh;
-  background: var(--color-paper);
-  color: var(--color-ink);
+  height: ${({ $count }) => $count * 75 + 60}vh;
+  background: #08090b;
+  color: ${INK};
   font-family: var(--font-body);
   overflow: clip;
   overflow-anchor: none;
@@ -137,240 +171,256 @@ const Sticky = styled.div`
   top: 0;
   height: 100svh;
   overflow: hidden;
-  --rim-x: clamp(150px, 24vw, 360px);
-
-  @media ${MOBILE_QUERY} {
-    --rim-x: 64px;
-  }
+  /* a fine instrument grid and a low horizon glow */
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(242, 165, 0, 0.06), transparent 70%),
+    linear-gradient(rgba(236, 236, 236, 0.025) 1px, transparent 1px) 0 0 / 100% 48px,
+    linear-gradient(90deg, rgba(236, 236, 236, 0.025) 1px, transparent 1px) 0 0 / 48px 100%;
 `;
 
-const CONTENT_LEFT = 'calc(var(--rim-x) + clamp(5.5rem, 3.5rem + 5vw, 9rem))';
-
-/* heading and role details share one column, so the details always start a
-   fixed gap below the heading, whatever the role's length */
-const Column = styled.div`
-  position: absolute;
-  z-index: 1;
-  left: ${CONTENT_LEFT};
-  right: var(--space-gutter);
-  top: calc(var(--nav-offset) + var(--nav-height) + clamp(1rem, 3vh, 2rem));
-  bottom: clamp(1.5rem, 4vh, 3rem);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.5rem, 5vh, 3.5rem);
-  max-width: 40rem;
-
-  @media ${MOBILE_QUERY} {
-    left: calc(var(--rim-x) + 2.75rem);
-  }
-`;
-
-const Content = styled.div`
-  flex: 1;
-  min-height: 0;
+const Inner = styled.div`
+  height: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: calc(var(--nav-offset) + var(--nav-height) + clamp(0.75rem, 2vh, 1.75rem)) var(--space-gutter)
+    clamp(1.25rem, 3vh, 2.5rem);
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: clamp(0.75rem, 2.5vh, 2rem);
+  box-sizing: content-box;
 `;
 
 const Header = styled.header`
-  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
 
   h2 {
+    margin-top: 0.5rem;
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 1.3rem + 1.2vw, 2.5rem);
+    font-size: clamp(2rem, 1.4rem + 2vw, 3.25rem);
     font-weight: 700;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
   }
+`;
+
+const Legend = styled.div`
+  display: flex;
+  gap: 1.25rem;
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: ${MUTED};
+  font-variant-numeric: tabular-nums;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  i {
+    width: 22px;
+    height: 0;
+    border-top: 2px solid var(--color-amber);
+  }
+
+  i.planned {
+    border-top: 2px dashed rgba(236, 236, 236, 0.35);
+  }
+
+  @media (max-width: 640px) {
+    span:not(:last-child) {
+      display: none;
+    }
+  }
+`;
+
+const Readout = styled.div`
+  min-height: 0;
+  border-top: 1px solid ${LINE};
+  padding-top: clamp(0.9rem, 2.5vh, 1.75rem);
+
+  article {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    gap: clamp(1.25rem, 1rem + 2vw, 3.5rem);
+  }
+
+  @media ${MOBILE} {
+    article {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+  }
+`;
+
+const Main = styled.div`
+  min-width: 0;
 `;
 
 const Kicker = styled.p`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem 0.9rem;
   font-size: var(--text-label);
-  font-weight: 700;
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
 
-  span {
-    color: var(--color-ink-soft);
-    font-weight: 400;
-  }
-`;
-
-const Live = styled.i`
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-live);
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: inherit;
-    animation: exp-pulse 2.4s var(--ease-out-expo) infinite;
+  .code {
+    padding: 0.25rem 0.5rem;
+    background: var(--color-amber);
+    color: #111111;
+    font-weight: 700;
   }
 
-  @keyframes exp-pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    70%, 100% { transform: scale(2.6); opacity: 0; }
+  .live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-amber);
+  }
+
+  .live i {
+    width: 7px;
+    height: 7px;
+    background: var(--color-amber);
+    animation: log-blink 1.6s steps(1, end) infinite;
+  }
+
+  .muted {
+    color: ${MUTED};
+  }
+
+  @keyframes log-blink {
+    50% { opacity: 0.3; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    &::after { animation: none; }
+    .live i { animation: none; }
   }
 `;
 
 const Role = styled.h3`
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 1.4rem + 2vw, 3.25rem);
+  font-size: clamp(1.7rem, 1.2rem + 2vw, 3rem);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1;
   letter-spacing: -0.035em;
 
-  @media (max-height: 780px) {
+  @media ${SHORT} {
     margin-top: 0.6rem;
-    font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.6rem);
-  }
-
-  @media ${MOBILE_QUERY} {
-    font-size: 1.6rem;
+    font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem);
   }
 `;
 
 const Company = styled.p`
-  margin-top: 0.6rem;
-  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
 
   span {
-    color: var(--color-ink-soft);
+    color: ${MUTED};
     font-weight: 400;
-  }
-
-  @media ${MOBILE_QUERY} {
-    font-size: 1rem;
   }
 `;
 
 const Summary = styled.p`
-  margin-top: 1rem;
-  max-width: 52ch;
+  margin-top: 0.8rem;
+  max-width: 58ch;
   line-height: 1.55;
-  color: var(--color-ink);
+  color: rgba(236, 236, 236, 0.85);
 
-  @media ${MOBILE_QUERY} {
+  @media ${MOBILE} {
     font-size: var(--text-sm);
   }
 `;
 
-/* short windows (e.g. 1280×720 laptops): tighter type and spacing */
-const SHORT_QUERY = '(max-height: 780px)';
-
 const Highlights = styled.ul`
   list-style: none;
-  margin-top: 1.1rem;
+  margin-top: 0.9rem;
   display: grid;
-  gap: 0.55rem;
-  max-width: 60ch;
-  color: var(--color-ink-soft);
+  gap: 0.45rem;
+  max-width: 64ch;
   font-size: var(--text-sm);
-  line-height: 1.55;
+  line-height: 1.5;
+  color: ${MUTED};
 
   li {
     position: relative;
     padding-left: 1.1rem;
   }
 
-  /* hairline dash instead of a bullet */
-  @media ${SHORT_QUERY} {
-    margin-top: 0.8rem;
-    gap: 0.35rem;
-    line-height: 1.45;
-  }
-
   li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.78em;
+    top: 0.7em;
     width: 0.55rem;
     height: 1px;
     background: var(--color-amber);
   }
 
-  /* too long for a narrow column: phones get the summary and impact instead */
-  @media ${MOBILE_QUERY} {
+  /* short screens: the summary and readout carry it */
+  @media ${SHORT} {
+    li:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  @media (max-height: 700px), ${MOBILE} {
     display: none;
   }
 `;
 
-const Impact = styled.div`
-  display: flex;
-  align-items: stretch;
-  gap: 1.25rem;
-  margin-top: 1.4rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--color-line);
-  max-width: 60ch;
-
-  @media ${SHORT_QUERY} {
-    margin-top: 1rem;
-    padding-top: 0.8rem;
-  }
-
-  p {
-    margin-top: 0.25rem;
-    font-size: var(--text-sm);
-    line-height: 1.55;
-  }
-
-  @media ${MOBILE_QUERY} {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-`;
-
-const ImpactLabel = styled.span`
-  font-size: var(--text-label);
-  font-weight: 700;
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
-`;
-
-const Metric = styled.div`
-  flex-shrink: 0;
+const Side = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-right: 1.25rem;
-  border-right: 1px solid var(--color-line);
+  gap: 0.75rem;
+  min-width: 0;
+`;
+
+const Cell = styled.div`
+  padding: 0.9rem 1rem;
+  border: 1px solid ${LINE};
+  background: rgba(236, 236, 236, 0.025);
+
+  .label {
+    display: block;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: ${MUTED};
+  }
 
   b {
+    display: block;
+    margin-top: 0.35rem;
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+    font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem);
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1;
+    color: var(--color-amber);
+    font-variant-numeric: tabular-nums;
   }
 
-  span {
-    margin-top: 0.3rem;
-    font-size: 0.75rem;
-    color: var(--color-ink-soft);
+  .sub {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: var(--text-label);
+    color: ${MUTED};
   }
 
-  @media ${MOBILE_QUERY} {
-    padding-right: 0;
-    border-right: 0;
+  p {
+    margin-top: 0.4rem;
+    font-size: var(--text-sm);
+    line-height: 1.5;
   }
 `;
 
@@ -378,25 +428,21 @@ const Tags = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
+  gap: 0.4rem;
 
   li {
-    padding: 0.3rem 0.7rem;
-    border-radius: 2px;
-    border: 1px solid var(--color-surface-strong);
-    font-size: var(--text-label);
-    letter-spacing: 0.03em;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid ${LINE};
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--color-ink-soft);
+    color: ${MUTED};
   }
 
-  /* very short windows: tags are the first thing to go */
-  @media (max-height: 680px) {
+  @media (max-height: 700px) {
     display: none;
   }
 `;
-
 
 const VisuallyHidden = styled.div`
   position: absolute;

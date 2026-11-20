@@ -815,70 +815,7 @@ Error generating stack: `+e.message+`
   @media ${Xv} {
     display: block;
   }
-`,py=`/assets/potentiometer-shaker-Bm73HY_b.webp`,my=()=>(0,Q.jsx)(hy,{id:`environmental-testing`,"aria-labelledby":`environmental-testing-heading`,children:(0,Q.jsxs)(gy,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(Kv,{tone:`night`,children:`Featured testing`}),(0,Q.jsx)(_y,{id:`environmental-testing-heading`,children:`Environmental qualification testing`}),(0,Q.jsx)(vy,{children:`Environmental Test Engineering Intern · Sensor Systems LLC · June–August 2026`}),(0,Q.jsx)(yy,{children:`I tested precision potentiometers used in aerospace and defense applications to evaluate their mechanical durability and electrical stability.`}),(0,Q.jsxs)(by,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Multi-axis vibration`}),(0,Q.jsx)(`dd`,{children:`Ran three-hour cycles across the X, Y and Z axes. I used a shaker, accelerometers and data acquisition equipment to monitor the assembly’s mechanical response and electrical output under vibration.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Clutch-release timing`}),(0,Q.jsx)(`dd`,{children:`Used controlled-speed actuation and high-speed timing instruments to measure how quickly clutched assemblies released and evaluate overtravel protection.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Full-travel linearity`}),(0,Q.jsx)(`dd`,{children:`Used precision actuators, digital multimeters, oscilloscopes and automated logging to check output across the full stroke. I looked for signal discontinuities and compared the response with customer specifications.`})]})]}),(0,Q.jsxs)(xy,{children:[(0,Q.jsx)(`h3`,{children:`Aircraft applications`}),(0,Q.jsx)(`p`,{children:`A potentiometer converts motion into a voltage that varies with position. Aircraft systems can use that signal to monitor the position of moving components.`})]})]}),(0,Q.jsx)(Sy,{src:py,alt:`Machined aluminum fixture with circuit boards and an accelerometer on a blue shaker`,width:`1400`,height:`788`,loading:`lazy`})]})}),hy=P.section`
-  background: #000;
-  color: var(--color-night-ink);
-`,gy=P.div`
-  --testing-muted: #c4c4c4;
-  width: min(calc(100% - 2 * var(--space-gutter)), var(--content-max));
-  margin-inline: auto;
-  padding-block: var(--space-section);
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  align-items: start;
-  gap: clamp(2rem, 6vw, 6rem);
-
-  @media (max-width: 899px) {
-    grid-template-columns: minmax(0, 1fr);
-  }
-`,_y=P.h2`
-  margin-top: 1rem;
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 1.5rem + 2.6vw, 4rem);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-`,vy=P.p`
-  margin-top: 1rem;
-  color: var(--testing-muted);
-  font-size: var(--text-sm);
-`,yy=P.p`
-  margin-top: 1.25rem;
-  line-height: 1.5;
-  color: var(--testing-muted);
-`,by=P.dl`
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-amber);
-
-  dt { font-weight: 700; }
-  dd {
-    margin-top: 0.25rem;
-    line-height: 1.5;
-    color: var(--testing-muted);
-  }
-`,xy=P.div`
-  margin-top: 1.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-night-line);
-
-  h3 { font-size: var(--text-base); }
-  p {
-    margin-top: 0.4rem;
-    line-height: 1.5;
-    color: var(--testing-muted);
-  }
-`,Sy=P.img`
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-card);
-
-  @media (min-width: 900px) {
-    align-self: center;
-  }
-`,Cy=()=>(0,Q.jsxs)(Ty,{"aria-label":`Nimbus V4 design specifications`,children:[(0,Q.jsxs)(wy,{children:[(0,Q.jsx)(`span`,{children:`Nimbus V4`}),`Design values`]}),(0,Q.jsx)(Ey,{children:iv.map(({value:e,label:t},n)=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsxs)(`dt`,{children:[(0,Q.jsx)(`span`,{className:`i`,children:String(n+1).padStart(2,`0`)}),t]}),(0,Q.jsx)(`dd`,{children:e})]},t))})]}),wy=P.p`
+`,py=()=>(0,Q.jsxs)(hy,{"aria-label":`Nimbus V4 design specifications`,children:[(0,Q.jsxs)(my,{children:[(0,Q.jsx)(`span`,{children:`Nimbus V4`}),`Design values`]}),(0,Q.jsx)(gy,{children:iv.map(({value:e,label:t},n)=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsxs)(`dt`,{children:[(0,Q.jsx)(`span`,{className:`i`,children:String(n+1).padStart(2,`0`)}),t]}),(0,Q.jsx)(`dd`,{children:e})]},t))})]}),my=P.p`
   display: flex;
   gap: 0.75rem;
   padding: 0.6rem 0;
@@ -892,12 +829,12 @@ Error generating stack: `+e.message+`
     color: var(--color-ink);
     font-weight: 700;
   }
-`,Ty=P.section`
+`,hy=P.section`
   width: min(calc(100% - 2 * var(--space-gutter)), var(--content-max));
   margin-inline: auto;
   margin-bottom: clamp(2rem, 5vw, 4rem);
   border-top: 1px solid var(--color-ink);
-`,Ey=P.dl`
+`,gy=P.dl`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
@@ -943,6 +880,69 @@ Error generating stack: `+e.message+`
       padding-left: 0;
       border-left: 0;
     }
+  }
+`,_y=`/assets/potentiometer-shaker-Bm73HY_b.webp`,vy=()=>(0,Q.jsx)(yy,{id:`environmental-testing`,"aria-labelledby":`environmental-testing-heading`,children:(0,Q.jsxs)(by,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(Kv,{tone:`night`,children:`Featured testing`}),(0,Q.jsx)(xy,{id:`environmental-testing-heading`,children:`Environmental qualification testing`}),(0,Q.jsx)(Sy,{children:`Environmental Test Engineering Intern · Sensor Systems LLC · June–August 2026`}),(0,Q.jsx)(Cy,{children:`I tested precision potentiometers used in aerospace and defense applications to evaluate their mechanical durability and electrical stability.`}),(0,Q.jsxs)(wy,{children:[(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Multi-axis vibration`}),(0,Q.jsx)(`dd`,{children:`Ran three-hour cycles across the X, Y and Z axes. I used a shaker, accelerometers and data acquisition equipment to monitor the assembly’s mechanical response and electrical output under vibration.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Clutch-release timing`}),(0,Q.jsx)(`dd`,{children:`Used controlled-speed actuation and high-speed timing instruments to measure how quickly clutched assemblies released and evaluate overtravel protection.`})]}),(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:`Full-travel linearity`}),(0,Q.jsx)(`dd`,{children:`Used precision actuators, digital multimeters, oscilloscopes and automated logging to check output across the full stroke. I looked for signal discontinuities and compared the response with customer specifications.`})]})]}),(0,Q.jsxs)(Ty,{children:[(0,Q.jsx)(`h3`,{children:`Aircraft applications`}),(0,Q.jsx)(`p`,{children:`A potentiometer converts motion into a voltage that varies with position. Aircraft systems can use that signal to monitor the position of moving components.`})]})]}),(0,Q.jsx)(Ey,{src:_y,alt:`Machined aluminum fixture with circuit boards and an accelerometer on a blue shaker`,width:`1400`,height:`788`,loading:`lazy`})]})}),yy=P.section`
+  background: #000;
+  color: var(--color-night-ink);
+`,by=P.div`
+  --testing-muted: #c4c4c4;
+  width: min(calc(100% - 2 * var(--space-gutter)), var(--content-max));
+  margin-inline: auto;
+  padding-block: var(--space-section);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  align-items: start;
+  gap: clamp(2rem, 6vw, 6rem);
+
+  @media (max-width: 899px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+`,xy=P.h2`
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.5rem + 2.6vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+`,Sy=P.p`
+  margin-top: 1rem;
+  color: var(--testing-muted);
+  font-size: var(--text-sm);
+`,Cy=P.p`
+  margin-top: 1.25rem;
+  line-height: 1.5;
+  color: var(--testing-muted);
+`,wy=P.dl`
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-amber);
+
+  dt { font-weight: 700; }
+  dd {
+    margin-top: 0.25rem;
+    line-height: 1.5;
+    color: var(--testing-muted);
+  }
+`,Ty=P.div`
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-night-line);
+
+  h3 { font-size: var(--text-base); }
+  p {
+    margin-top: 0.4rem;
+    line-height: 1.5;
+    color: var(--testing-muted);
+  }
+`,Ey=P.img`
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+
+  @media (min-width: 900px) {
+    align-self: center;
   }
 `,Dy=`/assets/photo-team-Cn4VVPbo.webp`,Oy=`/assets/render-hero-sp_Ix8R8.webp`,ky=[{index:`01`,slug:`nimbus-v4`,name:`Nimbus V4`,year:`2026`,kind:`Built & flown`,hook:`A flying-wing cargo UAV, optimized for profit, then built and flown at Mission Bay.`,tech:[`MATLAB`,`AVL`,`CMA-ES`,`CAD`],preview:Dy,previewAlt:`The Nimbus team behind the aircraft at the Mission Bay flight field`,figures:[{value:`1.57 m`,label:`Span`},{value:`800 g`,label:`Payload`},{value:`14.3`,label:`Cruise L/D`}]},{index:`02`,slug:`jager-qrf`,name:`Jäger-QRF`,year:`2026`,kind:`Conceptual design`,hook:`A hybrid VTOL that hovers over a fire and drops two suppression payloads.`,tech:[`MATLAB`,`AVL`,`Mission sizing`,`Flight dynamics`],preview:Oy,previewAlt:`Jäger-QRF render releasing two red suppression payloads`,figures:[{value:`~51 mph`,label:`Cruise`},{value:`1.5 mi`,label:`Range`},{value:`55 lb`,label:`Gross weight`}]}],Ay=[.16,1,.3,1],jy=[`A`,`B`,`C`,`D`,`E`,`F`],My=[`1`,`2`,`3`,`4`],Ny=()=>{let[e,t]=(0,j.useState)(0),n=!!Nh(),r=ky[e];return(0,Q.jsx)(Fy,{id:`projects`,"aria-labelledby":`projects-heading`,children:(0,Q.jsxs)(Iy,{children:[(0,Q.jsxs)(Ly,{children:[(0,Q.jsx)(Kv,{index:`03`,children:`The hangar`}),(0,Q.jsx)(Ry,{id:`projects-heading`,children:`Project files`}),(0,Q.jsx)(zy,{children:`Two airframes, from mission requirements to sizing, stability and hardware.`})]}),(0,Q.jsxs)(By,{children:[(0,Q.jsxs)(Vy,{children:[(0,Q.jsxs)(Uy,{"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{children:`No.`}),(0,Q.jsx)(`span`,{children:`Aircraft`}),(0,Q.jsx)(`span`,{children:`Status`})]}),ky.map((n,r)=>(0,Q.jsxs)(Wy,{"data-active":r===e,children:[(0,Q.jsxs)(Gy,{href:`/work/${n.slug}`,"aria-label":`${n.name}: view case study`,onPointerEnter:e=>e.pointerType===`mouse`&&t(r),onFocus:()=>t(r),children:[(0,Q.jsx)(`span`,{className:`no`,children:n.index}),(0,Q.jsx)(`span`,{className:`name`,children:n.name}),(0,Q.jsx)(`span`,{className:`kind`,children:n.kind})]}),(0,Q.jsx)(Ky,{children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`p`,{children:n.hook}),(0,Q.jsx)(`ul`,{children:n.tech.map(e=>(0,Q.jsx)(`li`,{children:e},e))}),(0,Q.jsxs)(`span`,{className:`open`,children:[`Open case study `,(0,Q.jsx)(Og,{"aria-hidden":`true`})]})]})}),(0,Q.jsx)(qy,{src:n.preview,alt:``,width:1600,height:1e3,loading:`lazy`,"aria-hidden":`true`})]},n.slug))]}),(0,Q.jsxs)(Jy,{"aria-live":`polite`,children:[(0,Q.jsx)(Yy,{"aria-hidden":`true`,$axis:`x`,children:jy.map(e=>(0,Q.jsx)(`span`,{children:e},e))}),(0,Q.jsx)(Yy,{"aria-hidden":`true`,$axis:`y`,children:My.map(e=>(0,Q.jsx)(`span`,{children:e},e))}),(0,Q.jsxs)(Xy,{children:[(0,Q.jsx)(Op,{mode:`popLayout`,initial:!1,children:(0,Q.jsx)($.img,{src:r.preview,alt:r.previewAlt,width:1600,height:1e3,initial:n?{opacity:0}:{opacity:0,scale:1.04,filter:`blur(8px)`},animate:{opacity:1,scale:1,filter:`blur(0px)`},exit:{opacity:0},transition:{duration:n?.2:.7,ease:Ay}},r.slug)}),(0,Q.jsx)(Zy,{"aria-hidden":`true`})]}),(0,Q.jsx)(Qy,{children:r.figures.map(({value:e,label:t})=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`dt`,{children:t}),(0,Q.jsx)(`dd`,{children:e})]},t))}),(0,Q.jsxs)($y,{"aria-hidden":`true`,children:[(0,Q.jsx)(`span`,{className:`k`,children:`Dwg`}),(0,Q.jsxs)(`span`,{className:`v`,children:[`HP-`,r.index]}),(0,Q.jsx)(`span`,{className:`k`,children:`Title`}),(0,Q.jsx)(`span`,{className:`v`,children:r.name}),(0,Q.jsx)(`span`,{className:`k`,children:`Sheet`}),(0,Q.jsxs)(`span`,{className:`v`,children:[e+1,` of `,ky.length]})]})]})]})]})})},Py=`(max-width: 899px)`,Fy=P.section`
   position: relative;
@@ -2505,4 +2505,4 @@ Error generating stack: `+e.message+`
     border-radius: 6px;
   }
   ::-webkit-scrollbar-thumb:hover { background: var(--color-amber); }
-`,MS=()=>(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(A_,{portraitSrc:AS,portraitAlt:Gg.alt}),(0,Q.jsx)(my,{}),(0,Q.jsx)(Qv,{}),(0,Q.jsx)(Cy,{}),(0,Q.jsx)(Ny,{}),(0,Q.jsx)(Ob,{}),(0,Q.jsx)(xx,{})]});(0,Ge.createRoot)(document.getElementById(`root`)).render((0,Q.jsx)(j.StrictMode,{children:(0,Q.jsx)(()=>{let{pathname:e}=OS(),t=TS(e);return kS(),(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(jS,{}),(0,Q.jsx)(Jh,{}),t?(0,Q.jsx)(dS,{slug:t},t):(0,Q.jsx)(MS,{})]})},{})}));
+`,MS=()=>(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(A_,{portraitSrc:AS,portraitAlt:Gg.alt}),(0,Q.jsx)(Qv,{}),(0,Q.jsx)(py,{}),(0,Q.jsx)(vy,{}),(0,Q.jsx)(Ny,{}),(0,Q.jsx)(Ob,{}),(0,Q.jsx)(xx,{})]});(0,Ge.createRoot)(document.getElementById(`root`)).render((0,Q.jsx)(j.StrictMode,{children:(0,Q.jsx)(()=>{let{pathname:e}=OS(),t=TS(e);return kS(),(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(jS,{}),(0,Q.jsx)(Jh,{}),t?(0,Q.jsx)(dS,{slug:t},t):(0,Q.jsx)(MS,{})]})},{})}));
